@@ -1,2 +1,3 @@
 ## python Window
-1. tkinter 工具
+1. tkinter 視覺工具
+	
