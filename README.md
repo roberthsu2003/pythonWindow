@@ -1,5 +1,4 @@
-## python Window
-1. [視覺工具](./視覺工具)
-2. [版面安排](./版面安排)
-3. [介面互動](./介面互動)
+## python tkinter
+1. [初見tkinter](./初見tkinter)
+
 	
