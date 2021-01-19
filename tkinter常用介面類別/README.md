@@ -394,6 +394,107 @@ window.mainloop()
 
 ## Canvas
 
+```python
+from tkinter import *
+
+root = Tk()
+root.title('Canvas')
+canvas = Canvas(root, width =400, height=400)
+canvas.create_oval(10,10,100,100, fill='gray90')
+canvas.create_line(105,10,200,105, stipple='@bitmaps/gray3')
+canvas.create_rectangle(205,10,300,105, outline='white', fill='gray50')
+canvas.create_bitmap(355, 53, bitmap='questhead')
+
+xy = 10, 105, 100, 200
+canvas.create_arc(xy, start=0, extent=270, fill='gray60')
+canvas.create_arc(xy, start=270, extent=5, fill='gray70')
+canvas.create_arc(xy, start=275, extent=35, fill='gray80')
+canvas.create_arc(xy, start=310, extent=49, fill='gray90')
+
+canvas.create_polygon(205,105,285,125,166,177,210,199,205,105, fill='white')
+canvas.create_text(350,150, text='text', fill='yellow', font=('verdana', 36))
+img = PhotoImage(file='julia.gif')
+canvas.create_image(145,280, image=img, anchor=CENTER)
+frm = Frame(canvas, relief=GROOVE, borderwidth=2)
+Label(frm, text="Embedded Frame/Label").pack()
+canvas.create_window(285, 280, window=frm, anchor=CENTER)
+canvas.pack()
+root.mainloop()
+```
+
+![](./images/pic16.png)
+
+---
+
+## scrollbar
+
+```python
+from tkinter import *
+
+root = Tk()
+root.title('Scrollbar')
+list = Listbox(root, height=6, width=15)
+scroll = Scrollbar(root, command=list.yview)
+list.configure(yscrollcommand=scroll.set)
+list.pack(side=LEFT)
+scroll.pack(side=RIGHT, fill=Y)
+for item in range(30):
+    list.insert(END, item)
+root.mainloop()
+```
+
+![](./images/pic17.png)
+
+---
+
+## ListBox
+
+```python
+from tkinter import *
+
+root = Tk()
+root.title('Listbox')
+list = Listbox(root, width=15)
+list.pack()
+for item in range(10):
+    list.insert(END, item)
+root.mainloop()
+```
+
+![](./images/pic18.png)
+
+---
+
+## Scale
+
+```
+from tkinter import *
+
+
+def setHeight(heightStr):
+    print(heightStr)
+
+root = Tk()
+root.title('Scale')
+
+canvas = Canvas(root, width=50, height=50, bd=0, highlightthickness=0)
+canvas.create_polygon(0,0,1,1,2,2, fill='cadetblue', tags='poly')
+canvas.create_line(0,0,1,1,2,2,0,0, fill='black', tags='line')
+scale = Scale(root, orient=VERTICAL, length=284, from_=0, to=250,
+              tickinterval=50, command=lambda h:setHeight(h))
+scale.grid(row=0, column=0, sticky='NE')
+canvas.grid(row=0, column=1, sticky='NWSE')
+scale.set(100)
+root.mainloop()
+```
+
+
+![](./images/pic19.png)
+
+---
+
+  
+
 
 
 
