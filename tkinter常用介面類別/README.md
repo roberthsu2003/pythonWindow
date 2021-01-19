@@ -493,6 +493,34 @@ root.mainloop()
 
 ---
 
+## 字型和顏色
+
+### 字型
+
+```python
+('Arial', 12, 'italic')
+('Helvetica', 10)
+('Verdana', 8, 'medium')
+```
+
+### 顏色
+
+```python
+#RGB for 4-bit values (16 levels for each color) 
+#RRGGBB for 8-bit values (256 levels for each color) #RRRRGGGGBBBB for 16-bit values (65526 levels for each color)
+```
+
+### 設定應用程式基本字型和顏色
+
+```python
+*font:                  Verdana 10
+*Label*font:            Verdana 10 bold
+*background:            Gray80
+*Entry*background:      white
+*foreground:            black
+*Listbox*foreground:    RoyalBlue
+```
+
   
 
 
