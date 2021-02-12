@@ -1,8 +1,10 @@
 #!usr/bin/python3.8
 '''
-使用tkinter label和grid顯示表格資料
+使用tkinter listbox和顯示單筆表格資料
 顯示台積電.sqlite
 '''
+
+
 import tkinter as tk
 from tkinter import *
 import sqlite3
@@ -12,11 +14,14 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.option_add('*font', ('verdana', 12, 'bold'))
-        self.title("載入台積電slqite")
+        self.title("載入台積電.csv")
         self.topFrame = Frame(self,bg="#555555", width=600, height=200, padx=10, pady=10)
         self.topFrame.pack()
         bottomFrame = Frame(self)
-        Button(bottomFrame, text='載入sqlite', command=self.buttonClick).pack()
+        list = Listbox(bottomFrame,width=10,height=3)
+        list.pack()
+        for title in getYears():
+            list.insert(END,title)
         bottomFrame.pack(padx=10, pady=10)
 
     def buttonClick(self):
@@ -51,8 +56,20 @@ def readSQLite():
         datalist.append(rowList)
 
     print("select 成功")
-    conn.close()
     return datalist
+
+def getYears():
+    years = []
+    conn = sqlite3.connect('台積電.db')
+    print("開啟資料庫成功")
+    c = conn.cursor()
+    cursor =c.execute("select 年度 from 獲利指標")
+    for row in cursor:
+        print(row[0])
+        years.append(row[0])
+    print("select 成功")
+    conn.close()
+    return years
 
 
 if __name__ == "__main__":
