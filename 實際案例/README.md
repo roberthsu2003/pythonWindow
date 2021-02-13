@@ -8,10 +8,11 @@
 
 ![顯示表格資料](./images/pic1.png)
 
-3.[建立ListBox+ScrollBar和Frame顯示單筆資料](sample3_displayOneRow_listbox.py)
+3.[建立ListBox+ScrollBar和Frame顯示單筆資料](./code/sample3_displayOneRow_listbox.py)
+
 ![](./images/pic3.png)
 
-4. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](sample4_displayOneRow_listbox.py)
+4. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](./code/sample4_displayOneRow_listbox.py)
 > 注意:必需先學習Convas的使用方法
 
 ![](./images/pic2.png)
