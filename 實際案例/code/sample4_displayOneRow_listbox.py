@@ -15,8 +15,8 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.option_add('*font', ('verdana', 12, 'bold'))
-        self.geometry("300x600")
-        #self.resizable(0,0) #不允許更改視窗大小
+        #self.geometry("450x400")
+        self.resizable(0,0) #不允許更改視窗大小
         self.title("載入台積電sqlite,單筆資料")
         leftFrame = Frame(self)
         scrollBar = Scrollbar(leftFrame)
@@ -29,9 +29,16 @@ class Window(tk.Tk):
             self.list.insert(END, title)
         leftFrame.pack(side=LEFT,padx=10, pady=10,fill="y")
 
-        self.rightFrame = Frame(self,width=200, pady=10)
-
-
+        frameConvas = Canvas(self)
+        convasScollbar = Scrollbar(self, orient="vertical", command=frameConvas.yview)
+        self.rightFrame = Frame(frameConvas,width=200, pady=10)
+        self.rightFrame.bind(
+            "<Configure>",
+            lambda e: frameConvas.configure(
+                scrollregion=frameConvas.bbox("all")
+            )
+        )
+        frameConvas.create_window((0, 0), window=self.rightFrame, anchor="nw")
         #self.rightFrame.pack_propagate(0) #不允許由它決定高度和寬度
         titles = ['年度','股本(億)','財報評分','收盤','平均','漲跌','漲跌(%)','營業收入',
                      '營業毛利','營業利益','業外損益','稅後淨利','營業毛利','營業利益','業外損益',
@@ -47,10 +54,11 @@ class Window(tk.Tk):
             Label(self.rightFrame, text=item).grid(row=index, column=0,sticky=W, padx=10, pady=5)
         for index,item in enumerate(self.values):
             Label(self.rightFrame, textvariable= item ).grid(row=index, column=1)
-        self.rightFrame.pack(side=LEFT,expand=YES,fill="x")
+        #self.rightFrame.pack(side=LEFT,expand=YES,fill="x")
 
-
-
+        frameConvas.config(yscrollcommand=convasScollbar.set)
+        frameConvas.pack(side=LEFT,expand=YES,fill=BOTH)
+        convasScollbar.pack(side=RIGHT,fill="y")
 
     def onSelect(self,event):
         widge = event.widget
