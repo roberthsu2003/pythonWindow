@@ -8,4 +8,7 @@
 
 ![顯示表格資料](./images/pic1.png)
 
-3. [建立下接式選項]
+3. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](sample3_displayOneRow_listbox.py)
+> 注意:必需先學習Convas的使用方法
+
+![](./images/pic2.png)
