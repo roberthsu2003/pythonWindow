@@ -493,6 +493,384 @@ root.mainloop()
 
 ---
 
+## ttk.Combolbox
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+# Creating tkinter window
+window = tk.Tk()
+window.title('Combobox')
+window.geometry('500x250')
+
+# label text for title
+ttk.Label(window, text = "GFG Combobox Widget",
+		background = 'green', foreground ="white",
+		font = ("Times New Roman", 15)).grid(row = 0, column = 1)
+
+# label
+ttk.Label(window, text = "Select the Month :",
+		font = ("Times New Roman", 10)).grid(column = 0,
+		row = 5, padx = 10, pady = 25)
+
+# Combobox creation
+n = tk.StringVar()
+monthchoosen = ttk.Combobox(window, width = 27, textvariable = n)
+
+# Adding combobox drop down list
+monthchoosen['values'] = (' January',
+						' February',
+						' March',
+						' April',
+						' May',
+						' June',
+						' July',
+						' August',
+						' September',
+						' October',
+						' November',
+						' December')
+
+monthchoosen.grid(column = 1, row = 5)
+monthchoosen.current()
+window.mainloop()
+
+```
+
+![](./images/pic20.png)
+
+---
+
+## ttk.spinbox
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+
+# root window
+root = tk.Tk()
+root.geometry('300x200')
+root.resizable(False, False)
+root.title('Spinbox Demo')
+
+# Spinbox
+current_value = tk.StringVar(value=0)
+spin_box = ttk.Spinbox(
+    root,
+    from_=0,
+    to=30,
+    textvariable=current_value,
+    wrap=True)
+
+spin_box.pack()
+
+root.mainloop()
+```
+
+![](./images/pic21.png)
+
+---
+
+## ttk.Sizegrip
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+root = tk.Tk()
+root.title('Sizegrip Demo')
+root.geometry('300x200')
+root.resizable(True, True)
+
+# grid layout
+root.columnconfigure(0, weight=1)
+root.rowconfigure(0, weight=1)
+
+# create the sizegrip
+sg = ttk.Sizegrip(root)
+sg.grid(row=1, sticky=tk.SE)
+
+
+root.mainloop()
+```
+
+![](./images/pic22.png)
+
+---
+
+## ttk.LabelFrame
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+
+# root window
+root = tk.Tk()
+root.geometry('300x200')
+root.resizable(False, False)
+root.title('LabelFrame Demo')
+
+# label frame
+lf = ttk.LabelFrame(
+    root,
+    text='Alignment')
+
+lf.grid(column=0, row=0, padx=20, pady=20)
+
+alignment = tk.StringVar()
+
+# left radio button
+left_radio = ttk.Radiobutton(
+    lf,
+    text='Left',
+    value='left',
+    variable=alignment
+)
+left_radio.grid(column=0, row=0, ipadx=10, ipady=10)
+
+# center radio button
+center_radio = ttk.Radiobutton(
+    lf,
+    text='Center',
+    value='center',
+    variable=alignment
+)
+
+center_radio.grid(column=1, row=0, ipadx=10, ipady=10)
+
+# right alignment radiobutton
+right_radio = ttk.Radiobutton(
+    lf,
+    text='Right',
+    value='right',
+    variable=alignment
+)
+right_radio.grid(column=2, row=0, ipadx=10, ipady=10)
+
+root.mainloop()
+```
+
+![](./images/pic23.png)
+
+---
+
+## ttk.Progressbar
+### indeterminate mode
+
+```
+import tkinter as tk
+from tkinter import ttk
+
+# root window
+root = tk.Tk()
+root.geometry('300x120')
+root.title('Progressbar Demo')
+
+root.grid()
+
+# progressbar
+pb = ttk.Progressbar(
+    root,
+    orient='horizontal',
+    mode='indeterminate',
+    length=280
+)
+# place the progressbar
+pb.grid(column=0, row=0, columnspan=2, padx=10, pady=20)
+
+
+# start button
+start_button = ttk.Button(
+    root,
+    text='Start',
+    command=pb.start
+)
+start_button.grid(column=0, row=1, padx=10, pady=10, sticky=tk.E)
+
+# stop button
+stop_button = ttk.Button(
+    root,
+    text='Stop',
+    command=pb.stop
+)
+stop_button.grid(column=1, row=1, padx=10, pady=10, sticky=tk.W)
+
+
+root.mainloop()
+```
+
+![](./images/pic24.png)
+
+---
+
+### determinate mode
+
+```python
+from tkinter import ttk
+import tkinter as tk
+from tkinter.messagebox import showinfo
+
+
+# root window
+root = tk.Tk()
+root.geometry('300x120')
+root.title('Progressbar Demo')
+
+
+def update_progress_label():
+    return f"Current Progress: {pb['value']}%"
+
+
+def progress():
+    if pb['value'] < 100:
+        pb['value'] += 20
+        value_label['text'] = update_progress_label()
+    else:
+        showinfo(message='The progress completed!')
+
+
+def stop():
+    pb.stop()
+    value_label['text'] = update_progress_label()
+
+
+# progressbar
+pb = ttk.Progressbar(
+    root,
+    orient='horizontal',
+    mode='determinate',
+    length=280
+)
+# place the progressbar
+pb.grid(column=0, row=0, columnspan=2, padx=10, pady=20)
+
+# label
+value_label = ttk.Label(root, text=update_progress_label())
+value_label.grid(column=0, row=1, columnspan=2)
+
+# start button
+start_button = ttk.Button(
+    root,
+    text='Progress',
+    command=progress
+)
+start_button.grid(column=0, row=2, padx=10, pady=10, sticky=tk.E)
+
+stop_button = ttk.Button(
+    root,
+    text='Stop',
+    command=stop
+)
+stop_button.grid(column=1, row=2, padx=10, pady=10, sticky=tk.W)
+
+
+root.mainloop()
+```
+
+![](./images/pic25.png)
+
+---
+
+## ttk.Progressbar
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+# root window
+root = tk.Tk()
+root.geometry('400x300')
+root.title('Notebook Demo')
+
+# create a notebook
+notebook = ttk.Notebook(root)
+notebook.pack(pady=10, expand=True)
+
+# create frames
+frame1 = ttk.Frame(notebook, width=400, height=280)
+frame2 = ttk.Frame(notebook, width=400, height=280)
+
+frame1.pack(fill='both', expand=True)
+frame2.pack(fill='both', expand=True)
+
+# add frames to notebook
+
+notebook.add(frame1, text='General Information')
+notebook.add(frame2, text='Profile')
+
+
+root.mainloop()
+```
+
+![](./images/pic26.png)
+
+---
+
+## ttk.Treeview
+
+```python
+import tkinter as tk
+from tkinter import ttk
+from tkinter.messagebox import showinfo
+
+
+root = tk.Tk()
+root.title('Treeview demo')
+root.geometry('620x200')
+
+# columns
+columns = ('#1', '#2', '#3')
+
+tree = ttk.Treeview(root, columns=columns, show='headings')
+
+# define headings
+tree.heading('#1', text='First Name')
+tree.heading('#2', text='Last Name')
+tree.heading('#3', text='Email')
+
+# generate sample data
+contacts = []
+for n in range(1, 100):
+    contacts.append((f'first {n}', f'last {n}', f'email{n}@example.com'))
+
+# adding data to the treeview
+for contact in contacts:
+    tree.insert('', tk.END, values=contact)
+
+
+# bind the select event
+def item_selected(event):
+    for selected_item in tree.selection():
+        # dictionary
+        item = tree.item(selected_item)
+        # list
+        record = item['values']
+        #
+        showinfo(title='Information',
+                message=','.join(record))
+
+
+tree.bind('<<TreeviewSelect>>', item_selected)
+
+tree.grid(row=0, column=0, sticky='nsew')
+
+# add a scrollbar
+scrollbar = ttk.Scrollbar(root, orient=tk.VERTICAL, command=tree.yview)
+tree.configure(yscroll=scrollbar.set)
+scrollbar.grid(row=0, column=1, sticky='ns')
+
+# run the app
+root.mainloop()
+```
+
+![](./images/pic27.png)
+
+---
+
+
 ## 字型和顏色
 
 ### 字型
@@ -519,6 +897,134 @@ root.mainloop()
 *Entry*background:      white
 *foreground:            black
 *Listbox*foreground:    RoyalBlue
+```
+
+### TTK Styles的使用
+
+### 修改預設的樣式
+
+```python
+import tkinter as tk
+from tkinter import ttk
+
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+
+        self.geometry('300x110')
+        self.resizable(0, 0)
+        self.title('Login')
+
+        # UI options
+        paddings = {'padx': 5, 'pady': 5}
+        entry_font = {'font': ('Helvetica', 11)}
+
+        # configure the grid
+        self.columnconfigure(0, weight=1)
+        self.columnconfigure(1, weight=3)
+
+        username = tk.StringVar()
+        password = tk.StringVar()
+
+        # username
+        username_label = ttk.Label(self, text="Username:")
+        username_label.grid(column=0, row=0, sticky=tk.W, **paddings)
+
+        username_entry = ttk.Entry(self, textvariable=username, **entry_font)
+        username_entry.grid(column=1, row=0, sticky=tk.E, **paddings)
+
+        # password
+        password_label = ttk.Label(self, text="Password:")
+        password_label.grid(column=0, row=1, sticky=tk.W, **paddings)
+
+        password_entry = ttk.Entry(
+            self, textvariable=password, show="*", **entry_font)
+        password_entry.grid(column=1, row=1, sticky=tk.E, **paddings)
+
+        # login button
+        login_button = ttk.Button(self, text="Login")
+        login_button.grid(column=1, row=3, sticky=tk.E, **paddings)
+
+        # configure style
+        self.style = ttk.Style(self)
+        self.style.configure('TLabel', font=('Helvetica', 11))
+        self.style.configure('TButton', font=('Helvetica', 11))
+
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
+```
+
+
+
+---
+
+
+
+
+### 自訂的樣式
+
+```
+import tkinter as tk
+from tkinter import ttk
+
+
+class App(tk.Tk):
+    def __init__(self):
+        super().__init__()
+
+        self.geometry('300x150')
+        self.resizable(0, 0)
+        self.title('Login')
+
+        # UI options
+        paddings = {'padx': 5, 'pady': 5}
+        entry_font = {'font': ('Helvetica', 11)}
+
+        # configure the grid
+        self.columnconfigure(0, weight=1)
+        self.columnconfigure(1, weight=3)
+
+        username = tk.StringVar()
+        password = tk.StringVar()
+
+        # heading
+        heading = ttk.Label(self, text='Member Login', style='Heading.TLabel')
+        heading.grid(column=0, row=0, columnspan=2, pady=5, sticky=tk.N)
+
+        # username
+        username_label = ttk.Label(self, text="Username:")
+        username_label.grid(column=0, row=1, sticky=tk.W, **paddings)
+
+        username_entry = ttk.Entry(self, textvariable=username, **entry_font)
+        username_entry.grid(column=1, row=1, sticky=tk.E, **paddings)
+
+        # password
+        password_label = ttk.Label(self, text="Password:")
+        password_label.grid(column=0, row=2, sticky=tk.W, **paddings)
+
+        password_entry = ttk.Entry(
+            self, textvariable=password, show="*", **entry_font)
+        password_entry.grid(column=1, row=2, sticky=tk.E, **paddings)
+
+        # login button
+        login_button = ttk.Button(self, text="Login")
+        login_button.grid(column=1, row=3, sticky=tk.E, **paddings)
+
+        # configure style
+        self.style = ttk.Style(self)
+        self.style.configure('TLabel', font=('Helvetica', 11))
+        self.style.configure('TButton', font=('Helvetica', 11))
+
+        # heading style
+        self.style.configure('Heading.TLabel', font=('Helvetica', 12))
+
+
+if __name__ == "__main__":
+    app = App()
+    app.mainloop()
 ```
 
   
