@@ -31,9 +31,10 @@ class Window(tk.Tk):
 def readCSV(fileName):
     datalist = [];
     try:
-        file=open("台積電.csv","r",encoding='utf8')
+        file=open(fileName,"r",encoding='utf8')
     except EXCEPTION as e:
         print("讀取錯誤發生錯誤",e)
+        file.close()
         return None
 
     rows = csv.reader(file)
