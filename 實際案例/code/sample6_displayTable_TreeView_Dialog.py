@@ -2,7 +2,8 @@ import tkinter as tk
 from tkinter import ttk
 import csv
 from tkinter.simpledialog import Dialog
-from tkinter import messagebox
+from PIL import ImageTk,Image
+import os
 
 class Window(tk.Tk):
     def __init__(self):
@@ -59,6 +60,14 @@ class ShowInfo(Dialog):
 
         for index,infoText in enumerate(self.info):
             tk.Label(master,text=infoText).grid(row=index,column=1,sticky=tk.W)
+
+        print(os.path.abspath("photos/"+self.info[4]))
+        imagePath = os.path.abspath("photos/"+self.info[4])
+        img = ImageTk.PhotoImage(Image.open(imagePath))
+        picLabel = tk.Label(master,image=img)
+        #要加下面這行才會顯示
+        picLabel.image = img
+        picLabel.grid(row=7,column=1, sticky=tk.W)
 
         return None
 
