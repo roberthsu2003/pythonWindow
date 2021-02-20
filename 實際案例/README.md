@@ -25,7 +25,7 @@
 
 ---
 
-5. [使用Treeview建立表格資料和TopLevel的操控](./codesample5_displayTable_TreeView_topLevel.py)
+5. [使用Treeview建立表格資料和TopLevel的操控](./code/sample5_displayTable_TreeView_topLevel.py)
 
 ![](./images/pic4.png)
 
@@ -33,7 +33,7 @@
 
 ---
 
-6. [使用Treeview建立表格資料和自訂Dialog類別](./sample6_displayTable_TreeView_Dialog.py)
+6. [使用Treeview建立表格資料和自訂Dialog類別](./code/sample6_displayTable_TreeView_Dialog.py)
 
 ![](./images/pic4.png)
 
@@ -41,3 +41,6 @@
 
 ---
 
+7. [顯示政府開放平台空氣品質指標](./code/sample8_顯示目前空氣品質.py)
+
+![](./images/pic7.png)
