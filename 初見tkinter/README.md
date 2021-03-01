@@ -22,6 +22,8 @@ if __name__ == "__main__":
 
 ```
 
+![](./images/pic1.png)
+
 ## 互動
 
 ```python
@@ -53,6 +55,8 @@ if __name__ == "__main__":
     window = Window()
     window.mainloop()
 ```
+
+![](./images/pic2.png)
 
 ## 更新元件內容
 
@@ -88,6 +92,8 @@ if __name__ == "__main__":
     window.mainloop()        
 
 ```
+
+![](./images/pic3.png)
 
 ## 顯示對話框
 
@@ -125,6 +131,8 @@ if __name__ == "__main__":
     window.mainloop()
         
 ```
+
+![](./images/pic4.png)
 
 ## 取得使用者的選擇
 
@@ -165,6 +173,8 @@ if __name__ == "__main__":
         
 
 ```
+
+![](./images/pic5.png)
 
 ## 取得使用者輸入的資訊
 
@@ -213,4 +223,6 @@ if __name__ == "__main__":
 
 
 ```
+
+![](./images/pic6.png)
 	

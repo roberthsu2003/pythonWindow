@@ -1,5 +1,7 @@
 # tkinter常用介面類別
 
+[常用介面](https://www.pythontutorial.net/tkinter/tkinter-hello-world/)
+
 ## topLevel
 
 ```python
