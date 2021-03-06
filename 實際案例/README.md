@@ -46,3 +46,5 @@
 ![](./images/pic7.png)
 
 8. [顯示政府開放平台空氣品質指標正式版](./code/sample9_空氣品質指標正式版.py)
+
+![](./images/pic8.png)
