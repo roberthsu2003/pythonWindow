@@ -52,3 +52,5 @@
 9.[台北市youbike及時資料](./台北市youbike/index.py)
 
 ![](./images/pic9.png)
+
+9. [股票及時查詢提醒系統(學員:梁晉嘉作品)](./股票及時查詢提醒系統/main.py)
