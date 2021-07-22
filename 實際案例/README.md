@@ -49,8 +49,13 @@
 
 ![](./images/pic8.png)
 
+
 9.[台北市youbike及時資料](./台北市youbike/index.py)
 
 ![](./images/pic9.png)
 
-9. [股票及時查詢提醒系統(學員:梁晉嘉作品)](./股票及時查詢提醒系統/main.py)
+9-1. [台北市youbike及時資料簡易版(無計時)](./簡易版youbike/youbikeOfTaipei.py)
+
+![](./簡易版youbike/images/pic1.png)
+
+10. [股票及時查詢提醒系統(學員:梁晉嘉作品)](./股票及時查詢提醒系統/main.py)
