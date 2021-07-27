@@ -53,7 +53,9 @@
 
 ![](./空氣品質指標aqi_csv_多欄位版/images/pic1.png)
 
+7-4.[顯示政府開放平台空氣品質_canvas_scrollbar](./空氣品質指標aqi_csv_canvas_scrollbar/main.py)
 
+![](./空氣品質指標aqi_csv_canvas_scrollbar/images/pic1.png)
 
 
 
