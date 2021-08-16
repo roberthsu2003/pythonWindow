@@ -1,3 +1,7 @@
+"""
+完整的requests,下載使用try..except檢查資料
+"""
+
 import requests
 from .stockInfo import StockInfo
 from requests import HTTPError, ConnectionError, Timeout

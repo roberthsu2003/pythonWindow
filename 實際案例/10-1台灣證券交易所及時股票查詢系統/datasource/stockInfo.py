@@ -9,3 +9,5 @@ class StockInfo():
         self.volume = None
         self.millionAmount = None
         self.error = None
+        self.diff = None
+        self.percent = None

@@ -1,4 +1,5 @@
 from datasource.source import getData
+from datasource.source import driver
 import tkinter as tk
 from threading import Timer
 
@@ -73,7 +74,10 @@ def closeWindow():
     # 應用程式關閉,有t就關閉
     if window.t and window.t.is_alive():
         window.t.cancel()
+
     window.destroy()
+    if not (driver is None):
+        driver.close()
 
 
 if __name__ == "__main__":
