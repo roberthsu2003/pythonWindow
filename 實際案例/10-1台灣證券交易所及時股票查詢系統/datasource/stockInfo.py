@@ -11,3 +11,5 @@ class StockInfo():
         self.error = None
         self.diff = None
         self.percent = None
+        self.tv_odd = None #當盤成交量
+        self.v_odd = None #累積_成交量
