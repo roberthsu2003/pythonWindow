@@ -16,6 +16,7 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
 if __name__ == "__main__":
-    print(populations)
+    for item in populations:
+        print(item[1])
     window = Window()
     window.mainloop()
