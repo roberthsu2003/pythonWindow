@@ -1,5 +1,5 @@
 import tkinter as tk
-from datasource import do_something
+from datasource import populations
 
 class Window(tk.Tk):
     def __init__(self):
@@ -16,6 +16,6 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
 if __name__ == "__main__":
-    do_something()
+    print(populations)
     window = Window()
     window.mainloop()

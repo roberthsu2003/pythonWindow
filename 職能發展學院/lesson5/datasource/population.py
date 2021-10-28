@@ -1,5 +1,13 @@
-go = "Hello Python"
-print(go)
+'''
+解析各鄉鎮市區人口密度.csv
+'''
 
-def do_something():
-    print("Hello! Do Something")
+import csv
+
+csvfile = open('./datasource/各鄉鎮市區人口密度.csv',mode='r',encoding='utf-8',newline='')
+csvReader = csv.reader(csvfile)
+csvReader.__next__()
+csvReader.__next__()
+
+populations = list(csvReader)
+print(populations)
