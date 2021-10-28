@@ -1,1 +1,1 @@
-from .population import populations
+from .population import get_populations

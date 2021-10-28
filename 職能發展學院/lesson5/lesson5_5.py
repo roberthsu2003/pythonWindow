@@ -1,5 +1,5 @@
 import tkinter as tk
-from datasource import populations
+from datasource import *
 
 class Window(tk.Tk):
     def __init__(self):
@@ -16,7 +16,8 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
     def left(self):
-        print("left")
+        total = get_populations()
+        print(total)
 
     def center(self):
         print("center")
@@ -25,7 +26,5 @@ class Window(tk.Tk):
         print("right")
 
 if __name__ == "__main__":
-    for item in populations:
-        print(item[1])
     window = Window()
     window.mainloop()

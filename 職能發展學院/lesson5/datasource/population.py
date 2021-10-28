@@ -12,3 +12,16 @@ csvReader.__next__()
 populations = list(csvReader)
 populations = populations[0:-5] #後面5行不要
 
+def getNum(item):
+    try:
+        return int(item)
+    except:
+        return 0
+
+def get_populations():
+    total = 0
+    for item in populations:
+        itemNum = getNum(item[2])
+        total += itemNum
+    return total
+
