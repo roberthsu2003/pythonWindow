@@ -8,9 +8,9 @@ class Window(tk.Tk):
         self.title(title)
         self.option_add('*font',('verdana',20))
 
-        tk.Button(self, text="LEFT",padx=10,pady=5).pack(side=tk.LEFT)
-        tk.Button(self, text="CENTER",padx=10,pady=5).pack(side=tk.LEFT)
-        tk.Button(self, text="RIGHT",padx=10,pady=5).pack(side=tk.LEFT)
+        tk.Button(self, text="LEFT",padx=10,pady=5).pack()
+        tk.Button(self, text="This is the Center Button",padx=10,pady=5).pack()
+        tk.Button(self, text="RIGHT",padx=10,pady=5).pack()
 
 if __name__ == "__main__":
     window = Window("layout1")
