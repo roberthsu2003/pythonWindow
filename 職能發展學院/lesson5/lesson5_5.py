@@ -25,7 +25,7 @@ class Window(tk.Tk):
         showinfo("總平方公里:",message=f'總平方公里:{areas}')
 
     def right(self):
-        print("right")
+        showinfo("總數:",message=f'區鄉鎮數:{get_listNum()}')
 
 if __name__ == "__main__":
     window = Window()

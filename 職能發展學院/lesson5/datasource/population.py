@@ -37,3 +37,6 @@ def get_areas():
         floatNum = getFloat(item[3])
         areas += floatNum
     return areas
+
+def get_listNum():
+    return len(populations)
