@@ -18,7 +18,7 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
     def left(self):
-        subDialog = Dialog()
+        subDialog = Dialog(self)
         total = get_populations()
         showinfo("總人口數",message=f'總人口數:{total}')
 
