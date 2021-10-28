@@ -25,3 +25,15 @@ def get_populations():
         total += itemNum
     return total
 
+def getFloat(item):
+    try:
+        return float(item)
+    except:
+        return 0.0
+
+def get_areas():
+    areas = 0.0
+    for item in populations:
+        floatNum = getFloat(item[3])
+        areas += floatNum
+    return areas

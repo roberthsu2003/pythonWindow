@@ -21,7 +21,8 @@ class Window(tk.Tk):
         showinfo("總人口數",message=f'總人口數:{total}')
 
     def center(self):
-        print("center")
+        areas = get_areas()
+        showinfo("總平方公里:",message=f'總平方公里:{areas}')
 
     def right(self):
         print("right")
