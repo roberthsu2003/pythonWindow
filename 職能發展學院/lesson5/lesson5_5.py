@@ -1,5 +1,6 @@
 import tkinter as tk
 from datasource import *
+from tkinter.messagebox import showinfo
 
 class Window(tk.Tk):
     def __init__(self):
@@ -17,7 +18,7 @@ class Window(tk.Tk):
 
     def left(self):
         total = get_populations()
-        print(total)
+        showinfo("總人口數",message=f'總人口數:{total}')
 
     def center(self):
         print("center")
