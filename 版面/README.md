@@ -140,9 +140,9 @@ class Window(tk.Tk):
         self.geometry("300x200")
 
         fm = Frame(self)
-        Button(self, text='Left').pack(side=LEFT)
-        Button(self, text='Center').pack(side=LEFT)
-        Button(self, text='Right').pack(side=LEFT)
+        Button(fm, text='Left').pack(side=LEFT)
+        Button(fm, text='Center').pack(side=LEFT)
+        Button(fm, text='Right').pack(side=LEFT)
         fm.pack(fill=BOTH, expand=YES)
 
 if __name__ == "__main__":
@@ -166,9 +166,9 @@ class Window(tk.Tk):
         self.geometry("300x200")
 
         fm = Frame(self)
-        Button(self, text='Left').pack(side=LEFT, expand=YES)
-        Button(self, text='Center').pack(side=LEFT, expand=YES)
-        Button(self, text='Right').pack(side=LEFT, expand=YES)
+        Button(fm, text='Left').pack(side=LEFT, expand=YES)
+        Button(fm, text='Center').pack(side=LEFT, expand=YES)
+        Button(fm, text='Right').pack(side=LEFT, expand=YES)
         fm.pack(fill=BOTH, expand=YES)
 
 if __name__ == "__main__":
@@ -192,9 +192,9 @@ class Window(tk.Tk):
         self.geometry("300x200")
 
         fm = Frame(self)
-        Button(self, text='Top').pack(side=TOP, expand=YES)
-        Button(self, text='Center').pack(side=TOP, expand=YES)
-        Button(self, text='Bottom').pack(side=TOP, expand=YES)
+        Button(fm, text='Top').pack(side=TOP, expand=YES)
+        Button(fm, text='Center').pack(side=TOP, expand=YES)
+        Button(fm, text='Bottom').pack(side=TOP, expand=YES)
         fm.pack(fill=BOTH, expand=YES)
 
 if __name__ == "__main__":
