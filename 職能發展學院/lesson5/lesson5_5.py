@@ -1,6 +1,7 @@
 import tkinter as tk
 from datasource import *
 from tkinter.messagebox import showinfo
+from dialog import Dialog
 
 class Window(tk.Tk):
     def __init__(self):
@@ -17,6 +18,7 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
     def left(self):
+        subDialog = Dialog()
         total = get_populations()
         showinfo("總人口數",message=f'總人口數:{total}')
 
