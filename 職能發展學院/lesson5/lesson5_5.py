@@ -1,4 +1,5 @@
 import tkinter as tk
+from datasource import do_something
 
 class Window(tk.Tk):
     def __init__(self):
@@ -15,5 +16,6 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
 if __name__ == "__main__":
+    do_something()
     window = Window()
     window.mainloop()
