@@ -10,10 +10,19 @@ class Window(tk.Tk):
 
         tk.Label(self,text="三個功能按鈕").pack(pady=20)
         topFrame = tk.Frame(self,bg="#aaaaaa")
-        tk.Button(topFrame,text="台灣總人口數",padx=5,pady=5).pack(side=tk.LEFT,expand=tk.YES,padx=(20,10),pady=(10,20))
-        tk.Button(topFrame,text="台灣總土地",padx=5,pady=5).pack(side=tk.LEFT,expand=tk.YES,padx=(10,10),pady=(10,20))
-        tk.Button(topFrame,text="台灣總區鄉鎮數",padx=5,pady=5).pack(side=tk.LEFT,expand=tk.YES,padx=(10,20),pady=(10,20))
+        tk.Button(topFrame,text="台灣總人口數",padx=5,pady=5,command=self.left).pack(side=tk.LEFT,expand=tk.YES,padx=(20,10),pady=(10,20))
+        tk.Button(topFrame,text="台灣總土地",padx=5,pady=5,command=self.center).pack(side=tk.LEFT,expand=tk.YES,padx=(10,10),pady=(10,20))
+        tk.Button(topFrame,text="台灣總區鄉鎮數",padx=5,pady=5,command=self.right).pack(side=tk.LEFT,expand=tk.YES,padx=(10,20),pady=(10,20))
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
+
+    def left(self):
+        print("left")
+
+    def center(self):
+        print("center")
+
+    def right(self):
+        print("right")
 
 if __name__ == "__main__":
     for item in populations:
