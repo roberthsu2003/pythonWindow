@@ -24,7 +24,7 @@ def parseHTML(htmlCode):
     傳出巢狀list
     '''
 
-    bs = BeautifulSoup(htmlCode)
+    bs = BeautifulSoup(htmlCode,'html.parser')
     dataList = bs.find('div', attrs={'id': 'txtFinDetailData'}).find_all('tr', attrs={'align': 'center'})
     allDataList = []
     for trTag in dataList:
@@ -41,7 +41,7 @@ def get_2330():
             return None
 
         allDataList = parseHTML(htmlCode)
-        print(allDataList)
+        return allDataList
 
 
 
