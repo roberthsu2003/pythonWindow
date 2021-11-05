@@ -10,11 +10,11 @@ def get_2330():
         response.encoding = "utf-8"
         bs = BeautifulSoup(response.text)
         dataList = bs.find('div',attrs={'id':'txtFinDetailData'}).find_all('tr',attrs={'align':'center'})
+        allDataList = []
         for trTag in dataList:
             tdList = trTag.find_all('td')
-            for tdTag in tdList:
-                print(tdTag.string,end=' ')
-
-            print()
+            list1 = [tdTag.string for tdTag in tdList] #comprehension
+            allDataList.append(list1)
+        print(allDataList)
     else:
         print("下載失敗")
