@@ -1,4 +1,5 @@
 
+
 def downloadHTML(code):
     '''
     下載資料，如果成功, 傳出html所有文字
@@ -52,7 +53,7 @@ def getStackData(stackCode):
         name,allDataList = parseHTML(htmlCode,stackCode)
         return name,allDataList
 
-
+__all__ = [getStackData]
 
 
 

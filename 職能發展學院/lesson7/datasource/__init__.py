@@ -1,1 +1,1 @@
-from .tw2330 import getStackData
+from .stackInfo import getStackData
