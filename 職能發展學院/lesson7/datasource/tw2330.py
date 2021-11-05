@@ -11,6 +11,10 @@ def get_2330():
         bs = BeautifulSoup(response.text)
         dataList = bs.find('div',attrs={'id':'txtFinDetailData'}).find_all('tr',attrs={'align':'center'})
         for trTag in dataList:
-            print(trTag.prettify())
+            tdList = trTag.find_all('td')
+            for tdTag in tdList:
+                print(tdTag.string,end=' ')
+
+            print()
     else:
         print("下載失敗")
