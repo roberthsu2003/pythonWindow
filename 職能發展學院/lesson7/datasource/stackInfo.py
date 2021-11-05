@@ -53,7 +53,7 @@ def getStackData(stackCode):
         name,allDataList = parseHTML(htmlCode,stackCode)
         return name,allDataList
 
-__all__ = [getStackData]
+__all__ = ["getStackData"]
 
 
 
