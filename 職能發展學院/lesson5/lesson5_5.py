@@ -18,9 +18,9 @@ class Window(tk.Tk):
         topFrame.pack(expand=tk.YES,fill=tk.BOTH)
 
     def left(self):
-        subDialog = Dialog(self)
+        subDialog = Dialog(self,"總人口數")
         total = get_populations()
-        showinfo("總人口數",message=f'總人口數:{total}')
+        #showinfo("總人口數",message=f'總人口數:{total}')
 
     def center(self):
         areas = get_areas()
