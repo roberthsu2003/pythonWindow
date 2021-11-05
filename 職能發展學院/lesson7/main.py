@@ -1,6 +1,6 @@
-from datasource import get_2330
+from datasource import getStackData
 
 if __name__ == "__main__":
     print("主執行檔")
-    allDataList = get_2330()
+    allDataList = getStackData(2317)
     print(allDataList)

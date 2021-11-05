@@ -1,14 +1,13 @@
-import requests
-from bs4 import BeautifulSoup
-url = 'https://goodinfo.tw/StockInfo/StockBzPerformance.asp?STOCK_ID=2330'
 
-headers = {'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'}
-
-def downloadHTML():
+def downloadHTML(code):
     '''
     下載資料，如果成功, 傳出html所有文字
     下載失敗傳出None
     '''
+    import requests
+    url = f'https://goodinfo.tw/StockInfo/StockBzPerformance.asp?STOCK_ID={code}'
+    headers = {
+        'user-agent': 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.69 Safari/537.36'}
     response = requests.get(url, headers=headers)
     if response.status_code == requests.codes.ok:
         response.encoding = "utf-8"
@@ -23,8 +22,9 @@ def parseHTML(htmlCode):
     取出每個td內的資料
     傳出巢狀list
     '''
-
+    from bs4 import BeautifulSoup
     bs = BeautifulSoup(htmlCode,'html.parser')
+
     dataList = bs.find('div', attrs={'id': 'txtFinDetailData'}).find_all('tr', attrs={'align': 'center'})
     allDataList = []
     for trTag in dataList:
@@ -34,8 +34,8 @@ def parseHTML(htmlCode):
     return allDataList
 
 
-def get_2330():
-        htmlCode = downloadHTML()
+def getStackData(stackCode):
+        htmlCode = downloadHTML(stackCode)
         if htmlCode is None:
             print("下載失敗")
             return None
