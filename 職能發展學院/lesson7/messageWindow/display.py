@@ -4,6 +4,7 @@ columnCount = 8
 class Display(tk.Toplevel):
     def __init__(self, main,stockName,dataList):
         super().__init__(main)
+        self.title(stockName)
         self.yearsText = [secondList[0] for secondList in dataList]
         tk.Label(self,text=f'{stockName}歷年經營績效查詢',font=('arial',20)).pack(padx=10,pady=10)
         #建立buttonsFrame
@@ -20,4 +21,6 @@ class Display(tk.Toplevel):
     def buttonClick(self,event):
         pressedBtn = event.widget #取得被按按鈕的參考
         print(pressedBtn['text']) #透過參考取得按鈕的文字
+
+
 
