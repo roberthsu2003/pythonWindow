@@ -1,5 +1,6 @@
 import tkinter as tk
 
+columnCount = 8
 class Display(tk.Toplevel):
     def __init__(self, main,stockName,dataList):
         super().__init__(main)
@@ -8,7 +9,10 @@ class Display(tk.Toplevel):
         #建立buttonsFrame
         buttonsFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300,height=80)
         for yearIndex,year in enumerate(self.yearsText):
-            print(f'{yearIndex},{year}')
+            rIndex = yearIndex // columnCount  #求得按鈕row的索引編號
+            cIndex = yearIndex % columnCount #求得按鈕column的索引編號
+            tk.Button(buttonsFrame,text=year).grid(row=rIndex,column=cIndex)
+
         buttonsFrame.pack_propagate(0)
         buttonsFrame.pack(padx=20,pady=20)
 
