@@ -8,7 +8,7 @@ class Display(tk.Toplevel):
         buttonsFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300,height=80)
         for rowIndex in range(4):
             for columnIndex in range(6):
-                tk.Button(buttonsFrame,text=f"row={rowIndex},row={columnIndex}").grid(row=rowIndex,column=columnIndex)
+                tk.Button(buttonsFrame,text=f"row={rowIndex},column={columnIndex}").grid(row=rowIndex,column=columnIndex)
         buttonsFrame.pack_propagate(0)
         buttonsFrame.pack(padx=20,pady=20)
 
