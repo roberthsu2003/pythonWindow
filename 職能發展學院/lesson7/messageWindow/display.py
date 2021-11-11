@@ -11,8 +11,13 @@ class Display(tk.Toplevel):
         for yearIndex,year in enumerate(self.yearsText):
             rIndex = yearIndex // columnCount  #求得按鈕row的索引編號
             cIndex = yearIndex % columnCount #求得按鈕column的索引編號
-            tk.Button(buttonsFrame,text=year).grid(row=rIndex,column=cIndex)
-
+            btn = tk.Button(buttonsFrame,text=year)
+            btn.grid(row=rIndex,column=cIndex)
+            btn.bind("<Button-1>",self.buttonClick)
         buttonsFrame.pack_propagate(0)
         buttonsFrame.pack(padx=20,pady=20)
+
+    def buttonClick(self,event):
+        pressedBtn = event.widget #取得被按按鈕的參考
+        print(pressedBtn['text']) #透過參考取得按鈕的文字
 
