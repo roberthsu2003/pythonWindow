@@ -11,12 +11,21 @@ class Window(tk.Tk):
         tk.Label(mainFrame,text="台股歷年經營績效查詢",font=("arial",20),bg="#333333",fg='#ffffff',padx=10,pady=10).pack(pady=20)
         inputFrame = tk.Frame(mainFrame)
         tk.Label(inputFrame, text="股票編號:", font=("arial", 20)).pack(side=tk.LEFT)
-        tk.Entry(inputFrame,font=("arial", 16),width=7).pack(side=tk.LEFT)
+        self.entryContent = tk.StringVar() #控制使用者輸入內容的實體
+        tk.Entry(inputFrame,textvariable=self.entryContent,font=("arial", 16),width=7).pack(side=tk.LEFT)
         inputFrame.pack()
 
-        tk.Button(mainFrame,text="確定",padx=40,pady=20).pack(pady=20)
+        tk.Button(mainFrame,text="確定",padx=40,pady=20,command=self.buttonClick).pack(pady=20)
         mainFrame.pack_propagate(0) #取消frame以子項的內容為預設的大小
         mainFrame.pack(padx=20,pady=20)
+
+    def buttonClick(self):
+        inputValue = self.entryContent.get() #使用者輸入內容
+        if len(inputValue) == 4:
+            print(inputValue)
+        else:
+            print("輸入錯誤")
+        self.entryContent.set("")
 
 
 
