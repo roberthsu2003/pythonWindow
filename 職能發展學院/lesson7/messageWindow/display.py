@@ -38,8 +38,8 @@ class Display(tk.Toplevel):
         for labelIndex,labelText in enumerate(titleLabelList):
             rowIndex = labelIndex // 11
             columnIndex = labelIndex % 11
-            tk.Label(self.subFrame,text=labelText).grid(row=rowIndex*2 ,column=columnIndex) #title的文字，分2列,0和1
-            tk.Label(self.subFrame, text=valueList[labelIndex]).grid(row=(rowIndex * 2)+1, column=columnIndex)  # value的文字，分2列,1和3
+            tk.Label(self.subFrame,text=labelText,bg='#999999').grid(row=rowIndex*2 ,column=columnIndex,sticky='ew') #title的文字，分2列,0和1
+            tk.Label(self.subFrame, text=valueList[labelIndex]).grid(row=(rowIndex * 2)+1, column=columnIndex,sticky='ew')  # value的文字，分2列,1和3
         self.subFrame.pack()
 
     def buttonClick(self,event):
