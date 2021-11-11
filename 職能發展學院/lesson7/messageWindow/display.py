@@ -5,6 +5,7 @@ class Display(tk.Toplevel):
     def __init__(self, main,stockName,dataList):
         super().__init__(main)
         self.dataList = dataList
+        self.subFrame = None #subFrame一開始設None,建立一個Display的屬性subFrame
         self.title(stockName)
         self.yearsText = [secondList[0] for secondList in dataList]
         tk.Label(self,text=f'{stockName}歷年經營績效查詢',font=('arial',20)).pack(padx=10,pady=10)
@@ -21,14 +22,15 @@ class Display(tk.Toplevel):
 
         self.infoContainer = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=800,height=200)
         #-----顯示value的內容
-        self.displayInfoContent(self.infoContainer,'2019')
+        self.displayInfoContent(self.infoContainer,self.yearsText[0])
         #-----顯示value內容
         self.infoContainer.pack_propagate(0)
         self.infoContainer.pack()
 
     def displayInfoContent(self,parent,year):
-        self.yearLabel = tk.Label(parent, text=year)
-        self.yearLabel.pack()
+        if self.subFrame:
+            self.subFrame.destroy() #如果已經有subFrame,則將subFrame消滅
+
         self.subFrame=tk.Frame(parent)
         yearindex = self.yearsText.index(year)
         valueList = self.dataList[yearindex] #儲存value內容
@@ -44,7 +46,7 @@ class Display(tk.Toplevel):
 
     def buttonClick(self,event):
         pressedBtn = event.widget #取得被按按鈕的參考
-        print(pressedBtn['text']) #透過參考取得按鈕的文字
-
+        year = pressedBtn['text'] #透過參考取得按鈕的文字
+        self.displayInfoContent(self.infoContainer, year)
 
 
