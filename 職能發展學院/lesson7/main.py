@@ -22,7 +22,8 @@ class Window(tk.Tk):
     def buttonClick(self):
         inputValue = self.entryContent.get() #使用者輸入內容
         if len(inputValue) == 4:
-            print(inputValue)
+            topLevel = tk.Toplevel(self)
+            topLevel.transient(self)
         else:
             print("輸入錯誤")
         self.entryContent.set("")
