@@ -4,6 +4,7 @@ columnCount = 8
 class Display(tk.Toplevel):
     def __init__(self, main,stockName,dataList):
         super().__init__(main)
+        self.dataList = dataList
         self.title(stockName)
         self.yearsText = [secondList[0] for secondList in dataList]
         tk.Label(self,text=f'{stockName}歷年經營績效查詢',font=('arial',20)).pack(padx=10,pady=10)
@@ -18,9 +19,9 @@ class Display(tk.Toplevel):
         #buttonsFrame.pack_propagate(0)
         buttonsFrame.pack(padx=20,pady=20)
 
-        self.infoContainer = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=800,height=80)
+        self.infoContainer = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=800,height=200)
         #-----顯示value的內容
-        self.displayInfoContent(self.infoContainer,'2011')
+        self.displayInfoContent(self.infoContainer,'2019')
         #-----顯示value內容
         self.infoContainer.pack_propagate(0)
         self.infoContainer.pack()
@@ -29,13 +30,16 @@ class Display(tk.Toplevel):
         self.yearLabel = tk.Label(parent, text=year)
         self.yearLabel.pack()
         self.subFrame=tk.Frame(parent)
+        yearindex = self.yearsText.index(year)
+        valueList = self.dataList[yearindex] #儲存value內容
         titleLabelList = ['年度', '股本(億)', '財報評分', '收盤', '平均', '漲跌', '漲跌(%)', '營業收入',
          '營業毛利', '營業利益', '業外損益', '稅後淨利', '營業毛利', '營業利益', '業外損益',
          '稅後淨利', 'ROE(%)', 'ROA(%)', '稅後EPS', 'EPS年增(元)', 'BPS(元)']
         for labelIndex,labelText in enumerate(titleLabelList):
             rowIndex = labelIndex // 11
             columnIndex = labelIndex % 11
-            tk.Label(self.subFrame,text=labelText).grid(row=rowIndex*2 ,column=columnIndex)
+            tk.Label(self.subFrame,text=labelText).grid(row=rowIndex*2 ,column=columnIndex) #title的文字，分2列,0和1
+            tk.Label(self.subFrame, text=valueList[labelIndex]).grid(row=(rowIndex * 2)+1, column=columnIndex)  # value的文字，分2列,1和3
         self.subFrame.pack()
 
     def buttonClick(self,event):
