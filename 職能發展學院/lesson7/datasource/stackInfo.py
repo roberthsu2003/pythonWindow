@@ -1,4 +1,5 @@
 
+__all__ = ["getStackData"]
 
 def downloadHTML(code):
     '''
@@ -53,7 +54,7 @@ def getStackData(stackCode):
         name,allDataList = parseHTML(htmlCode,stackCode)
         return name,allDataList
 
-__all__ = ["getStackData"]
+
 
 
 

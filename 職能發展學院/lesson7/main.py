@@ -12,5 +12,6 @@ class Window(tk.Tk):
 
 if __name__ == "__main__":
     window = Window()
+    window.title("台股歷年經營績效")
     window.mainloop()
 
