@@ -27,6 +27,8 @@ class Display(tk.Toplevel):
         self.infoContainer.pack_propagate(0)
         self.infoContainer.pack()
 
+        tk.Button(self,text="關閉視窗",font=('arial',16),padx=10,pady=10,command=self.windowclose).pack(padx=50,pady=20)
+
     def displayInfoContent(self,parent,year):
         if self.subFrame:
             self.subFrame.destroy() #如果已經有subFrame,則將subFrame消滅
@@ -48,5 +50,8 @@ class Display(tk.Toplevel):
         pressedBtn = event.widget #取得被按按鈕的參考
         year = pressedBtn['text'] #透過參考取得按鈕的文字
         self.displayInfoContent(self.infoContainer, year)
+
+    def windowclose(self):
+        self.destroy()
 
 
