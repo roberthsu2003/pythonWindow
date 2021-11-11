@@ -8,7 +8,7 @@ class Display(tk.Toplevel):
         self.subFrame = None #subFrame一開始設None,建立一個Display的屬性subFrame
         self.title(stockName)
         self.yearsText = [secondList[0] for secondList in dataList]
-        tk.Label(self,text=f'{stockName}歷年經營績效查詢',font=('arial',20)).pack(padx=10,pady=10)
+        tk.Label(self,text=f'{stockName}-歷年經營績效查詢',font=('arial',20)).pack(padx=10,pady=10)
         #建立buttonsFrame
         buttonsFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300,height=80)
         for yearIndex,year in enumerate(self.yearsText):

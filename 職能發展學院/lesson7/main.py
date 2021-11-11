@@ -25,6 +25,9 @@ class Window(tk.Tk):
             name, allDataList = getStackData(int(inputValue))
             topLevel = Display(self,stockName=name,dataList=allDataList)
             topLevel.transient(self)
+            topLevel.geometry("+150+200")
+            topLevel.resizable(0,0)
+
         else:
             print("輸入錯誤")
         self.entryContent.set("")
@@ -33,6 +36,8 @@ class Window(tk.Tk):
 
 if __name__ == "__main__":
     window = Window()
+    window.resizable(0,0) #無法改變視窗大小
+    window.geometry("+300+300")
     window.title("台股歷年經營績效")
     window.mainloop()
 
