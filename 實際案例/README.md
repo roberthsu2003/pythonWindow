@@ -6,6 +6,18 @@
 
 ---
 
+1-1. [顯示表格資料使用網路爬蟲和Toplevel](./1-1爬蟲和使用Toplevel/main.py)
+
+- 使用toplevel
+  
+- 使用2個自訂package
+
+![顯示表格資料使用網路爬蟲和Toplevel](./images/pic1-1-1.png)
+![顯示表格資料使用網路爬蟲和Toplevel](./images/pic1-1-2.png)
+
+
+---
+
 2. [顯示表格資料使用sqlite](./code/sample2_displayTable_sqlite.py)
 
 ![顯示表格資料](./images/pic1.png)
@@ -71,3 +83,5 @@
 10. [股票及時查詢系統](./10-1台灣證券交易所及時股票查詢系統/main.py)
 
 ![](./images/pic10.png)
+
+
