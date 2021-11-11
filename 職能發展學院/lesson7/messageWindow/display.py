@@ -14,13 +14,13 @@ class Display(tk.Toplevel):
         for yearIndex,year in enumerate(self.yearsText):
             rIndex = yearIndex // columnCount  #求得按鈕row的索引編號
             cIndex = yearIndex % columnCount #求得按鈕column的索引編號
-            btn = tk.Button(buttonsFrame,text=year)
+            btn = tk.Button(buttonsFrame,text=year,padx=5,pady=5)
             btn.grid(row=rIndex,column=cIndex)
             btn.bind("<Button-1>",self.buttonClick)
         #buttonsFrame.pack_propagate(0)
         buttonsFrame.pack(padx=20,pady=20)
 
-        self.infoContainer = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=800,height=200)
+        self.infoContainer = tk.Frame(self,width=800,height=150)
         #-----顯示value的內容
         self.displayInfoContent(self.infoContainer,self.yearsText[0])
         #-----顯示value內容
