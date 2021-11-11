@@ -5,7 +5,6 @@ from messageWindow import Display
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
-        #name, allDataList = getStackData(2303)
 
         #建立mainFrame
         mainFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300,height=200)
@@ -23,7 +22,8 @@ class Window(tk.Tk):
     def buttonClick(self):
         inputValue = self.entryContent.get() #使用者輸入內容
         if len(inputValue) == 4:
-            topLevel = Display(self)
+            name, allDataList = getStackData(int(inputValue))
+            topLevel = Display(self,stockName=name,dataList=allDataList)
             topLevel.transient(self)
         else:
             print("輸入錯誤")
