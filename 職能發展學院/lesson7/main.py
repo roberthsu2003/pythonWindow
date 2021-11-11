@@ -7,9 +7,9 @@ class Window(tk.Tk):
         #name, allDataList = getStackData(2303)
 
         #建立mainFrame
-        mainFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300)
-        tk.Label(mainFrame,text="台股歷年經營績效查詢",font=("arial",20)).pack()
-
+        mainFrame = tk.Frame(self,relief=tk.GROOVE,borderwidth=1,width=300,height=200)
+        tk.Label(mainFrame,text="台股歷年經營績效查詢",font=("arial",20),bg="#333333",fg='#ffffff').pack(pady=20)
+        mainFrame.pack_propagate(0) #取消frame以子項的內容為預設的大小
         mainFrame.pack(padx=20,pady=20)
 
 
