@@ -1,5 +1,6 @@
 from datasource import getStackData
 import tkinter as tk
+from messageWindow import Display
 
 class Window(tk.Tk):
     def __init__(self):
@@ -22,7 +23,7 @@ class Window(tk.Tk):
     def buttonClick(self):
         inputValue = self.entryContent.get() #使用者輸入內容
         if len(inputValue) == 4:
-            topLevel = tk.Toplevel(self)
+            topLevel = Display(self)
             topLevel.transient(self)
         else:
             print("輸入錯誤")
