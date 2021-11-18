@@ -18,7 +18,14 @@
 
 ---
 
-1-2. [顯示表格資料使用網路爬蟲和自訂Dialog類別](./1-1爬蟲和使用Toplevel/main.py)
+
+2. [顯示表格資料使用sqlite](./code/sample2_displayTable_sqlite.py)
+
+![顯示表格資料](./images/pic1.png)
+
+---
+
+3. [顯示表格資料使用網路爬蟲和自訂Dialog類別](./1-1爬蟲和使用Toplevel/main.py)
 
 - 繼承Dialog類別
 - 使用List類別和ScrollBar
@@ -29,17 +36,7 @@
 
 ---
 
-2. [顯示表格資料使用sqlite](./code/sample2_displayTable_sqlite.py)
 
-![顯示表格資料](./images/pic1.png)
-
----
-
-3.[建立ListBox+ScrollBar和Frame顯示單筆資料](./code/sample3_displayOneRow_listbox.py)
-
-![](./images/pic3.png)
-
----
 
 4. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](./code/sample4_displayOneRow_listbox.py)
 > 注意:必需先學習Convas的使用方法
