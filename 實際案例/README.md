@@ -18,6 +18,17 @@
 
 ---
 
+1-2. [顯示表格資料使用網路爬蟲和自訂Dialog類別](./1-1爬蟲和使用Toplevel/main.py)
+
+- 繼承Dialog類別
+- 使用List類別和ScrollBar
+- 使用2個自訂package
+
+![顯示表格資料使用網路爬蟲和Toplevel](./images/pic1-2-1.png)
+![顯示表格資料使用網路爬蟲和Toplevel](./images/pic1-2-2.png)
+
+---
+
 2. [顯示表格資料使用sqlite](./code/sample2_displayTable_sqlite.py)
 
 ![顯示表格資料](./images/pic1.png)
