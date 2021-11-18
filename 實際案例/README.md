@@ -68,27 +68,38 @@
 
 ![](./images/pic7.png)
 
+---
+
 7-2. [顯示政府開放平台空氣品質指標正式版](./code/sample9_空氣品質指標正式版.py)
 
 ![](./images/pic8.png)
+
+---
 
 7-3. [顯示政府開放平台空氣品質_分欄位的版本](./空氣品質指標aqi_csv_多欄位版/main.py)
 
 ![](./空氣品質指標aqi_csv_多欄位版/images/pic1.png)
 
+---
+
 7-4.[顯示政府開放平台空氣品質_canvas_scrollbar](./空氣品質指標aqi_csv_canvas_scrollbar/main.py)
 
 ![](./空氣品質指標aqi_csv_canvas_scrollbar/images/pic1.png)
 
+---
 
 
 9.[台北市youbike及時資料](./台北市youbike/index.py)
 
 ![](./images/pic9.png)
 
+---
+
 9-1. [台北市youbike及時資料簡易版(無計時)](./簡易版youbike/youbikeOfTaipei.py)
 
 ![](./簡易版youbike/images/pic1.png)
+
+---
 
 
 10. [股票及時查詢系統](./10-1台灣證券交易所及時股票查詢系統/main.py)
