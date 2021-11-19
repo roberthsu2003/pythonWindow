@@ -69,6 +69,12 @@ class InfoDisplay(Dialog):
 
 
 
-    #def buttonbox(self):
-    #    pass
+    def buttonbox(self):
+        box = tk.Frame(self)
+
+        w = tk.Button(box, text="關閉", width=10, command=self.ok,padx=10,pady=10,bg="#cccccc")
+        w.pack(side=tk.LEFT, padx=5, pady=5)
+        self.bind("<Return>", self.ok)
+        self.bind("<Escape>", self.cancel)
+        box.pack(pady=(0,20))
 
