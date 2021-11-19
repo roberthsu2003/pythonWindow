@@ -1,6 +1,7 @@
 import tkinter as tk
 import dataSource
 from tkinter import messagebox
+import tkinter.ttk as ttk
 
 class Window(tk.Tk):
 
@@ -32,11 +33,25 @@ class Window(tk.Tk):
         self.leftTimeLabel = tk.Label(topFrame, text="20:15", font=("arial", 16), fg="#555555")
         self.leftTimeLabel.pack()
         topFrame.pack()
+
+        #建立中間的middleFrame
+        middleFrame = tk.Frame(mainFrame)
+        tk.Label(middleFrame,text="請選擇監測站:",font=("arial",16),fg="#555555").pack(side=tk.LEFT)
+        comboBox = ttk.Combobox(middleFrame, values=['apple','banana','orange','lemon','tomato'])
+        comboBox.pack(side=tk.LEFT)
+        comboBox.current(0)
+        comboBox.bind('<<ComboboxSelected>>', self.combobox_selected)
+        middleFrame.pack(pady=20)
+
+
         mainFrame.pack_propagate(0)
         mainFrame.pack(padx=50,pady=50)
         # --------------建立視窗end-------------------#
 
-
+    def combobox_selected(self,event):
+        widget = event.widget
+        comboBoxIndex = widget.current()
+        print(comboBoxIndex)
 
 if __name__ == "__main__":
     window = Window()
