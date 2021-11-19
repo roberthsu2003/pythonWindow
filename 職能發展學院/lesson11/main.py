@@ -8,12 +8,13 @@ class Window(tk.Tk):
         super().__init__()
         self.title = "全省空氣品質指標"
         try:
-            downloadData = dataSource.getAirData()
+            cities = dataSource.getAirData()
         except ValueError as e:
             messagebox.showwarning("連線錯誤",e)
             self.destroy()
 
-        print(downloadData)
+        for city in cities:
+            print(city.county)
 
 if __name__ == "__main__":
     window = Window()

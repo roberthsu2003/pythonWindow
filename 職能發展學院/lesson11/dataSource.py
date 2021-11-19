@@ -1,5 +1,13 @@
 __all__ = ["getAirData"]
 
+class CityWeather():
+    def __init__(self,siteName=None,county=None,aqi=None,pm25=None,status=None,time=None):
+        self.siteName = siteName
+        self.county = county
+        self.aqi = aqi
+        self.pm25 = pm25
+        self.status = status
+        self.time = time
 
 
 def getAirData():
@@ -24,9 +32,15 @@ def getAirData():
         raise ValueError("TimeOut")
     except:
         raise ValueError("其它錯誤")
-    else:
-        print(response.text)
-        return "有資料"
+
+    originJson = response.json() #取得原始資料
+    records = originJson["records"]
+
+    #解析資料
+
+    cities = [CityWeather(siteName=dict["SiteName"],county=dict["County"],aqi=dict["AQI"],pm25=dict["PM2.5"],status=dict["Status"],time=dict["ImportDate"]) for dict in records]
+
+    return cities
 
 
 
