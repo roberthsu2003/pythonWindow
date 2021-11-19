@@ -15,7 +15,7 @@ class InfoDisplay(Dialog):
         listbox = tk.Listbox(leftFrame)
         for item in self.info:
             listbox.insert(tk.END, item[0])
-
+        listbox.bind("<<ListboxSelect>>",self.onSelect)
 
         listbox.pack(side=tk.LEFT)
         leftFrame.pack_propagate(0)
@@ -25,6 +25,13 @@ class InfoDisplay(Dialog):
 
         print("master:",master)
         print("傳過來的資料:",self.info)
+
+    def onSelect(self,event):
+        widget = event.widget
+        index = widget.curselection()[0]
+        year = widget.get(index)
+        print(year)
+
 
 
     #def buttonbox(self):
