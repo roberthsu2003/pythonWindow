@@ -25,7 +25,7 @@
 
 ---
 
-3. [顯示表格資料使用網路爬蟲和自訂Dialog類別](./1-1爬蟲和使用Toplevel/main.py)
+3. [顯示表格資料使用網路爬蟲和自訂Dialog類別](./1-2爬蟲和使用自訂Dialog/main.py)
 
 - 繼承Dialog類別
 - 使用List類別和ScrollBar
