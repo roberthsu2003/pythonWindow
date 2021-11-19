@@ -12,7 +12,7 @@ class InfoDisplay(Dialog):
         super().__init__(parent,title)
 
     def body(self,master):
-        topFrame=tk.Frame(master,bg='#999999')
+        topFrame=tk.Frame(master)
         leftFrame = tk.Frame(topFrame,bg='#aaaaaa')
         scrollBar = tk.Scrollbar(leftFrame, orient=tk.VERTICAL)
         scrollBar.pack(side=tk.RIGHT,fill=tk.Y)
@@ -29,16 +29,16 @@ class InfoDisplay(Dialog):
 
 
         #右邊資料顯示
-        self.infoContainer = tk.Frame(topFrame, width=700, height=200)
+        self.infoContainer = tk.Frame(topFrame)
         tk.Label(self.infoContainer, text=f'{self.stockName}-歷年經營績效查詢', font=('arial', 20)).pack(padx=10, pady=10)
         # -----顯示value的內容
         self.displayInfoContent(self.infoContainer, self.yearsText[0])
         # -----顯示value內容
-        self.infoContainer.pack_propagate(0)
-        self.infoContainer.pack(side=tk.RIGHT)
+        #self.infoContainer.pack_propagate(0)
+        self.infoContainer.pack(side=tk.RIGHT,padx=10)
 
 
-        topFrame.pack()
+        topFrame.pack(padx=20,pady=20)
 
         print("master:",master)
         print("傳過來的資料:",self.info)
@@ -60,7 +60,7 @@ class InfoDisplay(Dialog):
          '營業毛利', '營業利益', '業外損益', '稅後淨利', '營業毛利', '營業利益', '業外損益',
          '稅後淨利', 'ROE(%)', 'ROA(%)', '稅後EPS', 'EPS年增(元)', 'BPS(元)']
         for labelIndex,labelText in enumerate(titleLabelList):
-            columnCount = 11 #顯示欄位數量
+            columnCount = 8 #顯示欄位數量
             rowIndex = labelIndex // columnCount
             columnIndex = labelIndex % columnCount
             tk.Label(self.subFrame,text=labelText,bg='#999999').grid(row=rowIndex*2 ,column=columnIndex,sticky='ew') #title的文字，分2列,0和1
