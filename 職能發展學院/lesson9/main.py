@@ -1,6 +1,5 @@
 from datasource import getStackData
 import tkinter as tk
-from messageWindow import Display
 from messageWindow import InfoDisplay
 
 class Window(tk.Tk):
@@ -24,10 +23,7 @@ class Window(tk.Tk):
         inputValue = self.entryContent.get() #使用者輸入內容
         if len(inputValue) == 4:
             name, allDataList = getStackData(int(inputValue))
-            topLevel = Display(self,stockName=name,dataList=allDataList)
-            topLevel.transient(self)
-            topLevel.geometry("+150+200")
-            topLevel.resizable(0,0)
+            infoDisplay = InfoDisplay(self,name)
 
         else:
             print("輸入錯誤")
