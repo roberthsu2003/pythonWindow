@@ -7,10 +7,14 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title = "全省空氣品質指標"
-        if dataSource.getAirData() is not None:
-            print("下載成功")
+        try:
+            dataSource.getAirData()
+        except ValueError as e:
+            messagebox.showwarning("連線錯誤",e)
+            return
         else:
-            messagebox.showerror("連線錯誤","請稍後再試")
+            print("沒有錯誤")
+
 
 if __name__ == "__main__":
     window = Window()

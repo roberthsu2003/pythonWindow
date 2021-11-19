@@ -1,6 +1,6 @@
 __all__ = ["getAirData"]
 
-url = "https://data.epa.gov.tw/api/v/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&format=json"
+
 
 def getAirData():
     '''
@@ -10,21 +10,20 @@ def getAirData():
     '''
     import requests
     from requests.exceptions import HTTPError
+
+    url = "https://data.epa.gov.tw/api/v/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&format=json"
+
     try:
         response = requests.get(url)
         response.raise_for_status()
     except ConnectionError as e:
-        print("連線錯誤",e)
-        return None
+        raise ValueError("連線錯誤")
     except HTTPError as e:
-        print("HTTP錯誤", e)
-        return None
+        raise ValueError("HTTP錯誤")
     except requests.Timeout:
-        print("TimeOut")
-        return None
+        raise ValueError("TimeOut")
     except:
-        print("其它錯誤")
-        return None
+        raise ValueError("其它錯誤")
     else:
         print(response.text)
         return "資料"
