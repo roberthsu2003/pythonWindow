@@ -6,3 +6,10 @@ class InfoDisplay(Dialog):
         print(title)
         super().__init__(parent,title)
 
+    def body(self,master):
+        print('body被執行了')
+
+
+    #def buttonbox(self):
+    #    pass
+
