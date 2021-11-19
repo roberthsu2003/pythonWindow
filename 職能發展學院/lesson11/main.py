@@ -20,8 +20,18 @@ class Window(tk.Tk):
         # --------------取得資料end-------------------#
 
         # --------------建立視窗start-------------------#
-        mainFrame = tk.Frame(self,width=500,height=600,borderwidth=1,relief=tk.GROOVE)
+        mainFrame = tk.Frame(self,width=500,height=600,borderwidth=1,relief=tk.GROOVE,padx=20,pady=20)
 
+        #建立上方的topFrame
+        topFrame = tk.Frame(mainFrame)
+        tk.Label(topFrame,text="台灣各地空氣品質指標",font=("arial",22,"bold"),fg="#555555").pack()
+        self.currentTimeLabel = tk.Label(topFrame,text="觀測時間:xxxxxxxxx",font=("arial",16),fg="#555555")
+        self.currentTimeLabel.pack(pady=(30,10))
+        self.nextTimeLabel = tk.Label(topFrame,text="下次更新:xxxxxxxxx",font=("arial",16),fg="#555555")
+        self.nextTimeLabel.pack()
+        self.leftTimeLabel = tk.Label(topFrame, text="20:15", font=("arial", 16), fg="#555555")
+        self.leftTimeLabel.pack()
+        topFrame.pack()
         mainFrame.pack_propagate(0)
         mainFrame.pack(padx=50,pady=50)
         # --------------建立視窗end-------------------#
