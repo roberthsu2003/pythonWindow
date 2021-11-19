@@ -23,7 +23,7 @@ class Window(tk.Tk):
         inputValue = self.entryContent.get() #使用者輸入內容
         if len(inputValue) == 4:
             name, allDataList = getStackData(int(inputValue))
-            infoDisplay = InfoDisplay(self,name)
+            InfoDisplay(self,name,allDataList)
 
         else:
             print("輸入錯誤")
