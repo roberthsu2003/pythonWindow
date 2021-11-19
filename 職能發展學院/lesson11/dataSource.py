@@ -11,7 +11,7 @@ def getAirData():
     import requests
     from requests.exceptions import HTTPError
 
-    url = "https://data.epa.gov.tw/api/v/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&format=json"
+    url = "https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&format=json"
 
     try:
         response = requests.get(url)
@@ -26,7 +26,7 @@ def getAirData():
         raise ValueError("其它錯誤")
     else:
         print(response.text)
-        return "資料"
+        return "有資料"
 
 
 
