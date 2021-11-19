@@ -12,12 +12,15 @@ class InfoDisplay(Dialog):
     def body(self,master):
         topFrame=tk.Frame(master,bg='#999999')
         leftFrame = tk.Frame(topFrame,width=100,height=200,bg='#aaaaaa')
-        listbox = tk.Listbox(leftFrame)
+        scrollBar = tk.Scrollbar(leftFrame, orient=tk.VERTICAL)
+        scrollBar.pack(side=tk.RIGHT,fill=tk.Y)
+        listbox = tk.Listbox(leftFrame,yscrollcommand=scrollBar.set)
+        scrollBar.config(command=listbox.yview)
         for item in self.info:
             listbox.insert(tk.END, item[0])
         listbox.bind("<<ListboxSelect>>",self.onSelect)
+        listbox.pack(side=tk.LEFT,fill=tk.Y)
 
-        listbox.pack(side=tk.LEFT)
         leftFrame.pack_propagate(0)
         leftFrame.pack(side=tk.LEFT)
         #topFrame.pack_propagate(0)
