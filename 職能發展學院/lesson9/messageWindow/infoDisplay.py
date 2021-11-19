@@ -11,7 +11,7 @@ class InfoDisplay(Dialog):
 
     def body(self,master):
         topFrame=tk.Frame(master,bg='#999999')
-        leftFrame = tk.Frame(topFrame,width=100,height=200,bg='#aaaaaa')
+        leftFrame = tk.Frame(topFrame,bg='#aaaaaa')
         scrollBar = tk.Scrollbar(leftFrame, orient=tk.VERTICAL)
         scrollBar.pack(side=tk.RIGHT,fill=tk.Y)
         listbox = tk.Listbox(leftFrame,yscrollcommand=scrollBar.set)
@@ -21,9 +21,13 @@ class InfoDisplay(Dialog):
         listbox.bind("<<ListboxSelect>>",self.onSelect)
         listbox.pack(side=tk.LEFT,fill=tk.Y)
 
-        leftFrame.pack_propagate(0)
-        leftFrame.pack(side=tk.LEFT)
+        #leftFrame.pack_propagate(0)
+        leftFrame.pack(side=tk.LEFT,fill=tk.Y)
         #topFrame.pack_propagate(0)
+
+        rightFrame = tk.Frame(topFrame, bg='#555555',width=700,height=200)
+        rightFrame.pack(side=tk.RIGHT)
+        rightFrame.pack_propagate(0)
         topFrame.pack()
 
         print("master:",master)
