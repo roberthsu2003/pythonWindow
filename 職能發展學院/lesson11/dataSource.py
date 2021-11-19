@@ -8,8 +8,25 @@ def getAirData():
     :return: None
     '''
     import requests
-    response = requests.get(url)
-    if response.status_code == 200:
+    from  requests.exceptions import HTTPError
+    try:
+        response = requests.get(url)
+        response.raise_for_status()
+    except ConnectionError as e:
+        print("連線錯誤",e)
+        return
+    except HTTPError as e:
+        print("HTTP錯誤", e)
+        return
+    except requests.Timeout:
+        print("TimeOut")
+        return
+    except:
+        print("其它錯誤")
+        return
+    else:
         print("下載成功")
         print(response.text)
+
+
 
