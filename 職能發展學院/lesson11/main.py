@@ -2,6 +2,7 @@ import tkinter as tk
 import dataSource
 from tkinter import messagebox
 import tkinter.ttk as ttk
+from datetime import datetime
 
 class Window(tk.Tk):
 
@@ -15,6 +16,11 @@ class Window(tk.Tk):
         except ValueError as e:
             messagebox.showwarning("連線錯誤",e)
             self.destroy()
+
+        currentTimeString = self.cities[0].time #取得json內顯示的時間字串
+        self.currentDataTime = datetime.strptime(currentTimeString,"%Y-%m-%d %H:%M:%S.%f") #將字串轉為datetime物件
+        #保存目前顯示資料的datetime物件
+        print(self.currentDataTime)
 
         for city in self.cities: #self.cities是list,內容元素是CityWeather的實體
             print(city.county)
