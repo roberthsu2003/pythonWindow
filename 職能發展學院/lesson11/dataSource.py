@@ -1,7 +1,5 @@
 __all__ = ["getAirData"]
 
-import os
-
 
 class CityWeather():
     def __init__(self,siteName=None,county=None,aqi=None,pm25=None,status=None,time=None):
@@ -17,10 +15,11 @@ def getAirData():
     '''
     連線行政院環保署空氣品質指標
     有自已的apiKey
-    :return: None
+    :return: 傳出citys,list內有自訂實體CityWeather
     '''
     import requests
     from requests.exceptions import HTTPError
+    import json
 
     url = "https://data.epa.gov.tw/api/v1/aqx_p_432?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&format=json"
 
@@ -38,8 +37,12 @@ def getAirData():
 
     saveFile(response.text) #儲存檔案
     jsonFilePath = getlastestFilePath() #取得最新儲存檔案的路徑
-    print(jsonFilePath)
-    originJson = response.json() #取得原始資料
+
+    #開啟json檔
+    jsonFile = open(jsonFilePath,'r',encoding="utf-8")
+    originJson = json.load(jsonFile) #解析json的file物件，成為python的基本資料結構
+    jsonFile.close()
+    #originJson = response.json() #取得原始資料
     records = originJson["records"]
 
     #解析資料
