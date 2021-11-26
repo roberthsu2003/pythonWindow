@@ -33,6 +33,7 @@ def getAirData():
     except:
         raise ValueError("其它錯誤")
 
+    print(response.text)
     originJson = response.json() #取得原始資料
     records = originJson["records"]
 
