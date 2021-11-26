@@ -37,7 +37,8 @@ def getAirData():
         raise ValueError("其它錯誤")
 
     saveFile(response.text) #儲存檔案
-    getlastestFilePath() #取得最新儲存檔案的路徑
+    jsonFilePath = getlastestFilePath() #取得最新儲存檔案的路徑
+    print(jsonFilePath)
     originJson = response.json() #取得原始資料
     records = originJson["records"]
 
@@ -76,8 +77,17 @@ def getlastestFilePath():
     :return:傳出最新json檔的絕對路徑
     '''
     import os
+    from datetime import datetime
     folderName = "data"
-    print(os.listdir(folderName))
+    #取得data內檔案名稱的list
+    fileNames = os.listdir(folderName)
+    datetimeList = [datetime.strptime(fileName,"%Y-%m-%d-%H-%M-%S.json") for fileName in fileNames]
+    datetimeList.sort(reverse=True)
+    lestestDateTime = datetimeList[0]
+    fileName = f"{lestestDateTime.year}-{lestestDateTime.month}-{lestestDateTime.day}-{lestestDateTime.hour}-{lestestDateTime.minute}-{lestestDateTime.second}.json"
+    absFileName=os.path.abspath(f"{folderName}/{fileName}")
+    return absFileName
+
 
 
 
