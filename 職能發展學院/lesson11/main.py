@@ -46,10 +46,9 @@ class Window(tk.Tk):
         #建立中間的middleFrame
         middleFrame = tk.Frame(mainFrame)
         tk.Label(middleFrame,text="請選擇監測站:",font=("arial",16),fg="#555555").pack(side=tk.LEFT)
-        comboBox = ttk.Combobox(middleFrame, values=['apple','banana','orange','lemon','tomato'])
-        comboBox.pack(side=tk.LEFT)
-        comboBox.current(0)
-        comboBox.bind('<<ComboboxSelected>>', self.combobox_selected)
+        self.comboBox = ttk.Combobox(middleFrame)
+        self.comboBox.pack(side=tk.LEFT)
+        self.comboBox.bind('<<ComboboxSelected>>', self.combobox_selected)
         middleFrame.pack(pady=20)
 
 
@@ -58,13 +57,22 @@ class Window(tk.Tk):
         # --------------建立視窗end-------------------#
 
         #-------------更新標題start---------#
-        self.updateWindowContent(self.currentDateTime,self.downloadTime)
+        self.updateWindowContent(self.currentDateTime,self.downloadTime,list(self.cities.keys()))
         # -------------更新標題end---------#
 
-    def updateWindowContent(self,displayCurrent,downloadTime):
+    def updateWindowContent(self,displayCurrent,downloadTime,cityNames):
+        '''
+        更新畫面的內容
+        :param displayCurrent: 觀測的時間(datetime物件)
+        :param downloadTime: 現在下載的時間(datetime物件)
+        :param cityNames:目前所有城市名程(list,包含城市名稱字串)
+        :return:
+        '''
         self.currentTimeLabel.config(text=displayCurrent.strftime("觀測時間:%Y年%m月%d日--%H時%M分%S秒"))
         updateTime = downloadTime + timedelta(minutes=30);
         self.nextTimeLabel.config(text=updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
+        self.comboBox.config(values=cityNames)
+        self.comboBox.current(0) #預設選擇第一位
 
 
     def combobox_selected(self,event):
