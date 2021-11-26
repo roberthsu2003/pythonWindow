@@ -46,7 +46,8 @@ class Window(tk.Tk):
         #建立中間的middleFrame
         middleFrame = tk.Frame(mainFrame)
         tk.Label(middleFrame,text="請選擇監測站:",font=("arial",20),fg="#555555").pack(side=tk.LEFT)
-        self.comboBox = ttk.Combobox(middleFrame,font=("arial",20))
+        self.comboboxText = tk.StringVar()
+        self.comboBox = ttk.Combobox(middleFrame,textvariable=self.comboboxText,font=("arial",20))
         self.comboBox.pack(side=tk.LEFT)
         self.comboBox.bind('<<ComboboxSelected>>', self.combobox_selected)
         middleFrame.pack(pady=20)
@@ -54,19 +55,24 @@ class Window(tk.Tk):
         #建立下方的bottomFrame
         bottomFrame = tk.Frame(mainFrame)
         tk.Label(bottomFrame,text="監測點:",font=("Arial",14)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
-        self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16)).grid(row=0,column=1,sticky=tk.E,padx=10,pady=10)
+        self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16))
+        self.siteNameLabel.grid(row=0,column=1,sticky=tk.E,padx=10,pady=10)
+
         tk.Label(bottomFrame, text="城市:", font=("Arial", 14)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
-        self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16)).grid(row=1, column=1, sticky=tk.E,
-                                                                                        padx=10, pady=10)
+        self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16))
+        self.cityNameLabel.grid(row=1, column=1, sticky=tk.E,padx=10, pady=10)
+
         tk.Label(bottomFrame, text="AQI:", font=("Arial", 14)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
-        self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16)).grid(row=2, column=1, sticky=tk.E,
-                                                                                       padx=10, pady=10)
+        self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16))
+        self.aqiLabel.grid(row=2, column=1, sticky=tk.E,padx=10, pady=10)
+
         tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 14)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
-        self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16)).grid(row=3, column=1, sticky=tk.E,
-                                                                                   padx=10, pady=10)
+        self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16))
+        self.pm25Label.grid(row=3, column=1, sticky=tk.E,padx=10, pady=10)
+
         tk.Label(bottomFrame, text="狀態:", font=("Arial", 14)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
-        self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16)).grid(row=4, column=1, sticky=tk.E,
-                                                                                      padx=10, pady=10)
+        self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16))
+        self.stateLabel.grid(row=4, column=1, sticky=tk.E,padx=10, pady=10)
 
         bottomFrame.pack(pady=20)
 
@@ -76,12 +82,12 @@ class Window(tk.Tk):
         # --------------建立視窗end-------------------#
 
         #-------------更新標題start---------#
-        self.updateWindowContent(self.currentDateTime,self.downloadTime,list(self.cities.keys()))
+        self.updateTopWindowContent(self.currentDateTime,self.downloadTime,list(self.cities.keys()))
         # -------------更新標題end---------#
 
-    def updateWindowContent(self,displayCurrent,downloadTime,cityNames):
+    def updateTopWindowContent(self,displayCurrent,downloadTime,cityNames):
         '''
-        更新畫面的內容
+        更新畫面上方的的內容
         :param displayCurrent: 觀測的時間(datetime物件)
         :param downloadTime: 現在下載的時間(datetime物件)
         :param cityNames:目前所有城市名程(list,包含城市名稱字串)
@@ -93,11 +99,27 @@ class Window(tk.Tk):
         self.comboBox.config(values=cityNames)
         self.comboBox.current(0) #預設選擇第一位
 
+    def updateBottomWindowContent(self,selectedCounty):
+        '''
+        更新視窗下半部內容
+        :param selectedCounty: 使用者選擇的城市string
+        :return:
+        '''
+        cityWeather = self.cities[selectedCounty]
+        self.siteNameLabel.config(text=cityWeather.siteName)
+        self.cityNameLabel.config(text=cityWeather.county)
+        self.aqiLabel.config(text=cityWeather.aqi)
+        self.pm25Label.config(text=cityWeather.pm25)
+        self.stateLabel.config(text=cityWeather.status)
+
 
     def combobox_selected(self,event):
         widget = event.widget
         comboBoxIndex = widget.current()
-        print(comboBoxIndex)
+        selectedCounty = self.comboboxText.get()
+        self.updateBottomWindowContent(selectedCounty)
+
+
 
 if __name__ == "__main__":
     window = Window()
