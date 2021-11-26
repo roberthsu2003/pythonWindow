@@ -1,5 +1,8 @@
 __all__ = ["getAirData"]
 
+import os
+
+
 class CityWeather():
     def __init__(self,siteName=None,county=None,aqi=None,pm25=None,status=None,time=None):
         self.siteName = siteName
@@ -33,7 +36,8 @@ def getAirData():
     except:
         raise ValueError("其它錯誤")
 
-    saveFile(response.text)
+    saveFile(response.text) #儲存檔案
+    getlastestFilePath() #取得最新儲存檔案的路徑
     originJson = response.json() #取得原始資料
     records = originJson["records"]
 
@@ -65,6 +69,15 @@ def saveFile(fileContent):
     file.write(fileContent)
     file.close()
     print("存檔完畢")
+
+def getlastestFilePath():
+    '''
+    取得data資料夾內最新的檔案
+    :return:傳出最新json檔的絕對路徑
+    '''
+    import os
+    folderName = "data"
+    print(os.listdir(folderName))
 
 
 
