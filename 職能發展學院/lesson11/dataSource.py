@@ -33,7 +33,7 @@ def getAirData():
     except:
         raise ValueError("其它錯誤")
 
-    print(response.text)
+    saveFile(response.text)
     originJson = response.json() #取得原始資料
     records = originJson["records"]
 
@@ -42,6 +42,17 @@ def getAirData():
     cities = [CityWeather(siteName=dict["SiteName"],county=dict["County"],aqi=dict["AQI"],pm25=dict["PM2.5"],status=dict["Status"],time=dict["ImportDate"]) for dict in records]
 
     return cities
+
+def saveFile(fileContent):
+    import os
+    from datetime import datetime
+    folderName = "data" #資料夾名稱
+    now = datetime.now()
+    fileName = f"{now.year}-{now.month}-{now.day}-{now.hour}-{now.minute}-{now.second}.json" #存檔的檔案名稱
+    savePath = f"./{folderName}/{fileName}"
+    absPath = os.path.abspath(savePath) #存檔的絕對路徑
+    print(absPath)
+
 
 
 
