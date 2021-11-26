@@ -54,27 +54,29 @@ class Window(tk.Tk):
 
         #建立下方的bottomFrame
         bottomFrame = tk.Frame(mainFrame,bg='#666666')
-        tk.Label(bottomFrame,text="監測點:",font=("Arial",16)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
-        self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16))
-        self.siteNameLabel.grid(row=0,column=1,sticky=tk.E,padx=10,pady=10)
+        bottomFrame.columnconfigure(0,weight=1)
+        bottomFrame.columnconfigure(1, weight=2)
+        tk.Label(bottomFrame,text="監測點:",font=("Arial",16),bg='#666666',fg='#ffffff').grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
+        self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16),bg='#666666',fg='#ffffff')
+        self.siteNameLabel.grid(row=0,column=1,sticky=tk.W,padx=10,pady=10)
 
-        tk.Label(bottomFrame, text="城市:", font=("Arial", 16)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
-        self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16))
-        self.cityNameLabel.grid(row=1, column=1, sticky=tk.E,padx=10, pady=10)
+        tk.Label(bottomFrame, text="城市:", font=("Arial", 16),bg='#666666',fg='#ffffff').grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
+        self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16),bg='#666666',fg='#ffffff')
+        self.cityNameLabel.grid(row=1, column=1, sticky=tk.W,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="AQI:", font=("Arial", 16)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
-        self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16))
-        self.aqiLabel.grid(row=2, column=1, sticky=tk.E,padx=10, pady=10)
+        tk.Label(bottomFrame, text="AQI:", font=("Arial", 16),bg='#666666',fg='#ffffff').grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
+        self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16),bg='#666666',fg='#ffffff')
+        self.aqiLabel.grid(row=2, column=1, sticky=tk.W,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 16)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
-        self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16))
-        self.pm25Label.grid(row=3, column=1, sticky=tk.E,padx=10, pady=10)
+        tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 16),bg='#666666',fg='#ffffff').grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
+        self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16),bg='#666666',fg='#ffffff')
+        self.pm25Label.grid(row=3, column=1, sticky=tk.W,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="狀態:", font=("Arial", 16)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
-        self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16))
-        self.stateLabel.grid(row=4, column=1, sticky=tk.E,padx=10, pady=10)
+        tk.Label(bottomFrame, text="狀態:", font=("Arial", 16),bg='#666666',fg='#ffffff').grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
+        self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16),bg='#666666',fg='#ffffff')
+        self.stateLabel.grid(row=4, column=1, sticky=tk.W,padx=10, pady=10)
 
-        bottomFrame.pack(pady=20,padx=50,fill=tk.X,anchor=tk.CENTER)
+        bottomFrame.pack(pady=20,padx=70,fill=tk.X,expand=tk.YES,anchor=tk.CENTER)
 
 
         mainFrame.pack_propagate(0)
