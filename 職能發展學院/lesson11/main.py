@@ -53,28 +53,28 @@ class Window(tk.Tk):
         middleFrame.pack(pady=20)
 
         #建立下方的bottomFrame
-        bottomFrame = tk.Frame(mainFrame)
-        tk.Label(bottomFrame,text="監測點:",font=("Arial",14)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
+        bottomFrame = tk.Frame(mainFrame,bg='#666666')
+        tk.Label(bottomFrame,text="監測點:",font=("Arial",16)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
         self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16))
         self.siteNameLabel.grid(row=0,column=1,sticky=tk.E,padx=10,pady=10)
 
-        tk.Label(bottomFrame, text="城市:", font=("Arial", 14)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
+        tk.Label(bottomFrame, text="城市:", font=("Arial", 16)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
         self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16))
         self.cityNameLabel.grid(row=1, column=1, sticky=tk.E,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="AQI:", font=("Arial", 14)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
+        tk.Label(bottomFrame, text="AQI:", font=("Arial", 16)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
         self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16))
         self.aqiLabel.grid(row=2, column=1, sticky=tk.E,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 14)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
+        tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 16)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
         self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16))
         self.pm25Label.grid(row=3, column=1, sticky=tk.E,padx=10, pady=10)
 
-        tk.Label(bottomFrame, text="狀態:", font=("Arial", 14)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
+        tk.Label(bottomFrame, text="狀態:", font=("Arial", 16)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
         self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16))
         self.stateLabel.grid(row=4, column=1, sticky=tk.E,padx=10, pady=10)
 
-        bottomFrame.pack(pady=20)
+        bottomFrame.pack(pady=20,padx=50,fill=tk.X,anchor=tk.CENTER)
 
 
         mainFrame.pack_propagate(0)
@@ -98,6 +98,7 @@ class Window(tk.Tk):
         self.nextTimeLabel.config(text=updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
         self.comboBox.config(values=cityNames)
         self.comboBox.current(0) #預設選擇第一位
+        self.updateBottomWindowContent(cityNames[0])#預設選擇第一個城市
 
     def updateBottomWindowContent(self,selectedCounty):
         '''
