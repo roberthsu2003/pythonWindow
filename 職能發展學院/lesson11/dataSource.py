@@ -44,6 +44,10 @@ def getAirData():
     return cities
 
 def saveFile(fileContent):
+    '''
+    :param fileContent: 要儲存的文字內容
+    :return: None
+    '''
     import os
     from datetime import datetime
     folderName = "data" #資料夾名稱
@@ -51,7 +55,17 @@ def saveFile(fileContent):
     fileName = f"{now.year}-{now.month}-{now.day}-{now.hour}-{now.minute}-{now.second}.json" #存檔的檔案名稱
     savePath = f"./{folderName}/{fileName}"
     absPath = os.path.abspath(savePath) #存檔的絕對路徑
-    print(absPath)
+
+    #檢查有沒有資料夾, 沒有就建立資料夾
+    if not os.path.exists(folderName):
+        os.mkdir(folderName)
+
+    #儲存檔案
+    file = open(absPath,"wt",encoding="utf-8")
+    file.write(fileContent)
+    file.close()
+    print("存檔完畢")
+
 
 
 
