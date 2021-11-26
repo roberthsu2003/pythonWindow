@@ -12,18 +12,19 @@ class Window(tk.Tk):
 
         #--------------取得資料start-------------------#
         try:
-            self.cities = dataSource.getAirData()
+            citylist = dataSource.getAirData()
+            self.cities = {cityObject.county:cityObject for cityObject in citylist} #包存現在要顯示的資料,轉成dict,key=城市名,value=CityWeather的實體
         except ValueError as e:
             messagebox.showwarning("連線錯誤",e)
             self.destroy()
 
-        currentTimeString = self.cities[0].time #取得json內顯示的時間字串
-        self.currentDataTime = datetime.strptime(currentTimeString,"%Y-%m-%d %H:%M:%S.%f") #將字串轉為datetime物件
-        #保存目前顯示資料的datetime物件
-        print(self.currentDataTime)
+        currentTimeString = citylist[0].time #取得json內顯示的時間字串
+        self.currentDateTime = datetime.strptime(currentTimeString,"%Y-%m-%d %H:%M:%S.%f") #將字串轉為datetime物件,保存目前顯示資料的datetime物件
 
-        for city in self.cities: #self.cities是list,內容元素是CityWeather的實體
-            print(city.county)
+        print(self.currentDateTime)
+        print(self.cities)
+
+
         # --------------取得資料end-------------------#
 
         # --------------建立視窗start-------------------#
