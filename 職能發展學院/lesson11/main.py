@@ -45,11 +45,30 @@ class Window(tk.Tk):
 
         #建立中間的middleFrame
         middleFrame = tk.Frame(mainFrame)
-        tk.Label(middleFrame,text="請選擇監測站:",font=("arial",16),fg="#555555").pack(side=tk.LEFT)
-        self.comboBox = ttk.Combobox(middleFrame)
+        tk.Label(middleFrame,text="請選擇監測站:",font=("arial",20),fg="#555555").pack(side=tk.LEFT)
+        self.comboBox = ttk.Combobox(middleFrame,font=("arial",20))
         self.comboBox.pack(side=tk.LEFT)
         self.comboBox.bind('<<ComboboxSelected>>', self.combobox_selected)
         middleFrame.pack(pady=20)
+
+        #建立下方的bottomFrame
+        bottomFrame = tk.Frame(mainFrame)
+        tk.Label(bottomFrame,text="監測點:",font=("Arial",14)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
+        self.siteNameLabel = tk.Label(bottomFrame,text="監測點",font=("Arial",16)).grid(row=0,column=1,sticky=tk.E,padx=10,pady=10)
+        tk.Label(bottomFrame, text="城市:", font=("Arial", 14)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
+        self.cityNameLabel = tk.Label(bottomFrame, text="城市", font=("Arial", 16)).grid(row=1, column=1, sticky=tk.E,
+                                                                                        padx=10, pady=10)
+        tk.Label(bottomFrame, text="AQI:", font=("Arial", 14)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
+        self.aqiLabel = tk.Label(bottomFrame, text="AQI", font=("Arial", 16)).grid(row=2, column=1, sticky=tk.E,
+                                                                                       padx=10, pady=10)
+        tk.Label(bottomFrame, text="PM2.5:", font=("Arial", 14)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
+        self.pm25Label = tk.Label(bottomFrame, text="PM2.5", font=("Arial", 16)).grid(row=3, column=1, sticky=tk.E,
+                                                                                   padx=10, pady=10)
+        tk.Label(bottomFrame, text="狀態:", font=("Arial", 14)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
+        self.stateLabel = tk.Label(bottomFrame, text="狀態", font=("Arial", 16)).grid(row=4, column=1, sticky=tk.E,
+                                                                                      padx=10, pady=10)
+
+        bottomFrame.pack(pady=20)
 
 
         mainFrame.pack_propagate(0)
