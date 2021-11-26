@@ -79,13 +79,14 @@ def getlastestFilePath():
     import os
     from datetime import datetime
     folderName = "data"
-    #取得data內檔案名稱的list
-    fileNames = os.listdir(folderName)
-    datetimeList = [datetime.strptime(fileName,"%Y-%m-%d-%H-%M-%S.json") for fileName in fileNames]
-    datetimeList.sort(reverse=True)
-    lestestDateTime = datetimeList[0]
+
+    fileNames = os.listdir(folderName)  #取得data資料夾內檔案名稱的list
+    datetimeList = [datetime.strptime(fileName,"%Y-%m-%d-%H-%M-%S.json") for fileName in fileNames] #建立list,裏面是datatime物件
+    datetimeList.sort(reverse=True) #排序datatimes物件，由大到小
+    lestestDateTime = datetimeList[0] #取出最新的dateTime物件
+    #透過datatime物件建立檔案名稱
     fileName = f"{lestestDateTime.year}-{lestestDateTime.month}-{lestestDateTime.day}-{lestestDateTime.hour}-{lestestDateTime.minute}-{lestestDateTime.second}.json"
-    absFileName=os.path.abspath(f"{folderName}/{fileName}")
+    absFileName=os.path.abspath(f"{folderName}/{fileName}") #取出最新檔案的絕對路徑
     return absFileName
 
 
