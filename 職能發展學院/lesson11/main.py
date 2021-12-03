@@ -96,17 +96,24 @@ class Window(tk.Tk):
         :return:
         '''
         self.currentTimeLabel.config(text=displayCurrent.strftime("觀測時間:%Y年%m月%d日--%H時%M分%S秒"))
-        updateTime = downloadTime + timedelta(minutes=30);
+        self.updateTime = downloadTime + timedelta(minutes=30);
+
         #測試datetime-datetime
-        remainTime = updateTime - datetime.now() #下載時間 - 現在既時時間
-        remainSeconds=remainTime.seconds
-        remainMinutes = remainSeconds // 60
-        remainSeconds1 = remainSeconds % 60
-        print(f"{remainMinutes}分,{remainSeconds1}秒")
-        self.nextTimeLabel.config(text=updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
+
+        self.updatePersecond()
+
+        self.nextTimeLabel.config(text=self.updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
         self.comboBox.config(values=cityNames)
         self.comboBox.current(0) #預設選擇第一位
         self.updateBottomWindowContent(cityNames[0])#預設選擇第一個城市
+
+    def updatePersecond(self):
+        remainTime = self.updateTime - datetime.now()  # 下載時間 - 現在既時時間 #timeDelta實體
+        remainSeconds = remainTime.seconds #取出秒數
+        remainMinutes = remainSeconds // 60 #轉換為分鐘
+        remainSeconds1 = remainSeconds % 60 #轉換為剩餘秒數
+        print(f"{remainMinutes}分,{remainSeconds1}秒")
+        self.after(1000,self.updatePersecond)
 
     def updateBottomWindowContent(self,selectedCounty):
         '''
