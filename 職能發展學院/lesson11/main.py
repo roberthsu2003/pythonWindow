@@ -23,8 +23,8 @@ class Window(tk.Tk):
 
         self.currentDateTime = datetime.strptime(currentTimeString,"%Y-%m-%d %H:%M:%S.%f") #將字串轉為datetime物件,保存目前顯示資料的datetime物件
 
-        print(self.currentDateTime)
-        print(self.cities)
+        #print(self.currentDateTime)
+        #print(self.cities)
         # --------------取得資料end-------------------#
 
 
@@ -97,6 +97,12 @@ class Window(tk.Tk):
         '''
         self.currentTimeLabel.config(text=displayCurrent.strftime("觀測時間:%Y年%m月%d日--%H時%M分%S秒"))
         updateTime = downloadTime + timedelta(minutes=30);
+        #測試datetime-datetime
+        remainTime = updateTime - datetime.now() #下載時間 - 現在既時時間
+        remainSeconds=remainTime.seconds
+        remainMinutes = remainSeconds // 60
+        remainSeconds1 = remainSeconds % 60
+        print(f"{remainMinutes}分,{remainSeconds1}秒")
         self.nextTimeLabel.config(text=updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
         self.comboBox.config(values=cityNames)
         self.comboBox.current(0) #預設選擇第一位
