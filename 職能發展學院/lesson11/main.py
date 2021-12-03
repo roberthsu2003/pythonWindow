@@ -6,11 +6,7 @@ from datetime import datetime,timedelta
 
 class Window(tk.Tk):
 
-    def __init__(self):
-        super().__init__()
-        self.title("全省空氣品質指標")
-
-        #--------------取得資料start-------------------#
+    def getInternetData(self):
         try:
             self.downloadTime = datetime.now()
             citylist = dataSource.getAirData()
@@ -19,12 +15,20 @@ class Window(tk.Tk):
             messagebox.showwarning("連線錯誤",e)
             self.destroy()
 
-        currentTimeString = citylist[0].time #取得json內顯示的時間字串
+        currentTimeString = citylist[0].time  # 取得json內顯示的時間字串
 
-        self.currentDateTime = datetime.strptime(currentTimeString,"%Y-%m-%d %H:%M:%S.%f") #將字串轉為datetime物件,保存目前顯示資料的datetime物件
+        self.currentDateTime = datetime.strptime(currentTimeString,
+                                                 "%Y-%m-%d %H:%M:%S.%f")  # 將字串轉為datetime物件,保存目前顯示資料的datetime物件
 
-        #print(self.currentDateTime)
-        #print(self.cities)
+
+    def __init__(self):
+        super().__init__()
+        self.title("全省空氣品質指標")
+
+        #--------------取得資料start-------------------#
+
+        self.getInternetData()
+
         # --------------取得資料end-------------------#
 
 
@@ -96,19 +100,24 @@ class Window(tk.Tk):
         :return:
         '''
         self.currentTimeLabel.config(text=displayCurrent.strftime("觀測時間:%Y年%m月%d日--%H時%M分%S秒"))
-        self.updateTime = downloadTime + timedelta(minutes=30);
-
-        #測試datetime-datetime
-
+        self.updateTime = downloadTime + timedelta(minutes=1);
         self.updatePersecond()
-
         self.nextTimeLabel.config(text=self.updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
         self.comboBox.config(values=cityNames)
         self.comboBox.current(0) #預設選擇第一位
         self.updateBottomWindowContent(cityNames[0])#預設選擇第一個城市
 
     def updatePersecond(self):
+        '''
+        每隔1秒執行1次
+        時間到時，重新下載,更新畫面，更新self.updateTime
+        :return:
+        '''
         remainTime = self.updateTime - datetime.now()  # 下載時間 - 現在既時時間 #timeDelta實體
+        if remainTime.seconds <= 0:
+            self.getInternetData() #重新下載資料
+            print('時間到了')
+
         remainSeconds = remainTime.seconds #取出秒數
         remainMinutes = remainSeconds // 60 #轉換為分鐘
         remainSeconds1 = remainSeconds % 60 #轉換為剩餘秒數
