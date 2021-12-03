@@ -100,7 +100,7 @@ class Window(tk.Tk):
         :return:
         '''
         self.currentTimeLabel.config(text=displayCurrent.strftime("觀測時間:%Y年%m月%d日--%H時%M分%S秒"))
-        self.updateTime = downloadTime + timedelta(minutes=1);
+        self.updateTime = downloadTime + timedelta(minutes=10);
         self.updatePersecond()
         self.nextTimeLabel.config(text=self.updateTime.strftime("下次更新時間:%Y年%m月%d日--%H時%M分%S秒"))
         self.comboBox.config(values=cityNames)
@@ -109,19 +109,21 @@ class Window(tk.Tk):
 
     def updatePersecond(self):
         '''
-        每隔1秒執行1次
-        時間到時，重新下載,更新畫面，更新self.updateTime
+        每隔1秒執行1次,更新self.leftTimeLabel的text
+        時間到時，重新下載,更新畫面，取消self.updateTime
         :return:
         '''
         remainTime = self.updateTime - datetime.now()  # 下載時間 - 現在既時時間 #timeDelta實體
         if remainTime.seconds <= 0:
             self.getInternetData() #重新下載資料
+            self.updateTopWindowContent(self.currentDateTime,self.downloadTime,list(self.cities.keys())) #更新上方畫面
             print('時間到了')
+            return #取消self.updateTime
 
         remainSeconds = remainTime.seconds #取出秒數
         remainMinutes = remainSeconds // 60 #轉換為分鐘
         remainSeconds1 = remainSeconds % 60 #轉換為剩餘秒數
-        print(f"{remainMinutes}分,{remainSeconds1}秒")
+        self.leftTimeLabel.config(text=f"剩餘:{remainMinutes}分,{remainSeconds1}秒")
         self.after(1000,self.updatePersecond)
 
     def updateBottomWindowContent(self,selectedCounty):
