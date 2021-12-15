@@ -1,8 +1,8 @@
 # 實際案例
 
-1. [顯示表格資料使用CSV](./code/sample1_displayCSV_Grid.py)
+1. [1顯示表格資料使用CSV](./1顯示表格資料使用CSV/sample1_displayCSV_Grid.py)
 
-![顯示表格資料](./images/pic1.png)
+![顯示表格資料使用CSV](./images/pic1.png)
 
 ---
 
@@ -19,7 +19,7 @@
 ---
 
 
-2. [顯示表格資料使用sqlite](./code/sample2_displayTable_sqlite.py)
+2. [顯示表格資料使用sqlite](./2顯示表格資料使用sqlite/sample2_displayTable_sqlite.py)
 
 ![顯示表格資料](./images/pic1.png)
 
@@ -38,14 +38,14 @@
 
 
 
-4. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](./code/sample4_displayOneRow_listbox.py)
+4. [建立ListBox+ScrollBar和Convas+ScrollBar,顯示單筆資料](./4listBox_ScrollBar_Convas/sample4_displayOneRow_listbox.py)
 > 注意:必需先學習Convas的使用方法
 
 ![](./images/pic2.png)
 
 ---
 
-5. [使用Treeview建立表格資料和TopLevel的操控](./code/sample5_displayTable_TreeView_topLevel.py)
+5. [使用Treeview建立表格資料和TopLevel的操控](./5treeView_topLevel/sample5_displayTable_TreeView_topLevel.py)
 
 ![](./images/pic4.png)
 
@@ -53,7 +53,7 @@
 
 ---
 
-6. [使用Treeview建立表格資料和自訂Dialog類別](./code/sample6_displayTable_TreeView_Dialog.py)
+6. [使用Treeview建立表格資料和自訂Dialog類別](./6treeview和自訂Dialog類別/sample6_displayTable_TreeView_Dialog.py)
 
 ![](./images/pic4.png)
 
@@ -61,13 +61,13 @@
 
 ---
 
-7-1. [顯示政府開放平台空氣品質指標簡易版](./code/sample8_顯示目前空氣品質.py)
+7-1. [顯示政府開放平台空氣品質指標簡易版](./7顯示政府開放平台空氣品質指標簡易版/sample8_顯示目前空氣品質.py)
 
 ![](./images/pic7.png)
 
 ---
 
-7-2. [顯示政府開放平台空氣品質指標正式版](./code/sample9_空氣品質指標正式版.py)
+7-2. [顯示政府開放平台空氣品質指標正式版](./7-2顯示政府開放平台空氣品質指標正式版/sample9_空氣品質指標正式版.py)
 
 ![](./images/pic8.png)
 
