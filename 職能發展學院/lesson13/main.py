@@ -1,12 +1,12 @@
 from datasource import getStockInfo
 import tkinter as tk
-
-#stockInfo = getStockInfo("2330") #股票資料StockInfo的實體
-#print(stockInfo)
+from threading import Timer
 
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        #建立Timer的實體,一開始設為None,未來可以判斷,如果是None,代表目前沒有重覆執行
+        self.timer = None
 
         #-----------建立title----------
         self.title("股票成交價及時查詢系統")
@@ -72,6 +72,7 @@ class Window(tk.Tk):
         mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
 
     def getStockID(self):
+        print("執行")
         inputID = self.stockIDEntry.get()
         stockInfo = getStockInfo(inputID)  # 股票資料StockInfo的實體
         print(stockInfo)
@@ -85,6 +86,12 @@ class Window(tk.Tk):
         self.differentPriceLabel.config(text=stockInfo.differentPrice)
         self.differentPercentLabel.config(text=stockInfo.differentPercent)
         self.dealCountLabel.config(text=stockInfo.dealCount)
+
+        #第一次執行時,不需要取消執行,第2次執行要取消重覆執行,再建立新的重覆執行(因為按搜尋按鈕多次)
+        if self.timer is not None:
+            self.timer.cancel() #取消重覆執行
+        self.timer=Timer(20,self.getStockID)
+        self.timer.start()
 
 if __name__ == "__main__":
     window = Window()
