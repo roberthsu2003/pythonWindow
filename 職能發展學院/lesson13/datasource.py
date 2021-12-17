@@ -19,8 +19,19 @@ __all__ = ["getStockInfo"]
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))  #初始化webdriver
 
+class StockInfo():
+    def __init__(self):
+        self.title = None
 
 def getStockInfo(odd_number):
+    """
+    收集台灣證券交易所的資料,一次只收集一支股票的及時資料
+    :param odd_number: 股票的編號:string
+    :return: StockInfo的實體
+    """
+    #建立一個收集資料內容的StockInfo實體
+    stackInfo = StockInfo()
+    #連結網址
     url = f"https://mis.twse.com.tw/stock/fibest.jsp?stock={odd_number}"
 
     # 舊版
@@ -42,7 +53,7 @@ def getStockInfo(odd_number):
     title = soup.find('label', {'id': f'{odd_number}_n', 'class': 'title'}).string
 
     # title = soup.find(id=f'{odd_number}_n,class_=title).string #另一種寫法
-    print(title)
+    stackInfo.title = title
 
     # <td width="6%" class="oddObj" id="2330_v" align="center">23001</td>
     # 累紀成交量
@@ -97,3 +108,4 @@ def getStockInfo(odd_number):
     dealCount = soup.find('td', {'id': f'{odd_number}_tv'}).string
     print(f"成交量:{dealCount}")
     driver.close()
+    return stackInfo

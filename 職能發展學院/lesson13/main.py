@@ -1,5 +1,6 @@
 from datasource import getStockInfo
 
-getStockInfo("2330")
+stockInfo = getStockInfo("2330") #股票資料StockInfo的實體
+print(stockInfo.title)
 
 
