@@ -1,6 +1,7 @@
 from datasource import getStockInfo,closeDirver
 import tkinter as tk
 from threading import Timer
+from tkinter import messagebox
 
 class Window(tk.Tk):
     def __init__(self):
@@ -75,8 +76,9 @@ class Window(tk.Tk):
         print("執行")
         inputID = self.stockIDEntry.get()
         stockInfo = getStockInfo(inputID)  # 股票資料StockInfo的實體
-        if stockInfo.error:
-            print("連線發生誤")
+
+        if stockInfo.error: #error是檢查Webdriver是否錯誤,有錯就中斷
+            messagebox.showerror("錯誤","WebDriver有出錯")
             return
 
         print(stockInfo)
