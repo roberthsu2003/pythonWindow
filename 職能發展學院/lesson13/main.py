@@ -72,7 +72,9 @@ class Window(tk.Tk):
         mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
 
     def getStockID(self):
-        print("getStockID")
+        inputID = self.stockIDEntry.get()
+        stockInfo = getStockInfo(inputID)  # 股票資料StockInfo的實體
+        print(stockInfo)
 
 if __name__ == "__main__":
     window = Window()
