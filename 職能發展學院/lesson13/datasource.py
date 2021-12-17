@@ -17,7 +17,6 @@ from bs4 import BeautifulSoup
 
 __all__ = ["getStockInfo"]
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))  #初始化webdriver
 
 class StockInfo():
     '''
@@ -55,6 +54,8 @@ def getStockInfo(odd_number):
     :param odd_number: 股票的編號:string
     :return: StockInfo的實體
     """
+    #建立webdriver
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))  # 初始化webdriver
     #建立一個收集資料內容的StockInfo實體
     stackInfo = StockInfo()
     #連結網址
