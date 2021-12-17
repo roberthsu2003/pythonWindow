@@ -23,7 +23,53 @@ class Window(tk.Tk):
         submitButton = tk.Button(self.inputFrame,font=("Arial",15),text="搜尋",command=self.getStockID)
         submitButton.grid(row=0,column=2,sticky=tk.E)
         self.inputFrame.pack()
-        mainFrame.pack()
+
+
+        #-------------建立顯示畫面-----------------
+        self.listFrame = tk.Frame(mainFrame)
+
+        tk.Label(self.listFrame,text="公司名",font=("Arial",14)).grid(row=0,column=0,sticky=tk.E,padx=10,pady=10)
+        self.titleLabel = tk.Label(self.listFrame,text="",font=("Arial",14))
+        self.titleLabel.grid(row=0,column=1,sticky=tk.W,padx=10,pady=10)
+
+        tk.Label(self.listFrame, text="累紀成交量", font=("Arial", 14)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
+        self.total_oddLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.total_oddLabel.grid(row=1, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="開盤價", font=("Arial", 14)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
+        self.openPriceLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.openPriceLabel.grid(row=2, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="當日最高", font=("Arial", 14)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
+        self.highestLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.highestLabel.grid(row=3, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="當日最低", font=("Arial", 14)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
+        self.lowestLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.lowestLabel.grid(row=4, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="撮合時間", font=("Arial", 14)).grid(row=5, column=0, sticky=tk.E, padx=10, pady=10)
+        self.matchTimeLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.matchTimeLabel.grid(row=5, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="成交價", font=("Arial", 14)).grid(row=6, column=0, sticky=tk.E, padx=10, pady=10)
+        self.rightPriceLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.rightPriceLabel.grid(row=6, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="漲跌價差", font=("Arial", 14)).grid(row=7, column=0, sticky=tk.E, padx=10, pady=10)
+        self.differentPriceLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.differentPriceLabel.grid(row=7, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="漲跌(百分比)", font=("Arial", 14)).grid(row=8, column=0, sticky=tk.E, padx=10, pady=10)
+        self.differentPercentLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.differentPercentLabel.grid(row=8, column=1, sticky=tk.W, padx=10, pady=10)
+
+        tk.Label(self.listFrame, text="成交量", font=("Arial", 14)).grid(row=9, column=0, sticky=tk.E, padx=10,pady=10)
+        self.dealCountLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.dealCountLabel.grid(row=9, column=1, sticky=tk.W, padx=10, pady=10)
+        self.listFrame.pack()
+
+        mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
 
     def getStockID(self):
         print("getStockID")
