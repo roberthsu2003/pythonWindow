@@ -75,6 +75,16 @@ class Window(tk.Tk):
         inputID = self.stockIDEntry.get()
         stockInfo = getStockInfo(inputID)  # 股票資料StockInfo的實體
         print(stockInfo)
+        self.titleLabel.config(text=stockInfo.title)
+        self.total_oddLabel.config(text=stockInfo.total_odd)
+        self.openPriceLabel.config(text=stockInfo.openPrice)
+        self.highestLabel.config(text=stockInfo.highest)
+        self.lowestLabel.config(text=stockInfo.lowest)
+        self.matchTimeLabel.config(text=stockInfo.matchTime)
+        self.rightPriceLabel.config(text=stockInfo.rightPrice)
+        self.differentPriceLabel.config(text=stockInfo.differentPrice)
+        self.differentPercentLabel.config(text=stockInfo.differentPercent)
+        self.dealCountLabel.config(text=stockInfo.dealCount)
 
 if __name__ == "__main__":
     window = Window()
