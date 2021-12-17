@@ -20,8 +20,29 @@ __all__ = ["getStockInfo"]
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))  #初始化webdriver
 
 class StockInfo():
+    '''
+    title:title
+    total_odd:累紀成交量
+    openPrice:開盤價
+    highest:當日最高
+    lowest:當日最低
+    matchTime:撮合時間
+    rightPrice:成交價
+    differentPrice:漲跌價差
+    differentPercent:漲跌(百分比)
+    dealCount:成交量
+    '''
     def __init__(self):
         self.title = None
+        self.total_odd = None
+        self.openPrice = None
+        self.highest = None
+        self.lowest = None
+        self.matchTime = None
+        self.rightPrice = None
+        self.differentPrice = None
+        self.differentPercent = None
+        self.dealCount = None
 
 def getStockInfo(odd_number):
     """
@@ -59,36 +80,42 @@ def getStockInfo(odd_number):
     # 累紀成交量
     total_odd = soup.find('td', {'id': f'{odd_number}_v', 'class': 'oddObj'}).string
     print(f'累積成交量:{total_odd}')
+    stackInfo.total_odd = total_odd
 
     # 開盤價
     # <td width="6%" class="oddObj" id="2330_o" align="center" style="">614.00</td>
 
     openPrice = soup.find('td', {'id': f'{odd_number}_o', 'class': 'oddObj'}).string
     print(f"開盤價:{openPrice}")
+    stackInfo.openPrice = openPrice
 
     # 當日最高
     # <td width="6%" class="oddObj" id="2330_h" align="center">614.00</td>
 
     hightest = soup.find('td', {'id': f'{odd_number}_h', 'class': 'oddObj'}).string
     print(f"當日最高:{hightest}")
+    stackInfo.highest = hightest
 
     # 當日最低
     # <td width="6%" class="oddObj" id="2330_l" align="center">606.00</td>
 
     lowest = soup.find('td', {'id': f'{odd_number}_l', 'class': 'oddObj'}).string
     print(f"當日最低:{lowest}")
+    stackInfo.lowest = lowest
 
     # 撮合時間
     # <td id="2330_t" align="center">13:30:00</td>
 
     mathTime = soup.find('td', {'id': f'{odd_number}_t'}).string
     print(f"撮合時間:{mathTime}")
+    stackInfo.matchTime = mathTime
 
     # 成交價
     # <td id="2330_z" align="center" style="color: rgb(16, 80, 16);">608.00</td>
 
     rightPrice = soup.find('td', {'id': f'{odd_number}_z'}).string
     print(f"成交價:{rightPrice}")
+    stackInfo.rightPrice = rightPrice
 
     # 漲跌價差(百分比)
     # <td align="center">
@@ -98,14 +125,18 @@ def getStockInfo(odd_number):
 
     differentPrice = soup.find('label', {'id': f'{odd_number}_diff'}).string
     print(f"漲跌價差:{differentPrice}")
+    stackInfo.differentPrice = differentPrice
 
     differentPercent = soup.find('label', {'id': f'{odd_number}_pre'}).string
     print(f"漲跌(百分比):{differentPercent}")
+    stackInfo.differentPercent = differentPercent
 
     # 成交量
     # <td id="2330_tv" align="center">4610</td>
 
     dealCount = soup.find('td', {'id': f'{odd_number}_tv'}).string
+    stackInfo.dealCount = dealCount
+
     print(f"成交量:{dealCount}")
     driver.close()
     return stackInfo
