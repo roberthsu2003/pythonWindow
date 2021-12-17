@@ -75,6 +75,10 @@ class Window(tk.Tk):
         print("執行")
         inputID = self.stockIDEntry.get()
         stockInfo = getStockInfo(inputID)  # 股票資料StockInfo的實體
+        if stockInfo.error:
+            print("連線發生誤")
+            return
+
         print(stockInfo)
         self.titleLabel.config(text=stockInfo.title)
         self.total_oddLabel.config(text=stockInfo.total_odd)
