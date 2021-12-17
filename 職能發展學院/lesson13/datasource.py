@@ -80,6 +80,7 @@ def getStockInfo(odd_number):
     # driver = webdriver.Chrome(r"C:\Users\User\Downloads\chromedriver_win32\chromedriver")
     try:
         driver.get(url)
+        print("執行")
     except:
         stackInfo.error = True
         driver.close()
@@ -88,7 +89,13 @@ def getStockInfo(odd_number):
     # 等待一段時間
     time.sleep(2)
     # 等網頁DOM下載完後，最多等待5秒
-    WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, f'{odd_number}_z')))
+    try:
+        #股票號碼出錯，這裏會發出Exception
+        WebDriverWait(driver, 5).until(EC.presence_of_element_located((By.ID, f'{odd_number}_z')))
+    except:
+        stackInfo.error = True
+        driver.close()
+        return stackInfo
 
     # driver.find_element(By.ID,'btnChangeToOdd').click() #模擬使用者按這個按鈕
     webPageText = driver.page_source
