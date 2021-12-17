@@ -93,8 +93,21 @@ class Window(tk.Tk):
         self.timer=Timer(20,self.getStockID)
         self.timer.start()
 
+def closeWindow():
+    """
+    關閉應用程式,會執行這個function
+    關閉應用程式時,Timer實體要被關閉
+    :return: None
+    """
+    if window.timer is not None and window.timer.is_alive():
+        window.timer.cancel()
+    window.destroy()
+
+
+
 if __name__ == "__main__":
     window = Window()
+    window.protocol("WM_DELETE_WINDOW",closeWindow)
     window.mainloop()
 
 
