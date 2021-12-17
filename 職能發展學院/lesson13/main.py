@@ -1,4 +1,4 @@
-from datasource import getStockInfo
+from datasource import getStockInfo,closeDirver
 import tkinter as tk
 from threading import Timer
 
@@ -101,6 +101,8 @@ def closeWindow():
     """
     if window.timer is not None and window.timer.is_alive():
         window.timer.cancel()
+
+    closeDirver() #關閉driver
     window.destroy()
 
 

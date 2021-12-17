@@ -15,7 +15,7 @@ from selenium.webdriver.support import expected_conditions as EC
 import time
 from bs4 import BeautifulSoup
 
-__all__ = ["getStockInfo"]
+__all__ = ["getStockInfo","closeDirver"]
 
 
 class StockInfo():
@@ -46,7 +46,15 @@ class StockInfo():
     def __repr__(self):
         return f"title:{self.title},\ntotal_odd累紀成交量:{self.total_odd},\nopenPrice開盤價:{self.openPrice},\nhighest當日最高:{self.highest},\nlowest當日最低:{self.lowest}\nmatchTime撮合時間{self.matchTime}\nrightPrice成交價{self.rightPrice}\ndifferentPrice漲跌價差:{self.differentPrice}\ndifferentPercent漲跌(百分比):{self.differentPercent}\ndealCount成交量:{self.dealCount}"
 
+driver = None
 
+def closeDirver():
+    #應用程式關閉時,手動關閉driver
+    if driver is not None:
+        try:
+            driver.quit()
+        finally:
+            print("driver close")
 
 def getStockInfo(odd_number):
     """
@@ -55,6 +63,8 @@ def getStockInfo(odd_number):
     :return: StockInfo的實體
     """
     #建立webdriver
+
+    global driver
     driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))  # 初始化webdriver
     #建立一個收集資料內容的StockInfo實體
     stackInfo = StockInfo()
