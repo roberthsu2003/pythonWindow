@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/職能發展學院.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson11/data/2021-12-15-13-26-6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson11/dataSource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson11/lesson11_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson11/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson13/.ipynb_checkpoints/lesson13_1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson13/datasource.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson13/lesson13_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson13/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson14/index.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/datasource/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/datasource/population.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/datasource/各鄉鎮市區人口密度.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/dialog/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5_1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5_2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5_3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5_4.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson5/lesson5_5.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.ipynb_checkpoints/lesson7_1-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.ipynb_checkpoints/lesson7_2-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/.ipynb_checkpoints/lesson7_3-checkpoint.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/datasource/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/datasource/stackInfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/lesson7_1.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/lesson7_2.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/lesson7_3.ipynb" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/messageWindow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson7/messageWindow/display.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/datasource/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/datasource/stackInfo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/main.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/messageWindow/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/messageWindow/display.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson9/messageWindow/infoDisplay.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/README.pdf" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/S__343400450.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/S__343400452.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/answer.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/hw2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/ip_data.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/學生問題/query.csv" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectId" id="24wg4qMsSOJTEPaWIqEfUNkabmQ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../venv" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="" />
+      <created>1644546874906</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1644546874906</updated>
+    </task>
+    <servers />
+  </component>
+</project>
