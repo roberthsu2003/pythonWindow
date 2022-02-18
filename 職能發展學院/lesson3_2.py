@@ -13,9 +13,9 @@ class Window(tk.Tk):
         labelFont = tkFont.Font(family="Arial", size=30)
         label = ttk.Label(topFrame,text='Hello World',font=labelFont,anchor=tk.CENTER)
         label.pack(padx=20,pady=10)
-        leftbutton = ttk.Button(topFrame,text="確定")
+        leftbutton = ttk.Button(topFrame,text="確定",command=self.topLeftClick)
         leftbutton.pack(side=tk.LEFT,pady=10,ipady=10,padx=20)
-        rightbutton = ttk.Button(topFrame, text="取消")
+        rightbutton = ttk.Button(topFrame, text="取消",command=self.topRightClick)
         rightbutton.pack(side=tk.RIGHT, pady=10, ipady=10,padx=20)
         topFrame.pack(padx=10,pady=10)
 
@@ -28,6 +28,12 @@ class Window(tk.Tk):
         rightbutton1 = ttk.Button(buttonFrame, text="取消")
         rightbutton1.pack(side=tk.RIGHT, pady=10, ipady=10, padx=20)
         buttonFrame.pack(padx=10, pady=10)
+
+    def topLeftClick(self):
+        print("left click")
+
+    def topRightClick(self):
+        print("right click")
 
 
 
