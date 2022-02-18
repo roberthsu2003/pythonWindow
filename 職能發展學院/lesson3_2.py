@@ -35,7 +35,8 @@ class Window(tk.Tk):
     def topLeftClick(self):
         response = requests.get(urlpath)
         if response.status_code == 200:
-            print(response.json())
+            dataList = response.json()['records']
+        print(dataList)
 
 
     def topRightClick(self):
