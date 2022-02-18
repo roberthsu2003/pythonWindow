@@ -2,9 +2,11 @@
 """
 這是我的python_window範例
 """
+import tkinter as tk
 
 def createdWindow():
-    print("建立視窗")
+    window = tk.Tk()
+    window.mainloop()
 
 if __name__ == "__main__":
     createdWindow()
