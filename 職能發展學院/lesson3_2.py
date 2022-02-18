@@ -5,6 +5,9 @@
 import tkinter as tk
 import tkinter.font as tkFont
 from tkinter import ttk
+import requests
+
+urlpath = '	https://data.epa.gov.tw/api/v1/aqx_p_02?limit=1000&api_key=9be7b239-557b-4c10-9775-78cadfc555e9&sort=ImportDate%20desc&format=json'
 
 class Window(tk.Tk):
     def __init__(self):
@@ -30,7 +33,10 @@ class Window(tk.Tk):
         buttonFrame.pack(padx=10, pady=10)
 
     def topLeftClick(self):
-        print("left click")
+        response = requests.get(urlpath)
+        if response.status_code == 200:
+            print(response.json())
+
 
     def topRightClick(self):
         print("right click")
