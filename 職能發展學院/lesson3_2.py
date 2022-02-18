@@ -23,28 +23,28 @@ class Window(tk.Tk):
         topFrame.pack(padx=10,pady=10)
 
         buttonFrame = ttk.LabelFrame(self, text="下方顯示")
-        tree = ttk.Treeview(buttonFrame, columns=['site', 'county', 'pm25','date','unit'], show='headings')
-        tree.column('site', width=100, anchor='center')
-        tree.column('county', width=100, anchor='center')
-        tree.column('pm25', width=100, anchor='center')
-        tree.column('date', width=100, anchor='center')
-        tree.column('unit', width=100, anchor='center')
-        tree.heading('site', text='站點')
-        tree.heading('county', text='城市')
-        tree.heading('pm25', text='PM2.5')
-        tree.heading('date', text='日期')
-        tree.heading('unit', text='單位')
-        tree.insert('', 'end', values=['l1','l2','l3'])
-        tree.insert('', 'end', values=('o1','o2','o3'))
-        tree.insert('', 'end', values=('j1','j2','j3'))
-        tree.pack()
+        self.tree = ttk.Treeview(buttonFrame, columns=['site', 'county', 'pm25','date','unit'], show='headings')
+        self.tree.column('site', width=100, anchor='center')
+        self.tree.column('county', width=100, anchor='center')
+        self.tree.column('pm25', width=100, anchor='center')
+        self.tree.column('date', width=100, anchor='center')
+        self.tree.column('unit', width=100, anchor='center')
+        self.tree.heading('site', text='站點')
+        self.tree.heading('county', text='城市')
+        self.tree.heading('pm25', text='PM2.5')
+        self.tree.heading('date', text='日期')
+        self.tree.heading('unit', text='單位')
+        self.tree.pack()
+
         buttonFrame.pack(padx=10, pady=10)
 
     def topLeftClick(self):
         response = requests.get(urlpath)
         if response.status_code == 200:
             dataList = response.json()['records']
-        print(dataList)
+        for item in dataList:
+            print(item)
+            self.tree.insert('','end',values=list(item.values()))
 
 
     def topRightClick(self):
