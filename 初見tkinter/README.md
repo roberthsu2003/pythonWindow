@@ -1,5 +1,6 @@
 # 初見tkinter
 ## [說明文件](https://anzeljg.github.io/rin2/book2/2405/docs/tkinter/index.html)
+## [tkDoc說明文件](https://tkdocs.com/tutorial/index.html)
 ## Hello!World
 
 ```python
