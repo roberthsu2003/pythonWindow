@@ -9,7 +9,9 @@ def createdWindow():
     window = tk.Tk()
     window.configure(bg='white')
     window.title("我的第一個視窗")
-    #window.geometry('600x300+200+200')
+
+    window.geometry('300x300+200+200')
+
     window.resizable(False,False)
     mainFrame = tk.Frame(window)
     label = tk.Label(window, text="Hello World")
