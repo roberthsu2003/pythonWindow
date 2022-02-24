@@ -17,13 +17,14 @@ class Window(tk.Tk):
         cityvar = tk.StringVar()
         city_combobox = ttk.Combobox(self, textvariable=cityvar)
         city_combobox.pack(side=tk.LEFT)
-
+        city_combobox['values'] = cities
+        city_combobox.state(["readonly"])
         siteLabel = ttk.Label(self, text="站點:")
         siteLabel.pack(side=tk.LEFT, padx=(50, 0))
 
         site_listbox = tk.Listbox(self, height=10)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
-        print(cities)
+
 
 
 
