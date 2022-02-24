@@ -21,6 +21,22 @@ def create_connection(db_file):
 
     return conn
 
+def insert_db25(conn, values):
+    """
+    新增資料至projects資料庫
+    :param conn:Connection物件
+    :param project:tuple(加入至資料庫的內容)
+    :return:自動建立id的最後一筆
+    """
+    sql = ''' 
+    INSERT INTO pm25 (站點,城市,pm25,日期,單位)
+    VALUES (?,?,?,?,?)
+    '''
+    cursor = conn.cursor()
+    cursor.execute(sql, values)
+    conn.commit()
+
+
 def stringToFloat(s):
     try:
        return float(s)
@@ -35,6 +51,9 @@ def saveToDataBase(datas):
     '''
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
+    for item in datas:
+        print(item)
+
 
 def downloadData():
     response = requests.get(urlpath)
