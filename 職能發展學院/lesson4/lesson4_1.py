@@ -21,8 +21,14 @@ def create_connection(db_file):
 
     return conn
 
+def delete_table_pm25(conn):
+    sql = 'DROP TABLE pm25;'
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    conn.commit()
+
 def create_table_pm25(conn):
-    sql = '''
+    sql = ''' 
     CREATE TABLE IF NOT EXISTS pm25 (
 	id INTEGER PRIMARY KEY,
 	站點 TEXT,
@@ -34,6 +40,7 @@ def create_table_pm25(conn):
     '''
     cursor = conn.cursor()
     cursor.execute(sql)
+    conn.commit()
 
 def insert_pm25(conn, values):
     """
@@ -62,6 +69,7 @@ def saveToDataBase(datas):
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
     with conn:
+        delete_table_pm25(conn) #刪除資料表
         create_table_pm25(conn) #建立資料表
         for value in datas:
             insert_pm25(conn, value) #插入資料
