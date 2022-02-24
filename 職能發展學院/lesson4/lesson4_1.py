@@ -21,7 +21,21 @@ def create_connection(db_file):
 
     return conn
 
-def insert_db25(conn, values):
+def create_table_pm25(conn):
+    sql = '''
+    CREATE TABLE IF NOT EXISTS pm25 (
+	id INTEGER PRIMARY KEY,
+	站點 TEXT,
+	城市 TEXT,
+	pm25 REAL,
+	日期 TEXT,
+	單位 TEXT
+    );
+    '''
+    cursor = conn.cursor()
+    cursor.execute(sql)
+
+def insert_pm25(conn, values):
     """
     新增資料至projects資料庫
     :param conn:Connection物件
@@ -37,11 +51,7 @@ def insert_db25(conn, values):
     conn.commit()
 
 
-def stringToFloat(s):
-    try:
-       return float(s)
-    except:
-        return 999.0
+
 
 def saveToDataBase(datas):
     '''
@@ -51,11 +61,18 @@ def saveToDataBase(datas):
     '''
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
-    for value in datas:
-        insert_db25(conn, value)
+    with conn:
+        create_table_pm25(conn) #建立資料表
+        for value in datas:
+            insert_pm25(conn, value) #插入資料
 
 
 def downloadData():
+    def stringToFloat(s):
+        try:
+            return float(s)
+        except:
+            return 999.0
     response = requests.get(urlpath)
     if response.status_code == 200:
         print('下載成功')
