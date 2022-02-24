@@ -4,10 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson3_2.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson3_2.py" afterDir="false" />
-    </list>
+    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RunManager" selected="Python.lesson3_2">
     <configuration name="lesson3_1" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
@@ -217,7 +214,6 @@
       <updated>1645152748573</updated>
     </task>
     <task id="LOCAL-00018" summary="modify">
-
       <created>1645155846683</created>
       <option name="number" value="00018" />
       <option name="presentableId" value="LOCAL-00018" />
@@ -260,7 +256,6 @@
       <updated>1645167213981</updated>
     </task>
     <option name="localTasksCounter" value="24" />
-
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
