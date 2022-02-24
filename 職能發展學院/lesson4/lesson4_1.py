@@ -51,8 +51,8 @@ def saveToDataBase(datas):
     '''
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
-    for item in datas:
-        print(item)
+    for value in datas:
+        insert_db25(conn, value)
 
 
 def downloadData():
