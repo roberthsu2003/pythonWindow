@@ -5,9 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
-      <change afterPath="$PROJECT_DIR$/lesson4/lesson4.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4/lesson4_1.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/dataSource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lesson4/pm25.db" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/pm25.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/dataSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/dataSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lesson4/lesson4.py" beforeDir="false" afterPath="$PROJECT_DIR$/lesson4/lesson4.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -359,7 +358,14 @@
       <option name="project" value="LOCAL" />
       <updated>1645684750080</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="modify">
+      <created>1645686114197</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1645686114197</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
