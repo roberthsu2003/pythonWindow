@@ -4,7 +4,7 @@ from tkinter import font
 import dataSource
 
 class Window(tk.Tk):
-    def __init__(self):
+    def __init__(self,cities):
         super().__init__()
         #title_Font = font.nametofont('TkCaptionFont')
         title_Font = font.Font(family='Helvetica', size=20, weight='bold')
@@ -23,12 +23,14 @@ class Window(tk.Tk):
 
         site_listbox = tk.Listbox(self, height=10)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
+        print(cities)
 
 
 
 
 if __name__ == "__main__":
     dataSource.download_save_to_DataBase()
-    window = Window()
+    city_name_list = dataSource.get_city_name()
+    window = Window(city_name_list)
     window.title("PM2.5")
     window.mainloop()
