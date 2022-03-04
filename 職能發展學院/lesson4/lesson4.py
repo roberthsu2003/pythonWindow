@@ -43,7 +43,13 @@ class Window(tk.Tk):
         # 右邊容器==================end
 
         #下方容器===================start
-        tree = ttk.Treeview(self)
+        tree = ttk.Treeview(self,columns=('id','site','city','pm25','date','unit'),show='headings')
+        tree.heading('id',text="編號")
+        tree.heading('site', text="站點")
+        tree.heading('city', text="城市")
+        tree.heading('pm25', text="pm25")
+        tree.heading('date', text="日期")
+        tree.heading('unit', text="單位")
         tree.pack(side=tk.TOP)
         #下方容器===================end
 
