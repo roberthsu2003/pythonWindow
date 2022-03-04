@@ -23,7 +23,7 @@ class Window(tk.Tk):
         city_combobox['values'] = cities
         city_combobox.state(["readonly"])
         city_combobox.bind('<<ComboboxSelected>>', self.city_selected)
-        left_label_frame.pack(side=tk.LEFT,anchor=tk.N)
+        left_label_frame.pack(side=tk.LEFT,anchor=tk.N,fill=tk.X)
         #左邊容器==================end
 
         #右邊容器==================start
@@ -36,8 +36,13 @@ class Window(tk.Tk):
         site_listbox = tk.Listbox(right_label_frame, height=10,listvariable=self.choicesvar)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
         site_listbox.bind("<<ListboxSelect>>", self.site_selected)
-        right_label_frame.pack(side=tk.RIGHT)
+        right_label_frame.pack(side=tk.RIGHT,fill=tk.X)
         # 右邊容器==================end
+
+        #下方容器===================start
+        tree = ttk.Treeview(self)
+        tree.pack()
+        #下方容器===================end
 
     #comboboxbind的事件
     def city_selected(self,event):
