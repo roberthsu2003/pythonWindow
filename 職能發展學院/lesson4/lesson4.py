@@ -78,16 +78,11 @@ class Window(tk.Tk):
         self.tree.insert('',tk.END,values=siteInfo)
 
 
-
-
-
-
-
-
-
 if __name__ == "__main__":
     dataSource.download_save_to_DataBase()
     city_name_list = dataSource.get_city_name()
     window = Window(city_name_list)
     window.title("PM2.5")
     window.mainloop()
+    #https://www.youtube.com/watch?v=3h2-CNvxnCE&list=PLLVBR5MLJ8AX6Zjc7csNcq9ZD_qNs32IY
+    #https://www.youtube.com/watch?v=6MDZ7MZCCBk&list=PLLVBR5MLJ8AU7wxReVT-7FqaVXEfdkKsu
