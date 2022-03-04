@@ -17,23 +17,28 @@ class Window(tk.Tk):
         cityLabel = ttk.Label(left_label_frame, text="城市:")
         cityLabel.pack(side=tk.LEFT,padx=(50,0))
 
-        cityvar = tk.StringVar()
-        city_combobox = ttk.Combobox(left_label_frame, textvariable=cityvar)
+        self.cityvar = tk.StringVar()
+        city_combobox = ttk.Combobox(left_label_frame, textvariable=self.cityvar)
         city_combobox.pack(side=tk.LEFT)
         city_combobox['values'] = cities
         city_combobox.state(["readonly"])
-        left_label_frame.pack(side=tk.LEFT)
+        city_combobox.bind('<<ComboboxSelected>>', self.city_selected)
+        left_label_frame.pack(side=tk.LEFT,anchor=tk.N)
         #左邊容器==================end
 
         #右邊容器==================start
         right_label_frame = tk.LabelFrame(self, text="右邊容器",bg='blue')
         siteLabel = ttk.Label(right_label_frame, text="站點:")
-        siteLabel.pack(side=tk.LEFT, padx=(50, 0))
+        siteLabel.pack(side=tk.LEFT, padx=(50, 0),anchor=tk.N)
 
         site_listbox = tk.Listbox(right_label_frame, height=10)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
         right_label_frame.pack(side=tk.RIGHT)
         # 右邊容器==================end
+
+    def city_selected(self,event):
+        print(self.cityvar.get())
+
 
 
 
