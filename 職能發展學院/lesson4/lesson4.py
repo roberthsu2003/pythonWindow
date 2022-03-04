@@ -43,14 +43,20 @@ class Window(tk.Tk):
         # 右邊容器==================end
 
         #下方容器===================start
-        tree = ttk.Treeview(self,columns=('id','site','city','pm25','date','unit'),show='headings')
-        tree.heading('id',text="編號")
-        tree.heading('site', text="站點")
-        tree.heading('city', text="城市")
-        tree.heading('pm25', text="pm25")
-        tree.heading('date', text="日期")
-        tree.heading('unit', text="單位")
-        tree.pack(side=tk.TOP)
+        self.tree = ttk.Treeview(self,columns=('id','site','city','pm25','date','unit'),show='headings')
+        self.tree.heading('id',text="編號")
+        self.tree.heading('site', text="站點")
+        self.tree.heading('city', text="城市")
+        self.tree.heading('pm25', text="pm25")
+        self.tree.heading('date', text="日期")
+        self.tree.heading('unit', text="單位")
+        self.tree.column('id',width=100)
+        self.tree.column('site', width=100)
+        self.tree.column('city', width=100)
+        self.tree.column('pm25', width=100)
+        self.tree.column('date', width=100)
+        self.tree.column('unit', width=100)
+        self.tree.pack(side=tk.TOP)
         #下方容器===================end
 
     #comboboxbind的事件
@@ -66,7 +72,8 @@ class Window(tk.Tk):
             return
         site = event.widget.get(selectedIndex)
         siteInfo = dataSource.get_site_info(site)
-        print(siteInfo)
+        self.tree.insert('',tk.END,values=siteInfo.values())
+
 
 
 
