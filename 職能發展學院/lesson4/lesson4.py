@@ -72,7 +72,7 @@ class Window(tk.Tk):
             return
         site = event.widget.get(selectedIndex)
         siteInfo = dataSource.get_site_info(site)
-        self.tree.insert('',tk.END,values=siteInfo.values())
+        self.tree.insert('',tk.END,values=siteInfo)
 
 
 

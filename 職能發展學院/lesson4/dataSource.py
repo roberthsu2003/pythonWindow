@@ -137,4 +137,4 @@ def get_site_info(site):
     cursor = conn.cursor()
     cursor.execute(sql, (site,))
     rows = cursor.fetchone()
-    return {'id':rows[0], '站點':rows[1], '城市':rows[2], 'pm25':rows[3], '日期':rows[4], '單位':rows[5]}
+    return rows
