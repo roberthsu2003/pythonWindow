@@ -31,7 +31,13 @@ class Window(tk.Tk):
 
         #button_frame============start
         def betterClick():
-            print("better")
+            # 清除tree內容
+            for i in self.tree.get_children():
+                self.tree.delete(i)
+            records = dataSource.get_better()
+            for record in records:
+                self.tree.insert('', tk.END, values=record)
+
         button_frame = tk.Frame(left_label_frame)
         betterButton = tk.Button(button_frame,text="空氣較佳品質",command=betterClick)
         betterButton.pack(side=tk.LEFT)
@@ -95,6 +101,10 @@ class Window(tk.Tk):
 
     #listboxbind事件
     def site_selected(self,event):
+        # 清除tree內容
+        for i in self.tree.get_children():
+            self.tree.delete(i)
+
         selectedIndex = event.widget.curselection()
         if not selectedIndex:
             return

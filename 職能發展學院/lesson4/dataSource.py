@@ -138,3 +138,43 @@ def get_site_info(site):
     cursor.execute(sql, (site,))
     rows = cursor.fetchone()
     return rows
+
+
+def get_better():
+    conn = create_connection('pm25.db')
+    print("資料庫連線成功")
+    sql = '''
+        SELECT  *
+        FROM pm25
+        WHERE pm25 <= 35
+        '''
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    return rows
+
+def get_normal():
+    conn = create_connection('pm25.db')
+    print("資料庫連線成功")
+    sql = '''
+        SELECT  *
+        FROM pm25
+        WHERE pm25 BETWEEN 35 AND 53
+        '''
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    return rows
+
+def get_bad():
+    conn = create_connection('pm25.db')
+    print("資料庫連線成功")
+    sql = '''
+            SELECT  *
+            FROM pm25
+            WHERE pm25 > 53
+            '''
+    cursor = conn.cursor()
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    return rows
