@@ -15,15 +15,30 @@ class Window(tk.Tk):
         top_frame = tk.Frame(self)
         #左邊容器==================start
         left_label_frame = tk.LabelFrame(top_frame,text="左邊容器",background="red")
-        cityLabel = ttk.Label(left_label_frame, text="城市:")
+        #左上邊容器==================start
+        left_top_frame = tk.Frame(left_label_frame)
+        cityLabel = ttk.Label(left_top_frame, text="城市:")
         cityLabel.pack(side=tk.LEFT,padx=(50,0))
 
         self.cityvar = tk.StringVar()
-        city_combobox = ttk.Combobox(left_label_frame, textvariable=self.cityvar)
-        city_combobox.pack(side=tk.LEFT)
+        city_combobox = ttk.Combobox(left_top_frame, textvariable=self.cityvar)
+        city_combobox.pack()
         city_combobox['values'] = cities
         city_combobox.state(["readonly"])
         city_combobox.bind('<<ComboboxSelected>>', self.city_selected)
+        left_top_frame.pack()
+        # 左上邊容器=================end
+
+        #button_frame============start
+        button_frame = tk.Frame(left_label_frame)
+        betterButton = tk.Button(button_frame,text="空氣較佳品質")
+        betterButton.pack(side=tk.LEFT)
+        normalButton = tk.Button(button_frame, text="空氣一般品質")
+        normalButton.pack(side=tk.LEFT)
+        badButton = tk.Button(button_frame, text="空氣品質不佳")
+        badButton.pack(side=tk.LEFT)
+        button_frame.pack(pady=20)
+        # button_frame============end
         left_label_frame.pack(side=tk.LEFT,anchor=tk.N,fill=tk.X)
         #左邊容器==================end
         #上方容器==================end
@@ -84,5 +99,3 @@ if __name__ == "__main__":
     window = Window(city_name_list)
     window.title("PM2.5")
     window.mainloop()
-    #https://www.youtube.com/watch?v=3h2-CNvxnCE&list=PLLVBR5MLJ8AX6Zjc7csNcq9ZD_qNs32IY
-    #https://www.youtube.com/watch?v=6MDZ7MZCCBk&list=PLLVBR5MLJ8AU7wxReVT-7FqaVXEfdkKsu
