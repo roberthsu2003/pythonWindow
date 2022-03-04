@@ -48,6 +48,8 @@ class Window(tk.Tk):
     #listboxbind事件
     def site_selected(self,event):
         selectedIndex = event.widget.curselection()
+        if not selectedIndex:
+            return
         site = event.widget.get(selectedIndex)
         print(site)
 
