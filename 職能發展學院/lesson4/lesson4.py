@@ -30,12 +30,22 @@ class Window(tk.Tk):
         # 左上邊容器=================end
 
         #button_frame============start
+        def betterClick():
+            print("better")
         button_frame = tk.Frame(left_label_frame)
-        betterButton = tk.Button(button_frame,text="空氣較佳品質")
+        betterButton = tk.Button(button_frame,text="空氣較佳品質",command=betterClick)
         betterButton.pack(side=tk.LEFT)
-        normalButton = tk.Button(button_frame, text="空氣一般品質")
+
+        def normalClick():
+            print("normal")
+        normalButton = tk.Button(button_frame, text="空氣一般品質",command=normalClick)
         normalButton.pack(side=tk.LEFT)
-        badButton = tk.Button(button_frame, text="空氣品質不佳")
+
+
+        def badClick():
+            print("bad")
+
+        badButton = tk.Button(button_frame, text="空氣品質不佳",command=badClick)
         badButton.pack(side=tk.LEFT)
         button_frame.pack(pady=20)
         # button_frame============end
