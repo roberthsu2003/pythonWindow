@@ -11,9 +11,10 @@ class Window(tk.Tk):
         title_Font = font.Font(family='Helvetica', size=20, weight='bold')
         titleLabel = ttk.Label(self, text="台灣即時PM2.5",font=title_Font,anchor=tk.CENTER)
         titleLabel.pack(fill=tk.X, pady=20)
-
+        #上方容器
+        top_frame = tk.Frame(self)
         #左邊容器==================start
-        left_label_frame = tk.LabelFrame(self,text="左邊容器",background="red")
+        left_label_frame = tk.LabelFrame(top_frame,text="左邊容器",background="red")
         cityLabel = ttk.Label(left_label_frame, text="城市:")
         cityLabel.pack(side=tk.LEFT,padx=(50,0))
 
@@ -25,9 +26,11 @@ class Window(tk.Tk):
         city_combobox.bind('<<ComboboxSelected>>', self.city_selected)
         left_label_frame.pack(side=tk.LEFT,anchor=tk.N,fill=tk.X)
         #左邊容器==================end
+        #上方容器==================end
+        top_frame.pack()
 
         #右邊容器==================start
-        right_label_frame = tk.LabelFrame(self, text="右邊容器",bg='blue')
+        right_label_frame = tk.LabelFrame(top_frame, text="右邊容器",bg='blue')
         siteLabel = ttk.Label(right_label_frame, text="站點:")
         siteLabel.pack(side=tk.LEFT, padx=(50, 0),anchor=tk.N)
 
@@ -41,7 +44,7 @@ class Window(tk.Tk):
 
         #下方容器===================start
         tree = ttk.Treeview(self)
-        tree.pack()
+        tree.pack(side=tk.TOP)
         #下方容器===================end
 
     #comboboxbind的事件
