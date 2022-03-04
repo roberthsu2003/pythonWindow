@@ -123,3 +123,18 @@ def get_site_name(city):
     rows = cursor.fetchall()
     sites = [item[0] for item in rows]
     return sites
+
+
+def get_site_info(site):
+    conn = create_connection('pm25.db')
+    print("資料庫連線成功")
+    sql = '''
+        SELECT  *
+        FROM pm25
+        WHERE 站點=?
+        LIMIT 1
+        '''
+    cursor = conn.cursor()
+    cursor.execute(sql, (site,))
+    rows = cursor.fetchone()
+    return {'id':rows[0], '站點':rows[1], '城市':rows[2], 'pm25':rows[3], '日期':rows[4], '單位':rows[5]}

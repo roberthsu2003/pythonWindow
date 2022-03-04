@@ -51,7 +51,8 @@ class Window(tk.Tk):
         if not selectedIndex:
             return
         site = event.widget.get(selectedIndex)
-        print(site)
+        siteInfo = dataSource.get_site_info(site)
+        print(siteInfo)
 
 
 
