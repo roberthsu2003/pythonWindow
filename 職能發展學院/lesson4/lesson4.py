@@ -31,7 +31,9 @@ class Window(tk.Tk):
         siteLabel = ttk.Label(right_label_frame, text="站點:")
         siteLabel.pack(side=tk.LEFT, padx=(50, 0),anchor=tk.N)
 
-        site_listbox = tk.Listbox(right_label_frame, height=10)
+
+        self.choicesvar = tk.StringVar(value=[])
+        site_listbox = tk.Listbox(right_label_frame, height=10,listvariable=self.choicesvar)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
         right_label_frame.pack(side=tk.RIGHT)
         # 右邊容器==================end
@@ -40,7 +42,8 @@ class Window(tk.Tk):
     def city_selected(self,event):
         selectedCity = self.cityvar.get()
         sites = dataSource.get_site_name(selectedCity)
-        print(sites)
+        self.choicesvar.set(sites)
+
 
 
 

@@ -114,7 +114,7 @@ def get_site_name(city):
     conn = create_connection('pm25.db')
     print("資料庫連線成功")
     sql = '''
-    SELECT 站點
+    SELECT DISTINCT 站點
     FROM pm25
     WHERE 城市=?
     '''
