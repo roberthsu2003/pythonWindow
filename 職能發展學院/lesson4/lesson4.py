@@ -35,6 +35,7 @@ class Window(tk.Tk):
         self.choicesvar = tk.StringVar(value=[])
         site_listbox = tk.Listbox(right_label_frame, height=10,listvariable=self.choicesvar)
         site_listbox.pack(side=tk.LEFT,padx=(0,50),pady=(0,30))
+        site_listbox.bind("<<ListboxSelect>>", self.site_selected)
         right_label_frame.pack(side=tk.RIGHT)
         # 右邊容器==================end
 
@@ -43,6 +44,15 @@ class Window(tk.Tk):
         selectedCity = self.cityvar.get()
         sites = dataSource.get_site_name(selectedCity)
         self.choicesvar.set(sites)
+
+    #listboxbind事件
+    def site_selected(self,event):
+        selectedIndex = event.widget.curselection()
+        site = event.widget.get(selectedIndex)
+        print(site)
+
+
+
 
 
 
