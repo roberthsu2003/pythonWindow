@@ -109,3 +109,17 @@ def get_city_name():
         rows = cursor.fetchall()
         city_name_list = [row[0] for row in rows]
         return  city_name_list
+
+def get_site_name(city):
+    conn = create_connection('pm25.db')
+    print("資料庫連線成功")
+    sql = '''
+    SELECT 站點
+    FROM pm25
+    WHERE 城市=?
+    '''
+    cursor = conn.cursor()
+    cursor.execute(sql,(city,))
+    rows = cursor.fetchall()
+    sites = [item[0] for item in rows]
+    return sites

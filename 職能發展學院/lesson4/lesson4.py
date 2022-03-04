@@ -36,8 +36,11 @@ class Window(tk.Tk):
         right_label_frame.pack(side=tk.RIGHT)
         # 右邊容器==================end
 
+    #comboboxbind的事件
     def city_selected(self,event):
-        print(self.cityvar.get())
+        selectedCity = self.cityvar.get()
+        sites = dataSource.get_site_name(selectedCity)
+        print(sites)
 
 
 
