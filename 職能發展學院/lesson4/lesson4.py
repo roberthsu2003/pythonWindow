@@ -64,6 +64,9 @@ class Window(tk.Tk):
         selectedCity = self.cityvar.get()
         sites = dataSource.get_site_name(selectedCity)
         self.choicesvar.set(sites)
+        #清除tree內容
+        for i in self.tree.get_children():
+            self.tree.delete(i)
 
     #listboxbind事件
     def site_selected(self,event):
