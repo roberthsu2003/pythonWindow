@@ -109,4 +109,16 @@ def update_youbike_data():
         create_youbike_table(conn)
         replace_youbike_data(conn,datalist)
 
+'''
+SELECT sno as 站點編號,sna as 站點名稱,tot as 總容量,sbi as 可借,bemp as 可還,act as 狀態
+FROM youbike
+WHERE act = 1 AND sbi > 3 AND bemp >3
+'''
+
+'''
+SELECT count(*) as 正常數量
+FROM youbike
+WHERE act = 1 AND sbi > 3 AND bemp >3
+'''
+
 
