@@ -68,10 +68,8 @@ def create_youbike_table(conn):
 
 def update_youbike_data():
     datalist = download_youbike_data()
-    print(datalist)
     conn = create_connection('youbike.db')
     with conn:
-        create_connection(conn)
         create_youbike_table(conn)
 
 

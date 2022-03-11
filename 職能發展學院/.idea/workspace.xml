@@ -5,8 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youbikeTP/dataSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/dataSource.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youbikeTP/youbike.db" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/youbike.db" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -162,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644546874906</updated>
-    </task>
-    <task id="LOCAL-00009" summary="modify">
-      <created>1644561661066</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1644561661066</updated>
     </task>
     <task id="LOCAL-00010" summary="modify">
       <created>1644562851603</created>
@@ -506,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646964527836</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="modify">
+      <created>1646967620898</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1646967620898</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
