@@ -17,7 +17,9 @@ class Window(tk.Tk):
 class LeftLabelFrame(tk.LabelFrame):
     def __init__(self, *args , **kwargs):
         super().__init__(*args, **kwargs)
-        tk.Label(self, text="正常租借站點", font=("arial", 20)).pack()
+        topFrame = tk.Frame(self,background='gray')
+        tk.Label(topFrame, text="正常租借站點", font=("arial", 20)).pack(padx=10,pady=10)
+        topFrame.pack()
 
 class CenterLabelFrame(tk.LabelFrame):
     def __init__(self, *args , **kwargs):
