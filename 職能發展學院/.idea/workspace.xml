@@ -7,7 +7,6 @@
     <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/youbikeTP/dataSource.py" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/dataSource.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youbikeTP/youbike.py" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/youbike.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -163,13 +162,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644546874906</updated>
-    </task>
-    <task id="LOCAL-00008" summary="modify">
-      <created>1644560330767</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1644560330767</updated>
     </task>
     <task id="LOCAL-00009" summary="modify">
       <created>1644561661066</created>
@@ -507,7 +499,14 @@
       <option name="project" value="LOCAL" />
       <updated>1646963574356</updated>
     </task>
-    <option name="localTasksCounter" value="57" />
+    <task id="LOCAL-00057" summary="modify">
+      <created>1646964527836</created>
+      <option name="number" value="00057" />
+      <option name="presentableId" value="LOCAL-00057" />
+      <option name="project" value="LOCAL" />
+      <updated>1646964527836</updated>
+    </task>
+    <option name="localTasksCounter" value="58" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

@@ -1,7 +1,7 @@
 import requests
 from requests import ConnectionError,HTTPError,Timeout
 import sqlite3
-from sqlite3 import Error
+from sqlite3 import Error as sqlite3Error
 
 __all__ = ['update_youbike_data']
 
@@ -31,9 +31,47 @@ def download_youbike_data():
     return list(allData["retVal"].values())
 
 def create_connection(db_file):
-    pass;
+    conn = None
+    try:
+        conn = sqlite3.connect(db_file)
+    except sqlite3Error as e:
+        print("sqlite連線錯誤")
+        print(e)
+        return
+    return conn
+
+def create_youbike_table(conn):
+    sql = '''
+    CREATE TABLE IF NOT EXISTS youbike(
+    id INTEGER PRIMARY KEY,
+    sno TEXT NOT NULL,
+    sna TEXT NOT NULL,
+    tot INTEGER,
+    sbi INTEGER,
+    sarea TEXT,
+    mday TEXT,
+    lat REAL,
+    lng REAL,
+    ar TEXT,
+    bemp INTEGER,
+    act INTEGER,
+    UNIQUE (sno)
+);
+    '''
+
+    cursor = conn.cursor()
+    try:
+        cursor.execute(sql)
+    except sqlite3Error as e:
+        print(e)
+
 
 def update_youbike_data():
     datalist = download_youbike_data()
-    create_connection('youbike.db')
+    print(datalist)
+    conn = create_connection('youbike.db')
+    with conn:
+        create_connection(conn)
+        create_youbike_table(conn)
+
 
