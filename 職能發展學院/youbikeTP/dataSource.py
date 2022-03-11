@@ -23,4 +23,6 @@ def download_youbike_data():
         return
 
     allData = response.json()
-    print(allData)
+    #解析資料,傳出[{:}]
+    return list(allData["retVal"].values())
+
