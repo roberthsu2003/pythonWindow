@@ -1,5 +1,9 @@
 import requests
 from requests import ConnectionError,HTTPError,Timeout
+import sqlite3
+from sqlite3 import Error
+
+__all__ = ['update_youbike_data']
 
 def download_youbike_data():
     youbikeurl = "https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json"
@@ -25,4 +29,11 @@ def download_youbike_data():
     allData = response.json()
     #解析資料,傳出[{:}]
     return list(allData["retVal"].values())
+
+def create_connection(db_file):
+    pass;
+
+def update_youbike_data():
+    datalist = download_youbike_data()
+    create_connection('youbike.db')
 
