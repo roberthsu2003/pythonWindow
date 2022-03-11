@@ -66,10 +66,47 @@ def create_youbike_table(conn):
         print(e)
 
 
+def replace_youbike_data(conn,dataList):
+    from datetime import datetime
+    def change_mday_string_format(mday):
+        datetimeObject = datetime.strptime(mday,"%Y%m%d%H%M%S")
+        return datetimeObject.strftime("%Y-%m-%d %H:%M:%S")
+
+    sql = '''
+    INSERT or replace  INTO 
+    youbike(sno,sna,tot,sbi,sarea,mday,lat,lng,ar,bemp,act)
+    VALUES( ?,?,?,?,?,?,?,?,?,?,?)
+    '''
+
+    try:
+        curser = conn.cursor()
+        for item in dataList:
+            sno = item['sno']
+            sna = item['sna']
+            tot = int(item['tot'])
+            sbi = int(item['sbi'])
+            sarea = item['sarea']
+            mday = change_mday_string_format(item['mday']);
+            lat = float(item['lat'])
+            lng = float(item['lng'])
+            ar = item['ar']
+            bemp = int(item['bemp'])
+            act = int(item['act'])
+            curser.execute(sql,(sno,sna,tot,sbi,sarea,mday,lat,lng,ar,bemp,act))
+    except  sqlite3Error as e:
+        print(e)
+
+    conn.commit()
+
+
+
+
+
 def update_youbike_data():
     datalist = download_youbike_data()
     conn = create_connection('youbike.db')
     with conn:
         create_youbike_table(conn)
+        replace_youbike_data(conn,datalist)
 
 
