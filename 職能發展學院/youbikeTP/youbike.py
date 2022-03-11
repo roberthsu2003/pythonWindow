@@ -18,7 +18,9 @@ class LeftLabelFrame(tk.LabelFrame):
     def __init__(self, *args , **kwargs):
         super().__init__(*args, **kwargs)
         topFrame = tk.Frame(self,background='gray')
-        tk.Label(topFrame, text="正常租借站點", font=("arial", 20)).pack(padx=10,pady=10)
+        tk.Label(topFrame, text="正常租借站點", font=("arial", 20),background='gray',fg="white").pack(padx=10,pady=10)
+        normal_count = dataSource.get_count_of_normal()
+        tk.Label(topFrame, text=f"數量:{normal_count}",background='gray',fg='#ffffff', font=("arial",20)).pack(padx=10,pady=10)
         topFrame.pack()
 
 class CenterLabelFrame(tk.LabelFrame):
