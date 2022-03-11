@@ -34,6 +34,12 @@ class LeftLabelFrame(tk.LabelFrame):
         treeView.column('bemp',width=50)
         treeView.pack()
 
+        normal_list = dataSource.get_list_of_normal()
+        for item in normal_list:
+            treeView.insert('', 'end', values=item)
+
+
+
 class CenterLabelFrame(tk.LabelFrame):
     def __init__(self, *args , **kwargs):
         super().__init__(*args, **kwargs)
