@@ -1,6 +1,7 @@
 import dataSource
 import tkinter as tk
 from tkinter import ttk
+from datetime import datetime
 
 class Window(tk.Tk):
     def __init__(self):
@@ -24,9 +25,14 @@ class Window(tk.Tk):
 
     def update_data(self):
         dataSource.update_youbike_data()
+        now = datetime.now()
+        nowString = now.strftime("%Y-%m-%d %H:%M:%S")
         self.leftLabelFrame.update_screen()
+        self.leftLabelFrame.configure(text=nowString)
         self.rightLabelFrame.update_screen()
+        self.rightLabelFrame.configure(text=nowString)
         self.centerLabelFrame.update_screen()
+        self.centerLabelFrame.configure(text=nowString)
         self.after(60*1000,self.update_data)
 
 class LeftLabelFrame(tk.LabelFrame):
