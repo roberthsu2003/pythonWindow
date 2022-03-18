@@ -5,6 +5,7 @@ from tkinter import ttk
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        self.update_data()
         #上方的Frame=========start
         topFrame = tk.Frame(self,background='red')
         tk.Label(topFrame,text="台北市youbike即時監測系統",font=("arial",20)).pack()
@@ -13,6 +14,12 @@ class Window(tk.Tk):
         LeftLabelFrame(self,text="左邊的").grid(column=0,row=1,padx=20,pady=20)
         CenterLabelFrame(self,text="中間的").grid(column=1,row=1,padx=20,pady=20)
         RightLabelFrame(self,text="右邊的").grid(column=2, row=1, padx=20, pady=20)
+
+
+
+    def update_data(self):
+        dataSource.update_youbike_data()
+        self.after(60*1000,self.update_data)
 
 class LeftLabelFrame(tk.LabelFrame):
     def __init__(self, *args , **kwargs):
@@ -91,7 +98,7 @@ class RightLabelFrame(tk.LabelFrame):
             treeView.insert('', 'end', values=item)
 
 if __name__=="__main__":
-    dataSource.update_youbike_data()
+
     window = Window()
     window.title("台北市youbike及時監測資料")
     window.mainloop()
