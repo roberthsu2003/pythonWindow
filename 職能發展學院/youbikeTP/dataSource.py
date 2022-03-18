@@ -147,9 +147,39 @@ def get_list_of_normal():
     return rows
 
 
-'''
+def get_count_of_less_bike():
+    conn = create_connection(databasName )
+    sql = '''
+    SELECT count(*) as 正常數量
+    FROM youbike
+    WHERE act = 1 AND sbi <= 3 
+    '''
+    with conn:
+        cursor = conn.cursor()
+        try:
+            cursor.execute(sql)
+            row = cursor.fetchone()
+            print(row)
+        except sqlite3Error as e:
+            print(e)
+    return row[0]
 
-'''
+def get_list_of_less_bike():
+    conn = create_connection(databasName)
+    sql = '''
+        SELECT sna,tot,sbi,bemp
+        FROM youbike
+        WHERE act = 1 AND sbi <= 3 
+        '''
+    with conn:
+        cursor = conn.cursor()
+        try:
+            cursor.execute(sql)
+            rows = cursor.fetchall()
+            print(rows)
+        except sqlite3Error as e:
+            print(e)
+    return rows
 
 
 
