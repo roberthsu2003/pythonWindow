@@ -69,9 +69,9 @@ class RightLabelFrame(tk.LabelFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         topFrame = tk.Frame(self, background='gray')
-        tk.Label(topFrame, text="正常租借站點", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
-        normal_count = dataSource.get_count_of_normal()
-        tk.Label(topFrame, text=f"數量:{normal_count}", background='gray', fg='#ffffff', font=("arial", 20)).pack(padx=10,
+        tk.Label(topFrame, text="還車數量少於4台站點", font=("arial", 20), background='gray', fg="white").pack(padx=10, pady=10)
+        backspace_count = dataSource.get_count_of_less_back_space()
+        tk.Label(topFrame, text=f"數量:{backspace_count}", background='gray', fg='#ffffff', font=("arial", 20)).pack(padx=10,
                                                                                                                 pady=10)
         topFrame.pack(pady=20)
         treeView = ttk.Treeview(self, columns=('sna', 'tot', 'sbi', 'bemp'), show="headings")
@@ -86,8 +86,8 @@ class RightLabelFrame(tk.LabelFrame):
         treeView.column('bemp', width=50)
         treeView.pack()
 
-        normal_list = dataSource.get_list_of_normal()
-        for item in normal_list:
+        less_back_space_list = dataSource.get_list_of_less_back_space()
+        for item in less_back_space_list:
             treeView.insert('', 'end', values=item)
 
 if __name__=="__main__":
