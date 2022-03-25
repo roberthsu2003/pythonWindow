@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youbikeTP/youbike.db" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/youbike.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/youbikeTP/youbike.py" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/youbike.py" afterDir="false" />
-    </list>
+    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -168,13 +164,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644546874906</updated>
-    </task>
-    <task id="LOCAL-00029" summary="modify">
-      <created>1645681846345</created>
-      <option name="number" value="00029" />
-      <option name="presentableId" value="LOCAL-00029" />
-      <option name="project" value="LOCAL" />
-      <updated>1645681846345</updated>
     </task>
     <task id="LOCAL-00030" summary="modify">
       <created>1645683338994</created>
@@ -512,7 +501,14 @@
       <option name="project" value="LOCAL" />
       <updated>1647575219423</updated>
     </task>
-    <option name="localTasksCounter" value="78" />
+    <task id="LOCAL-00078" summary="modify">
+      <created>1648171346044</created>
+      <option name="number" value="00078" />
+      <option name="presentableId" value="LOCAL-00078" />
+      <option name="project" value="LOCAL" />
+      <updated>1648171346044</updated>
+    </task>
+    <option name="localTasksCounter" value="79" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
