@@ -6,7 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scraping/lesson1.ipynb" beforeDir="false" afterPath="$PROJECT_DIR$/scraping/lesson1.ipynb" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -167,13 +166,6 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1644546874906</updated>
-    </task>
-    <task id="LOCAL-00033" summary="modify">
-      <created>1645686712302</created>
-      <option name="number" value="00033" />
-      <option name="presentableId" value="LOCAL-00033" />
-      <option name="project" value="LOCAL" />
-      <updated>1645686712302</updated>
     </task>
     <task id="LOCAL-00034" summary="modify">
       <created>1645689815328</created>
@@ -511,7 +503,14 @@
       <option name="project" value="LOCAL" />
       <updated>1648173893709</updated>
     </task>
-    <option name="localTasksCounter" value="82" />
+    <task id="LOCAL-00082" summary="modify">
+      <created>1648176179875</created>
+      <option name="number" value="00082" />
+      <option name="presentableId" value="LOCAL-00082" />
+      <option name="project" value="LOCAL" />
+      <updated>1648176179875</updated>
+    </task>
+    <option name="localTasksCounter" value="83" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
