@@ -67,8 +67,6 @@ class LeftLabelFrame(tk.LabelFrame):
 
         print("L update")
 
-
-
 class CenterLabelFrame(tk.LabelFrame):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
