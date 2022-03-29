@@ -96,6 +96,13 @@
 
 ![](./簡易版youbike/images/pic1.png)
 
+9-2 [台北市youbike可停_可借_及時更新資訊](./台北市youbike1/youbike.py)
+
+ - 使用繼承LabelFrame,讓程式可讀性和維護更方便
+ - 使用TreeView
+ - 使用sqlite儲存資料,資料不會重覆,使用Replace
+
+![](./台北市youbike1/images/pic1.png)
 ---
 
 
