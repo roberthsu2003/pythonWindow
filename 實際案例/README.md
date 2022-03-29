@@ -101,6 +101,7 @@
  - 使用繼承LabelFrame,讓程式可讀性和維護更方便
  - 使用TreeView
  - 使用sqlite儲存資料,資料不會重覆,使用Replace
+ - 每隔10秒更新一次資料
 
 ![](./台北市youbike1/images/pic1.png)
 ---
