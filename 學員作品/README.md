@@ -45,3 +45,7 @@
 8. [劉清吉_存股輔助系統](./劉清吉_存股輔助系統/main.py)
 
 [影片展示](https://youtu.be/vc-Q13-tEk0)
+
+9. [彭瓊萱_股利與股東會紀念品資訊](./彭瓊萱_股利與股東會紀念品資訊/main.py)
+
+[影片展示](https://youtu.be/cyUrQzCWsm0)

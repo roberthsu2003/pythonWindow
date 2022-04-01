@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify" />
+    <list default="true" id="64c9b28a-3d1f-4be4-935d-f83cfebc6229" name="Changes" comment="modify">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/youbikeTP/youbike.db" beforeDir="false" afterPath="$PROJECT_DIR$/youbikeTP/youbike.db" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
