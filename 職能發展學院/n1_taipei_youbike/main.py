@@ -1,13 +1,18 @@
-def func1():
-    print("func1")
+import requests
 
-def func2():
-    print("func2")
+def get_youbike_data():
+    url = 'https://tcgbusfs.blob.core.windows.net/blobyoubike/YouBikeTP.json'
+    response = requests.get(url)
+    allData = response.json()
+    youbikeData = list(allData['retVal'].values())
+    return youbikeData
 
-def func3():
-    print("func3")
+
 
 if __name__ == "__main__":
-    func3()
-    func2()
-    func1()
+    youbikeData = get_youbike_data()
+    for siteInfo in youbikeData:
+        print(siteInfo['sna'])
+        print('可借:', siteInfo['sbi'])
+        print('可還:', siteInfo['bemp'])
+        print('========================')
