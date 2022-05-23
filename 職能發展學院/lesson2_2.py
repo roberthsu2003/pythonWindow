@@ -1,5 +1,8 @@
+import tkinter
+
 def main():
-    print("這是主程式,程式執行點")
+    window = tkinter.Tk()
+    window.mainloop()
 
 if __name__ == "__main__":
     main()
