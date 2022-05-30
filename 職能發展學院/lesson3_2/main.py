@@ -17,11 +17,12 @@ class Window(tk.Tk):
                 topFrame = tk.Frame(self, bg="#cccccc", borderwidth=2, relief="groove")
                 topFrame.pack(padx=20, pady=20)
             areaName = dataSource.AREA[i]
-            btn1 = tk.Button(topFrame, text=areaName, padx=20, pady=20,command=lambda :self.areaClick(areaName))
+            btn1 = tk.Button(topFrame, text=areaName, padx=20, pady=20)
+            btn1.bind('<Button-1>',self.areaClick)
             btn1.pack(side=tk.LEFT, padx=20, pady=20)
 
-    def areaClick(self,areaName):
-        print(areaName)
+    def areaClick(self,even):
+        print(even.widget["text"])
 
 
 if __name__ == "__main__":
