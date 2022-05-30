@@ -28,8 +28,8 @@ class Window(tk.Tk):
             if areaName == site['sarea']:
                 areaList.append(site)
 
-        print(areaList)
-        MapDialog(self,title=areaName)
+
+        MapDialog(self,title=areaName,info=areaList)
 
 
 
