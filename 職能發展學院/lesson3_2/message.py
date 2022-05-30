@@ -1,4 +1,5 @@
 from tkinter.simpledialog import Dialog
+import tkintermapview as tkmap
 
 class MapDialog(Dialog):
     def __init__(self, parent, title = None,info=None):
@@ -7,8 +8,12 @@ class MapDialog(Dialog):
 
 
     def body(self, master):
-        print("body")
-        print(self.info)
+        map_widget = tkmap.TkinterMapView(master,
+                                          width=800,
+                                          height=600,
+                                          corner_radius=0
+                                          )
+        map_widget.pack()
 
     def buttonbox(self):
         super().buttonbox()
