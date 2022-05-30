@@ -16,7 +16,9 @@ class Window(tk.Tk):
         topFrame.pack(padx=20,pady=20)
 
     def btn1Click(self):
-        dataSource.download()
+        youbikeList =dataSource.download()
+        for site in youbikeList:
+            print(site)
 
     def btn2Click(self):
         print("btn2 click")
