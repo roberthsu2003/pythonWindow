@@ -5,16 +5,14 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         topFrame = tk.Frame(self,bg="#cccccc",borderwidth=2,relief="groove")
-        i = 0
-        for area in dataSource.AREA:
-            if i == 0:
+        col = 4
+        for i in range(len(dataSource.AREA)):
+            if  i % col == 0:
                 topFrame = tk.Frame(self, bg="#cccccc", borderwidth=2, relief="groove")
                 topFrame.pack(padx=20, pady=20)
-            btn1 = tk.Button(topFrame, text=area, command=self.btn1Click, padx=20, pady=20)
+            btn1 = tk.Button(topFrame, text=dataSource.AREA[i], command=self.btn1Click, padx=20, pady=20)
             btn1.pack(side=tk.LEFT, padx=20, pady=20)
-            i += 1
-            if i == 4:
-                i=0
+
 
 
 
