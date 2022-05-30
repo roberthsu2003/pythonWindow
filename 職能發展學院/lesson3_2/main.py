@@ -7,7 +7,7 @@ class Window(tk.Tk):
         print(dataSource.DATA)
         titleFrame = tk.Frame(self, bg="#333333",borderwidth=2,relief=tk.SUNKEN,padx=50,pady=50)
         tk.Label(titleFrame,text="台北市youbike2.0即時資訊",bg="#333333",fg="#cccccc",font=('arial',20)).pack()
-        updateButton = tk.Button(titleFrame,text="立即更新",bg="#333333",fg="#333333",font=('arial',16),command=self.updateData)
+        updateButton = tk.Button(titleFrame,text="立即更新",bg="#333333",fg="#333333",font=('arial',16),command=lambda :dataSource.download())
         updateButton.pack(pady=(20,0))
         titleFrame.pack(pady=20)
 
@@ -21,13 +21,6 @@ class Window(tk.Tk):
 
 
 
-
-
-
-    def updateData(self):
-        youbikeList =dataSource.download()
-        for site in youbikeList:
-            print(site)
 
 
 
