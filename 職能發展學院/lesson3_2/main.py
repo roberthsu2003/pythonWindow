@@ -1,5 +1,6 @@
 import tkinter as tk
 import dataSource
+from message import MapDialog
 
 class Window(tk.Tk):
     def __init__(self):
@@ -28,6 +29,8 @@ class Window(tk.Tk):
                 areaList.append(site)
 
         print(areaList)
+        MapDialog(self,title=areaName)
+
 
 
 if __name__ == "__main__":
