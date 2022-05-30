@@ -4,14 +4,13 @@ import dataSource
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
-        print(dataSource.DATA)
         titleFrame = tk.Frame(self, bg="#333333",borderwidth=2,relief=tk.SUNKEN,padx=50,pady=50)
         tk.Label(titleFrame,text="台北市youbike2.0即時資訊",bg="#333333",fg="#cccccc",font=('arial',20)).pack()
         updateButton = tk.Button(titleFrame,text="立即更新",bg="#333333",fg="#333333",font=('arial',16),command=lambda :dataSource.download())
         updateButton.pack(pady=(20,0))
         titleFrame.pack(pady=20)
 
-        col = 4
+        col = 5
         for i in range(len(dataSource.AREA)):
             if  i % col == 0:
                 topFrame = tk.Frame(self, bg="#cccccc", borderwidth=2, relief="groove")
@@ -22,7 +21,13 @@ class Window(tk.Tk):
             btn1.pack(side=tk.LEFT, padx=20, pady=20)
 
     def areaClick(self,even):
-        print(even.widget["text"])
+        areaName = even.widget["text"]
+        areaList = []
+        for site in dataSource.DATA:
+            if areaName == site['sarea']:
+                areaList.append(site)
+
+        print(areaList)
 
 
 if __name__ == "__main__":
