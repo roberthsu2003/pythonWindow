@@ -1,4 +1,5 @@
 import tkinter as tk
+import dataSource
 
 class Window(tk.Tk):
     def __init__(self):
@@ -15,7 +16,7 @@ class Window(tk.Tk):
         topFrame.pack(padx=20,pady=20)
 
     def btn1Click(self):
-        print("btn1 click")
+        dataSource.download()
 
     def btn2Click(self):
         print("btn2 click")
