@@ -38,9 +38,17 @@ class MapDialog(Dialog):
         centerLat,centerLong = self.getCenter()
 
         map_widget.set_position(centerLat, centerLong)  # 台北市位置
-        map_widget.set_zoom(13)  # 設定顯示大小
+        map_widget.set_zoom(15)  # 設定顯示大小
         map_widget.pack()
-        #print(self.info)
+
+        #建立marker
+        for site in self.info:
+            marker = map_widget.set_marker(site['lat'],site['lng'],command=self.click1)
+            marker.data = site
+
+    def click1(self,marker):
+        marker.text = marker.data['sna']
+
 
 
     def buttonbox(self):
