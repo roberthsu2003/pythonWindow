@@ -30,24 +30,30 @@ class MapDialog(Dialog):
 
 
     def body(self, master):
-        map_widget = tkmap.TkinterMapView(master,
+        self.map_widget = tkmap.TkinterMapView(master,
                                           width=800,
                                           height=600,
                                           corner_radius=0
                                           )
         centerLat,centerLong = self.getCenter()
 
-        map_widget.set_position(centerLat, centerLong)  # 台北市位置
-        map_widget.set_zoom(15)  # 設定顯示大小
-        map_widget.pack()
+        self.map_widget.set_position(centerLat, centerLong)  # 台北市位置
+        self.map_widget.set_zoom(15)  # 設定顯示大小
+        self.map_widget.pack()
 
         #建立marker
         for site in self.info:
-            marker = map_widget.set_marker(site['lat'],site['lng'],command=self.click1)
+            marker = self.map_widget.set_marker(site['lat'],site['lng'],marker_color_outside='white',font=('arial',10),text=f"{site['sna']}\n可借:{site['sbi']}\n可還:{site['bemp']}",command=self.click1)
             marker.data = site
 
     def click1(self,marker):
+        '''
         marker.text = marker.data['sna']
+        marker.marker_color_outside='black'
+        self.map_widget.set_position(marker.data['lat'], marker.data['lng'])
+        '''
+
+
 
 
 
