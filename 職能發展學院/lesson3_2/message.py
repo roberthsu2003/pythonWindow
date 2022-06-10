@@ -1,5 +1,6 @@
 from tkinter.simpledialog import Dialog
 import tkintermapview as tkmap
+import tkinter as tk
 
 class MapDialog(Dialog):
     def __init__(self, parent, title = None,info=None):
@@ -16,7 +17,15 @@ class MapDialog(Dialog):
         map_widget.pack()
 
     def buttonbox(self):
-        super().buttonbox()
-        print("自訂按鈕區")
+        #super().buttonbox()
+        #自訂按鈕區
+        bottomFrame = tk.Frame(self)
+        closeButton = tk.Button(bottomFrame,text="關閉"+self.title()+"地圖",command=self.ok)
+        closeButton.pack()
+        bottomFrame.pack()
+
+
+    def ok(self, event=None):
+        super().ok()
 
 
