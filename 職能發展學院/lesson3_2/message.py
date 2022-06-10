@@ -14,6 +14,8 @@ class MapDialog(Dialog):
                                           height=600,
                                           corner_radius=0
                                           )
+        map_widget.set_position(25.038128318756307, 121.56306490172479)  # 台北市位置
+        map_widget.set_zoom(15)  # 設定顯示大小
         map_widget.pack()
 
     def buttonbox(self):
