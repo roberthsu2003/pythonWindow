@@ -20,8 +20,7 @@ class MapDialog(Dialog):
         #super().buttonbox()
         #自訂按鈕區
         bottomFrame = tk.Frame(self)
-        closeButton = tk.Button(bottomFrame,text="關閉"+self.title()+"地圖",command=self.ok)
-        closeButton.pack()
+        tk.Button(bottomFrame,text="關閉"+self.title()+"地圖",command=self.ok,padx=10,pady=10).pack(padx=10,pady=20)
         bottomFrame.pack()
 
 
