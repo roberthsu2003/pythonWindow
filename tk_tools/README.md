@@ -3,7 +3,7 @@
 - [參考文件](https://tk-tools.readthedocs.io/en/latest/)
 
 ```python
-$ pip install tk-tooks
+$ pip install tk-tools
 ```
 
 ## RotaryScale
