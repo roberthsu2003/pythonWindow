@@ -1,5 +1,6 @@
-from dataSource import getData
-from dataSource import driver
+import dataSource
+
+
 import tkinter as tk
 class Window(tk.Tk):
     def __init__(self):
@@ -52,7 +53,7 @@ class Window(tk.Tk):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
             self.currentStockID = inputID
-            title, t_odd, odd, diff_odd, percent_diff = getData(self.currentStockID)
+            title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
             self.companyLabel.configure(text=title)
             self.timeLabel.configure(text=t_odd)
             self.closeLabel.configure(text=odd)
@@ -64,8 +65,9 @@ class Window(tk.Tk):
 def closeWindow():
     print("close window")
     window.destroy()
-    driver.close()
-    driver.quit()
+    dataSource.driver.close()
+    dataSource.driver.quit()
+
 
 if __name__ == "__main__":
     window = Window()

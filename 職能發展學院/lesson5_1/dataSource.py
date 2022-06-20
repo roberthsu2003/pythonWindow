@@ -6,7 +6,7 @@ from bs4 import BeautifulSoup
 import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.set_window_position(x=-10000,y=-10000)
+driver.set_window_position(x=-10000, y=-10000)
 def getData(stock_number):
     url = "https://mis.twse.com.tw/stock/fibest.jsp?stock=" + stock_number
     try:
@@ -19,7 +19,10 @@ def getData(stock_number):
 
     driver.find_element(By.ID,"btnChangeToOdd").click()
     time.sleep(1)
+
     soup = BeautifulSoup(driver.page_source,'html.parser')
+    driver.close()
+    # driver.quit()
     title = soup.find(id=stock_number+"_n",class_="title").string
     t_odd = soup.find(id=stock_number+"_t_odd", class_="oddObj").string
     odd = soup.find(id=stock_number+"_z_odd", class_="oddObj").string
