@@ -20,16 +20,9 @@ def getData(stock_number):
     time.sleep(1)
     soup = BeautifulSoup(driver.page_source,'html.parser')
     title = soup.find(id=stock_number+"_n",class_="title").string
-    print(title)
     t_odd = soup.find(id=stock_number+"_t_odd", class_="oddObj").string
-    print(t_odd)
     odd = soup.find(id=stock_number+"_z_odd", class_="oddObj").string
-    print(odd)
-
-
-
-if __name__ == "__main__":
-    getData("2330")
-
-
+    diff_odd = soup.find(id=stock_number + "_diff_odd").string
+    percent_diff = soup.find(id=stock_number + "_pre_odd").string
+    return title,t_odd,odd,diff_odd,percent_diff
 
