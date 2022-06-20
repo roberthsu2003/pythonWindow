@@ -16,7 +16,12 @@ class Window(tk.Tk):
         tk.Label(self.inputFrame, text="輸入欲查詢的股票號碼:",font=('Arial',13)).grid(row=0,column=0,sticky=tk.E)
         self.stockIDentry  = tk.Entry(self.inputFrame,text=tk.StringVar(),bd=5)
         self.stockIDentry.grid(row=0, column=1, sticky=tk.E)
+        subminButton  = tk.Button(self.inputFrame, font=('Arial',15),text="搜尋",command=self.getStockID)
+        subminButton.grid(row=0, column=2, sticky=tk.E)
         self.inputFrame.pack()
+
+    def getStockID(self):
+        print("搜尋")
 
 def closeWindow():
     print("close window")
