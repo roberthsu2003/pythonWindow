@@ -25,6 +25,12 @@ class Window(tk.Tk):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
             self.currentStockID = inputID
+            title, t_odd, odd, diff_odd, percent_diff = getData(self.currentStockID)
+            print(title)
+            print(t_odd)
+            print(odd)
+            print(diff_odd)
+            print(percent_diff)
         elif self.currentStockID == "":
             print("不可以為空字串")
 
@@ -38,12 +44,7 @@ if __name__ == "__main__":
     window = Window()
     window.resizable(width=0,height=0)
     window.protocol("WM_DELETE_WINDOW",closeWindow)
-    title, t_odd, odd, diff_odd, percent_diff = getData("2330")
-    print(title)
-    print(t_odd)
-    print(odd)
-    print(diff_odd)
-    print(percent_diff)
+
     window.mainloop()
 
 
