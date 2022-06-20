@@ -6,10 +6,15 @@ import time
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 def getData(stock_number):
     url = "https://mis.twse.com.tw/stock/fibest.jsp?stock=" + stock_number
-    if driver.current_url == url:
-        driver.refresh()
-    else:
-        driver.get(url)
+    try:
+        if driver.current_url == url:
+            driver.refresh()
+        else:
+            driver.get(url)
+    except Exception as e:
+        print(f"伺服器發生錯誤:{e}")
+
+    driver.find_element_by_id("btnChangeToOdd").click()
 
 
 if __name__ == "__main__":
