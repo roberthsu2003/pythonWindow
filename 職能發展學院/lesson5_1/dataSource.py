@@ -21,8 +21,6 @@ def getData(stock_number):
     time.sleep(1)
 
     soup = BeautifulSoup(driver.page_source,'html.parser')
-    driver.close()
-    # driver.quit()
     title = soup.find(id=stock_number+"_n",class_="title").string
     t_odd = soup.find(id=stock_number+"_t_odd", class_="oddObj").string
     odd = soup.find(id=stock_number+"_z_odd", class_="oddObj").string
