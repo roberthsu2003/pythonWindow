@@ -6,6 +6,7 @@ from bs4 import BeautifulSoup
 import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+driver.set_window_position(x=-10000,y=-10000)
 def getData(stock_number):
     url = "https://mis.twse.com.tw/stock/fibest.jsp?stock=" + stock_number
     try:
