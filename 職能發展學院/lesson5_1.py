@@ -2,6 +2,7 @@ from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
 from selenium.webdriver.common.by import By
+from bs4 import BeautifulSoup
 import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -16,6 +17,9 @@ def getData(stock_number):
         print(f"伺服器發生錯誤:{e}")
 
     driver.find_element(By.ID,"btnChangeToOdd").click()
+    soup = BeautifulSoup(driver.page_source,'html.parser')
+    title = soup.find(id=stock_number+"_n",class_="title").string
+    print(title)
 
 
 if __name__ == "__main__":
