@@ -16,6 +16,8 @@ def getData(stock_number):
             driver.get(url)
     except Exception as e:
         print(f"伺服器發生錯誤:{e}")
+        raise Exception()
+
 
     driver.find_element(By.ID,"btnChangeToOdd").click()
     time.sleep(1)

@@ -1,5 +1,6 @@
 import dataSource
 from threading import Timer
+from tkinter import messagebox
 
 
 import tkinter as tk
@@ -59,11 +60,14 @@ class Window(tk.Tk):
             self.currentStockID = inputID
             self.repeat_run()
         elif self.currentStockID == "":
-            print("不可以為空字串")
+            messagebox.showerror("錯誤","輸入欄位不可以為空字串")
 
     def repeat_run(self):
         print("取得資料")
-        title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
+        try:
+            title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
+        except Exception as e:
+            messagebox.showerror("錯誤", "伺服器有問題,請一會再試")
         self.companyLabel.configure(text=title)
         self.timeLabel.configure(text=t_odd)
         self.closeLabel.configure(text=odd)
