@@ -66,15 +66,16 @@ class Window(tk.Tk):
         print("取得資料")
         try:
             title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
+            self.companyLabel.configure(text=title)
+            self.timeLabel.configure(text=t_odd)
+            self.closeLabel.configure(text=odd)
+            self.diffLabel.configure(text=diff_odd)
+            self.percentLabel.configure(text=percent_diff)
+            self.t = Timer(10, self.repeat_run)
+            self.t.start()
         except Exception as e:
             messagebox.showerror("錯誤", "伺服器有問題,請一會再試")
-        self.companyLabel.configure(text=title)
-        self.timeLabel.configure(text=t_odd)
-        self.closeLabel.configure(text=odd)
-        self.diffLabel.configure(text=diff_odd)
-        self.percentLabel.configure(text=percent_diff)
-        self.t = Timer(10, self.repeat_run)
-        self.t.start()
+
 
 def closeWindow():
     print("close window")
