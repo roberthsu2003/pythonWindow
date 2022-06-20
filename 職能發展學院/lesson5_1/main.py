@@ -5,6 +5,11 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.title("股票成交價及時查詢提醒系統")
+        mainFrame  = tk.Frame(self, relief="groove", borderwidth=2)
+        titleFrame = tk.Frame(mainFrame)
+        tk.Label(titleFrame,text="股票成交價及時查詢提醒系統",font=("Arial",20,'bold'),fg="#555555").pack(padx=10)
+        titleFrame.pack(pady=30)
+        mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
 
 def closeWindow():
     print("close window")
