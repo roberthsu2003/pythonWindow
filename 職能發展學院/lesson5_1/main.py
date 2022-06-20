@@ -74,6 +74,9 @@ class Window(tk.Tk):
 
 def closeWindow():
     print("close window")
+    if window.t and window.t.is_alive():
+        window.t.cancel()
+
     window.destroy()
     dataSource.driver.close()
     dataSource.driver.quit()
