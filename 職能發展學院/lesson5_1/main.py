@@ -4,6 +4,7 @@ import tkinter as tk
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        self.currentStockID = ""
         self.title("股票成交價及時查詢提醒系統")
         mainFrame  = tk.Frame(self, relief="groove", borderwidth=2)
         titleFrame = tk.Frame(mainFrame)
@@ -21,7 +22,11 @@ class Window(tk.Tk):
         self.inputFrame.pack()
 
     def getStockID(self):
-        print("搜尋")
+        inputID = self.stockIDentry.get()
+        if inputID != self.currentStockID:
+            self.currentStockID = inputID
+        elif self.currentStockID == "":
+            print("不可以為空字串")
 
 def closeWindow():
     print("close window")
