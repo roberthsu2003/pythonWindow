@@ -21,12 +21,19 @@ class Window(tk.Tk):
         subminButton.grid(row=0, column=2, sticky=tk.E)
         self.inputFrame.pack()
 
+        #-----------建立顯示畫面-----------------------
+        self.listFrame = tk.Frame(mainFrame)
+        tk.Label(self.listFrame, text="公司名:", font=("Arial",14)).grid(row=0, column=0, sticky=tk.E, padx=10,pady=10)
+        self.companyLabel = tk.Label(self.listFrame, text="", font=("Arial",14))
+        self.companyLabel.grid(row=0,column=1,sticky=tk.W,padx=10,pady=10)
+        self.listFrame.pack()
+
     def getStockID(self):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
             self.currentStockID = inputID
             title, t_odd, odd, diff_odd, percent_diff = getData(self.currentStockID)
-            print(title)
+            self.companyLabel.configure(text=title)
             print(t_odd)
             print(odd)
             print(diff_odd)
