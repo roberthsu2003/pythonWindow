@@ -1,6 +1,7 @@
 from selenium import webdriver
 from selenium.webdriver.chrome.service import Service
 from webdriver_manager.chrome import ChromeDriverManager
+from selenium.webdriver.common.by import By
 import time
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
@@ -14,7 +15,7 @@ def getData(stock_number):
     except Exception as e:
         print(f"伺服器發生錯誤:{e}")
 
-    driver.find_element_by_id("btnChangeToOdd").click()
+    driver.find_element(By.ID,"btnChangeToOdd").click()
 
 
 if __name__ == "__main__":
