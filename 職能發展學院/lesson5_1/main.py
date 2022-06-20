@@ -2,7 +2,9 @@ from dataSource import getData
 from dataSource import driver
 import tkinter as tk
 class Window(tk.Tk):
-    pass
+    def __init__(self):
+        super().__init__()
+        self.title("股票成交價及時查詢提醒系統")
 
 def closeWindow():
     print("close window")
