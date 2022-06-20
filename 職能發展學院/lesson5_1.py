@@ -1,3 +1,8 @@
-from webdriver_manager.chrome import ChromeDriverManager
-service = Service(executable_path=ChromeDriverManager().install())
-driver = webdriver.Chrome(service=service)
+from selenium import webdriver
+import time
+driver=webdriver.Chrome('./chromedriver')
+driver.get("https://www.google.com.tw")
+time.sleep(3)
+driver.close()
+
+
