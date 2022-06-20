@@ -33,6 +33,21 @@ class Window(tk.Tk):
         self.timeLabel.grid(row=1, column=1, sticky=tk.W, padx=10, pady=10)
         self.listFrame.pack()
 
+        tk.Label(self.listFrame, text="目前成交價:", font=("Arial", 14)).grid(row=2, column=0, sticky=tk.E, padx=10, pady=10)
+        self.closeLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.closeLabel.grid(row=2, column=1, sticky=tk.W, padx=10, pady=10)
+        self.listFrame.pack()
+
+        tk.Label(self.listFrame, text="目前狀況:", font=("Arial", 14)).grid(row=3, column=0, sticky=tk.E, padx=10, pady=10)
+        self.diffLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.diffLabel.grid(row=3, column=1, sticky=tk.W, padx=10, pady=10)
+        self.listFrame.pack()
+
+        tk.Label(self.listFrame, text="漲跌價差(百分比):", font=("Arial", 14)).grid(row=4, column=0, sticky=tk.E, padx=10, pady=10)
+        self.percentLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.percentLabel.grid(row=4, column=1, sticky=tk.W, padx=10, pady=10)
+        self.listFrame.pack()
+
     def getStockID(self):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
@@ -40,10 +55,9 @@ class Window(tk.Tk):
             title, t_odd, odd, diff_odd, percent_diff = getData(self.currentStockID)
             self.companyLabel.configure(text=title)
             self.timeLabel.configure(text=t_odd)
-            print(t_odd)
-            print(odd)
-            print(diff_odd)
-            print(percent_diff)
+            self.closeLabel.configure(text=odd)
+            self.diffLabel.configure(text=diff_odd)
+            self.percentLabel.configure(text=percent_diff)
         elif self.currentStockID == "":
             print("不可以為空字串")
 
