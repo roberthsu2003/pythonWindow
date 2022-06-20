@@ -11,6 +11,13 @@ class Window(tk.Tk):
         titleFrame.pack(pady=30)
         mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
 
+        #-------------建立inputFrame-------------------
+        self.inputFrame = tk.Frame(mainFrame,width=50)
+        tk.Label(self.inputFrame, text="輸入欲查詢的股票號碼:",font=('Arial',13)).grid(row=0,column=0,sticky=tk.E)
+        self.stockIDentry  = tk.Entry(self.inputFrame,text=tk.StringVar(),bd=5)
+        self.stockIDentry.grid(row=0, column=1, sticky=tk.E)
+        self.inputFrame.pack()
+
 def closeWindow():
     print("close window")
     window.destroy()
