@@ -28,12 +28,18 @@ class Window(tk.Tk):
         self.companyLabel.grid(row=0,column=1,sticky=tk.W,padx=10,pady=10)
         self.listFrame.pack()
 
+        tk.Label(self.listFrame, text="成交時間:", font=("Arial", 14)).grid(row=1, column=0, sticky=tk.E, padx=10, pady=10)
+        self.timeLabel = tk.Label(self.listFrame, text="", font=("Arial", 14))
+        self.timeLabel.grid(row=1, column=1, sticky=tk.W, padx=10, pady=10)
+        self.listFrame.pack()
+
     def getStockID(self):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
             self.currentStockID = inputID
             title, t_odd, odd, diff_odd, percent_diff = getData(self.currentStockID)
             self.companyLabel.configure(text=title)
+            self.timeLabel.configure(text=t_odd)
             print(t_odd)
             print(odd)
             print(diff_odd)
