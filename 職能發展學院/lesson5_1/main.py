@@ -1,4 +1,5 @@
 import dataSource
+from threading import Timer
 
 
 import tkinter as tk
@@ -6,6 +7,7 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         self.currentStockID = ""
+        self.t = None
         self.title("股票成交價及時查詢提醒系統")
         mainFrame  = tk.Frame(self, relief="groove", borderwidth=2)
         titleFrame = tk.Frame(mainFrame)
@@ -52,15 +54,23 @@ class Window(tk.Tk):
     def getStockID(self):
         inputID = self.stockIDentry.get()
         if inputID != self.currentStockID:
+            if self.t and self.t.is_alive():
+                self.t.cancel()
             self.currentStockID = inputID
-            title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
-            self.companyLabel.configure(text=title)
-            self.timeLabel.configure(text=t_odd)
-            self.closeLabel.configure(text=odd)
-            self.diffLabel.configure(text=diff_odd)
-            self.percentLabel.configure(text=percent_diff)
+            self.repeat_run()
         elif self.currentStockID == "":
             print("不可以為空字串")
+
+    def repeat_run(self):
+        print("取得資料")
+        title, t_odd, odd, diff_odd, percent_diff = dataSource.getData(self.currentStockID)
+        self.companyLabel.configure(text=title)
+        self.timeLabel.configure(text=t_odd)
+        self.closeLabel.configure(text=odd)
+        self.diffLabel.configure(text=diff_odd)
+        self.percentLabel.configure(text=percent_diff)
+        self.t = Timer(10, self.repeat_run)
+        self.t.start()
 
 def closeWindow():
     print("close window")
