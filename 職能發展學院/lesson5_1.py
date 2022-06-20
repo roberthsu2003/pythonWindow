@@ -17,9 +17,15 @@ def getData(stock_number):
         print(f"伺服器發生錯誤:{e}")
 
     driver.find_element(By.ID,"btnChangeToOdd").click()
+    time.sleep(1)
     soup = BeautifulSoup(driver.page_source,'html.parser')
     title = soup.find(id=stock_number+"_n",class_="title").string
     print(title)
+    t_odd = soup.find(id=stock_number+"_t_odd", class_="oddObj").string
+    print(t_odd)
+    odd = soup.find(id=stock_number+"_z_odd", class_="oddObj").string
+    print(odd)
+
 
 
 if __name__ == "__main__":
