@@ -1,7 +1,9 @@
-from tkinter import messagebox
 import tkinter.ttk as ttk
-
+import os
 import tkinter as tk
+import pandas as pd
+import matplotlib.pyplot as plt
+
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -28,15 +30,27 @@ class Window(tk.Tk):
                                   )
 
         self.stock_choose.grid(row=0, column=1, sticky=tk.E)
-
-
         self.inputFrame.pack()
         #-----------建立顯示畫面-----------------------
 
     def combobox_selected(self,event):
         column_names = ['2330.TW','2303.TW','2454.TW','2317.TW']
         index = self.stock_choose.current()
-        print(column_names[index])
+        column_name = column_names[index]
+        image_name = column_name+'.png'
+        abs_file_name = os.path.abspath('./assets/2022-06-25.csv')
+        dataFrame = pd.read_csv(abs_file_name)
+        dataFrame['Date'] = pd.to_datetime(dataFrame['Date'])
+        dataFrame['2330.TW'] = dataFrame['2330.TW'].round(2)
+        dataFrame['2303.TW'] = dataFrame['2303.TW'].round(2)
+        dataFrame['2454.TW'] = dataFrame['2454.TW'].round(2)
+        dataFrame['2317.TW'] = dataFrame['2317.TW'].round(2)
+        figure = plt.figure(figsize=(10, 5))
+        ax1 = figure.add_subplot(1, 1, 1)
+        ax1.plot(dataFrame['Date'], dataFrame[column_name])
+        plt.title(column_name)
+        plt.savefig("./assets/" + image_name)
+
 
 
 
