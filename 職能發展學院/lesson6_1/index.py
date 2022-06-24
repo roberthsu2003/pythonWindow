@@ -15,20 +15,28 @@ class Window(tk.Tk):
         #-------------建立inputFrame-------------------
         self.inputFrame = tk.Frame(mainFrame,width=50)
         tk.Label(self.inputFrame, text="請選取股票號碼:",font=('Arial',13)).grid(row=0,column=0,sticky=tk.E)
-        n = tk.StringVar()
-        stock_choose = ttk.Combobox(self.inputFrame, width=27, textvariable=n)
+
+        self.stock_choose = ttk.Combobox(self.inputFrame, width=27,state='readonly')
+        self.stock_choose.bind('<<ComboboxSelected>>', self.combobox_selected)
 
         # Adding combobox drop down list
-        stock_choose['values'] = ('2330.TW',
-                                  '2303.TW',
-                                  '2454.TW',
-                                  '2317.TW',
+
+        self.stock_choose['values'] = ('台積電',
+                                  '聯電',
+                                  '聯發科',
+                                  '鴻海',
                                   )
 
-        stock_choose.grid(row=0, column=1, sticky=tk.E)
+        self.stock_choose.grid(row=0, column=1, sticky=tk.E)
+
 
         self.inputFrame.pack()
         #-----------建立顯示畫面-----------------------
+
+    def combobox_selected(self,event):
+        column_names = ['2330.TW','2303.TW','2454.TW','2317.TW']
+        index = self.stock_choose.current()
+        print(column_names[index])
 
 
 
