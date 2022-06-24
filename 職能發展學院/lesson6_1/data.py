@@ -9,6 +9,7 @@ from datetime import datetime
 
 driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
 driver.set_window_position(x=-10000, y=-10000)
+
 def getData(stock_number):
     url = "https://mis.twse.com.tw/stock/fibest.jsp?stock=" + stock_number
     try:
@@ -19,10 +20,11 @@ def getData(stock_number):
     except Exception as e:
         print(f"伺服器發生錯誤:{e}")
         raise Exception()
+    time.sleep(2)
 
 
     driver.find_element(By.ID,"btnChangeToOdd").click()
-    time.sleep(1)
+
     now  = datetime.now()
     now_str = now.strftime("%Y-%m-%d ")
     soup = BeautifulSoup(driver.page_source,'html.parser')
@@ -57,10 +59,15 @@ def getData(stock_number):
 
     return title,t_odd,odd,diff_odd,percent_diff
 
+while True:
+    try:
+        print(getData("2330"))
+        time.sleep(5)
+    except:
+        driver.close()
+        driver.quit()
 
-print(getData("2809"))
-driver.close()
-driver.quit()
+
 
 '''
 if not os.path.isdir('assets'):
