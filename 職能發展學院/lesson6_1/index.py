@@ -3,6 +3,7 @@ import os
 import tkinter as tk
 import pandas as pd
 import matplotlib.pyplot as plt
+from PIL import ImageTk, Image
 
 class Window(tk.Tk):
     def __init__(self):
@@ -32,6 +33,8 @@ class Window(tk.Tk):
         self.stock_choose.grid(row=0, column=1, sticky=tk.E)
         self.inputFrame.pack()
         #-----------建立顯示畫面-----------------------
+        self.panel = tk.Label(self)
+        self.panel.pack(side = "bottom", fill = "both", expand = "yes")
 
     def combobox_selected(self,event):
         column_names = ['2330.TW','2303.TW','2454.TW','2317.TW']
@@ -50,6 +53,10 @@ class Window(tk.Tk):
         ax1.plot(dataFrame['Date'], dataFrame[column_name])
         plt.title(column_name)
         plt.savefig("./assets/" + image_name)
+
+        image_path = "./assets/" + image_name
+        img = ImageTk.PhotoImage(Image.open(image_path))
+        self.panel.configure(image=img)
 
 
 
