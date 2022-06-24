@@ -26,12 +26,36 @@ def getData(stock_number):
     now  = datetime.now()
     now_str = now.strftime("%Y-%m-%d ")
     soup = BeautifulSoup(driver.page_source,'html.parser')
+
     title = soup.find(id=stock_number+"_n",class_="title").string
+    if title == "-":
+        title=""
+
     t_odd = soup.find(id=stock_number+"_t_odd", class_="oddObj").string
+    if t_odd == "-":
+        t_odd = ''
+    else:
+        t_odd =  now_str + t_odd
+
     odd = soup.find(id=stock_number+"_z_odd", class_="oddObj").string
+    try:
+        odd = float(odd)
+    except:
+        odd = ''
+
     diff_odd = soup.find(id=stock_number + "_diff_odd").string
+    try:
+        diff_odd = float(diff_odd[1:])
+    except:
+        diff_odd = ''
+
     percent_diff = soup.find(id=stock_number + "_pre_odd").string
-    return title,(now_str+t_odd),odd,diff_odd,percent_diff
+    try:
+        percent_diff = float(percent_diff[1:-3])
+    except:
+        percent_diff = ''
+
+    return title,t_odd,odd,diff_odd,percent_diff
 
 
 print(getData("2809"))
