@@ -6,12 +6,16 @@ from selenium.webdriver.common.by import By
 from bs4 import BeautifulSoup
 import time
 from datetime import datetime
+import csv
 
-driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
-driver.set_window_position(x=-10000, y=-10000)
+
 
 def getData(stock_number):
+    driver = webdriver.Chrome(service=Service(ChromeDriverManager().install()))
+    driver.set_window_position(x=-10000, y=-10000)
+    driver.delete_all_cookies()
     url = "https://mis.twse.com.tw/stock/fibest.jsp?stock=" + stock_number
+
     try:
         if driver.current_url == url:
             driver.refresh()
@@ -20,11 +24,10 @@ def getData(stock_number):
     except Exception as e:
         print(f"伺服器發生錯誤:{e}")
         raise Exception()
+
     time.sleep(2)
-
-
     driver.find_element(By.ID,"btnChangeToOdd").click()
-
+    time.sleep(8)
     now  = datetime.now()
     now_str = now.strftime("%Y-%m-%d ")
     soup = BeautifulSoup(driver.page_source,'html.parser')
@@ -57,15 +60,27 @@ def getData(stock_number):
     except:
         percent_diff = ''
 
-    return title,t_odd,odd,diff_odd,percent_diff
+
+    driver.quit()
+
+    return [title,t_odd,odd,diff_odd,percent_diff]
 
 while True:
-    try:
-        print(getData("2330"))
-        time.sleep(5)
-    except:
-        driver.close()
-        driver.quit()
+    dataList = getData("2330")
+    if not ('' in dataList):
+        if not os.path.isdir('assets'):
+            os.mkdir('assets')
+
+        now = datetime.now()
+        now_str = now.strftime("%Y-%m-%d.csv")
+        abs_file_name = os.path.abspath('./assets/'+now_str)
+        with open(abs_file_name, 'a', encoding='utf-8',newline='') as file:
+            writer = csv.writer(file,delimiter=',')
+            writer.writerow(dataList)
+
+
+
+
 
 
 
