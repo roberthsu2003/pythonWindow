@@ -27,6 +27,12 @@ class Window(tk.Tk):
         #顯示時間
         now = datetime.now()
         now_string = now.strftime("%Y-%m-%d %H:%M:%S")
+        file_name = now.strftime("./assets/%Y-%m-%d.csv")
+        dataFrame = pd.read_csv(file_name)
+        dataFrame.columns = ["公司名","日期","成交價","漲跌價","百分比"]
+        unique_dataFrame = dataFrame.drop_duplicates()
+        print(unique_dataFrame)
+
         self.datetimeLabel.configure(text=now_string)
         self.after(1000,self.repeatRun)
 
