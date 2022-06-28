@@ -4,6 +4,7 @@ import tkinter as tk
 import pandas as pd
 import matplotlib.pyplot as plt
 from PIL import ImageTk, Image
+from datetime import datetime
 
 class Window(tk.Tk):
     def __init__(self):
@@ -24,7 +25,9 @@ class Window(tk.Tk):
 
     def repeatRun(self):
         #顯示時間
-        self.datetimeLabel.configure(text="2022-06-28 09:28:30")
+        now = datetime.now()
+        now_string = now.strftime("%Y-%m-%d %H:%M:%S")
+        self.datetimeLabel.configure(text=now_string)
         self.after(1000,self.repeatRun)
 
 def closeWindow():
