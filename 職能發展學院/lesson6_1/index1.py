@@ -28,6 +28,12 @@ class Window(tk.Tk):
         self.tree.heading('#3', text="成交價")
         self.tree.heading('#4', text="漲跌價")
         self.tree.heading('#5', text="百分比")
+
+        self.tree.column('#1', width=150,anchor='center')
+        self.tree.column('#2', width=150,anchor='center')
+        self.tree.column('#3', width=80,anchor='center')
+        self.tree.column('#4', width=80,anchor='center')
+        self.tree.column('#5', width=80,anchor='center')
         self.tree.pack()
 
         mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
