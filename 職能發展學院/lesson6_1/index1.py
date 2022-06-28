@@ -13,6 +13,9 @@ class Window(tk.Tk):
         titleFrame = tk.Frame(mainFrame)
         tk.Label(titleFrame,text="台積電當日線圖",font=("Arial",20,'bold'),fg="#555555").pack(padx=10)
         titleFrame.pack(pady=30)
+        self.datetimeLabel = tk.Label(titleFrame, text="", font=("Arial", 20), fg="#555555")
+        self.datetimeLabel.pack(padx=10)
+        titleFrame.pack(pady=30)
         mainFrame.pack(pady=30,padx=30,ipadx=30,ipady=30)
         #-----------建立顯示畫面-----------------------
         self.panel = tk.Label(self)
@@ -20,7 +23,8 @@ class Window(tk.Tk):
         self.repeatRun()
 
     def repeatRun(self):
-        print("Hello!")
+        #顯示時間
+        self.datetimeLabel.configure(text="2022-06-28 09:28:30")
         self.after(1000,self.repeatRun)
 
 def closeWindow():
