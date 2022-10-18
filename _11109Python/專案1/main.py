@@ -1,5 +1,9 @@
+import tkinter
+
 def main():
-    print("這是main_function")
+    window = tkinter.Tk()
+    window.title("這是我的第一個視窗")
+    window.mainloop()
 
 if __name__ == "__main__":
     main()
