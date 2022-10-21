@@ -4,12 +4,12 @@ from PIL import Image, ImageTk
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        bgImage = Image.open('bg.jpg')        
+        self.tkImage = ImageTk.PhotoImage(bgImage)
         mainCanvas = tk.Canvas(self,width=640,height=427)
-        bgImage = Image.open('bg.jpg')
-        tkImage = ImageTk.PhotoImage(bgImage)
-        mainCanvas.create_image(0,0,anchor=tk.NW,image=tkImage)
+        mainCanvas.create_image(0,0,anchor=tk.NW,image=self.tkImage)              
         mainCanvas.pack()
-
+        
 
 def main():
     window = Window()
