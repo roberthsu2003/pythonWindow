@@ -6,9 +6,10 @@ class Window(tk.Tk):
         super().__init__()
         bgImage = Image.open('bg.jpg')        
         self.tkImage = ImageTk.PhotoImage(bgImage)
-        mainCanvas = tk.Canvas(self,width=640,height=427)
-        mainCanvas.create_image(0,0,anchor=tk.NW,image=self.tkImage)              
-        mainCanvas.pack()
+        mainCanvas = tk.Canvas(self)        
+        mainCanvas.create_image(0,0,anchor=tk.NW,image=self.tkImage)
+        tk.Button(mainCanvas,text="click").pack()     
+        mainCanvas.pack(fill=tk.BOTH, expand=True)
         
 
 def main():
