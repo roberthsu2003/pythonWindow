@@ -4,6 +4,7 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         mainFrame = tk.Frame(self,bg='#345678',width=800,height=500)
+        
         mainFrame.pack()
 
 
