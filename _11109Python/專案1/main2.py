@@ -12,6 +12,11 @@ class Window(tk.Tk):
         mainCanvas.pack(fill=tk.BOTH, expand=True)
         #end----建立背景------------
 
+        #------建立Lable----------
+        tk.Label(mainCanvas,text="職能發展學院",font=('arial',30),background='#C9C8CD').place(x=370,y=80)
+        #end------建立Lable----------
+        
+
 def main():
     window = Window()
     window.title("Frame框架")
