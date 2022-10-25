@@ -5,6 +5,9 @@ import tkinter.font as tkFont
 class ImageButton(tk.Button):
     def __init__(self,parents,**kwargs):
         super().__init__(parents,**kwargs)
+        bgImage1 = Image.open('btn1.png')
+        self.tkImage1 = ImageTk.PhotoImage(bgImage1)
+        self.config(image=self.tkImage1,borderwidth=0)
 
 
 class Window(tk.Tk):
@@ -28,11 +31,12 @@ class Window(tk.Tk):
         buttonFrame.place(x=100,y=50)
         #end-----建立ButtonsFrame-------
 
-        #-----建立Button-----
-        bgImage1 = Image.open('btn1.png')
-        self.tkImage1 = ImageTk.PhotoImage(bgImage1)        
-        btn1 = ImageButton(buttonFrame,image=self.tkImage1,borderwidth=0,command=self.btn1Click)
+        #-----建立Button-----      
+        btn1 = ImageButton(buttonFrame,command=self.btn1Click)
         btn1.pack()
+
+        btn2 = ImageButton(buttonFrame,command=self.btn1Click)
+        btn2.pack()
         #end-----建立Button-----
 
     def btn1Click(self):
