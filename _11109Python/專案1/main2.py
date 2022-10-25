@@ -1,5 +1,6 @@
 import tkinter as tk
 from PIL import Image, ImageTk
+import tkinter.font as tkFont
 
 class Window(tk.Tk):
     def __init__(self):
@@ -13,7 +14,8 @@ class Window(tk.Tk):
         #end----建立背景------------
 
         #------建立Lable----------
-        tk.Label(mainCanvas,text="職能發展學院",font=('arial',30),background='#C9C8CD').place(x=370,y=80)
+        helv36 = tkFont.Font(family='Helvetica',size=36, weight='bold')
+        tk.Label(mainCanvas,text="職能發展學院",font=helv36,background='#C9C8CD').place(x=370,y=80)
         #end------建立Lable----------
         
 
