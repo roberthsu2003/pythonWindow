@@ -24,10 +24,15 @@ class Window(tk.Tk):
         #end-----建立ButtonsFrame-------
 
         #-----建立Button-----
-        bgImage1 = Image.open('icon1.png')
-        self.tkImage1 = ImageTk.PhotoImage(bgImage1)
+        bgImage1 = Image.open('btn1.png')
+        self.tkImage1 = ImageTk.PhotoImage(bgImage1)        
         btn1 = tk.Button(buttonFrame,image=self.tkImage1,borderwidth=0)
-        btn1.pack(padx=10,pady=10)
+        btn1.pack()
+
+        bgImage2 = Image.open('btn1.png')
+        self.tkImage2 = ImageTk.PhotoImage(bgImage2)        
+        btn2 = tk.Button(buttonFrame,image=self.tkImage2,borderwidth=0)
+        btn2.pack()
         #end-----建立Button-----
         
 
