@@ -15,7 +15,8 @@ class Window(tk.Tk):
 def main():
     window = Window()
     window.title("Frame框架")
-    window.geometry("640x427")
+    window.resizable(0,0) #可以使用滑鼠改變視窗的大小
+    window.geometry("640x427+300+200")#設定window的大小和位置
     window.mainloop()
 
 if __name__ == "__main__":
