@@ -24,7 +24,9 @@ class Window(tk.Tk):
         #end-----建立ButtonsFrame-------
 
         #-----建立Button-----
-        btn1 = tk.Button(buttonFrame,text="美麗花園",background="#ff0000")
+        bgImage1 = Image.open('icon1.png')
+        self.tkImage1 = ImageTk.PhotoImage(bgImage1)
+        btn1 = tk.Button(buttonFrame,image=self.tkImage1,borderwidth=0)
         btn1.pack(padx=10,pady=10)
         #end-----建立Button-----
         
