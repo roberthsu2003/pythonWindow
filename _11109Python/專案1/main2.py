@@ -19,9 +19,14 @@ class Window(tk.Tk):
         #end------建立Lable----------
 
         #-----建立ButtonsFrame----------
-        buttonFrame = tk.Frame(mainCanvas,width=130,height=300,background="#ffffff")
+        buttonFrame = tk.Frame(mainCanvas,background="#ffffff")
         buttonFrame.place(x=100,y=50)
         #end-----建立ButtonsFrame-------
+
+        #-----建立Button-----
+        btn1 = tk.Button(buttonFrame,text="美麗花園",background="#ff0000")
+        btn1.pack(padx=10,pady=10)
+        #end-----建立Button-----
         
 
 def main():
