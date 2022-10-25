@@ -2,6 +2,11 @@ import tkinter as tk
 from PIL import Image, ImageTk
 import tkinter.font as tkFont
 
+class ImageButton(tk.Button):
+    def __init__(self,parents,**kwargs):
+        super().__init__(parents,**kwargs)
+
+
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -26,12 +31,8 @@ class Window(tk.Tk):
         #-----建立Button-----
         bgImage1 = Image.open('btn1.png')
         self.tkImage1 = ImageTk.PhotoImage(bgImage1)        
-        btn1 = tk.Button(buttonFrame,image=self.tkImage1,borderwidth=0,command=self.btn1Click)
+        btn1 = ImageButton(buttonFrame,image=self.tkImage1,borderwidth=0,command=self.btn1Click)
         btn1.pack()
-
-               
-        btn2 = tk.Button(buttonFrame,image=self.tkImage1,borderwidth=0)
-        btn2.pack()
         #end-----建立Button-----
 
     def btn1Click(self):
