@@ -15,7 +15,7 @@ class Window(tk.Tk):
 
         #------建立Lable----------
         helv36 = tkFont.Font(family='Helvetica',size=36, weight='bold')
-        tk.Label(mainCanvas,text="職能發展學院",font=helv36,background='#C9C8CD').place(x=370,y=80)
+        tk.Label(mainCanvas,text="職能發展學院",font=helv36,background='#C9C8CD',foreground="#888888").place(x=370,y=50)
         #end------建立Lable----------
         
 
