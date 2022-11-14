@@ -1,2 +1,2 @@
-print("Hello! Python")
-print("Hello! Python")
+import private
+print(private.secret.open_weather_key)
