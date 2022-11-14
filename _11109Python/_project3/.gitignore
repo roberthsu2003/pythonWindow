@@ -1,2 +1,3 @@
 a.txt
 private/*
+__pycache__/*
