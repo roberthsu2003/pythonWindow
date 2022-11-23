@@ -1,6 +1,4 @@
 import requests
-
-api_key = "29c4f184354b9889e87f7b494ac86aed"
 tw_county_names = {"台北":"Taipei",
                    "台中":"Taichung",
                    "基隆":"Keelung",
