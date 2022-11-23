@@ -9,6 +9,6 @@ def get_forcast_data():
     response = requests.get(url=url)
     if response.ok:
         print("下載成功")
-        print(response.text)
+        return response.json()
     else:
         print("下載失敗")
