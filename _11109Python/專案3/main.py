@@ -4,7 +4,12 @@ from secrets import api_key
 
 def main():
     print("這裏是main function")
-    list_data = ds.get_forcast_data(ds.tw_county_names["基隆"],api_key)
+    try:
+        list_data = ds.get_forcast_data(ds.tw_county_names["金門"],api_key)
+    except Exception as e:
+        print(e)
+        return
+    
     for item in list_data:
         print(item['dt_txt'])
 
