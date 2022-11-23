@@ -26,7 +26,7 @@ def get_forcast_data(cityName,api_key):
 
     response = requests.get(url=url)
     if response.ok:
-        print("下載成功")
+        print("下載成功")        
         return response.json()['list']
     else:        
         raise Exception(f"{cityName}下載失數")
