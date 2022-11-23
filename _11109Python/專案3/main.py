@@ -5,6 +5,8 @@ import tkinter as tk
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        title_label = tk.Label(self,text="各縣市4天天氣預測",font=('Arial', 20))
+        title_label.pack(padx=30,pady=30)
 
 
 def main():
