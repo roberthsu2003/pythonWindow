@@ -40,7 +40,7 @@ class Window(tk.Tk):
         #end-----建立Button-----
 
     def btn1Click(self):
-        print("userClick")
+        print("userClick1")
 
         
 
