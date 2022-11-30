@@ -14,7 +14,12 @@ class Window(tk.Tk):
         grid_row_nums = 3
         for index,cities in enumerate(cities_dict.items()):
             cname, ename = cities
-            tk.Button(buttons_frame,text=f"{cname}\n{ename}",font=('arial',15),padx=20,pady=5).grid(row=index % grid_row_nums,column=index // grid_row_nums)
+            tk.Button(buttons_frame,text=f"{cname}\n{ename}",command=self.button_click,font=('arial',15),padx=20,pady=5).grid(row=index % grid_row_nums,column=index // grid_row_nums)
+    
+    #實體的方法
+    def button_click(self):
+        print("user click")
+
             
 
 
