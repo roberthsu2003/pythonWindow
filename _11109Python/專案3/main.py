@@ -1,6 +1,7 @@
 import datasource as ds
 from secrets import api_key
 import tkinter as tk
+from tkinter import ttk
 
 class Window(tk.Tk):
     def __init__(self,cities_dict):
@@ -17,6 +18,11 @@ class Window(tk.Tk):
             btn = tk.Button(buttons_frame,text=f"{cname}\n{ename}",font=('arial',15),width=8,padx=20,pady=5)
             btn.grid(row=index % grid_row_nums,column=index // grid_row_nums)
             btn.bind("<Button>",self.button_click)
+
+        displayFrame = ttk.LabelFrame(self,text="台北",width=500,height=400,borderwidth=2,relief=tk.GROOVE)
+        displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
+        
+
 
     
     #實體的方法
