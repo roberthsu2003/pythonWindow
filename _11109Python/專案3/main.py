@@ -34,7 +34,7 @@ class Window(tk.Tk):
         if hasattr(self,'displayFrame'):
             self.displayFrame.destroy()
         self.displayFrame = DisplayFrame(self,data=city_forcase,text=cname,borderwidth=2,relief=tk.GROOVE)
-        self.displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
+        self.displayFrame.pack(padx=50,pady=(0,30))
 
 
 
@@ -51,19 +51,20 @@ class DisplayFrame(ttk.LabelFrame):
         rightData = self.city_data[column_rows*2:]
 
 
-        leftFrame = CustomFrame(self,data=leftData,width=200,height=200,bg="#ff0000")
+        leftFrame = CustomFrame(self,data=leftData)
         leftFrame.pack(side=tk.LEFT)
 
-        centerFrame = CustomFrame(self,data=centerData,width=200,height=200,bg="#00ff00")
+        centerFrame = CustomFrame(self,data=centerData)
         centerFrame.pack(side=tk.LEFT)
 
-        rightFrame = CustomFrame(self,data=rightData,width=200,height=200,bg="#0000ff")
+        rightFrame = CustomFrame(self,data=rightData)
         rightFrame.pack(side=tk.LEFT)
 
 class CustomFrame(tk.Frame):
     def __init__(self,parent,data=None,**kwarge):
         super().__init__(parent,**kwarge)
         self.list_data = data
+        print(self.list_data)
         self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'])
         self.tree.pack(side=tk.LEFT)
 
