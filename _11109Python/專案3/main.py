@@ -64,8 +64,12 @@ class CustomFrame(tk.Frame):
     def __init__(self,parent,data=None,**kwarge):
         super().__init__(parent,**kwarge)
         self.list_data = data
-        self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'],show='headings',height=14)
+        self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'],show='headings',height=10)
         self.tree.pack(side=tk.LEFT)
+        scrollbar = tk.Scrollbar(self)
+        scrollbar.pack(side=tk.LEFT,fill=tk.Y)
+        self.tree.config(yscrollcommand=scrollbar.set)
+        scrollbar.config(command=self.tree.yview)
 
         self.tree.heading('#1',text="時間")
         self.tree.heading('#2',text="溫度")
