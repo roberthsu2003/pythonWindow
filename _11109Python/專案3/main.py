@@ -30,21 +30,21 @@ class Window(tk.Tk):
         name_list = btn_text.split("\n")
         cname = name_list[0]
         ename = name_list[1]        
-        city_forcase=ds.get_forcast_data(ename,api_key)
-        print(cname)
-        print(city_forcase)
+        city_forcase=ds.get_forcast_data(ename,api_key)        
         if hasattr(self,'displayFrame'):
             self.displayFrame.destroy()
-        self.displayFrame = DisplayFrame(self,text=cname,width=500,height=400,borderwidth=2,relief=tk.GROOVE)
+        self.displayFrame = DisplayFrame(self,data=city_forcase,text=cname,width=500,height=400,borderwidth=2,relief=tk.GROOVE)
         self.displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
 
 
 
 class DisplayFrame(ttk.LabelFrame):
-    def __init__(self,parent,**kwargs):
+    def __init__(self,parent,data=None,**kwargs):
         print(kwargs)
         super().__init__(parent,**kwargs)
-        
+        self.city_data = data
+        print(self.city_data)
+
 
 
         
