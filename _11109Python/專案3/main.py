@@ -29,8 +29,13 @@ class Window(tk.Tk):
         btn_text = event.widget['text']
         name_list = btn_text.split("\n")
         cname = name_list[0]
-        ename = name_list[1]        
-        city_forcase=ds.get_forcast_data(ename,api_key)        
+        ename = name_list[1]
+        try:     
+            city_forcase=ds.get_forcast_data(ename,api_key)
+        except Exception as e:
+            #出現錯誤訊息
+            return
+            
         if hasattr(self,'displayFrame'):
             self.displayFrame.destroy()
         self.displayFrame = DisplayFrame(self,data=city_forcase,text=cname,borderwidth=2,relief=tk.GROOVE)
@@ -97,16 +102,6 @@ def main():
     window.title("各縣市4天天氣預測")
     window.mainloop()
 
-    '''
-    try:
-        list_data = ds.get_forcast_data(ds.tw_county_names["金門"],api_key)
-    except Exception as e:
-        print(e)
-        return
-    
-    for item in list_data:
-        print(item['dt_txt'])
-    '''
     
 
 if __name__ == "__main__":
