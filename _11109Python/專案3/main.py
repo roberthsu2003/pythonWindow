@@ -12,8 +12,9 @@ class Window(tk.Tk):
         buttons_frame.pack(padx=50,pady=(0,30))
         #設定grid的row數量
         grid_row_nums = 3
-        for index,key in enumerate(cities_dict):
-            tk.Button(buttons_frame,text=key,font=('arial',15),padx=20,pady=5).grid(row=index % grid_row_nums,column=index // grid_row_nums)
+        for index,cities in enumerate(cities_dict.items()):
+            cname, ename = cities
+            tk.Button(buttons_frame,text=f"{cname}\n{ename}",font=('arial',15),padx=20,pady=5).grid(row=index % grid_row_nums,column=index // grid_row_nums)
             
 
 
