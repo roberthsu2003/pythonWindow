@@ -10,9 +10,10 @@ class Window(tk.Tk):
         #建立存放按鈕的容器
         buttons_frame = tk.Frame(self)
         buttons_frame.pack(padx=50,pady=(0,30))
-
+        #設定grid的row數量
+        grid_row_nums = 3
         for index,key in enumerate(cities_dict):
-            tk.Button(buttons_frame,text=key,font=('arial',15),padx=20,pady=5).grid(row=index % 7,column=index // 7)
+            tk.Button(buttons_frame,text=key,font=('arial',15),padx=20,pady=5).grid(row=index % grid_row_nums,column=index // grid_row_nums)
             
 
 
