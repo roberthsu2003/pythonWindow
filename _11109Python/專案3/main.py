@@ -19,8 +19,7 @@ class Window(tk.Tk):
             btn.grid(row=index % grid_row_nums,column=index // grid_row_nums)
             btn.bind("<Button>",self.button_click)
 
-        displayFrame = ttk.LabelFrame(self,text="台北",width=500,height=400,borderwidth=2,relief=tk.GROOVE)
-        displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
+        
         
 
 
@@ -34,6 +33,10 @@ class Window(tk.Tk):
         city_forcase=ds.get_forcast_data(ename,api_key)
         print(cname)
         print(city_forcase)
+        if hasattr(self,'displayFrame'):
+            self.displayFrame.destroy()
+        self.displayFrame = ttk.LabelFrame(self,text=cname,width=500,height=400,borderwidth=2,relief=tk.GROOVE)
+        self.displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
 
             
 
