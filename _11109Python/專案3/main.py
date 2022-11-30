@@ -42,14 +42,29 @@ class DisplayFrame(ttk.LabelFrame):
     def __init__(self,parent,data=None,**kwargs):        
         super().__init__(parent,**kwargs)
         self.city_data = data
-        leftFrame = tk.Frame(self,width=200,height=200,bg="#ff0000")
+        #資料折成3份
+        total_rows = len(self.city_data)
+        column_rows = total_rows // 3 + 1
+        leftData = self.city_data[:column_rows]
+        centerData = self.city_data[column_rows:column_rows*2]
+        rightData = self.city_data[column_rows*2:]
+
+
+        leftFrame = CustomFrame(self,data=leftData,width=200,height=200,bg="#ff0000")
         leftFrame.pack(side=tk.LEFT)
 
-        centerFrame = tk.Frame(self,width=200,height=200,bg="#00ff00")
+        centerFrame = CustomFrame(self,data=centerData,width=200,height=200,bg="#00ff00")
         centerFrame.pack(side=tk.LEFT)
 
-        rightFrame = tk.Frame(self,width=200,height=200,bg="#0000ff")
+        rightFrame = CustomFrame(self,data=rightData,width=200,height=200,bg="#0000ff")
         rightFrame.pack(side=tk.LEFT)
+
+class CustomFrame(tk.Frame):
+    def __init__(self,parent,data=None,**kwarge):
+        super().__init__(parent,**kwarge)
+        self.list_data = data
+        print(self.list_data)
+
 
 
 
