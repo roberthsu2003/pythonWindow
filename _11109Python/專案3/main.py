@@ -42,7 +42,8 @@ class DisplayFrame(ttk.LabelFrame):
     def __init__(self,parent,data=None,**kwargs):        
         super().__init__(parent,**kwargs)
         self.city_data = data
-        #資料折成3份
+        
+        #資料拆成3份
         total_rows = len(self.city_data)
         column_rows = total_rows // 3 + 1
         leftData = self.city_data[:column_rows]
@@ -63,8 +64,22 @@ class CustomFrame(tk.Frame):
     def __init__(self,parent,data=None,**kwarge):
         super().__init__(parent,**kwarge)
         self.list_data = data
-        print(self.list_data)
+        self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'])
+        self.tree.pack(side=tk.LEFT)
 
+        self.tree.heading('#1',text="時間")
+        self.tree.heading('#2',text="溫度")
+        self.tree.heading('#3',text="狀態")
+        self.tree.heading('#4',text="溼度")
+
+        self.tree.column('#1',width=120,anchor='center')
+        self.tree.column('#2',width=50,anchor='center')
+        self.tree.column('#3',width=80,anchor='center')
+        self.tree.column('#4',width=50,anchor='center')
+
+        for item in self.list_data:
+            self.tree.insert('',tk.END,values=item)
+        
 
 
 
