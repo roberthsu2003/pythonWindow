@@ -24,8 +24,10 @@ class Window(tk.Tk):
         btn_text = event.widget['text']
         name_list = btn_text.split("\n")
         cname = name_list[0]
-        ename = name_list[1]
-        print(f"{cname}-{ename}")
+        ename = name_list[1]        
+        city_forcast=ds.get_forcast_data(ename,api_key)
+        print(cname)
+        print(city_forcast)
 
             
 
