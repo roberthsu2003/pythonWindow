@@ -26,8 +26,12 @@ def get_forcast_data(cityName, api_key):
     url = f"https://api.openweathermap.org/data/2.5/forecast?q={cityName},tw&APPID={api_key}&lang=zh_tw&units=metric"
 
     response = requests.get(url=url)
+    county_forcase = []
     if response.ok:
         print("下載成功")
-        return response.json()['list']
+        source_data = response.json()['list']
+        for item in source_data:
+            county_forcase.append([item['dt_txt'],item['main']['temp'],item['weather'][0]['description'],item['main']['humidity']])
+        return county_forcase
     else:
         raise Exception(f"{cityName}下載失數")
