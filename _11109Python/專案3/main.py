@@ -33,17 +33,23 @@ class Window(tk.Tk):
         city_forcase=ds.get_forcast_data(ename,api_key)        
         if hasattr(self,'displayFrame'):
             self.displayFrame.destroy()
-        self.displayFrame = DisplayFrame(self,data=city_forcase,text=cname,width=500,height=400,borderwidth=2,relief=tk.GROOVE)
+        self.displayFrame = DisplayFrame(self,data=city_forcase,text=cname,borderwidth=2,relief=tk.GROOVE)
         self.displayFrame.pack(fill=tk.BOTH,padx=50,pady=(0,30))
 
 
 
 class DisplayFrame(ttk.LabelFrame):
-    def __init__(self,parent,data=None,**kwargs):
-        print(kwargs)
+    def __init__(self,parent,data=None,**kwargs):        
         super().__init__(parent,**kwargs)
         self.city_data = data
-        print(self.city_data)
+        leftFrame = tk.Frame(self,width=200,height=200,bg="#ff0000")
+        leftFrame.pack(side=tk.LEFT)
+
+        centerFrame = tk.Frame(self,width=200,height=200,bg="#00ff00")
+        centerFrame.pack(side=tk.LEFT)
+
+        rightFrame = tk.Frame(self,width=200,height=200,bg="#0000ff")
+        rightFrame.pack(side=tk.LEFT)
 
 
 
