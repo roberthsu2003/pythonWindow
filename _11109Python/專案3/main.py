@@ -52,20 +52,19 @@ class DisplayFrame(ttk.LabelFrame):
 
 
         leftFrame = CustomFrame(self,data=leftData)
-        leftFrame.pack(side=tk.LEFT)
+        leftFrame.pack(side=tk.LEFT,padx=10)
 
         centerFrame = CustomFrame(self,data=centerData)
-        centerFrame.pack(side=tk.LEFT)
+        centerFrame.pack(side=tk.LEFT,padx=10)
 
         rightFrame = CustomFrame(self,data=rightData)
-        rightFrame.pack(side=tk.LEFT)
+        rightFrame.pack(side=tk.LEFT,padx=10)
 
 class CustomFrame(tk.Frame):
     def __init__(self,parent,data=None,**kwarge):
         super().__init__(parent,**kwarge)
         self.list_data = data
-        print(self.list_data)
-        self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'])
+        self.tree = ttk.Treeview(self,columns=['#1','#2','#3','#4'],show='headings',height=14)
         self.tree.pack(side=tk.LEFT)
 
         self.tree.heading('#1',text="時間")
