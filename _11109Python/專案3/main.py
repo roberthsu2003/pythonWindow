@@ -1,6 +1,7 @@
 import datasource as ds
 from secrets import api_key
 import tkinter as tk
+from tkinter import messagebox
 from tkinter import ttk
 
 class Window(tk.Tk):
@@ -34,6 +35,7 @@ class Window(tk.Tk):
             city_forcase=ds.get_forcast_data(ename,api_key)
         except Exception as e:
             #出現錯誤訊息
+            messagebox.showwarning("警告","目前沒有提供此資訊!")
             return
             
         if hasattr(self,'displayFrame'):
