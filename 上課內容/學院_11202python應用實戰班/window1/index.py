@@ -4,8 +4,8 @@ from tkinter import Button
 class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
-        Button(self,text="按鈕1",padx=10,pady=10).pack()
-        Button(self,text="按鈕2",padx=10,pady=10).pack()
+        Button(self,text="按鈕1",font=('Helvetica', '24'),pady=10).pack(fill=tk.X)
+        Button(self,text="按鈕2",font=('Helvetica', '24'),pady=10).pack(fill=tk.X)
         
 
 
