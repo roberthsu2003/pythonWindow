@@ -1,10 +1,17 @@
 import tkinter as tk
 from tkinter import Button,Frame
+from tools import Taiwan_AQI
 
 class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
-        Button(self,text="按鈕1",font=('Helvetica', '24'),pady=10,command=self.btn1_click).pack(fill=tk.X)
+        try:
+            self.aqi_list = Taiwan_AQI.download_aqi()
+        except Exception as err:
+            print(str(err))
+            return
+        
+        Button(self,text="台灣目前aqi最好的3個站點",font=('Helvetica', '24'),pady=10,command=self.btn1_click).pack(fill=tk.X)
         Button(self,text="按鈕2",font=('Helvetica', '24'),pady=10,command=self.btn2_click).pack(fill=tk.X)
 
         bottom_frame  = Frame(self,bg="#ffffff")
@@ -21,8 +28,20 @@ class Window(tk.Tk):
         btn5.pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
         bottom_frame.pack(expand=True,fill=tk.BOTH)
 
+    def get_best(self,dataList) -> list:
+        sorted_data = sorted(dataList,key=lambda a:a.aqi,reverse=True)
+        def out_aqi_999(site):
+            return site.aqi != 999
+        filter_data = filter(out_aqi_999,sorted_data)
+        filter_data = list(filter_data)
+        return filter_data[-3:]
+    
     def btn1_click(self):
-        print("按鈕1按下")
+        good3_list = self.get_best(self.aqi_list)
+        print("目前空氣aqi品質最好的3個:")
+        good3_list.reverse()
+        for site in good3_list:
+            print(site)
 
     def btn2_click(self):
         print("按鈕2按下")
