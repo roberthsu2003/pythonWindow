@@ -5,7 +5,7 @@ class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
         Button(self,text="按鈕1",font=('Helvetica', '24'),pady=10,command=self.btn1_click).pack(fill=tk.X)
-        Button(self,text="按鈕2",font=('Helvetica', '24'),pady=10).pack(fill=tk.X)
+        Button(self,text="按鈕2",font=('Helvetica', '24'),pady=10,command=self.btn2_click).pack(fill=tk.X)
 
         bottom_frame  = Frame(self,bg="#ffffff")
         Button(bottom_frame,text="按鈕3",font=('Helvetica', '24')).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
@@ -15,6 +15,9 @@ class Window(tk.Tk):
 
     def btn1_click(self):
         print("按鈕1按下")
+
+    def btn2_click(self):
+        print("按鈕2按下")
         
 
 
