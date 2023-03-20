@@ -8,9 +8,9 @@ class Window(tk.Tk):
         Button(self,text="按鈕2",font=('Helvetica', '24'),pady=10).pack(fill=tk.X)
 
         bottom_frame  = Frame(self,bg="#ffffff")
-        Button(bottom_frame,text="按鈕3",font=('Helvetica', '24'),pady=10).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
-        Button(bottom_frame,text="按鈕4",font=('Helvetica', '24'),pady=10).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
-        Button(bottom_frame,text="按鈕5",font=('Helvetica', '24'),pady=10).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
+        Button(bottom_frame,text="按鈕3",font=('Helvetica', '24')).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
+        Button(bottom_frame,text="按鈕4",font=('Helvetica', '24')).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
+        Button(bottom_frame,text="按鈕5",font=('Helvetica', '24')).pack(side=tk.LEFT,fill=tk.BOTH,expand=True)
         bottom_frame.pack(expand=True,fill=tk.BOTH)
         
 
