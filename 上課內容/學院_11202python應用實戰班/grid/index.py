@@ -62,12 +62,6 @@ class Window(tk.Tk):
         commitBtn.grid(column=1,row=6,sticky=tk.W)
 
 
-        
-
-
-
-
-
 def main():
     '''
     這是程式的執行點
