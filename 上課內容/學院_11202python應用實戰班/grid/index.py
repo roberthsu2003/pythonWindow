@@ -31,9 +31,26 @@ class Window(tk.Tk):
         bottomFrame.columnconfigure(0,weight=3)
         bottomFrame.columnconfigure(1,weight=5)
         bottomFrame.rowconfigure(0, weight=1)
+        
 
         ttk.Label(bottomFrame,text="姓名:",style='gridLabel.TLabel').grid(column=0,row=0,sticky=tk.E)
-        ttk.Entry(bottomFrame,style='gridEntry.TEntry').grid(column=1,row=0,sticky=tk.W)
+        nameEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        nameEntry.grid(column=1,row=0,sticky=tk.W)
+
+        ttk.Label(bottomFrame,text="出生年月日:",style='gridLabel.TLabel').grid(column=0,row=1,sticky=tk.E)
+        ttk.Label(bottomFrame,text="(2000/03/01)",style='gridLabel.TLabel').grid(column=0,row=2,sticky=tk.E)
+
+        birthEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        birthEntry.grid(column=1,row=1,sticky=tk.W,rowspan=2)
+
+        ttk.Label(bottomFrame,text="身高(cm):",style='gridLabel.TLabel').grid(column=0,row=3,sticky=tk.E)
+        heightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        heightEntry.grid(column=1,row=3,sticky=tk.W)
+
+        ttk.Label(bottomFrame,text="體重(kg):",style='gridLabel.TLabel').grid(column=0,row=4,sticky=tk.E)
+        weightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        weightEntry.grid(column=1,row=4,sticky=tk.W)
+        
 
 
 
@@ -45,7 +62,7 @@ def main():
     '''
     window = Window()
     window.title("BMI計算")
-    window.geometry("400x500")
+    #window.geometry("400x500")
     window.mainloop()
 
 if __name__ == "__main__":
