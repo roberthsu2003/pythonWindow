@@ -50,6 +50,14 @@ class Window(tk.Tk):
         ttk.Label(bottomFrame,text="體重(kg):",style='gridLabel.TLabel').grid(column=0,row=4,sticky=tk.E)
         weightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
         weightEntry.grid(column=1,row=4,sticky=tk.W)
+
+        messageText = tk.Text(bottomFrame,height=5,width=20)
+        messageText.grid(column=0,row=5,sticky=tk.W+tk.N+tk.E+tk.S,columnspan=2)
+
+        commitBtn = ttk.Button(bottomFrame,text="計算")
+        commitBtn.grid(column=1,row=6,sticky=tk.W)
+
+
         
 
 
