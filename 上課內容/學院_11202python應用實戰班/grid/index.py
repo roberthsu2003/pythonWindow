@@ -9,9 +9,17 @@ class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
         ttkStyle = ttk.Style()
-        ttkStyle.configure('1.main_bg_Color',background='#ffffff')
-        mainFrame  =  ttk.Frame(self,style='1.main_bg_Color')
+        ttkStyle.configure('back.TFrame',background='#ffffff')
+        
+        mainFrame = ttk.Frame(self,style='back.TFrame')        
         mainFrame.pack(expand=True,fill=tk.BOTH)
+        
+
+        topFrame = ttk.Frame(mainFrame,style='back.TFrame',height=100)
+        topFrame.pack(fill=tk.X)
+
+        bottomFrame = ttk.Frame(mainFrame,style='back.TFrame')
+        bottomFrame.pack(expand=True,fill=tk.BOTH)
 
 
 def main():
