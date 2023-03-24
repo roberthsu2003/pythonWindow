@@ -14,7 +14,7 @@ class Window(tk.Tk):
         ttkStyle.configure('white.TFrame',background='#ffffff')
         ttkStyle.configure('yellow.TFrame',background='yellow')
         ttkStyle.configure('white.TLabel',background='#ffffff')
-        ttkStyle.configure('gridLabel.TLabel',font=('Helvetica', 16))
+        ttkStyle.configure('gridLabel.TLabel',font=('Helvetica', 16),foreground='#666666')
         ttkStyle.configure('gridEntry.TEntry',font=('Helvetica', 16))
         
         mainFrame = ttk.Frame(self)        
@@ -55,7 +55,7 @@ class Window(tk.Tk):
         weightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
         weightEntry.grid(column=1,row=4,sticky=tk.W,padx=10)
 
-        messageText = tk.Text(bottomFrame,height=5,width=35,state=tk.DISABLED)
+        messageText = tk.Text(bottomFrame,height=5,width=35,state=tk.DISABLED,takefocus=0,bd=0)
         messageText.grid(column=0,row=5,sticky=tk.N+tk.S,columnspan=2)
 
         commitBtn = ttk.Button(bottomFrame,text="計算")
