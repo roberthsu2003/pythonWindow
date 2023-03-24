@@ -26,6 +26,10 @@ class Window(tk.Tk):
         bottomFrame = ttk.Frame(mainFrame,style='yellow.TFrame')
         bottomFrame.pack(expand=True,fill=tk.BOTH)
 
+        ttk.Label(bottomFrame,text="姓名:").grid(column=0,row=0)
+        ttk.Entry(bottomFrame).grid(column=1,row=0)
+
+
 
 
 
