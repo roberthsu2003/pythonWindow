@@ -9,21 +9,24 @@ class Window(tk.Tk):
     def __init__(self,**kwargs):
         super().__init__(**kwargs)
         ttkStyle = ttk.Style()
-        print(ttkStyle.theme_names())
         ttkStyle.theme_use('default')
         ttkStyle.configure('red.TFrame',background='#ff0000')
         ttkStyle.configure('white.TFrame',background='#ffffff')
         ttkStyle.configure('yellow.TFrame',background='yellow')
         
-        mainFrame = ttk.Frame(self,style='red.TFrame')        
+        mainFrame = ttk.Frame(self)        
         mainFrame.pack(expand=True,fill=tk.BOTH)
         
 
-        topFrame = ttk.Frame(mainFrame,style='white.TFrame',height=100)
+        topFrame = ttk.Frame(mainFrame,height=100)
         topFrame.pack(fill=tk.X)
+
+        ttk.Label(topFrame,text="BMI試算",font=('Helvetica', '20')).pack(pady=20)
 
         bottomFrame = ttk.Frame(mainFrame,style='yellow.TFrame')
         bottomFrame.pack(expand=True,fill=tk.BOTH)
+
+
 
 
 def main():
