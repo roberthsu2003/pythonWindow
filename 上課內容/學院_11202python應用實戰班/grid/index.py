@@ -13,6 +13,9 @@ class Window(tk.Tk):
         ttkStyle.configure('red.TFrame',background='#ff0000')
         ttkStyle.configure('white.TFrame',background='#ffffff')
         ttkStyle.configure('yellow.TFrame',background='yellow')
+        ttkStyle.configure('white.TLabel',background='#ffffff')
+        ttkStyle.configure('gridLabel.TLabel',font=('Helvetica', 16))
+        ttkStyle.configure('gridEntry.TEntry',font=('Helvetica', 16))
         
         mainFrame = ttk.Frame(self)        
         mainFrame.pack(expand=True,fill=tk.BOTH)
@@ -25,9 +28,12 @@ class Window(tk.Tk):
 
         bottomFrame = ttk.Frame(mainFrame,style='yellow.TFrame')
         bottomFrame.pack(expand=True,fill=tk.BOTH)
+        bottomFrame.columnconfigure(0,weight=3)
+        bottomFrame.columnconfigure(1,weight=5)
+        bottomFrame.rowconfigure(0, weight=1)
 
-        ttk.Label(bottomFrame,text="姓名:").grid(column=0,row=0)
-        ttk.Entry(bottomFrame).grid(column=1,row=0)
+        ttk.Label(bottomFrame,text="姓名:",style='gridLabel.TLabel').grid(column=0,row=0,sticky=tk.E)
+        ttk.Entry(bottomFrame,style='gridEntry.TEntry').grid(column=1,row=0,sticky=tk.W)
 
 
 
