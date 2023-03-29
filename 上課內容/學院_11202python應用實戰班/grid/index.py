@@ -4,6 +4,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image,ImageTk
 
 class Window(tk.Tk):
     def __init__(self,**kwargs):
@@ -24,7 +25,7 @@ class Window(tk.Tk):
         topFrame = ttk.Frame(mainFrame,height=100)
         topFrame.pack(fill=tk.X)
 
-        ttk.Label(topFrame,text="BMI試算",font=('Helvetica', '20')).pack(pady=20)
+        ttk.Label(topFrame,text="BMI試算",font=('Helvetica', '20')).pack(pady=(80,20))
 
         bottomFrame = ttk.Frame(mainFrame)
         bottomFrame.pack(expand=True,fill=tk.BOTH)
@@ -70,7 +71,14 @@ class Window(tk.Tk):
         clearBtn = ttk.Button(commitFrame,text="清除")
         clearBtn.grid(column=1,row=0,sticky=tk.E)
         #---------commitFrame結束--------------------
-        
+
+        #---------建立Logo--------------------
+        logoImage = Image.open('logo.png')
+        resizeImage = logoImage.resize((180,45),Image.LANCZOS)
+        self.logoTkimage = ImageTk.PhotoImage(resizeImage)
+        logoLabel = ttk.Label(self,image=self.logoTkimage,width=180)
+        logoLabel.place(x=40,y=45)
+
         
 
 
