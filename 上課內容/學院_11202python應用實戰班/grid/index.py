@@ -4,6 +4,7 @@
 
 import tkinter as tk
 from tkinter import ttk
+import re
 from PIL import Image,ImageTk
 
 class Window(tk.Tk):
@@ -71,7 +72,7 @@ class Window(tk.Tk):
         commitFrame = ttk.Frame(bottomFrame)
         commitFrame.grid(column=0,row=6,columnspan=2)
         commitFrame.columnconfigure(0,pad=10)
-        commitBtn = ttk.Button(commitFrame,text="計算")
+        commitBtn = ttk.Button(commitFrame,text="計算",command=self.press_commit)
         commitBtn.grid(column=0,row=0,sticky=tk.W)
 
         clearBtn = ttk.Button(commitFrame,text="清除",command=self.press_clear)
@@ -94,6 +95,42 @@ class Window(tk.Tk):
         self.messageText.delete("1.0",tk.END)
         self.messageText.configure(state=tk.DISABLED)
         print("清除")
+
+    def press_commit(self) -> None:
+        self.check_data()
+
+    def check_data(self) -> None:
+        dateRegex = re.compile(r"^\d\d\d\d/\d\d/\d\d$")
+        nameValue = self.nameStringVar.get()
+        birthValue = self.birthStringVar.get()
+        birthMatch = re.match(dateRegex,birthValue)
+        if  birthMatch is None:            
+            birthValue = ""
+
+        try:
+            heightValue = self.heightIntVar.get()
+        except:
+            heightValue = 0
+
+        try:
+            weightValue = self.weightIntVar.get()
+        except:
+            weightValue =  0
+        
+        if nameValue == "" or birthValue=="" or heightValue==0 or weightValue==0 :            
+            self.messageText.configure(state=tk.NORMAL)
+            self.messageText.delete("1.0",tk.END)
+            self.messageText.insert(tk.END,"有欄位沒填或格式不正確")
+            self.messageText.configure(state=tk.DISABLED)
+        else:
+            self.messageText.configure(state=tk.NORMAL)
+            self.messageText.delete("1.0",tk.END)
+            self.messageText.insert(tk.END,"正確")
+            self.messageText.configure(state=tk.DISABLED)
+
+    
+
+
 
 def close_window(w):
     w.destroy()        
