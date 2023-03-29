@@ -64,7 +64,7 @@ class Window(tk.Tk):
         #
         commitFrame = ttk.Frame(bottomFrame)
         commitFrame.grid(column=0,row=6,columnspan=2)
-
+        commitFrame.columnconfigure(0,pad=10)
         commitBtn = ttk.Button(commitFrame,text="計算")
         commitBtn.grid(column=0,row=0,sticky=tk.W)
 
