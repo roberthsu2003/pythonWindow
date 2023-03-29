@@ -123,9 +123,15 @@ class Window(tk.Tk):
             self.messageText.insert(tk.END,"有欄位沒填或格式不正確")
             self.messageText.configure(state=tk.DISABLED)
         else:
+            bmi = weightValue / (heightValue / 100) ** 2
+            message = f"{nameValue}您好:\n"
+            message += f"出生年月日:{birthValue}\n"
+            message += f"BMI值是:{bmi:.2f}\n"
+            message += f"狀態是:xxxx"
+
             self.messageText.configure(state=tk.NORMAL)
             self.messageText.delete("1.0",tk.END)
-            self.messageText.insert(tk.END,"正確")
+            self.messageText.insert(tk.END,message)
             self.messageText.configure(state=tk.DISABLED)
 
     
