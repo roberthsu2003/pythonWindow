@@ -36,28 +36,34 @@ class Window(tk.Tk):
         bottomFrame.rowconfigure(4, weight=1,pad=20)
         bottomFrame.rowconfigure(5, weight=1,pad=20)
         bottomFrame.rowconfigure(6, weight=1,pad=20)
-        
+
+        #定義entry的textvariable
+        self.nameStringVar = tk.StringVar()
+        self.birthStringVar = tk.StringVar()
+        self.heightIntVar = tk.IntVar()
+        self.weightIntVar = tk.IntVar()
 
         ttk.Label(bottomFrame,text="姓名:",style='gridLabel.TLabel').grid(column=0,row=0,sticky=tk.E)
-        nameEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        
+        nameEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry',textvariable=self.nameStringVar)
         nameEntry.grid(column=1,row=0,sticky=tk.W,padx=10)
 
         ttk.Label(bottomFrame,text="出生年月日:",style='gridLabel.TLabel').grid(column=0,row=1,sticky=tk.E)
         ttk.Label(bottomFrame,text="(2000/03/01)",style='gridLabel.TLabel').grid(column=0,row=2,sticky=tk.E)
 
-        birthEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        birthEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry',textvariable=self.birthStringVar)
         birthEntry.grid(column=1,row=1,sticky=tk.W,rowspan=2,padx=10)
 
         ttk.Label(bottomFrame,text="身高(cm):",style='gridLabel.TLabel').grid(column=0,row=3,sticky=tk.E)
-        heightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        heightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry',textvariable=self.heightIntVar)
         heightEntry.grid(column=1,row=3,sticky=tk.W,padx=10)
 
         ttk.Label(bottomFrame,text="體重(kg):",style='gridLabel.TLabel').grid(column=0,row=4,sticky=tk.E)
-        weightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry')
+        weightEntry = ttk.Entry(bottomFrame,style='gridEntry.TEntry',textvariable=self.weightIntVar)
         weightEntry.grid(column=1,row=4,sticky=tk.W,padx=10)
 
-        messageText = tk.Text(bottomFrame,height=5,width=35,state=tk.DISABLED,takefocus=0,bd=0)
-        messageText.grid(column=0,row=5,sticky=tk.N+tk.S,columnspan=2)
+        self.messageText = tk.Text(bottomFrame,height=5,width=35,state=tk.DISABLED,takefocus=0,bd=0)
+        self.messageText.grid(column=0,row=5,sticky=tk.N+tk.S,columnspan=2)
 
         #---------commitFrame開始--------------------
         #有左右2個按鈕
@@ -68,7 +74,7 @@ class Window(tk.Tk):
         commitBtn = ttk.Button(commitFrame,text="計算")
         commitBtn.grid(column=0,row=0,sticky=tk.W)
 
-        clearBtn = ttk.Button(commitFrame,text="清除")
+        clearBtn = ttk.Button(commitFrame,text="清除",command=self.press_clear)
         clearBtn.grid(column=1,row=0,sticky=tk.E)
         #---------commitFrame結束--------------------
 
@@ -78,6 +84,16 @@ class Window(tk.Tk):
         self.logoTkimage = ImageTk.PhotoImage(resizeImage)
         logoLabel = ttk.Label(self,image=self.logoTkimage,width=180)
         logoLabel.place(x=40,y=45)
+
+    def press_clear(self) -> None:
+        self.nameStringVar.set("")
+        self.birthStringVar.set("")
+        self.heightIntVar.set(0)
+        self.weightIntVar.set(0)
+        self.messageText.configure(state=tk.NORMAL)
+        self.messageText.delete("1.0",tk.END)
+        self.messageText.configure(state=tk.DISABLED)
+        print("清除")
 
 def close_window(w):
     w.destroy()        
