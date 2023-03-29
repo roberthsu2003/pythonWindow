@@ -58,6 +58,9 @@ class Window(tk.Tk):
         messageText = tk.Text(bottomFrame,height=5,width=35,state=tk.DISABLED,takefocus=0,bd=0)
         messageText.grid(column=0,row=5,sticky=tk.N+tk.S,columnspan=2)
 
+        #---------commitFrame開始--------------------
+        #有左右2個按鈕
+        #
         commitFrame = ttk.Frame(bottomFrame)
         commitFrame.grid(column=0,row=6,columnspan=2)
 
@@ -66,6 +69,7 @@ class Window(tk.Tk):
 
         clearBtn = ttk.Button(commitFrame,text="清除")
         clearBtn.grid(column=1,row=0,sticky=tk.E)
+        #---------commitFrame結束--------------------
         
         
 
