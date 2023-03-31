@@ -1,6 +1,8 @@
 import requests
 import csv
 from io import StringIO
+import password
+
 
 class Site(object):
     def __init__(self,name,county,aqi):
@@ -21,7 +23,7 @@ class Taiwan_AQI():
     @classmethod
     def download_aqi(cls) -> list:
         
-        response=requests.get(f'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key={cls.API_KEY}&limit=1000&sort=ImportDate desc&format=CSV')
+        response=requests.get(f'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key={password.API_KEY}&limit=1000&sort=ImportDate desc&format=CSV')
 
         if response.ok:
             #print(response.text)            
