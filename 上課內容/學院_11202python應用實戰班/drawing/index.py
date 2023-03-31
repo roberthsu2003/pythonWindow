@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import ttk
 import tkinter.font as tkFont
+from PIL import Image,ImageTk
 
 class Window(tk.Tk):
     def __init__(self,**kwargs):
@@ -28,6 +29,13 @@ class Window(tk.Tk):
         textCanvas.create_text(0,0,text="ABC_中文",font=f1,anchor='nw')
         textCanvas.pack()
 
+        mapCanvas = tk.Canvas(drawingFrame,width=300,height=300,bd=0,highlightthickness=0,background='white')
+        taiwanImage = Image.open("map.png")
+        newImage = taiwanImage.resize((300, 300),Image.LANCZOS)
+        self.taiwanImageTk = ImageTk.PhotoImage(newImage)
+        mapCanvas.create_image(0,0,image=self.taiwanImageTk,anchor=tk.NW)
+        mapCanvas.create_text(100,100,text="ABC_中文",font=tkFont.Font(family='Helvetica', size=12),anchor='nw')
+        mapCanvas.pack()
 
 
 
