@@ -28,8 +28,9 @@ class Taiwan_AQI(list):
             csvReader = csv.reader(file)
             next(csvReader)            
             for item in csvReader:
-                site = Site(item[0],item[1],item[2])
-                self.append(site)
+                if item[2] !=  999:
+                    site = Site(item[0],item[1],item[2])
+                    self.append(site)
                         
         else:
             raise Exception("下載失敗")
