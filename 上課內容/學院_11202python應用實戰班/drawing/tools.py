@@ -18,30 +18,21 @@ class Site(object):
         return f"站點:{self.site_name},城市:{self.county},aqi:{self.aqi}"
 
 
-class Taiwan_AQI():    
-    
-    @classmethod
-    def download_aqi(cls) -> list:
-        
+class Taiwan_AQI(list):    
+    def __init__(self):
+        super().__init__()        
         response=requests.get(f'https://data.epa.gov.tw/api/v2/aqx_p_432?api_key={password.API_KEY}&limit=1000&sort=ImportDate desc&format=CSV')
 
-        if response.ok:
-            #print(response.text)            
-            #file = open('./lesson17/aqi.csv',mode='w',encoding='utf-8')
-            #file.write(response.text)
-            #file.close()
+        if response.ok:            
             file = StringIO(response.text,newline='')
             csvReader = csv.reader(file)
-            next(csvReader)
-            dataList = []
+            next(csvReader)            
             for item in csvReader:
                 site = Site(item[0],item[1],item[2])
-                dataList.append(site)
-            return dataList
-            
-
-            
+                self.append(site)
+                        
         else:
             raise Exception("下載失敗")
-        
-        
+    
+    def get_bad_3(self):
+        return self[:3]
