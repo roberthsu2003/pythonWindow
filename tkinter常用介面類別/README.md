@@ -429,6 +429,7 @@ root.mainloop()
 ---
 
 ## scrollbar
+### scrollbar_Listbox
 
 ```python
 from tkinter import *
@@ -446,6 +447,43 @@ root.mainloop()
 ```
 
 ![](./images/pic17.png)
+
+---
+
+## scrollbar
+### scrollbar_Canvas
+
+
+```python
+import tkinter as tk
+
+root = tk.Tk()
+root.title('oxxo.studio')
+root.geometry('400x400')
+
+frame = tk.Frame(root, width=200, height=300)    # 使用 frame 裝載 Canvas
+frame.pack()
+
+# 設定 Canvas
+canvas = tk.Canvas(frame, width=200, height=300, bg='#fff', scrollregion=(0,0,400,400))
+
+canvas.create_rectangle(120, 10, 170, 100, width=8, fill='#f00')   # 在 Canvas 裡畫矩形
+
+scrollX = tk.Scrollbar(frame, orient='horizontal')   # 水平捲軸放在 frame 裡
+scrollX.pack(side='bottom', fill='x')                # 放在下面填滿 x 軸
+scrollX.config(command=canvas.xview)                 # 綁定 Canvas x 方向
+
+scrollY = tk.Scrollbar(frame, orient='vertical')     # 垂直捲軸放在 frame 裡
+scrollY.pack(side='right', fill='y')                 # 放在右邊填滿 y 軸
+scrollY.config(command=canvas.yview)                 # 綁定 Canvas y 方向
+
+canvas.config(xscrollcommand=scrollX.set, yscrollcommand=scrollY.set)  # Canvas 綁定捲軸
+canvas.pack(side='left')                             # Canvas 放在 frame 中的左側
+
+root.mainloop()
+```
+
+![](./images/pic28.png)
 
 ---
 
