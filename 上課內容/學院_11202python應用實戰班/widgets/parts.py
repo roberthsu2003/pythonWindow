@@ -5,6 +5,9 @@ from PIL import Image, ImageTk
 class TopFrame(ttk.LabelFrame):
     def __init__(self,master,**kwargs):
         super().__init__(master,**kwargs)
+        #using ttk.Style to change the style of the self widget
+        ttkStyle = ttk.Style()
+        ttkStyle.theme_use('default')
         flowerImage1 = Image.open("./images/flower1.png")
         self.flowerPhoto1 = ImageTk.PhotoImage(flowerImage1)
         self.canvas = tk.Canvas(self, width=173, height=200)
