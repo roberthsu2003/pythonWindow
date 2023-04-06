@@ -33,5 +33,20 @@ class TopFrame(ttk.LabelFrame):
         self.canvas.configure(scrollregion=(0,0,500,200))
 
 
+class MedianFrame(ttk.LabelFrame):
+    def __init__(self,master,**kwargs):
+        super().__init__(master,**kwargs)
+        # create ttk.radiobuttons in self
+        radionFrame = ttk.LabelFrame(self, text='Radio Buttons')
+        radionFrame.pack()
+        self.radiobutton1 = ttk.Radiobutton(radionFrame, text='Option 1')
+        self.radiobutton1.pack()
+        self.radiobutton2 = ttk.Radiobutton(radionFrame, text='Option 2')
+        self.radiobutton2.pack()
+        self.radiobutton3 = ttk.Radiobutton(radionFrame, text='Option 3')
+        self.radiobutton3.pack()
+        self.radiobutton4 = ttk.Radiobutton(radionFrame, text='Option 4')
+        self.radiobutton4.pack()
+
 
 
