@@ -39,17 +39,17 @@ class MedianFrame(ttk.LabelFrame):
         # create ttk.radiobuttons in self
         
         radionFrame = ttk.LabelFrame(self, text='Radio Buttons')
-        radionFrame.pack()
-        radioStringVar = tk.StringVar()
-        self.radiobutton1 = ttk.Radiobutton(radionFrame, text='Option 1',variable=radioStringVar)
+        radionFrame.pack(side=tk.LEFT, padx=10, pady=10)
+        self.radioStringVar = tk.StringVar()
+        self.radiobutton1 = ttk.Radiobutton(radionFrame, text='Option 1',variable=self.radioStringVar,value="red")
         self.radiobutton1.pack()
-        self.radiobutton2 = ttk.Radiobutton(radionFrame, text='Option 2',variable=radioStringVar)
+        self.radiobutton2 = ttk.Radiobutton(radionFrame, text='Option 2',variable=self.radioStringVar,value="blue")
         self.radiobutton2.pack()
-        self.radiobutton3 = ttk.Radiobutton(radionFrame, text='Option 3', variable=radioStringVar)
+        self.radiobutton3 = ttk.Radiobutton(radionFrame, text='Option 3', variable=self.radioStringVar,value="green")
         self.radiobutton3.pack()
-        self.radiobutton4 = ttk.Radiobutton(radionFrame, text='Option 4', variable=radioStringVar)
+        self.radiobutton4 = ttk.Radiobutton(radionFrame, text='Option 4', variable=self.radioStringVar,value="yellow")
         self.radiobutton4.pack()
-        radioStringVar.set('Option 1')
+        self.radioStringVar.set('red')
 
 
 
