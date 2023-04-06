@@ -37,7 +37,9 @@ class MedianFrame(ttk.LabelFrame):
     def __init__(self,master,**kwargs):
         super().__init__(master,**kwargs)
         # create ttk.radiobuttons in self
-        
+        # ttk.Style change ttk.Radiobutton shape
+        ttkStyle = ttk.Style()
+        ttkStyle.theme_use('clam')          
         radionFrame = ttk.LabelFrame(self, text='Radio Buttons')
         radionFrame.pack(side=tk.LEFT, padx=10, pady=10)
         self.radioStringVar = tk.StringVar()
@@ -50,6 +52,17 @@ class MedianFrame(ttk.LabelFrame):
         self.radiobutton4 = ttk.Radiobutton(radionFrame, text='Option 4', variable=self.radioStringVar,value="yellow")
         self.radiobutton4.pack()
         self.radioStringVar.set('red')
+        # create event of ttk.radionbuttons
+        self.radiobutton1.bind('<Button-1>',self.radioEvent)
+        self.radiobutton2.bind('<Button-1>',self.radioEvent)
+        self.radiobutton3.bind('<Button-1>',self.radioEvent)
+        self.radiobutton4.bind('<Button-1>',self.radioEvent)
+    
+    def radioEvent(self,event):
+        print(self.radioStringVar.get())
+
+
+
 
 
 
