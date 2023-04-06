@@ -1,24 +1,23 @@
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image, ImageTk
 #create canvas with tkinter
 #How to draw images in tkinter window
 
-def DrawImageWithTkinter():
-    root = tk.Tk()
-    root.title("Drawing an Image")
-    root.geometry("400x400")
-    canvas = tk.Canvas(root, width=400, height=400)
-    canvas.pack()
-    img = tk.PhotoImage(file="image.png")
-    canvas.create_image(20, 20, anchor=tk.NW, image=img)
-    root.mainloop()
+def createImageOfTkinterUsingPIL():
+    pass
 
+    
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         topFrame = ttk.LabelFrame(self)
-        canvas = tk.Canvas(topFrame, width=400, height=400)
+        flowerImage1 = Image.open("./images/flower1.png")
+        self.flowerPhoto1 = ImageTk.PhotoImage(flowerImage1)
+        canvas = tk.Canvas(topFrame, width=173, height=200)
         canvas.pack()
+        canvas.create_image(0,0,image=self.flowerPhoto1,anchor='nw')
+        canvas.create_text(0,200,text='Flower', fill='yellow', font=('verdana', 36),anchor='sw')
         topFrame.pack()
         
 
