@@ -58,23 +58,29 @@ class MedianFrame(ttk.LabelFrame):
         checkFrames = ttk.LabelFrame(self, text='Check Buttons')
         checkFrames.pack(side=tk.RIGHT, padx=10, pady=10)
 
-        self.checkStringVar = tk.StringVar()
-        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1',variable=self.checkStringVar,command=self.checkEvent,onvalue='op1check')
+        self.checkStringVar1 = tk.StringVar()
+        self.checkStringVar2 = tk.StringVar()
+        self.checkStringVar3 = tk.StringVar()
+        self.checkStringVar4 = tk.StringVar()
+
+        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1',variable=self.checkStringVar1,command=self.checkEvent,onvalue='op1check')
         self.checkbutton1.pack()
-        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2',variable=self.checkStringVar,command=self.checkEvent,onvalue='op2check')
+        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2',variable=self.checkStringVar2,command=self.checkEvent,onvalue='op2check')
         self.checkbutton2.pack()
-        self.checkbutton3 = ttk.Checkbutton(checkFrames, text='Option 3', variable=self.checkStringVar,command=self.checkEvent,onvalue='op3check')
+        self.checkbutton3 = ttk.Checkbutton(checkFrames, text='Option 3', variable=self.checkStringVar3,command=self.checkEvent,onvalue='op3check')
         self.checkbutton3.pack()
-        self.checkbutton4 = ttk.Checkbutton(checkFrames, text='Option 4', variable=self.checkStringVar,command=self.checkEvent,onvalue='op4check')
-        self.checkbutton4.pack()
-        self.checkStringVar.set('op1check')
+        self.checkbutton4 = ttk.Checkbutton(checkFrames, text='Option 4', variable=self.checkStringVar4,command=self.checkEvent,onvalue='op4check')
+        self.checkbutton4.pack() 
         
     
     def radioEvent(self):
         self.w.radioButtonEventOfMedianFrame(self.radioStringVar.get())
 
     def checkEvent(self):
-        print(self.checkStringVar.get())
+        print(self.checkStringVar1.get())
+        print(self.checkStringVar2.get())
+        print(self.checkStringVar3.get())
+        print(self.checkStringVar4.get())
         #self.w.radioButtonEventOfMedianFrame(self.checkStringVar.get())
 
     
