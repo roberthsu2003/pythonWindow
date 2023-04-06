@@ -8,6 +8,8 @@ class TopFrame(ttk.LabelFrame):
         #using ttk.Style to change the style of the self widget
         ttkStyle = ttk.Style()
         ttkStyle.theme_use('default')
+        #ttkStyle change ttk.LabelFrame border width
+        ttkStyle.configure('TLabelFrame',borderwidth=0)
         flowerImage1 = Image.open("./images/flower1.png")
         self.flowerPhoto1 = ImageTk.PhotoImage(flowerImage1)
         self.canvas = tk.Canvas(self, width=173, height=200)
