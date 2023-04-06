@@ -57,6 +57,8 @@ class MedianFrame(ttk.LabelFrame):
     def radioEvent(self):
         print(self.radioStringVar.get())
 
+    
+
 
 
 
