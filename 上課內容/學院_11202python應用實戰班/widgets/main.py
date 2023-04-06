@@ -2,6 +2,7 @@ import tkinter as tk
 from parts import TopFrame,MedianFrame
 
 class Window(tk.Tk):
+    
     def __init__(self):
         super().__init__()
         topFrame = TopFrame(self,borderwidth=0)       
