@@ -4,7 +4,7 @@ from parts import TopFrame
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
-        topFrame = TopFrame(self)        
+        topFrame = TopFrame(self,borderwidth=0)       
         topFrame.pack()
         
 
