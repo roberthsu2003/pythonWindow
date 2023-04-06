@@ -63,13 +63,13 @@ class MedianFrame(ttk.LabelFrame):
         self.checkStringVar3 = tk.StringVar()
         self.checkStringVar4 = tk.StringVar()
 
-        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1',variable=self.checkStringVar1,command=self.checkEvent,onvalue='op1check')
+        self.checkbutton1 = ttk.Checkbutton(checkFrames, text='Option 1',variable=self.checkStringVar1,command=self.checkEvent,onvalue='op1check',offvalue='op1off')
         self.checkbutton1.pack()
-        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2',variable=self.checkStringVar2,command=self.checkEvent,onvalue='op2check')
+        self.checkbutton2 = ttk.Checkbutton(checkFrames, text='Option 2',variable=self.checkStringVar2,command=self.checkEvent,onvalue='op2check',offvalue='op2off')
         self.checkbutton2.pack()
-        self.checkbutton3 = ttk.Checkbutton(checkFrames, text='Option 3', variable=self.checkStringVar3,command=self.checkEvent,onvalue='op3check')
+        self.checkbutton3 = ttk.Checkbutton(checkFrames, text='Option 3', variable=self.checkStringVar3,command=self.checkEvent,onvalue='op3check',offvalue='op3off')
         self.checkbutton3.pack()
-        self.checkbutton4 = ttk.Checkbutton(checkFrames, text='Option 4', variable=self.checkStringVar4,command=self.checkEvent,onvalue='op4check')
+        self.checkbutton4 = ttk.Checkbutton(checkFrames, text='Option 4', variable=self.checkStringVar4,command=self.checkEvent,onvalue='op4check',offvalue='op4off')
         self.checkbutton4.pack() 
         
     
