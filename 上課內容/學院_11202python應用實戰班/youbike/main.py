@@ -17,7 +17,10 @@ class Window(tk.Tk):
         self.radioStringVar.set('信義區')
 
     def radio_Event(self):
-        print(self.radioStringVar.get())
+        area_name = self.radioStringVar.get()
+        area_data = datasource.getInfoFromArea(area_name)
+        for item in area_data:
+            print(item)
 
 def main():
     window = Window()
