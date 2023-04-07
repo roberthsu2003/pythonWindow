@@ -86,7 +86,13 @@ class MedianFrame(ttk.LabelFrame):
 
 class BottomFrame(ttk.LabelFrame):
     def __init__(self,master,**kwargs):
-        super().__init__(master,**kwargs) 
+        super().__init__(master,**kwargs)
+        listFrame = ttk.LabelFrame(self)
+        listFrame.pack(side=tk.LEFT) 
+        list = tk.Listbox(listFrame,height=6,width=5)
+        list.pack()
+        for month in range(1,13):
+            list.insert(tk.END,f"{month}月")
 
 
 
