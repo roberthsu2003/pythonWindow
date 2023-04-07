@@ -96,11 +96,9 @@ class BottomFrame(ttk.LabelFrame):
 
         scrollBar = ttk.Scrollbar(listFrame,command=list.yview)
         scrollBar.pack(side=tk.RIGHT,fill=tk.Y)
-
         list.configure(yscrollcommand=scrollBar.set)
 
-    def abc(self):
-        pass
+    
 
 
 
