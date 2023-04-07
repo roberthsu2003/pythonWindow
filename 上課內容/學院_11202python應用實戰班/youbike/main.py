@@ -1,7 +1,7 @@
 import datasource
 
 def main():
-    datasource.getInfo()
+    print(datasource.sarea_list)
 
 if __name__ == "__main__":
     main()
