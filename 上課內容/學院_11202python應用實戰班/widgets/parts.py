@@ -87,12 +87,20 @@ class MedianFrame(ttk.LabelFrame):
 class BottomFrame(ttk.LabelFrame):
     def __init__(self,master,**kwargs):
         super().__init__(master,**kwargs)
-        listFrame = ttk.LabelFrame(self)
-        listFrame.pack(side=tk.LEFT) 
-        list = tk.Listbox(listFrame,height=6,width=5)
-        list.pack()
+        listFrame = ttk.LabelFrame(self,text="List Box")
+        listFrame.pack(side=tk.LEFT,padx=10,pady=10) 
+        list = tk.Listbox(listFrame,height=6,width=10)
+        list.pack(side=tk.LEFT)
         for month in range(1,13):
             list.insert(tk.END,f"{month}月")
+
+        scrollBar = ttk.Scrollbar(listFrame,command=list.yview)
+        scrollBar.pack(side=tk.RIGHT,fill=tk.Y)
+
+        list.configure(yscrollcommand=scrollBar.set)
+
+    def abc(self):
+        pass
 
 
 

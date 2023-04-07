@@ -7,7 +7,7 @@ class Window(tk.Tk):
     def __init__(self):
         super().__init__()
         topFrame = TopFrame(self,borderwidth=0)       
-        topFrame.pack()
+        topFrame.pack()        
         medianFrame = MedianFrame(self,borderwidth=0)
         medianFrame.pack(fill=tk.X)
         bottomFrame = BottomFrame(self)
