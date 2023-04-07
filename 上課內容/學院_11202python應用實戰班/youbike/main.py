@@ -14,6 +14,7 @@ class Window(tk.Tk):
             ttk.Radiobutton(topFrame,text=datasource.sarea_list[i],value=datasource.sarea_list[i],variable=self.radioStringVar,command=self.radio_Event).grid(column=cols,row=rows,sticky=tk.W,padx=10,pady=10)
 
         topFrame.pack()
+        self.radioStringVar.set('信義區')
 
     def radio_Event(self):
         print(self.radioStringVar.get())
