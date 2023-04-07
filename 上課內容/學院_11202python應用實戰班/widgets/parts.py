@@ -105,9 +105,9 @@ class BottomFrame(ttk.LabelFrame):
         list.bind('<<ListboxSelect>>', self.items_selected)
 
         comboBoxFrame = ttk.LabelFrame(self,text="Combo Box")
-        comboBoxFrame.pack(side=tk.LEFT,fill=tk.Y)
+        comboBoxFrame.pack(side=tk.LEFT,fill=tk.Y,padx=10,pady=10)
 
-        comboBoxValues  = ('請選擇月份',
+        self.comboBoxValues  = ('請選擇月份',
                         'January',
 						'February',
 						'March',
@@ -122,10 +122,11 @@ class BottomFrame(ttk.LabelFrame):
 						'December')
         
         
-        comboBox = ttk.Combobox(comboBoxFrame,state= "readonly")
+        comboBox = ttk.Combobox(comboBoxFrame,state= "readonly",width=8)
         comboBox.pack()
-        comboBox['values'] = comboBoxValues        
+        comboBox['values'] = self.comboBoxValues        
         comboBox.current(0)
+        comboBox.bind('<<ComboboxSelected>>', self.month_changed)
         
         
         
@@ -138,6 +139,11 @@ class BottomFrame(ttk.LabelFrame):
         selectedValue = self.data[selectedIndex]
         self.w.listBoxEventOfBottomFrame(selectedValue)
 
+    def month_changed(self,event):
+        combobox = event.widget
+        selectedIndex= combobox.current()
+        selectedValue = self.comboBoxValues[selectedIndex]
+        self.w.comboBoxEventOfBottomFrame(selectedValue)
     
 
 
