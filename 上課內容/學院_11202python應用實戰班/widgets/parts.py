@@ -104,6 +104,28 @@ class BottomFrame(ttk.LabelFrame):
         list.configure(yscrollcommand=scrollBar.set)
         list.bind('<<ListboxSelect>>', self.items_selected)
 
+        comboBoxValues  = ('請選擇月份',
+                        'January',
+						'February',
+						'March',
+						'April',
+						'May',
+						'June',
+						'July',
+						'August',
+						'September',
+						'October',
+						'November',
+						'December')
+        
+        selected_month = tk.StringVar()
+        
+        comboBox = ttk.Combobox(self,values=comboBoxValues,textvariable=selected_month)
+        selected_month.set("請選擇月份")
+        
+        
+        comboBox.pack(side=tk.RIGHT)
+
     def items_selected(self,event):
         listbox = event.widget
         #selectedIndex -> tuple
