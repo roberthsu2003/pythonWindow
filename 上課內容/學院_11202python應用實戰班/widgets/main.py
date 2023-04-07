@@ -1,6 +1,7 @@
 import tkinter as tk
 from parts import TopFrame,MedianFrame,BottomFrame
 
+
 class Window(tk.Tk):
     
     def __init__(self):
