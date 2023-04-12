@@ -27,9 +27,9 @@ class Window(tk.Tk):
         #topFrame_end=====================
 
         #sbi_warningFrame_start====================
-        sbi_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可借目前不足站點")       
+        self.sbi_warningFrame = ttk.LabelFrame(top_wrapperFrame)       
         columns = ('#1', '#2', '#3')
-        self.sbi_tree = ttk.Treeview(sbi_warningFrame, columns=columns, show='headings')
+        self.sbi_tree = ttk.Treeview(self.sbi_warningFrame, columns=columns, show='headings')
         self.sbi_tree.heading('#1', text='站點')
         self.sbi_tree.column("#1", minwidth=0, width=200)        
         self.sbi_tree.heading('#2', text='可借')
@@ -38,15 +38,18 @@ class Window(tk.Tk):
         self.sbi_tree.column("#3", minwidth=0, width=30)        
         self.sbi_tree.pack(side=tk.LEFT)
         self.sbi_warning_data = datasource.filter_sbi_warning_data(self.area_data,sbi_numbers)
+        sbi_sites_numbers = len(self.sbi_warning_data)
+        print(sbi_sites_numbers)
+        self.sbi_warningFrame.configure(text=f"可借不足站點數:{sbi_sites_numbers}")
         for item in self.sbi_warning_data:
             self.sbi_tree.insert('',tk.END,values=[item['sna'][11:],item['sbi'],item['bemp']])
-        sbi_warningFrame.pack(side=tk.LEFT)
+        self.sbi_warningFrame.pack(side=tk.LEFT)
         #sbi_warningFrame_end======================
 
         #bemp_warningFrame_start====================
-        bemp_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可還目前不足站點")       
+        self.bemp_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可還目前不足站點")       
         columns = ('#1', '#2', '#3')
-        self.bemp_tree = ttk.Treeview(bemp_warningFrame, columns=columns, show='headings')
+        self.bemp_tree = ttk.Treeview(self.bemp_warningFrame, columns=columns, show='headings')
         self.bemp_tree.heading('#1', text='站點')
         self.bemp_tree.column("#1", minwidth=0, width=200)        
         self.bemp_tree.heading('#2', text='可借')
@@ -55,16 +58,18 @@ class Window(tk.Tk):
         self.bemp_tree.column("#3", minwidth=0, width=30)        
         self.bemp_tree.pack(side=tk.LEFT)
         self.bemp_warning_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers)
+        bemp_sites_numbers = len(self.bemp_warning_data)
+        self.bemp_warningFrame.configure(text=f"可還不足站點數:{bemp_sites_numbers}")
         for item in self.bemp_warning_data:
             self.bemp_tree.insert('',tk.END,values=[item['sna'][11:],item['sbi'],item['bemp']])
-        bemp_warningFrame.pack(side=tk.LEFT)
+        self.bemp_warningFrame.pack(side=tk.LEFT)
         #bemp_warningFrame_end======================
 
-        bottomFrame = ttk.LabelFrame(self,text="信義區")
-        bottomFrame.pack()
+        self.bottomFrame = ttk.LabelFrame(self,text="信義區")
+        self.bottomFrame.pack()
 
         columns = ('#1', '#2', '#3', '#4', '#5', '#6', '#7')
-        self.tree = ttk.Treeview(bottomFrame, columns=columns, show='headings')
+        self.tree = ttk.Treeview(self.bottomFrame, columns=columns, show='headings')
         self.tree.heading('#1', text='站點')
         self.tree.column("#1", minwidth=0, width=200)
         self.tree.heading('#2', text='時間')
@@ -86,7 +91,7 @@ class Window(tk.Tk):
         
 #幫treeview加scrollbar------------------------------------------------
 
-        scrollbar = ttk.Scrollbar(bottomFrame,command=self.tree.yview)
+        scrollbar = ttk.Scrollbar(self.bottomFrame,command=self.tree.yview)
         scrollbar.pack(side=tk.RIGHT,fill=tk.Y)
         self.tree.config(yscrollcommand=scrollbar.set)
 
@@ -117,20 +122,23 @@ class Window(tk.Tk):
 
         
         # Get selected radio button value
-        area_name = self.radioStringVar.get()        
+        area_name = self.radioStringVar.get()  
+
+        self.bottomFrame.config(text=f"{area_name}")      
         
         # Get all station data from selected area
         self.area_data = datasource.getInfoFromArea(area_name)
         
+        
         # Filter data with sbi warning number
         self.sbi_warning_data = datasource.filter_sbi_warning_data(self.area_data,sbi_numbers)
-        print("sbi:")
-        print(self.sbi_warning_data)
+        sbi_site_numbers = len(self.sbi_warning_data)
+        self.sbi_warningFrame.config(text=f"可借不足站點數:{sbi_site_numbers}")
         
         # Filter data with bemp warning number
-        self.bemp_waring_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers)
-        print("bemp:")
-        print(self.bemp_waring_data)
+        self.bemp_warning_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers)
+        bemp_site_numbers = len(self.bemp_warning_data)
+        self.bemp_warningFrame.configure(text=f"可還不足站點數:{bemp_site_numbers}")
 
         # Display data in tree view
         for item in self.area_data:

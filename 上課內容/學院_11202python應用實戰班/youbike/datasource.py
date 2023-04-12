@@ -5,6 +5,7 @@ sarea_list = None
 data_list = None
 
 def getInfo() -> None:
+    global sarea_list, data_list
     # Get data from TCGB website
     url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
     response = requests.get(url)
