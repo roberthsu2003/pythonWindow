@@ -8,10 +8,11 @@ bemp_numbers = 3
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
-#top_wrapperFrame=================
+        #top_wrapperFrame=================
         top_wrapperFrame = ttk.Frame(self)
         top_wrapperFrame.pack(fill=tk.X)
-#topFrame_start===================
+
+        #topFrame_start===================
         topFrame = ttk.LabelFrame(top_wrapperFrame,text="台北市行政區")
         length = len(datasource.sarea_list)
         self.radioStringVar = tk.StringVar()
@@ -23,9 +24,9 @@ class Window(tk.Tk):
         topFrame.pack(side=tk.LEFT)
         self.radioStringVar.set('信義區')
         self.area_data = datasource.getInfoFromArea('信義區')
-#topFrame_end===================
+        #topFrame_end=====================
 
-#sbi_warningFrame_start====================
+        #sbi_warningFrame_start====================
         sbi_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可借目前不足站點")       
         columns = ('#1', '#2', '#3')
         self.sbi_tree = ttk.Treeview(sbi_warningFrame, columns=columns, show='headings')
@@ -40,9 +41,9 @@ class Window(tk.Tk):
         for item in self.sbi_warning_data:
             self.sbi_tree.insert('',tk.END,values=[item['sna'][11:],item['sbi'],item['bemp']])
         sbi_warningFrame.pack(side=tk.LEFT)
-#sbi_warningFrame_end======================
+        #sbi_warningFrame_end======================
 
-#bemp_warningFrame_start====================
+        #bemp_warningFrame_start====================
         bemp_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可還目前不足站點")       
         columns = ('#1', '#2', '#3')
         self.bemp_tree = ttk.Treeview(bemp_warningFrame, columns=columns, show='headings')
@@ -57,7 +58,7 @@ class Window(tk.Tk):
         for item in self.bemp_warning_data:
             self.bemp_tree.insert('',tk.END,values=[item['sna'][11:],item['sbi'],item['bemp']])
         bemp_warningFrame.pack(side=tk.LEFT)
-#bemp_warningFrame_end======================
+        #bemp_warningFrame_end======================
 
         bottomFrame = ttk.LabelFrame(self,text="信義區")
         bottomFrame.pack()
@@ -112,6 +113,8 @@ class Window(tk.Tk):
         # Clear tree view
         for item in self.tree.get_children():
             self.tree.delete(item)
+        
+
         
         # Get selected radio button value
         area_name = self.radioStringVar.get()        

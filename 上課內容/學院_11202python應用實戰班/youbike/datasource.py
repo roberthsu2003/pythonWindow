@@ -1,13 +1,15 @@
 import requests
 
+# Store the area names and data
 sarea_list = None
 data_list = None
 
-def getInfo():
-    global sarea_list, data_list
+def getInfo() -> None:
+    # Get data from TCGB website
     url = "https://tcgbusfs.blob.core.windows.net/dotapp/youbike/v2/youbike_immediate.json"
     response = requests.get(url)
     data_list = response.json()
+    # Get all available areas
     sarea_temp = set()
     for item in data_list:
         sarea_temp.add(item["sarea"])
