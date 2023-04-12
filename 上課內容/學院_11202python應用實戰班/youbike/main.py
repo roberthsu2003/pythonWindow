@@ -9,6 +9,17 @@ bemp_numbers = 3
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
+        # add menubar that contains a menu
+        self.menubar = tk.Menu(self)
+        self.config(menu=self.menubar)
+        # add command menu in menubar
+        
+        self.command_menu = tk.Menu(self.menubar)
+        self.command_menu.add_command(label="設定", command=self.menu_setting_click)
+        self.command_menu.add_command(label="離開", command=self.destroy)
+        self.menubar.add_cascade(label="File", menu=self.command_menu)
+        
+
         #top_wrapperFrame=================
         top_wrapperFrame = ttk.Frame(self)
         top_wrapperFrame.pack(fill=tk.X)
@@ -119,7 +130,8 @@ class Window(tk.Tk):
     '''
         
 
-
+    def menu_setting_click(self):
+        print("setting")
         
 
 
