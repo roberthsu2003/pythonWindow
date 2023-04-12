@@ -5,7 +5,11 @@ from tkinter import ttk
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
-        topFrame = ttk.LabelFrame(self,text="台北市行政區")
+#top_wrapperFrame=================
+        top_wrapperFrame = ttk.Frame(self)
+        top_wrapperFrame.pack(fill=tk.X)
+#topFrame_start===================
+        topFrame = ttk.LabelFrame(top_wrapperFrame,text="台北市行政區")
         length = len(datasource.sarea_list)
         self.radioStringVar = tk.StringVar()
         for i in range(length):
@@ -13,9 +17,22 @@ class Window(tk.Tk):
             rows = i // 3
             ttk.Radiobutton(topFrame,text=datasource.sarea_list[i],value=datasource.sarea_list[i],variable=self.radioStringVar,command=self.radio_Event).grid(column=cols,row=rows,sticky=tk.W,padx=10,pady=10)
 
-        topFrame.pack()
+        topFrame.pack(side=tk.LEFT)
         self.radioStringVar.set('信義區')
         self.area_data = datasource.getInfoFromArea('信義區')
+#topFrame_end===================
+
+#sbi_warningFrame_start====================
+        sbi_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可借目前不足站點")       
+        
+        sbi_warningFrame.pack(side=tk.LEFT)
+#sbi_warningFrame_end======================
+
+#bemp_warningFrame_start====================
+        bemp_warningFrame = ttk.LabelFrame(top_wrapperFrame,text="可還目前不足站點")       
+        
+        bemp_warningFrame.pack(side=tk.LEFT)
+#bemp_warningFrame_end======================
 
         bottomFrame = ttk.LabelFrame(self,text="信義區")
         bottomFrame.pack()
@@ -47,6 +64,24 @@ class Window(tk.Tk):
         scrollbar.pack(side=tk.RIGHT,fill=tk.Y)
         self.tree.config(yscrollcommand=scrollbar.set)
 
+        #sorted by column in scrollbar
+
+    '''
+    self.tree.bind('<ButtonRelease-1>',self.sortby)
+
+    def sortby(self,event):
+        col = self.tree.identify_column(event.x)
+        items = [(self.tree.set(k, col), k) for k in self.tree.get_children('')]
+        items.sort(reverse=True)
+        for index, (val, k) in enumerate(items):
+            self.tree.move(k, '', index)
+        self.tree.heading(col, command=lambda: self.sortby(col, 0))
+    '''
+        
+
+
+        
+
 
     def radio_Event(self):
         for item in self.tree.get_children():
@@ -54,6 +89,7 @@ class Window(tk.Tk):
         
         area_name = self.radioStringVar.get()        
         self.area_data = datasource.getInfoFromArea(area_name)
+        
         for item in self.area_data:
             self.tree.insert('',tk.END,values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']])
         
