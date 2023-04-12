@@ -2,6 +2,9 @@ import datasource
 import tkinter as tk
 from tkinter import ttk
 
+sbi_numbers = 3
+bemp_numbers = 3
+
 class Window(tk.Tk):
     def __init__(self):
         super().__init__()
@@ -89,7 +92,13 @@ class Window(tk.Tk):
         
         area_name = self.radioStringVar.get()        
         self.area_data = datasource.getInfoFromArea(area_name)
-        
+        self.sbi_warning_data = datasource.filter_sbi_warning_data(self.area_data,sbi_numbers)
+        print("sbi:")
+        print(self.sbi_warning_data)
+        self.bemp_waring_data = datasource.filter_bemp_warning_data(self.area_data,bemp_numbers)
+        print("bemp:")
+        print(self.bemp_waring_data)
+
         for item in self.area_data:
             self.tree.insert('',tk.END,values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']])
         
