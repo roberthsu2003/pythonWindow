@@ -9,9 +9,17 @@ class MapDisplay(Dialog):
     
     #override
     def body(self,master):
-        closeButton = ttk.Button(self,text="close")
-        closeButton.pack(padx=30,pady=30)
-    #override
-    
-    def buttonbox(self):
         pass
+        
+    #override
+    def buttonbox(self):
+        '''add standard button box.
+        override if you do not want the standard buttons
+        '''
+
+        boxFrame = ttk.Frame(self)
+        button = ttk.Button(boxFrame, text="關閉", width=10, command=self.ok, default=tk.ACTIVE) #self.ok方法是繼承來的
+        button.pack(side=tk.LEFT, padx=5, pady=5)
+        self.bind("<Return>", self.ok)
+        boxFrame.pack()
+

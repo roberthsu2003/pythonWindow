@@ -163,7 +163,7 @@ class Window(tk.Tk):
         
         #顯示地圖window
         mapDisplay = MapDisplay(self,selectd_data)
-        mapDisplay.transient(self)
+        
 
     def menu_setting_click(self):
         global sbi_numbers,bemp_numbers
