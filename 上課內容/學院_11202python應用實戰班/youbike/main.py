@@ -1,8 +1,10 @@
 import datasource
 import tkinter as tk
 from tkinter import ttk
+from PIL import Image,ImageTk
 import datetime
 from tkinter.simpledialog import askinteger
+
 
 sbi_numbers = 3
 bemp_numbers = 3
@@ -19,9 +21,18 @@ class Window(tk.Tk):
         self.command_menu.add_command(label="離開", command=self.destroy)
         self.menubar.add_cascade(label="File", menu=self.command_menu)
 
-        #main Frame
+        
+        # main Frame
         mainFrame = ttk.Frame(self)
         mainFrame.pack(padx=30,pady=50)
+
+        #logoLabel top of top_wrapperFrame       
+        logoImage = Image.open('logo.png')
+        resizeImage = logoImage.resize((270,68),Image.LANCZOS)
+        self.logoTkimage = ImageTk.PhotoImage(resizeImage)
+        logoLabel = ttk.Label(mainFrame,image=self.logoTkimage)
+        logoLabel.pack(pady=(0,50))
+        
         
 
         #top_wrapperFrame=================
