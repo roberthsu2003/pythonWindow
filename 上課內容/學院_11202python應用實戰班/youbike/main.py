@@ -152,7 +152,12 @@ class Window(tk.Tk):
     def treeSelected(self,event):
         selectedTree = event.widget
         itemTag = selectedTree.selection()[0]
-        print(selectedTree.item(itemTag))
+        itemDic = selectedTree.item(itemTag)
+        siteName = itemDic['tags'][0]
+        for item in self.area_data:
+            if siteName == item['sna']:
+                print(item)
+                break
 
     def menu_setting_click(self):
         global sbi_numbers,bemp_numbers
