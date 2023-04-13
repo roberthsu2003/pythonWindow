@@ -118,7 +118,7 @@ class Window(tk.Tk):
 
         #self.tree, addItem
         for item in self.area_data:
-            self.tree.insert('',tk.END,values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']])
+            self.tree.insert('',tk.END,values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']],tags=item['sna'])
 
         #self.tree bind event
         self.tree.bind('<<TreeviewSelect>>',self.treeSelected)
