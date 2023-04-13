@@ -116,8 +116,12 @@ class Window(tk.Tk):
         self.tree.column("#7", minwidth=0, width=30)
         self.tree.pack(side=tk.LEFT)
 
+        #self.tree, addItem
         for item in self.area_data:
             self.tree.insert('',tk.END,values=[item['sna'][11:],item['mday'],item['tot'],item['sbi'],item['bemp'],item['ar'],item['act']])
+
+        #self.tree bind event
+        self.tree.bind('<<TreeviewSelect>>',self.treeSelected)
         
         #幫treeview加scrollbar------------------------------------------------
         scrollbar = ttk.Scrollbar(self.bottomFrame,command=self.tree.yview)
@@ -144,6 +148,11 @@ class Window(tk.Tk):
         self.tree.heading(col, command=lambda: self.sortby(col, 0))
     '''
         
+
+    def treeSelected(self,event):
+        selectedTree = event.widget
+        itemTag = selectedTree.selection()[0]
+        print(selectedTree.item(itemTag))
 
     def menu_setting_click(self):
         global sbi_numbers,bemp_numbers
