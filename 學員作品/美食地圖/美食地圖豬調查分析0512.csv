@@ -1,0 +1,1001 @@
+﻿Num,Sex,Age,Job,Salery,Merry,Place,Transportation,drinks,price,delivery habits
+20,women,20,service,32500,TRUE,Songshan,Bus,WooTea,40,Yes
+59,women,20,staff,29500,FALSE,Neihu,drive,TRUEDAN,60,No
+74,women,20,staff,36000,FALSE,Wanhua,MRT,Wanpo,35,Yes
+95,women,20,service,38500,TRUE,Songshan,Bus,Wanpo,45,No
+119,Man,20,service,46000,TRUE,Datong,Scooter,TRUEDAN,45,Yes
+274,Man,20,student,26000,FALSE,Songshan,Bus,OtherTeaShop,60,No
+294,Man,20,Market,45500,FALSE,Zhongshan,MRT,WooTea,35,No
+298,Man,20,Market,56500,TRUE,Wanhua,MRT,KEBUKE,60,No
+316,Man,20,staff,35500,TRUE,Wanhua,MRT,WooTea,50,Yes
+400,women,20,staff,39000,FALSE,Da’an,Bus,Ching-Shin Fu-Chuan,60,No
+458,women,20,staff,70500,TRUE,Nangang,MRT,JOHN TEA COMPANY,65,No
+481,women,20,staff,56000,TRUE,Da’an,MRT,Chunshuitang,70,No
+492,Man,20,staff,40000,FALSE,Wenshan,MRT,50 Arashi,45,No
+498,Man,20,service,39500,FALSE,Beitou,Bus,Guiji,40,No
+514,women,20,staff,43000,FALSE,Shilin,drive,50 Arashi,40,No
+528,Man,20,Market,39000,FALSE,Zhongzheng,drive,KEBUKE,55,No
+540,Man,20,staff,56500,FALSE,Wenshan,Scooter,Wanpo,70,No
+561,women,20,financial,41000,FALSE,Shilin,MRT,Wanpo,35,No
+576,Man,20,teacher,40000,FALSE,Datong,MRT,JOHN TEA COMPANY,70,No
+609,Man,20,staff,43500,FALSE,Beitou,Scooter,KEBUKE,45,Yes
+610,Man,20,staff,29500,TRUE,Datong,Scooter,Guiji,50,No
+615,women,20,service,38000,FALSE,Neihu,Scooter,50 Arashi,40,No
+618,women,20, retail,36000,TRUE,Songshan,Scooter,Guiji,45,Yes
+721,Man,20,financial,35500,FALSE,Nangang,MRT,CoCo,70,Yes
+726,women,20,staff,31000,FALSE,Wanhua,Bus,Ching-Shin Fu-Chuan,45,No
+737,women,20,student,12500,FALSE,Da’an,Scooter,TRUEDAN,40,No
+743,Man,20,Market,51000,TRUE,Zhongshan,drive,OtherTeaShop,70,Yes
+756,women,20, retail,44000,FALSE,Zhongshan,Scooter,Tenren's Tea,35,No
+765,Man,20,police,47000,FALSE,Zhongshan,Bus,Tenren's Tea,60,No
+768,women,20,staff,29500,TRUE,Wanhua,Bus,CoCo,45,No
+774,women,20,financial,38500,FALSE,Zhongshan,Bus,Wanpo,70,No
+798,Man,20,Freelance,38000,FALSE,Beitou,MRT,Guiji,35,Yes
+885,women,20,service,40000,FALSE,Nangang,Bus,WooTea,55,No
+919,women,20,service,46500,FALSE,Datong,Bus,Ching-Shin Fu-Chuan,60,Yes
+921,Man,20,staff,35000,FALSE,Wanhua,Scooter,50 Arashi,40,No
+938,Man,20,Worker,34000,TRUE,Da’an,Bus,KEBUKE,45,No
+954,Man,20,engineer,42500,FALSE,Zhongshan,MRT,Chunshuitang,55,No
+957,women,20,staff,29000,FALSE,Neihu,Bus,OtherTeaShop,40,Yes
+56,Man,21,Worker,29000,TRUE,Da’an,Scooter,OtherTeaShop,45,Yes
+60,Man,21,staff,45000,FALSE,Wenshan,Scooter,Wanpo,45,No
+113,Man,21,Worker,31500,FALSE,Zhongzheng,Bus,JOHN TEA COMPANY,45,Yes
+123,Man,21,student,19000,FALSE,Wenshan,Bus,CoCo,70,Yes
+125,Man,21,sales,34000,FALSE,Wenshan,Scooter,Ching-Shin Fu-Chuan,45,Yes
+165,Man,21,engineer,38500,FALSE,Wanhua,Scooter,OtherTeaShop,60,No
+176,women,21,student,27500,FALSE,Datong,Bus,WooTea,55,Yes
+194,women,21,service,54000,FALSE,Xinyi,drive,WooTea,55,No
+208,women,21,staff,29500,FALSE,Da’an,MRT,WooTea,45,No
+210,Man,21,staff,32000,TRUE,Zhongshan,Scooter,CoCo,35,No
+240,Man,21,engineer,45500,TRUE,Zhongzheng,MRT,50 Arashi,60,Yes
+255,Man,21,financial,45000,FALSE,Zhongshan,drive,Guiji,60,No
+279,Man,21,sales,50000,TRUE,Shilin,Scooter,50 Arashi,60,No
+300,women,21,staff,28500,FALSE,Beitou,MRT,Tenren's Tea,45,No
+318,women,21,service,33500,TRUE,Wenshan,Bus,50 Arashi,70,No
+327,women,21,staff,32000,TRUE,Xinyi,Scooter,KEBUKE,70,No
+368,women,21,service,28500,TRUE,Wenshan,drive,JOHN TEA COMPANY,70,No
+374,women,21,staff,42500,FALSE,Xinyi,Scooter,JOHN TEA COMPANY,60,No
+460,Man,21,Freelance,33000,TRUE,Wanhua,Scooter,Guiji,65,No
+554,women,21,staff,31500,TRUE,Zhongzheng,Bus,Tenren's Tea,60,No
+570,Man,21, lawyer,49000,FALSE,Datong,MRT,Wanpo,60,No
+604,Man,21,staff,34500,TRUE,Neihu,Bus,50 Arashi,35,No
+613,women,21,sales,34000,FALSE,Neihu,Scooter,KEBUKE,65,Yes
+647,women,21,Worker,35000,TRUE,Zhongshan,Scooter,Ching-Shin Fu-Chuan,50,No
+674,women,21,staff,65000,FALSE,Beitou,MRT,Ching-Shin Fu-Chuan,65,No
+715,women,21, retail,49000,FALSE,Neihu,drive,Tenren's Tea,50,No
+730,women,21,service,36000,TRUE,Shilin,Scooter,OtherTeaShop,50,Yes
+742,Man,21,staff,46000,TRUE,Wenshan,MRT,Ching-Shin Fu-Chuan,60,No
+789,women,21,engineer,39500,TRUE,Xinyi,Scooter,Ching-Shin Fu-Chuan,45,No
+940,women,21,staff,26000,TRUE,Datong,Bus,CoCo,40,Yes
+949,women,21,staff,43000,FALSE,Zhongshan,MRT,Ching-Shin Fu-Chuan,55,No
+1000,women,21,engineer,32000,TRUE,Wenshan,MRT,Guiji,70,Yes
+48,Man,22,sales,49500,TRUE,Wenshan,Bus,WooTea,60,Yes
+68,women,22,staff,32500,TRUE,Nangang,MRT,JOHN TEA COMPANY,55,No
+105,women,22,staff,45500,FALSE,Zhongshan,MRT,Tenren's Tea,60,No
+108,women,22,student,30000,TRUE,Wenshan,Bus,OtherTeaShop,70,Yes
+110,Man,22,engineer,32500,FALSE,Neihu,MRT,Tenren's Tea,50,No
+139,women,22,Market,59500,FALSE,Wenshan,Bus,KEBUKE,55,No
+163,women,22,staff,67500,TRUE,Xinyi,Scooter,Wanpo,45,No
+168,Man,22,staff,41500,TRUE,Beitou,MRT,CoCo,50,No
+207,women,22,financial,31500,FALSE,Neihu,Bus,OtherTeaShop,70,No
+249,women,22, retail,48500,FALSE,Xinyi,Bus,OtherTeaShop,50,No
+262,women,22,financial,45500,FALSE,Zhongshan,Scooter,WooTea,45,No
+293,Man,22,financial,60500,FALSE,Wenshan,drive,CoCo,70,No
+340,Man,22,staff,33500,FALSE,Beitou,Scooter,TRUEDAN,65,No
+344,women,22,staff,59000,FALSE,Da’an,Bus,OtherTeaShop,55,No
+417,Man,22,staff,47000,FALSE,Xinyi,Scooter,KEBUKE,55,Yes
+421,Man,22,staff,48500,TRUE,Shilin,drive,Ching-Shin Fu-Chuan,35,Yes
+432,women,22,Market,59000,FALSE,Neihu,MRT,TRUEDAN,60,No
+433,Man,22,engineer,31500,FALSE,Zhongshan,MRT,WooTea,70,No
+449,women,22,staff,45500,FALSE,Zhongshan,Scooter,Guiji,50,No
+499,women,22,staff,35500,TRUE,Wanhua,drive,WooTea,40,No
+511,women,22,financial,50000,FALSE,Datong,Scooter,CoCo,50,No
+565,women,22,Freelance,50000,FALSE,Da’an,Bus,Tenren's Tea,60,Yes
+606,Man,22,engineer,30000,FALSE,Nangang,Bus,Wanpo,70,No
+625,women,22,teacher,42000,FALSE,Nangang,Bus,50 Arashi,35,No
+646,women,22,engineer,37000,FALSE,Shilin,Scooter,Tenren's Tea,60,Yes
+652,women,22,sales,48000,TRUE,Da’an,Scooter,Guiji,65,Yes
+729,women,22,staff,52000,FALSE,Datong,Scooter,KEBUKE,60,No
+738,women,22,police,34000,TRUE,Nangang,Bus,Chunshuitang,40,No
+752,women,22,staff,28500,FALSE,Da’an,Bus,Chunshuitang,70,Yes
+771,Man,22,student,15500,FALSE,Datong,Bus,Guiji,45,Yes
+796,women,22,engineer,40000,TRUE,Zhongzheng,MRT,JOHN TEA COMPANY,50,No
+848,Man,22, lawyer,34500,FALSE,Beitou,Scooter,TRUEDAN,65,Yes
+852,women,22,staff,37000,FALSE,Da’an,Scooter,KEBUKE,70,No
+857,women,22,staff,63000,TRUE,Nangang,Scooter,KEBUKE,45,No
+862,Man,22,student,24000,FALSE,Wenshan,MRT,Guiji,45,No
+865,Man,22,service,21500,FALSE,Songshan,MRT,TRUEDAN,50,No
+939,women,22,service,42000,FALSE,Wenshan,Scooter,Guiji,50,Yes
+952,Man,22,staff,34500,FALSE,Beitou,drive,Wanpo,65,Yes
+961,women,22,staff,34000,FALSE,Zhongzheng,Scooter,WooTea,65,Yes
+33,Man,23,staff,35000,FALSE,Wenshan,Bus,Ching-Shin Fu-Chuan,60,No
+50,Man,23,staff,49000,FALSE,Shilin,Bus,50 Arashi,45,Yes
+89,Man,23,financial,33500,TRUE,Shilin,Bus,WooTea,70,No
+177,Man,23,financial,31000,TRUE,Zhongzheng,Scooter,CoCo,60,No
+179,women,23,student,29000,FALSE,Datong,Bus,Wanpo,45,No
+220,Man,23,sales,34000,TRUE,Zhongshan,Bus,Wanpo,70,Yes
+234,women,23,staff,36500,FALSE,Datong,MRT,WooTea,65,No
+276,Man,23,staff,53500,FALSE,Zhongzheng,Scooter,Tenren's Tea,70,Yes
+383,women,23,engineer,32500,FALSE,Neihu,Bus,Ching-Shin Fu-Chuan,45,Yes
+394,women,23,Market,39000,FALSE,Songshan,Scooter,Guiji,35,No
+407,women,23,staff,31000,FALSE,Songshan,Scooter,50 Arashi,55,No
+415,women,23,staff,40500,FALSE,Zhongzheng,Bus,CoCo,50,No
+445,Man,23,staff,42500,FALSE,Shilin,MRT,Wanpo,40,Yes
+451,Man,23,engineer,59000,TRUE,Nangang,MRT,Chunshuitang,40,Yes
+483,Man,23,Worker,51000,TRUE,Beitou,MRT,Chunshuitang,35,No
+484,Man,23,staff,31000,FALSE,Shilin,MRT,50 Arashi,65,Yes
+651,women,23,Market,44500,TRUE,Shilin,Scooter,50 Arashi,65,Yes
+664,women,23,sales,42500,TRUE,Nangang,Bus,TRUEDAN,35,Yes
+682,women,23,Worker,39000,FALSE,Neihu,Scooter,CoCo,65,Yes
+687,Man,23,teacher,50000,TRUE,Xinyi,Scooter,WooTea,70,No
+694,women,23,service,36500,FALSE,Xinyi,Scooter,OtherTeaShop,65,No
+753,women,23,staff,40500,TRUE,Songshan,MRT,KEBUKE,60,No
+778,Man,23,engineer,59500,FALSE,Zhongshan,Scooter,50 Arashi,35,No
+786,Man,23,engineer,38000,FALSE,Wanhua,Bus,CoCo,35,No
+791,Man,23,staff,52500,FALSE,Beitou,Bus,Tenren's Tea,50,No
+823,Man,23,staff,55500,FALSE,Wenshan,Scooter,Chunshuitang,50,Yes
+834,women,23,service,63500,TRUE,Songshan,Scooter,Guiji,60,No
+853,women,23,staff,63000,TRUE,Songshan,Scooter,Wanpo,35,No
+870,Man,23,staff,48000,FALSE,Datong,Scooter,Chunshuitang,50,No
+873,women,23,service,65500,FALSE,Wenshan,MRT,Chunshuitang,70,Yes
+932,Man,23,staff,33000,FALSE,Shilin,MRT,JOHN TEA COMPANY,65,Yes
+934,women,23,staff,67500,FALSE,Wenshan,Scooter,Ching-Shin Fu-Chuan,45,No
+980,women,23,student,12000,TRUE,Wanhua,Scooter,Wanpo,35,No
+983,Man,23,service,29000,FALSE,Beitou,Scooter,WooTea,35,No
+986,Man,23,staff,28500,FALSE,Wanhua,Scooter,Chunshuitang,55,Yes
+45,women,24,engineer,33000,TRUE,Songshan,MRT,Wanpo,40,Yes
+54,Man,24,staff,34000,FALSE,Xinyi,Bus,50 Arashi,60,No
+111,women,24,police,55000,FALSE,Zhongzheng,MRT,Wanpo,50,No
+136,Man,24,police,56000,FALSE,Shilin,Bus,Chunshuitang,40,Yes
+157,Man,24,Freelance,29000,FALSE,Wanhua,drive,Wanpo,65,No
+159,Man,24,staff,76000,TRUE,Zhongshan,Scooter,KEBUKE,45,No
+161,Man,24,staff,33000,FALSE,Da’an,MRT,Ching-Shin Fu-Chuan,70,No
+174,women,24,engineer,62500,TRUE,Xinyi,MRT,TRUEDAN,70,No
+211,Man,24,engineer,30000,FALSE,Neihu,Bus,WooTea,60,No
+248,women,24,staff,66500,TRUE,Datong,MRT,TRUEDAN,70,No
+254,women,24, lawyer,28000,FALSE,Shilin,Bus,Ching-Shin Fu-Chuan,40,No
+258,Man,24,service,36000,TRUE,Da’an,MRT,Chunshuitang,40,No
+278,women,24,staff,38000,FALSE,Songshan,Scooter,KEBUKE,45,Yes
+309,women,24,Market,52500,FALSE,Beitou,MRT,TRUEDAN,55,No
+351,women,24, retail,51000,TRUE,Beitou,drive,Tenren's Tea,55,No
+360,women,24,financial,64000,FALSE,Wenshan,MRT,TRUEDAN,45,No
+367,Man,24,staff,52500,TRUE,Neihu,Scooter,50 Arashi,50,No
+387,Man,24,engineer,70000,FALSE,Nangang,Scooter,WooTea,65,No
+392,Man,24,sales,65000,FALSE,Shilin,MRT,Tenren's Tea,35,No
+477,women,24,Worker,57500,FALSE,Datong,Scooter,Wanpo,55,Yes
+497,women,24,financial,28500,FALSE,Zhongzheng,Scooter,Guiji,70,No
+526,women,24,staff,64500,FALSE,Neihu,Bus,50 Arashi,65,No
+533,Man,24,financial,29500,FALSE,Shilin,MRT,Ching-Shin Fu-Chuan,35,Yes
+537,women,24,engineer,41500,FALSE,Datong,MRT,KEBUKE,40,Yes
+579,Man,24,staff,59500,FALSE,Wanhua,MRT,Ching-Shin Fu-Chuan,35,No
+635,women,24,staff,78000,FALSE,Xinyi,Scooter,JOHN TEA COMPANY,35,No
+670,Man,24,service,29500,FALSE,Da’an,Scooter,Wanpo,40,No
+689,women,24,financial,47500,TRUE,Neihu,MRT,Ching-Shin Fu-Chuan,45,No
+797,Man,24,staff,29500,TRUE,Nangang,Bus,OtherTeaShop,35,No
+824,Man,24,financial,51500,FALSE,Neihu,MRT,CoCo,45,Yes
+829,Man,24,teacher,40000,TRUE,Songshan,MRT,50 Arashi,60,Yes
+835,women,24,staff,49000,FALSE,Zhongzheng,MRT,Ching-Shin Fu-Chuan,60,No
+842,Man,24,staff,68500,TRUE,Xinyi,Scooter,KEBUKE,40,Yes
+882,women,24,sales,45500,TRUE,Neihu,MRT,OtherTeaShop,40,No
+918,Man,24,engineer,62000,FALSE,Wenshan,Scooter,Ching-Shin Fu-Chuan,50,No
+924,women,24,sales,56000,FALSE,Neihu,MRT,Chunshuitang,65,No
+929,women,24,sales,49000,FALSE,Zhongzheng,drive,Ching-Shin Fu-Chuan,45,Yes
+978,Man,24,docter,34500,FALSE,Songshan,MRT,CoCo,70,Yes
+44,Man,25,staff,34000,TRUE,Da’an,Bus,50 Arashi,70,No
+47,women,25,financial,41500,TRUE,Wanhua,Scooter,Guiji,50,No
+63,Man,25,Market,61500,FALSE,Xinyi,MRT,CoCo,40,No
+124,Man,25, lawyer,72500,TRUE,Wenshan,Bus,Wanpo,65,No
+158,Man,25,engineer,35500,FALSE,Shilin,Bus,CoCo,60,No
+198,women,25,Market,60500,TRUE,Neihu,Bus,TRUEDAN,65,Yes
+244,Man,25,police,47500,FALSE,Nangang,Scooter,50 Arashi,35,Yes
+386,Man,25,staff,66000,FALSE,Songshan,MRT,50 Arashi,55,Yes
+410,women,25,staff,67500,TRUE,Wanhua,MRT,TRUEDAN,65,No
+439,Man,25,staff,73000,TRUE,Datong,Bus,50 Arashi,50,No
+468,women,25,staff,74500,TRUE,Nangang,MRT,Wanpo,45,No
+493,women,25,financial,28000,FALSE,Datong,Scooter,KEBUKE,45,No
+536,women,25,staff,59500,FALSE,Xinyi,Scooter,50 Arashi,45,Yes
+553,Man,25,staff,49500,TRUE,Nangang,MRT,Tenren's Tea,50,Yes
+557,Man,25, retail,49500,FALSE,Datong,Scooter,JOHN TEA COMPANY,50,No
+566,Man,25,Freelance,24500,TRUE,Xinyi,MRT,Guiji,45,No
+580,women,25,service,39500,TRUE,Da’an,Scooter,KEBUKE,65,No
+581,Man,25,staff,50000,TRUE,Songshan,MRT,WooTea,40,No
+634,women,25,engineer,49500,TRUE,Neihu,Bus,CoCo,40,No
+686,Man,25,Worker,60500,TRUE,Da’an,Bus,Chunshuitang,55,No
+734,Man,25,teacher,68500,FALSE,Zhongshan,Scooter,WooTea,60,No
+793,women,25,financial,59500,FALSE,Nangang,Scooter,TRUEDAN,40,No
+828,Man,25,sales,46000,TRUE,Xinyi,MRT,KEBUKE,40,No
+844,women,25,sales,41000,FALSE,Beitou,Scooter,Chunshuitang,60,No
+854,Man,25,staff,28500,TRUE,Wanhua,Bus,Ching-Shin Fu-Chuan,40,Yes
+877,Man,25,staff,31500,TRUE,Neihu,Scooter,50 Arashi,70,No
+911,women,25,staff,55500,TRUE,Xinyi,Bus,Chunshuitang,50,No
+928,Man,25,staff,51000,TRUE,Datong,Bus,JOHN TEA COMPANY,35,No
+982,Man,25,financial,77500,FALSE,Xinyi,Bus,TRUEDAN,50,No
+19,Man,26,staff,32500,FALSE,Beitou,Bus,TRUEDAN,35,No
+30,Man,26,staff,33500,FALSE,Zhongzheng,Bus,Guiji,55,Yes
+35,Man,26, retail,58000,FALSE,Shilin,Bus,TRUEDAN,55,No
+43,women,26,staff,63500,TRUE,Nangang,Bus,Ching-Shin Fu-Chuan,35,Yes
+132,Man,26,sales,38000,FALSE,Wanhua,Scooter,Chunshuitang,70,No
+197,women,26,staff,63000,FALSE,Songshan,MRT,Wanpo,35,Yes
+201,Man,26,engineer,31500,FALSE,Datong,Bus,JOHN TEA COMPANY,70,Yes
+205,women,26,staff,37500,FALSE,Datong,Bus,KEBUKE,35,No
+206,women,26,staff,52000,TRUE,Xinyi,Bus,TRUEDAN,50,No
+222,Man,26,Freelance,46000,FALSE,Xinyi,Scooter,WooTea,60,No
+246,Man,26,staff,72500,FALSE,Shilin,Bus,KEBUKE,50,Yes
+270,women,26,sales,40500,TRUE,Zhongshan,Bus,Chunshuitang,65,No
+307,Man,26,teacher,63000,TRUE,Wenshan,MRT,Tenren's Tea,60,No
+308,Man,26,staff,42000,FALSE,Neihu,Scooter,JOHN TEA COMPANY,50,No
+365,Man,26,service,46000,FALSE,Datong,Bus,TRUEDAN,45,Yes
+399,Man,26,staff,40000,FALSE,Wanhua,Bus,JOHN TEA COMPANY,70,No
+427,Man,26, retail,37500,FALSE,Xinyi,MRT,Wanpo,60,No
+431,Man,26,staff,49000,FALSE,Shilin,MRT,JOHN TEA COMPANY,65,No
+440,Man,26,staff,72000,FALSE,Beitou,Scooter,Wanpo,35,No
+482,women,26,financial,42000,FALSE,Beitou,MRT,50 Arashi,70,No
+534,Man,26,Worker,34500,FALSE,Beitou,Scooter,Guiji,60,No
+538,women,26,staff,78000,TRUE,Da’an,drive,Guiji,55,No
+622,Man,26,financial,46000,FALSE,Zhongshan,MRT,WooTea,45,Yes
+644,women,26,staff,60000,FALSE,Wenshan,MRT,CoCo,70,Yes
+676,Man,26,Freelance,29500,FALSE,Neihu,MRT,TRUEDAN,40,No
+678,Man,26, retail,46000,TRUE,Nangang,Scooter,50 Arashi,55,Yes
+711,women,26,staff,73500,TRUE,Da’an,Scooter,Wanpo,35,Yes
+758,women,26,staff,33000,FALSE,Zhongshan,Scooter,JOHN TEA COMPANY,65,No
+785,women,26,financial,51000,TRUE,Zhongzheng,Bus,TRUEDAN,55,Yes
+803,women,26,staff,58000,FALSE,Da’an,Bus,Chunshuitang,45,No
+810,women,26, lawyer,33500,TRUE,Wenshan,Scooter,Ching-Shin Fu-Chuan,35,Yes
+815,Man,26,staff,37000,TRUE,Wenshan,MRT,Guiji,45,No
+847,women,26, retail,44000,TRUE,Beitou,MRT,KEBUKE,70,No
+925,women,26,financial,45000,TRUE,Zhongshan,MRT,KEBUKE,35,No
+947,women,26,staff,69000,TRUE,Songshan,Bus,CoCo,35,No
+958,women,26,engineer,66500,TRUE,Datong,Scooter,JOHN TEA COMPANY,65,No
+81,women,27,staff,56500,TRUE,Nangang,Bus,KEBUKE,40,Yes
+120,Man,27,financial,69000,FALSE,Songshan,Scooter,WooTea,50,Yes
+122,Man,27,engineer,52000,TRUE,Neihu,drive,Guiji,55,Yes
+128,Man,27,sales,56500,FALSE,Zhongzheng,Scooter,Tenren's Tea,35,Yes
+188,women,27,sales,48500,TRUE,Beitou,MRT,50 Arashi,55,No
+196,women,27,service,56500,FALSE,Da’an,MRT,TRUEDAN,35,No
+256,Man,27,staff,41000,TRUE,Nangang,Bus,Guiji,60,Yes
+265,Man,27,Worker,43000,TRUE,Datong,Bus,JOHN TEA COMPANY,65,No
+266,Man,27,engineer,46500,FALSE,Da’an,Bus,JOHN TEA COMPANY,50,No
+280,women,27,service,60500,TRUE,Shilin,MRT,WooTea,40,No
+283,Man,27,engineer,72000,FALSE,Wanhua,Scooter,CoCo,55,Yes
+329,women,27,engineer,64000,FALSE,Xinyi,MRT,Tenren's Tea,60,Yes
+342,women,27,staff,36500,FALSE,Beitou,MRT,OtherTeaShop,55,No
+388,women,27,engineer,69000,FALSE,Songshan,Scooter,Chunshuitang,55,Yes
+423,women,27,sales,56000,FALSE,Shilin,Scooter,TRUEDAN,55,No
+446,Man,27,Market,32000,TRUE,Wenshan,Bus,CoCo,35,No
+485,Man,27,service,66500,TRUE,Datong,Bus,Tenren's Tea,35,Yes
+488,women,27,staff,49000,TRUE,Da’an,Scooter,KEBUKE,65,No
+507,women,27,staff,41500,TRUE,Xinyi,MRT,Tenren's Tea,55,No
+552,women,27,service,44000,TRUE,Neihu,Scooter,Tenren's Tea,45,Yes
+555,women,27,staff,64000,TRUE,Shilin,Bus,Chunshuitang,70,No
+556,women,27,staff,36000,FALSE,Zhongzheng,MRT,JOHN TEA COMPANY,45,Yes
+577,Man,27,sales,57000,FALSE,Neihu,Scooter,Ching-Shin Fu-Chuan,50,No
+597,women,27,sales,58000,FALSE,Beitou,Scooter,TRUEDAN,35,Yes
+600,women,27,Worker,49000,FALSE,Beitou,Scooter,CoCo,45,Yes
+626,women,27,staff,63000,TRUE,Nangang,MRT,Guiji,55,No
+642,women,27,Freelance,40000,TRUE,Songshan,MRT,OtherTeaShop,55,Yes
+657,Man,27,civil servant,56000,TRUE,Nangang,Bus,50 Arashi,60,Yes
+710,women,27,sales,65000,FALSE,Shilin,Scooter,WooTea,70,Yes
+736,Man,27, lawyer,32000,TRUE,Xinyi,MRT,Tenren's Tea,55,Yes
+760,Man,27,staff,56500,TRUE,Beitou,Scooter,Tenren's Tea,40,No
+766,women,27,staff,50000,FALSE,Beitou,Scooter,Wanpo,65,No
+807,women,27,sales,31000,TRUE,Shilin,Scooter,Wanpo,50,Yes
+809,women,27,staff,48000,FALSE,Songshan,Bus,CoCo,45,Yes
+866,women,27,staff,44500,TRUE,Nangang,Scooter,JOHN TEA COMPANY,35,No
+889,women,27,staff,78500,TRUE,Shilin,Bus,WooTea,40,No
+897,Man,27,financial,78500,TRUE,Songshan,Bus,50 Arashi,50,Yes
+902,Man,27,Market,46000,FALSE,Shilin,Scooter,OtherTeaShop,65,No
+937,Man,27,staff,59000,FALSE,Zhongshan,Bus,CoCo,55,Yes
+965,Man,27,engineer,60500,FALSE,Neihu,MRT,CoCo,70,No
+967,Man,27,staff,29000,FALSE,Da’an,drive,Chunshuitang,60,Yes
+7,women,28,service,46500,FALSE,Wanhua,Bus,Wanpo,65,Yes
+8,women,28, retail,70000,TRUE,Da’an,Bus,KEBUKE,60,No
+57,Man,28,staff,67000,FALSE,Shilin,MRT,OtherTeaShop,35,No
+58,women,28,sales,36000,FALSE,Beitou,Bus,TRUEDAN,50,Yes
+64,women,28,staff,69000,FALSE,Datong,Bus,KEBUKE,35,Yes
+70,women,28,financial,74000,FALSE,Nangang,Bus,WooTea,65,No
+82,Man,28,financial,32000,TRUE,Zhongzheng,MRT,JOHN TEA COMPANY,55,Yes
+236,women,28,staff,49000,FALSE,Zhongzheng,Scooter,Ching-Shin Fu-Chuan,70,No
+267,women,28,teacher,55500,TRUE,Beitou,MRT,OtherTeaShop,50,Yes
+320,Man,28,Market,41500,TRUE,Shilin,MRT,KEBUKE,50,No
+346,women,28,engineer,40500,FALSE,Zhongzheng,Scooter,50 Arashi,55,No
+391,women,28, lawyer,89000,TRUE,Zhongshan,Bus,CoCo,40,No
+406,women,28,staff,46500,FALSE,Wanhua,Scooter,JOHN TEA COMPANY,40,No
+411,women,28,staff,30500,FALSE,Zhongshan,Bus,OtherTeaShop,35,No
+425,women,28,staff,45000,TRUE,Datong,Bus,Guiji,60,No
+447,women,28,engineer,49000,TRUE,Datong,Scooter,Guiji,40,No
+450,women,28,staff,67000,TRUE,Songshan,MRT,JOHN TEA COMPANY,45,No
+453,Man,28,financial,39000,FALSE,Nangang,Bus,Guiji,45,No
+501,women,28,staff,79000,FALSE,Wanhua,Scooter,TRUEDAN,70,No
+530,Man,28,financial,49500,TRUE,Datong,MRT,JOHN TEA COMPANY,60,No
+531,Man,28,staff,40500,FALSE,Xinyi,MRT,JOHN TEA COMPANY,55,Yes
+539,Man,28,staff,59000,FALSE,Datong,Bus,WooTea,50,No
+574,Man,28,staff,34000,FALSE,Xinyi,Scooter,50 Arashi,45,Yes
+654,Man,28,staff,51500,TRUE,Da’an,Scooter,JOHN TEA COMPANY,40,No
+704,Man,28,staff,41000,TRUE,Xinyi,Bus,OtherTeaShop,55,No
+709,Man,28,staff,74500,TRUE,Beitou,Bus,OtherTeaShop,65,Yes
+720,Man,28,police,61000,TRUE,Wenshan,drive,WooTea,55,Yes
+757,Man,28,financial,69000,FALSE,Wenshan,Scooter,OtherTeaShop,45,No
+767,Man,28,Worker,61500,TRUE,Beitou,MRT,JOHN TEA COMPANY,45,No
+856,women,28,sales,68000,FALSE,Da’an,MRT,50 Arashi,40,Yes
+912,Man,28,financial,73500,FALSE,Wenshan,MRT,JOHN TEA COMPANY,50,Yes
+948,women,28,staff,74500,FALSE,Beitou,Bus,Chunshuitang,70,No
+990,women,28,service,65500,TRUE,Neihu,drive,Wanpo,35,No
+996,Man,28,staff,36500,TRUE,Xinyi,Scooter,Wanpo,60,No
+997,women,28,sales,41500,TRUE,Shilin,Bus,KEBUKE,40,Yes
+38,Man,29,engineer,40000,FALSE,Datong,Scooter,KEBUKE,65,No
+61,Man,29,financial,60500,FALSE,Da’an,Scooter,Chunshuitang,45,No
+107,Man,29,staff,58500,FALSE,Zhongshan,Bus,CoCo,40,No
+112,Man,29,service,56500,FALSE,Shilin,Scooter,50 Arashi,45,Yes
+131,Man,29,Freelance,69000,FALSE,Beitou,MRT,Tenren's Tea,55,Yes
+142,women,29,police,76000,TRUE,Nangang,Scooter,JOHN TEA COMPANY,45,No
+199,Man,29,engineer,69000,TRUE,Zhongzheng,MRT,Chunshuitang,65,Yes
+239,Man,29,Worker,56000,TRUE,Datong,Bus,OtherTeaShop,55,No
+336,Man,29,Worker,71000,TRUE,Da’an,Bus,Tenren's Tea,65,Yes
+352,women,29,staff,39500,TRUE,Wanhua,MRT,Ching-Shin Fu-Chuan,55,No
+355,women,29,financial,48000,TRUE,Beitou,Scooter,Ching-Shin Fu-Chuan,65,No
+382,women,29,staff,70500,TRUE,Da’an,Scooter,WooTea,45,No
+397,Man,29,Market,61500,FALSE,Datong,MRT,Wanpo,55,No
+455,Man,29,staff,52500,FALSE,Da’an,MRT,Chunshuitang,70,No
+466,women,29,financial,39000,TRUE,Nangang,Scooter,CoCo,65,No
+476,Man,29,staff,39500,TRUE,Da’an,MRT,JOHN TEA COMPANY,45,No
+509,women,29,service,79000,FALSE,Nangang,Scooter,Ching-Shin Fu-Chuan,40,No
+513,women,29,Freelance,45500,FALSE,Datong,Scooter,JOHN TEA COMPANY,40,Yes
+521,Man,29,Freelance,61500,TRUE,Beitou,Scooter,KEBUKE,50,Yes
+524,women,29,Market,67000,FALSE,Shilin,Bus,Wanpo,45,Yes
+588,women,29,sales,51000,TRUE,Xinyi,drive,JOHN TEA COMPANY,70,No
+593,Man,29,staff,43500,TRUE,Zhongzheng,MRT,50 Arashi,50,No
+621,women,29,staff,33500,TRUE,Wenshan,Scooter,Wanpo,60,No
+631,Man,29,staff,39500,TRUE,Wanhua,MRT,WooTea,70,No
+659,women,29,teacher,67500,TRUE,Shilin,Bus,Guiji,50,No
+696,women,29,sales,69500,FALSE,Shilin,MRT,50 Arashi,65,No
+755,Man,29,Freelance,30000,FALSE,Songshan,Scooter,Guiji,50,No
+761,Man,29,financial,54500,FALSE,Da’an,MRT,50 Arashi,65,No
+816,women,29,financial,44000,FALSE,Songshan,Scooter,Guiji,60,No
+855,women,29,engineer,74000,FALSE,Songshan,MRT,Wanpo,35,No
+860,Man,29,Worker,55500,TRUE,Zhongshan,Scooter,Guiji,65,Yes
+863,women,29,staff,58500,FALSE,Shilin,Bus,KEBUKE,50,No
+908,Man,29,engineer,74500,FALSE,Datong,Bus,TRUEDAN,65,No
+914,women,29,civil servant,63000,TRUE,Da’an,Bus,50 Arashi,35,No
+922,women,29,Worker,44000,FALSE,Neihu,Bus,TRUEDAN,35,No
+930,Man,29,staff,69000,TRUE,Xinyi,Bus,50 Arashi,65,No
+936,Man,29,staff,79000,FALSE,Nangang,Bus,TRUEDAN,70,No
+944,women,29,sales,49500,TRUE,Da’an,Bus,Guiji,70,No
+999,women,29,staff,36000,TRUE,Wanhua,Scooter,WooTea,55,Yes
+25,Man,30,financial,65000,FALSE,Beitou,drive,Tenren's Tea,50,Yes
+39,Man,30,staff,57500,TRUE,Beitou,Bus,50 Arashi,35,Yes
+55,Man,30,service,76000,FALSE,Zhongshan,drive,Tenren's Tea,40,Yes
+104,Man,30,civil servant,79000,TRUE,Zhongzheng,drive,Chunshuitang,40,No
+137,Man,30,staff,38000,FALSE,Wenshan,MRT,WooTea,60,Yes
+143,Man,30,staff,43000,FALSE,Beitou,Bus,JOHN TEA COMPANY,40,No
+147,women,30,engineer,43000,TRUE,Xinyi,Scooter,OtherTeaShop,40,Yes
+160,Man,30,staff,59500,TRUE,Wanhua,MRT,TRUEDAN,35,No
+181,Man,30,engineer,62500,TRUE,Wenshan,MRT,KEBUKE,35,Yes
+229,Man,30,staff,40000,FALSE,Nangang,MRT,CoCo,50,Yes
+232,women,30,financial,52000,TRUE,Neihu,Bus,Chunshuitang,50,No
+259,women,30,staff,42500,FALSE,Wenshan,MRT,WooTea,65,No
+260,Man,30,financial,54500,TRUE,Neihu,MRT,TRUEDAN,45,No
+272,Man,30,student,29000,FALSE,Songshan,Scooter,Wanpo,50,Yes
+281,women,30,service,38000,TRUE,Wanhua,MRT,Guiji,50,No
+323,women,30,staff,28000,FALSE,Datong,Bus,50 Arashi,70,Yes
+326,women,30,Market,66000,FALSE,Zhongzheng,Bus,Guiji,35,Yes
+349,Man,30,staff,56500,TRUE,Wenshan,Scooter,KEBUKE,50,Yes
+452,women,30,Market,69000,FALSE,Nangang,Scooter,CoCo,40,No
+486,women,30,staff,37500,FALSE,Shilin,MRT,50 Arashi,60,No
+563,Man,30,civil servant,38000,FALSE,Datong,MRT,Wanpo,50,Yes
+564,Man,30,staff,44500,TRUE,Wanhua,Bus,50 Arashi,50,Yes
+607,women,30,Freelance,42500,TRUE,Beitou,MRT,Ching-Shin Fu-Chuan,35,No
+620,women,30,staff,61000,TRUE,Nangang,Scooter,Ching-Shin Fu-Chuan,70,No
+680,women,30,teacher,40000,TRUE,Songshan,drive,Guiji,35,No
+691,women,30,staff,30000,TRUE,Wenshan,MRT,Tenren's Tea,55,No
+717,Man,30,staff,56500,FALSE,Beitou,MRT,TRUEDAN,40,Yes
+769,women,30,Market,39000,TRUE,Shilin,Scooter,Wanpo,45,Yes
+784,women,30,financial,66000,TRUE,Datong,MRT,Chunshuitang,35,No
+812,Man,30,staff,46000,TRUE,Zhongzheng,MRT,Guiji,35,No
+814,women,30, retail,75000,FALSE,Da’an,MRT,KEBUKE,45,No
+822,Man,30,sales,39500,FALSE,Nangang,drive,TRUEDAN,65,Yes
+825,women,30,staff,52000,FALSE,Wanhua,MRT,CoCo,60,No
+915,Man,30,sales,48500,FALSE,Datong,Scooter,JOHN TEA COMPANY,60,No
+49,women,31,staff,49000,TRUE,Shilin,Bus,JOHN TEA COMPANY,60,No
+94,women,31,engineer,73000,FALSE,Datong,MRT,Ching-Shin Fu-Chuan,40,No
+99,women,31,engineer,60000,TRUE,Datong,Bus,CoCo,45,No
+100,Man,31,engineer,57000,FALSE,Neihu,Bus,KEBUKE,40,No
+103,women,31,Worker,44500,TRUE,Shilin,MRT,TRUEDAN,50,No
+156,women,31,Market,34500,TRUE,Datong,Bus,Chunshuitang,70,Yes
+169,women,31,financial,73000,FALSE,Nangang,drive,Ching-Shin Fu-Chuan,60,No
+183,Man,31,financial,59000,FALSE,Zhongshan,Scooter,50 Arashi,35,No
+184,Man,31,financial,42000,FALSE,Wanhua,Scooter,Tenren's Tea,60,No
+186,women,31,staff,39000,FALSE,Xinyi,Scooter,Tenren's Tea,60,No
+212,Man,31,staff,62500,TRUE,Songshan,Scooter,JOHN TEA COMPANY,60,No
+230,Man,31,staff,37500,FALSE,Nangang,MRT,JOHN TEA COMPANY,55,Yes
+241,Man,31,service,74000,TRUE,Wanhua,MRT,Tenren's Tea,40,Yes
+286,Man,31,civil servant,51000,FALSE,Nangang,Bus,KEBUKE,40,Yes
+291,women,31,financial,68500,TRUE,Datong,Scooter,KEBUKE,45,No
+357,Man,31,engineer,41500,FALSE,Nangang,MRT,Guiji,65,Yes
+359,women,31,staff,38500,TRUE,Wenshan,Bus,WooTea,45,Yes
+361,women,31,service,57000,FALSE,Wenshan,MRT,Wanpo,70,Yes
+370,women,31,sales,73000,TRUE,Beitou,MRT,CoCo,60,Yes
+371,women,31,sales,29500,FALSE,Songshan,MRT,OtherTeaShop,40,Yes
+418,Man,31,staff,38500,TRUE,Zhongzheng,Scooter,OtherTeaShop,55,No
+430,women,31,staff,58500,FALSE,Wenshan,drive,WooTea,55,No
+434,women,31,staff,68500,TRUE,Zhongshan,Bus,Chunshuitang,70,No
+444,Man,31,staff,61500,TRUE,Songshan,Bus,JOHN TEA COMPANY,45,Yes
+471,Man,31,staff,42500,TRUE,Wenshan,Scooter,TRUEDAN,45,No
+532,Man,31,engineer,63500,TRUE,Zhongshan,MRT,Wanpo,40,No
+612,Man,31,Freelance,59000,FALSE,Shilin,MRT,50 Arashi,35,No
+649,Man,31,financial,40500,TRUE,Wenshan,Bus,TRUEDAN,70,Yes
+660,women,31,staff,63500,TRUE,Songshan,MRT,Wanpo,70,Yes
+693,women,31,staff,62000,TRUE,Xinyi,Bus,Chunshuitang,50,Yes
+707,Man,31,Worker,65000,TRUE,Zhongshan,Scooter,KEBUKE,45,Yes
+718,Man,31,engineer,69500,FALSE,Neihu,Bus,50 Arashi,40,No
+727,women,31,engineer,60000,FALSE,Shilin,MRT,50 Arashi,70,No
+764,Man,31,Worker,30000,FALSE,Zhongshan,Scooter,JOHN TEA COMPANY,55,No
+804,women,31,sales,72000,FALSE,Da’an,Scooter,Guiji,40,Yes
+817,women,31,staff,68500,TRUE,Songshan,Scooter,Wanpo,70,No
+858,women,31,staff,66000,TRUE,Datong,Bus,WooTea,45,No
+864,Man,31, retail,34500,FALSE,Shilin,MRT,KEBUKE,65,Yes
+907,women,31,staff,60000,FALSE,Da’an,Bus,KEBUKE,45,No
+926,women,31,Worker,54500,TRUE,Nangang,MRT,Ching-Shin Fu-Chuan,70,No
+956,Man,31,civil servant,42000,FALSE,Wenshan,Bus,50 Arashi,35,No
+962,women,31,sales,69000,TRUE,Songshan,MRT,50 Arashi,35,No
+22,Man,32,staff,52500,FALSE,Da’an,Bus,JOHN TEA COMPANY,65,No
+109,Man,32, retail,71500,TRUE,Nangang,Bus,Ching-Shin Fu-Chuan,65,Yes
+135,Man,32,Market,28000,FALSE,Neihu,MRT,Tenren's Tea,50,Yes
+138,women,32,staff,36500,FALSE,Shilin,MRT,CoCo,45,No
+146,women,32,Worker,34500,FALSE,Neihu,Bus,JOHN TEA COMPANY,50,Yes
+164,Man,32,Freelance,72000,TRUE,Wenshan,drive,OtherTeaShop,55,Yes
+172,women,32,staff,65000,FALSE,Wenshan,Bus,OtherTeaShop,45,No
+182,Man,32,staff,74000,FALSE,Shilin,Bus,TRUEDAN,70,Yes
+297,women,32,engineer,38500,TRUE,Nangang,Scooter,50 Arashi,50,No
+314,women,32,engineer,37000,FALSE,Xinyi,Scooter,JOHN TEA COMPANY,45,Yes
+379,women,32,Worker,35000,TRUE,Beitou,MRT,Wanpo,35,Yes
+404,women,32,civil servant,39500,TRUE,Neihu,MRT,Tenren's Tea,50,No
+422,women,32,staff,56000,TRUE,Zhongzheng,Bus,WooTea,55,Yes
+435,women,32,staff,38500,FALSE,Shilin,Bus,JOHN TEA COMPANY,70,Yes
+437,women,32,financial,76000,FALSE,Nangang,MRT,Ching-Shin Fu-Chuan,50,No
+462,women,32,financial,63500,FALSE,Wenshan,Scooter,JOHN TEA COMPANY,65,Yes
+559,women,32,staff,78000,TRUE,Xinyi,Scooter,50 Arashi,70,No
+601,Man,32,staff,35500,TRUE,Xinyi,Scooter,CoCo,65,Yes
+608,women,32,staff,49500,FALSE,Beitou,MRT,50 Arashi,70,Yes
+641,women,32,staff,57000,FALSE,Datong,Bus,CoCo,60,No
+656,women,32,docter,43500,TRUE,Nangang,Bus,CoCo,45,No
+677,Man,32,Market,39000,TRUE,Wenshan,Bus,Wanpo,50,Yes
+708,Man,32,sales,30000,TRUE,Shilin,Bus,WooTea,50,Yes
+745,Man,32,staff,55000,FALSE,Nangang,MRT,WooTea,55,Yes
+776,Man,32,staff,49000,TRUE,Shilin,Scooter,TRUEDAN,50,No
+794,Man,32,staff,43000,TRUE,Zhongzheng,Scooter,KEBUKE,70,Yes
+838,women,32,financial,42500,FALSE,Neihu,MRT,WooTea,35,Yes
+851,Man,32,Market,52000,FALSE,Wanhua,MRT,OtherTeaShop,35,Yes
+878,women,32,staff,79500,TRUE,Songshan,MRT,KEBUKE,45,No
+883,women,32,staff,48500,TRUE,Zhongzheng,MRT,Ching-Shin Fu-Chuan,45,Yes
+905,women,32,staff,78000,TRUE,Wanhua,MRT,Wanpo,50,No
+906,women,32,sales,68000,FALSE,Zhongzheng,Scooter,JOHN TEA COMPANY,70,No
+943,women,32,Freelance,38500,TRUE,Zhongshan,Scooter,JOHN TEA COMPANY,60,No
+96,women,33,financial,59500,TRUE,Zhongshan,drive,Guiji,65,No
+170,women,33, retail,50500,FALSE,Zhongshan,MRT,Ching-Shin Fu-Chuan,70,No
+190,Man,33, lawyer,61000,TRUE,Da’an,MRT,CoCo,35,No
+200,Man,33,staff,75000,FALSE,Zhongzheng,Scooter,CoCo,65,No
+214,Man,33,financial,62500,FALSE,Datong,MRT,CoCo,40,No
+217,Man,33,staff,59000,TRUE,Wenshan,MRT,Guiji,50,No
+268,Man,33,staff,71500,FALSE,Zhongzheng,MRT,Tenren's Tea,50,No
+310,women,33,Worker,69000,TRUE,Xinyi,Bus,Guiji,40,No
+443,Man,33,financial,38000,FALSE,Zhongshan,drive,KEBUKE,55,No
+470,Man,33,Market,34000,TRUE,Neihu,Scooter,JOHN TEA COMPANY,40,Yes
+495,Man,33,staff,42000,FALSE,Zhongshan,Bus,OtherTeaShop,40,No
+496,Man,33,staff,47000,FALSE,Zhongshan,MRT,Guiji,70,Yes
+520,women,33,sales,62000,TRUE,Shilin,MRT,Wanpo,60,No
+578,Man,33,civil servant,77000,TRUE,Beitou,MRT,CoCo,45,No
+638,Man,33,staff,70000,TRUE,Songshan,Scooter,JOHN TEA COMPANY,45,No
+733,women,33,Worker,42000,FALSE,Zhongshan,MRT,Ching-Shin Fu-Chuan,50,No
+751,Man,33,financial,43500,TRUE,Zhongshan,Scooter,KEBUKE,35,Yes
+800,Man,33,staff,59500,FALSE,Songshan,Bus,Tenren's Tea,35,No
+890,Man,33,service,48500,TRUE,Zhongzheng,MRT,CoCo,65,Yes
+950,women,33,sales,40500,FALSE,Zhongshan,MRT,OtherTeaShop,40,Yes
+951,women,33,teacher,36500,TRUE,Wanhua,Bus,CoCo,60,No
+972,women,33,service,47000,TRUE,Songshan,MRT,CoCo,45,No
+987,Man,33,financial,57000,FALSE,Zhongshan,Scooter,KEBUKE,45,Yes
+998,Man,33,staff,74000,FALSE,Datong,MRT,Chunshuitang,65,Yes
+1,women,34,staff,58500,FALSE,Xinyi,MRT,CoCo,45,No
+28,Man,34,financial,40000,TRUE,Beitou,Scooter,Chunshuitang,50,No
+29,women,34,financial,48000,FALSE,Wanhua,Bus,50 Arashi,60,Yes
+40,women,34,Market,76500,FALSE,Shilin,MRT,KEBUKE,60,No
+46,women,34,staff,30000,TRUE,Zhongshan,Bus,JOHN TEA COMPANY,55,Yes
+213,Man,34,staff,42500,FALSE,Wanhua,Bus,Ching-Shin Fu-Chuan,35,Yes
+231,women,34,staff,76000,TRUE,Da’an,MRT,WooTea,40,No
+282,women,34,teacher,63000,TRUE,Nangang,MRT,TRUEDAN,55,Yes
+376,women,34,financial,64000,TRUE,Nangang,drive,Guiji,35,No
+389,women,34,civil servant,53500,FALSE,Zhongshan,Bus,CoCo,35,Yes
+405,Man,34,financial,39500,FALSE,Nangang,Scooter,Ching-Shin Fu-Chuan,65,Yes
+428,Man,34,staff,77500,FALSE,Beitou,Scooter,Tenren's Tea,60,Yes
+463,Man,34,sales,79000,TRUE,Nangang,Bus,OtherTeaShop,55,No
+505,women,34,staff,62500,FALSE,Nangang,Scooter,TRUEDAN,45,Yes
+523,Man,34,civil servant,68500,TRUE,Wenshan,Scooter,Chunshuitang,60,No
+535,women,34,staff,69500,TRUE,Da’an,MRT,Tenren's Tea,60,Yes
+582,Man,34,Market,57500,TRUE,Neihu,MRT,50 Arashi,65,No
+590,women,34,staff,30500,FALSE,Datong,MRT,Guiji,40,Yes
+602,women,34,staff,59500,TRUE,Wanhua,Scooter,WooTea,40,No
+627,women,34,Worker,75500,FALSE,Neihu,Bus,Chunshuitang,65,Yes
+639,women,34, lawyer,72500,TRUE,Nangang,Bus,OtherTeaShop,35,No
+672,women,34,Freelance,64500,TRUE,Shilin,MRT,50 Arashi,60,Yes
+741,Man,34,engineer,44500,TRUE,Datong,MRT,JOHN TEA COMPANY,35,No
+813,women,34,sales,63500,TRUE,Da’an,Bus,TRUEDAN,45,No
+833,women,34,engineer,67500,FALSE,Songshan,MRT,JOHN TEA COMPANY,70,Yes
+836,women,34,staff,80000,TRUE,Xinyi,MRT,Tenren's Tea,45,No
+879,women,34,sales,55500,FALSE,Beitou,Bus,Guiji,70,No
+979,women,34,Freelance,57000,TRUE,Songshan,MRT,KEBUKE,70,No
+981,Man,34,staff,70500,FALSE,Datong,Bus,JOHN TEA COMPANY,55,No
+86,women,35,Freelance,79000,FALSE,Songshan,MRT,Ching-Shin Fu-Chuan,65,Yes
+126,Man,35,staff,59000,FALSE,Shilin,MRT,Tenren's Tea,45,No
+209,women,35,staff,46500,FALSE,Beitou,Scooter,Ching-Shin Fu-Chuan,60,No
+219,Man,35,staff,57000,TRUE,Nangang,Bus,Tenren's Tea,70,Yes
+250,Man,35,staff,38500,FALSE,Datong,Bus,TRUEDAN,35,No
+261,women,35, lawyer,65000,TRUE,Zhongshan,Bus,Chunshuitang,70,No
+321,Man,35,staff,71000,FALSE,Nangang,Bus,WooTea,50,No
+324,Man,35,Worker,51500,TRUE,Datong,Bus,JOHN TEA COMPANY,60,No
+375,Man,35,financial,51000,TRUE,Zhongzheng,MRT,Wanpo,70,Yes
+457,Man,35,service,65000,TRUE,Da’an,MRT,Ching-Shin Fu-Chuan,40,Yes
+479,Man,35,sales,43000,TRUE,Neihu,Scooter,KEBUKE,35,No
+480,women,35,staff,47000,TRUE,Datong,MRT,JOHN TEA COMPANY,35,Yes
+550,women,35,engineer,73500,TRUE,Zhongzheng,Scooter,Guiji,40,No
+572,Man,35,staff,74500,FALSE,Songshan,Scooter,Ching-Shin Fu-Chuan,50,Yes
+587,women,35,staff,65000,TRUE,Xinyi,Scooter,WooTea,40,Yes
+630,women,35, lawyer,62000,TRUE,Xinyi,Scooter,JOHN TEA COMPANY,35,Yes
+702,Man,35, retail,54000,FALSE,Da’an,Scooter,50 Arashi,70,Yes
+762,Man,35,staff,49500,TRUE,Shilin,Bus,Tenren's Tea,40,No
+775,Man,35,staff,59500,TRUE,Da’an,drive,Chunshuitang,50,No
+783,women,35,sales,49000,FALSE,Wanhua,Bus,KEBUKE,65,No
+787,Man,35,civil servant,59500,TRUE,Shilin,Scooter,OtherTeaShop,65,No
+799,women,35,financial,33500,TRUE,Zhongshan,MRT,CoCo,70,Yes
+811,women,35,staff,48500,TRUE,Xinyi,Scooter,WooTea,60,No
+840,women,35,staff,71500,TRUE,Datong,Scooter,Tenren's Tea,35,No
+901,women,35,staff,43500,TRUE,Wanhua,Scooter,Wanpo,65,Yes
+903,Man,35,financial,68500,TRUE,Shilin,Bus,WooTea,70,No
+910,Man,35,teacher,39500,TRUE,Zhongshan,MRT,KEBUKE,35,No
+27,women,36,Market,56500,TRUE,Beitou,MRT,TRUEDAN,60,Yes
+65,women,36,engineer,52500,FALSE,Da’an,MRT,Chunshuitang,40,No
+88,Man,36,police,52000,TRUE,Da’an,MRT,Tenren's Tea,65,No
+130,Man,36,Market,59000,TRUE,Xinyi,Bus,JOHN TEA COMPANY,65,No
+141,Man,36,staff,74500,TRUE,Shilin,MRT,Wanpo,65,No
+171,women,36,Worker,72500,FALSE,Beitou,MRT,Ching-Shin Fu-Chuan,40,No
+204,women,36,staff,68000,FALSE,Shilin,drive,50 Arashi,70,No
+224,women,36,Freelance,60500,FALSE,Wenshan,MRT,Tenren's Tea,50,No
+275,women,36,financial,53500,FALSE,Wanhua,Bus,50 Arashi,55,No
+287,women,36,service,53500,TRUE,Shilin,Bus,TRUEDAN,50,No
+288,women,36,staff,69000,TRUE,Datong,Scooter,Wanpo,40,No
+299,women,36,staff,61500,TRUE,Datong,MRT,50 Arashi,35,No
+304,Man,36,staff,78500,FALSE,Nangang,Scooter,TRUEDAN,60,No
+305,Man,36,financial,45000,FALSE,Datong,MRT,CoCo,35,No
+312,women,36,sales,33500,TRUE,Songshan,Bus,CoCo,40,No
+341,women,36,financial,40500,TRUE,Beitou,MRT,KEBUKE,65,No
+345,Man,36,service,67500,FALSE,Zhongzheng,Scooter,TRUEDAN,55,Yes
+353,Man,36,staff,37000,FALSE,Neihu,Scooter,Chunshuitang,70,Yes
+426,Man,36,civil servant,42000,TRUE,Songshan,MRT,Chunshuitang,55,No
+441,Man,36,service,79500,FALSE,Wenshan,Scooter,WooTea,40,Yes
+464,women,36,staff,49000,TRUE,Zhongzheng,MRT,JOHN TEA COMPANY,55,Yes
+508,Man,36,staff,56500,FALSE,Wenshan,Scooter,50 Arashi,60,Yes
+510,women,36,docter,48000,TRUE,Datong,Bus,Tenren's Tea,70,No
+515,Man,36,engineer,42500,TRUE,Wenshan,Bus,OtherTeaShop,60,No
+545,Man,36,staff,71500,TRUE,Neihu,Bus,50 Arashi,50,No
+567,women,36,financial,47500,TRUE,Xinyi,Scooter,Guiji,65,Yes
+575,Man,36,sales,75000,FALSE,Datong,MRT,WooTea,70,No
+603,Man,36,engineer,79000,FALSE,Datong,MRT,Ching-Shin Fu-Chuan,60,Yes
+605,women,36,Market,80000,FALSE,Wenshan,MRT,Ching-Shin Fu-Chuan,35,Yes
+636,Man,36,financial,57000,FALSE,Da’an,Scooter,KEBUKE,65,Yes
+705,Man,36,staff,50000,TRUE,Shilin,Bus,Guiji,70,No
+728,Man,36,staff,51500,TRUE,Datong,Scooter,CoCo,70,No
+831,women,36,civil servant,51500,FALSE,Da’an,Scooter,Wanpo,65,Yes
+843,women,36,Market,60000,TRUE,Songshan,MRT,Chunshuitang,55,No
+3,Man,37,Freelance,41500,TRUE,Zhongzheng,Bus,WooTea,55,Yes
+14,Man,37,Market,35500,FALSE,Nangang,Scooter,JOHN TEA COMPANY,35,No
+73,Man,37,service,56000,TRUE,Da’an,Scooter,Tenren's Tea,65,No
+75,women,37,engineer,41500,TRUE,Beitou,MRT,Tenren's Tea,40,Yes
+151,Man,37,staff,31500,FALSE,Zhongshan,MRT,TRUEDAN,45,No
+337,Man,37,service,70500,FALSE,Shilin,Scooter,Guiji,55,Yes
+384,women,37,sales,34500,FALSE,Shilin,MRT,Guiji,65,Yes
+396,women,37,financial,55000,FALSE,Zhongshan,drive,50 Arashi,50,No
+398,Man,37,staff,62000,FALSE,Beitou,Bus,Chunshuitang,35,Yes
+500,women,37,sales,31500,FALSE,Neihu,MRT,TRUEDAN,35,Yes
+551,Man,37,staff,43000,TRUE,Xinyi,MRT,Tenren's Tea,60,No
+571,Man,37,staff,42000,TRUE,Wanhua,MRT,Chunshuitang,50,Yes
+596,women,37,teacher,55500,TRUE,Da’an,Bus,Tenren's Tea,60,Yes
+628,women,37,engineer,85000,FALSE,Neihu,Bus,Chunshuitang,70,No
+658,women,37,Worker,44500,FALSE,Neihu,Bus,50 Arashi,55,No
+667,Man,37,staff,34500,TRUE,Datong,Bus,JOHN TEA COMPANY,40,No
+685,women,37,engineer,65000,TRUE,Shilin,MRT,50 Arashi,50,Yes
+722,Man,37,staff,36500,FALSE,Shilin,Scooter,50 Arashi,50,Yes
+802,Man,37,Market,65000,FALSE,Songshan,Bus,Guiji,40,No
+805,Man,37,civil servant,67000,FALSE,Da’an,MRT,WooTea,65,Yes
+818,Man,37,staff,77500,TRUE,Wanhua,Scooter,TRUEDAN,70,No
+861,women,37,teacher,45500,FALSE,Wanhua,Bus,TRUEDAN,45,No
+871,Man,37,staff,67500,FALSE,Songshan,Bus,JOHN TEA COMPANY,65,No
+872,women,37,sales,52000,TRUE,Shilin,Scooter,50 Arashi,60,Yes
+963,Man,37,civil servant,36000,FALSE,Songshan,MRT,OtherTeaShop,40,Yes
+969,women,37,staff,77000,TRUE,Wanhua,Scooter,OtherTeaShop,50,No
+970,Man,37,sales,43000,TRUE,Nangang,MRT,TRUEDAN,70,No
+974,Man,37,engineer,90000,FALSE,Shilin,Bus,Wanpo,35,No
+991,Man,37,staff,66000,FALSE,Zhongshan,MRT,JOHN TEA COMPANY,40,No
+10,Man,38,staff,39000,TRUE,Wanhua,Bus,TRUEDAN,40,No
+31,women,38,staff,56500,FALSE,Wanhua,MRT,Tenren's Tea,45,No
+53,women,38, lawyer,39500,TRUE,Songshan,Bus,Guiji,60,Yes
+79,Man,38,sales,44000,TRUE,Zhongshan,Scooter,50 Arashi,55,Yes
+83,women,38,staff,64000,FALSE,Xinyi,Scooter,WooTea,50,No
+92,Man,38,sales,37000,TRUE,Xinyi,Bus,OtherTeaShop,40,Yes
+101,Man,38,staff,39000,TRUE,Songshan,Bus,OtherTeaShop,60,Yes
+116,Man,38,service,48000,TRUE,Neihu,MRT,WooTea,70,No
+187,women,38,Market,31000,TRUE,Wanhua,drive,OtherTeaShop,35,No
+238,women,38,sales,46500,TRUE,Wanhua,Scooter,Tenren's Tea,40,No
+253,women,38,staff,58500,TRUE,Zhongshan,Scooter,Wanpo,65,Yes
+358,Man,38,staff,36500,FALSE,Neihu,Bus,Chunshuitang,35,Yes
+362,women,38,sales,39500,TRUE,Wenshan,MRT,50 Arashi,45,Yes
+380,Man,38,teacher,53000,FALSE,Da’an,MRT,TRUEDAN,60,Yes
+469,women,38,sales,36500,FALSE,Xinyi,Scooter,TRUEDAN,35,No
+472,women,38,staff,34000,TRUE,Zhongshan,drive,Chunshuitang,65,Yes
+519,women,38,sales,67500,TRUE,Wenshan,Scooter,50 Arashi,65,No
+611,women,38,staff,42500,FALSE,Beitou,Scooter,CoCo,60,No
+619,Man,38,Market,38500,TRUE,Neihu,Scooter,WooTea,55,Yes
+661,women,38,sales,43000,TRUE,Datong,Bus,TRUEDAN,65,No
+684,women,38,Market,48500,TRUE,Songshan,MRT,Tenren's Tea,70,Yes
+716,women,38,teacher,45000,FALSE,Datong,MRT,WooTea,40,No
+732,Man,38,staff,69500,FALSE,Nangang,MRT,Wanpo,40,No
+772,women,38, retail,76000,FALSE,Beitou,Scooter,Ching-Shin Fu-Chuan,60,No
+859,women,38,financial,69500,FALSE,Wenshan,Bus,Ching-Shin Fu-Chuan,40,Yes
+884,Man,38,staff,66000,TRUE,Nangang,Scooter,WooTea,65,Yes
+968,women,38,staff,31000,FALSE,Nangang,Scooter,TRUEDAN,65,No
+26,Man,39,financial,38000,FALSE,Nangang,Bus,TRUEDAN,70,No
+84,women,39,staff,30500,TRUE,Songshan,drive,Tenren's Tea,40,No
+97,women,39,staff,78500,TRUE,Wanhua,Scooter,Tenren's Tea,50,No
+166,Man,39,financial,31000,TRUE,Xinyi,drive,Tenren's Tea,55,Yes
+195,women,39,Freelance,37000,FALSE,Songshan,Scooter,JOHN TEA COMPANY,60,Yes
+243,Man,39,Worker,28500,TRUE,Wenshan,Scooter,TRUEDAN,50,No
+296,Man,39,financial,42500,TRUE,Neihu,MRT,Chunshuitang,35,No
+372,Man,39,sales,57000,TRUE,Wenshan,drive,OtherTeaShop,50,No
+393,Man,39,service,60000,FALSE,Wenshan,MRT,Wanpo,35,No
+402,women,39,staff,54000,TRUE,Zhongshan,MRT,TRUEDAN,60,Yes
+403,women,39,financial,62500,FALSE,Datong,Bus,Guiji,50,Yes
+413,women,39,sales,83500,FALSE,Wanhua,MRT,Ching-Shin Fu-Chuan,60,Yes
+414,women,39,engineer,42000,TRUE,Xinyi,Scooter,Tenren's Tea,60,Yes
+420,Man,39,police,55500,FALSE,Xinyi,MRT,WooTea,55,No
+424,Man,39,staff,56000,FALSE,Zhongshan,Bus,WooTea,70,Yes
+442,Man,39,staff,59000,FALSE,Xinyi,Bus,OtherTeaShop,50,No
+478,Man,39,police,61500,TRUE,Songshan,Scooter,Tenren's Tea,55,No
+544,Man,39,staff,45500,TRUE,Wanhua,MRT,OtherTeaShop,60,No
+546,Man,39,staff,58500,FALSE,Da’an,Scooter,CoCo,45,No
+569,Man,39,engineer,56000,FALSE,Zhongzheng,MRT,KEBUKE,45,Yes
+589,women,39, retail,46500,TRUE,Zhongshan,Bus,50 Arashi,45,No
+594,women,39,sales,39500,FALSE,Zhongshan,Scooter,Guiji,45,Yes
+595,Man,39,service,61000,TRUE,Shilin,Scooter,TRUEDAN,50,No
+617,Man,39,staff,28000,FALSE,Beitou,Scooter,Wanpo,70,No
+633,women,39,staff,51500,FALSE,Shilin,MRT,Guiji,35,No
+673,Man,39,Market,51500,FALSE,Da’an,MRT,50 Arashi,35,Yes
+719,Man,39,staff,56500,TRUE,Songshan,MRT,Chunshuitang,60,No
+748,Man,39,staff,78500,TRUE,Datong,Bus,Tenren's Tea,50,Yes
+801,Man,39,service,76500,TRUE,Wenshan,drive,CoCo,70,Yes
+827,women,39,civil servant,30500,TRUE,Da’an,Scooter,CoCo,40,No
+874,women,39,staff,51500,FALSE,Wenshan,Bus,WooTea,55,No
+875,women,39,Freelance,49000,FALSE,Beitou,Bus,Tenren's Tea,70,Yes
+880,Man,39,docter,57000,FALSE,Zhongzheng,MRT,KEBUKE,50,No
+893,Man,39,engineer,55500,TRUE,Beitou,Bus,Wanpo,65,No
+909,women,39,Freelance,54500,TRUE,Neihu,Bus,Chunshuitang,55,No
+935,women,39,staff,54000,FALSE,Nangang,Scooter,Guiji,70,No
+945,Man,39,staff,61000,FALSE,Beitou,Scooter,Chunshuitang,35,No
+2,Man,40,staff,60000,FALSE,Neihu,MRT,CoCo,60,No
+6,Man,40,engineer,53500,FALSE,Xinyi,Scooter,JOHN TEA COMPANY,35,No
+21,women,40,Freelance,57500,TRUE,Datong,Bus,50 Arashi,65,Yes
+32,women,40,staff,80000,TRUE,Zhongshan,Scooter,Tenren's Tea,50,No
+66,women,40,sales,79500,FALSE,Songshan,Scooter,Guiji,35,Yes
+102,Man,40,staff,71000,TRUE,Nangang,Bus,JOHN TEA COMPANY,50,Yes
+106,Man,40,Freelance,66500,FALSE,Da’an,MRT,Chunshuitang,40,No
+121,women,40,civil servant,35000,TRUE,Xinyi,MRT,JOHN TEA COMPANY,50,Yes
+269,women,40,teacher,55500,TRUE,Songshan,Bus,Chunshuitang,55,No
+290,women,40,docter,68500,TRUE,Xinyi,Scooter,WooTea,65,Yes
+315,Man,40,service,70500,TRUE,Beitou,Bus,TRUEDAN,70,Yes
+330,women,40,sales,60500,TRUE,Zhongzheng,Bus,50 Arashi,60,Yes
+333,Man,40,staff,70000,TRUE,Datong,Scooter,Tenren's Tea,55,No
+347,Man,40,Freelance,34000,TRUE,Wenshan,MRT,Ching-Shin Fu-Chuan,55,No
+356,women,40,staff,75500,TRUE,Wanhua,MRT,CoCo,45,No
+454,women,40,sales,53000,FALSE,Beitou,MRT,Ching-Shin Fu-Chuan,35,No
+473,women,40,sales,78500,FALSE,Zhongshan,Scooter,50 Arashi,70,No
+518,Man,40,financial,46500,FALSE,Neihu,MRT,Chunshuitang,35,Yes
+529,women,40,staff,52500,TRUE,Zhongshan,MRT,50 Arashi,55,No
+547,Man,40,financial,33500,FALSE,Wanhua,Bus,Guiji,40,Yes
+586,Man,40,Worker,41500,FALSE,Xinyi,Scooter,CoCo,55,No
+616,Man,40,staff,41500,FALSE,Zhongzheng,MRT,OtherTeaShop,50,No
+666,Man,40,staff,42000,TRUE,Beitou,Bus,CoCo,35,Yes
+683,Man,40,staff,63500,FALSE,Shilin,Bus,Tenren's Tea,50,No
+712,women,40,teacher,71000,FALSE,Neihu,Scooter,TRUEDAN,50,Yes
+744,Man,40,staff,58500,TRUE,Datong,Scooter,TRUEDAN,60,Yes
+754,women,40,staff,44500,FALSE,Nangang,Scooter,CoCo,35,No
+846,Man,40,engineer,55500,FALSE,Datong,Bus,CoCo,45,Yes
+887,women,40,financial,74000,TRUE,Songshan,MRT,50 Arashi,70,Yes
+888,Man,40,Worker,60500,TRUE,Songshan,Bus,WooTea,60,No
+892,Man,40,Market,66500,FALSE,Wanhua,Scooter,OtherTeaShop,50,No
+942,women,40,staff,61000,FALSE,Nangang,Scooter,WooTea,65,Yes
+18,women,41,sales,69500,TRUE,Songshan,MRT,50 Arashi,70,No
+24,Man,41,staff,59500,TRUE,Datong,Scooter,Guiji,55,No
+42,women,41,Worker,52500,TRUE,Wanhua,MRT,50 Arashi,55,No
+145,women,41,financial,41500,FALSE,Neihu,MRT,OtherTeaShop,35,No
+154,Man,41,sales,31500,TRUE,Wenshan,MRT,WooTea,60,No
+192,women,41,staff,78500,FALSE,Datong,Bus,Wanpo,70,No
+193,women,41,Freelance,47500,FALSE,Shilin,Scooter,WooTea,35,No
+218,Man,41,staff,55000,TRUE,Wanhua,Scooter,Guiji,35,No
+221,Man,41,engineer,63500,FALSE,Zhongshan,MRT,Wanpo,40,No
+227,Man,41, retail,68500,FALSE,Zhongzheng,Scooter,Chunshuitang,35,Yes
+247,women,41,financial,66500,TRUE,Datong,Scooter,Guiji,60,No
+390,Man,41,staff,72000,FALSE,Shilin,Scooter,CoCo,60,Yes
+395,Man,41,engineer,31500,TRUE,Neihu,Bus,Guiji,55,Yes
+456,Man,41,staff,76500,TRUE,Datong,MRT,Chunshuitang,35,No
+475,women,41,Market,49500,TRUE,Wanhua,MRT,Guiji,60,Yes
+491,women,41, retail,48500,FALSE,Shilin,Bus,KEBUKE,55,No
+573,women,41,sales,33000,FALSE,Xinyi,Bus,KEBUKE,60,No
+624,Man,41,docter,55000,FALSE,Neihu,Scooter,TRUEDAN,35,No
+688,Man,41,Market,44000,TRUE,Shilin,MRT,Ching-Shin Fu-Chuan,55,No
+713,Man,41,staff,52500,TRUE,Songshan,MRT,TRUEDAN,35,No
+739,women,41,police,62000,TRUE,Zhongzheng,drive,OtherTeaShop,40,No
+792,women,41,sales,73500,FALSE,Neihu,MRT,50 Arashi,50,No
+886,women,41,staff,40000,FALSE,Wanhua,MRT,OtherTeaShop,45,No
+904,women,41,sales,76000,TRUE,Da’an,Scooter,50 Arashi,55,No
+913,Man,41,sales,54000,FALSE,Shilin,MRT,WooTea,70,No
+985,women,41,staff,57500,TRUE,Zhongzheng,Scooter,Chunshuitang,45,No
+989,women,41,staff,58500,TRUE,Beitou,MRT,Wanpo,60,No
+12,Man,42,Market,61000,FALSE,Datong,MRT,OtherTeaShop,40,No
+36,women,42,Worker,55500,TRUE,Nangang,MRT,50 Arashi,45,Yes
+71,women,42,staff,31000,TRUE,Shilin,Scooter,Wanpo,65,Yes
+80,Man,42,staff,73000,TRUE,Wanhua,Bus,Chunshuitang,65,No
+98,women,42,staff,68500,TRUE,Datong,Bus,JOHN TEA COMPANY,45,No
+129,women,42,staff,47000,FALSE,Wanhua,MRT,CoCo,55,No
+133,women,42,staff,57000,FALSE,Wanhua,MRT,Ching-Shin Fu-Chuan,65,No
+140,Man,42,staff,64500,TRUE,Xinyi,Scooter,Wanpo,60,Yes
+175,Man,42, retail,72000,TRUE,Neihu,MRT,Chunshuitang,50,No
+215,Man,42, lawyer,68000,TRUE,Zhongzheng,Scooter,Guiji,55,Yes
+252,women,42, lawyer,56500,TRUE,Xinyi,Bus,Ching-Shin Fu-Chuan,50,No
+348,women,42,staff,66500,TRUE,Shilin,drive,OtherTeaShop,35,No
+502,Man,42,Market,50000,TRUE,Nangang,Scooter,Ching-Shin Fu-Chuan,65,Yes
+517,women,42, lawyer,43000,TRUE,Beitou,drive,Wanpo,45,Yes
+663,women,42,sales,30500,FALSE,Zhongzheng,Scooter,Wanpo,65,No
+665,Man,42,Freelance,58500,FALSE,Wanhua,Scooter,Tenren's Tea,40,No
+669,Man,42,service,55000,FALSE,Wenshan,MRT,Ching-Shin Fu-Chuan,45,No
+690,Man,42,staff,72000,TRUE,Xinyi,Bus,Ching-Shin Fu-Chuan,40,No
+695,Man,42,Freelance,67000,FALSE,Da’an,drive,Tenren's Tea,35,No
+697,women,42,financial,60500,TRUE,Beitou,Scooter,Tenren's Tea,40,No
+698,women,42,Worker,65500,FALSE,Nangang,MRT,Ching-Shin Fu-Chuan,65,No
+777,women,42,staff,78000,TRUE,Xinyi,Bus,CoCo,45,No
+898,Man,42,teacher,50000,TRUE,Zhongzheng,Scooter,WooTea,50,No
+917,women,42,service,50500,TRUE,Datong,Scooter,CoCo,65,No
+959,Man,42,engineer,68000,TRUE,Wenshan,Scooter,Tenren's Tea,40,No
+973,Man,42,staff,50000,FALSE,Zhongshan,Scooter,Tenren's Tea,70,No
+993,Man,42,staff,28000,FALSE,Datong,Scooter,CoCo,40,Yes
+4,women,43,staff,41000,FALSE,Wanhua,Scooter,KEBUKE,50,Yes
+23,women,43,staff,31000,TRUE,Zhongshan,drive,Chunshuitang,35,Yes
+114,women,43,staff,48000,FALSE,Songshan,MRT,Wanpo,50,No
+127,women,43,Market,34000,TRUE,Shilin,Scooter,KEBUKE,55,No
+134,women,43,staff,45500,TRUE,Nangang,MRT,WooTea,70,Yes
+149,Man,43,staff,71500,TRUE,Zhongshan,Bus,Tenren's Tea,40,No
+216,women,43,Freelance,79500,TRUE,Nangang,Scooter,JOHN TEA COMPANY,35,No
+228,women,43,financial,89500,TRUE,Datong,Scooter,TRUEDAN,60,No
+242,women,43,staff,69000,FALSE,Wenshan,Bus,Tenren's Tea,60,Yes
+257,women,43,engineer,70500,FALSE,Neihu,Bus,Chunshuitang,55,Yes
+263,women,43, retail,50500,FALSE,Zhongshan,MRT,TRUEDAN,45,Yes
+264,women,43,Freelance,75000,TRUE,Da’an,Scooter,JOHN TEA COMPANY,65,No
+277,Man,43,staff,76000,TRUE,Zhongzheng,Scooter,50 Arashi,40,Yes
+292,Man,43,sales,79500,TRUE,Neihu,Scooter,KEBUKE,35,No
+301,women,43,staff,64000,TRUE,Xinyi,Scooter,OtherTeaShop,60,Yes
+317,women,43,sales,54000,TRUE,Songshan,Bus,Ching-Shin Fu-Chuan,60,Yes
+381,women,43,Market,59500,TRUE,Nangang,MRT,Ching-Shin Fu-Chuan,60,Yes
+401,women,43,staff,73000,TRUE,Shilin,Bus,JOHN TEA COMPANY,45,Yes
+487,Man,43,financial,45000,TRUE,Xinyi,drive,OtherTeaShop,50,No
+543,women,43,Worker,79500,FALSE,Wenshan,Bus,Tenren's Tea,45,No
+558,women,43,staff,55500,TRUE,Xinyi,Bus,WooTea,45,Yes
+560,Man,43,Freelance,79500,TRUE,Xinyi,MRT,Ching-Shin Fu-Chuan,55,Yes
+562,women,43,staff,52500,FALSE,Da’an,Scooter,Guiji,50,Yes
+614,Man,43,staff,64500,TRUE,Xinyi,MRT,Ching-Shin Fu-Chuan,70,Yes
+643,women,43,staff,78000,FALSE,Songshan,drive,50 Arashi,65,Yes
+662,Man,43,teacher,48000,TRUE,Zhongzheng,Bus,TRUEDAN,60,No
+724,women,43,financial,54000,FALSE,Nangang,Bus,TRUEDAN,55,No
+731,Man,43,financial,71000,TRUE,Datong,MRT,Chunshuitang,60,No
+773,women,43, lawyer,36000,FALSE,Wanhua,MRT,KEBUKE,35,Yes
+780,Man,43,sales,70000,TRUE,Songshan,Scooter,50 Arashi,70,Yes
+782,Man,43,Market,64000,FALSE,Neihu,Bus,Ching-Shin Fu-Chuan,45,Yes
+790,Man,43,staff,79500,TRUE,Neihu,Bus,TRUEDAN,60,Yes
+900,women,43,sales,56000,TRUE,Xinyi,Scooter,CoCo,70,No
+933,Man,43,engineer,112000,FALSE,Datong,Scooter,50 Arashi,60,Yes
+953,women,43,Freelance,44000,TRUE,Songshan,Bus,Wanpo,45,Yes
+975,Man,43,docter,60500,FALSE,Wenshan,MRT,50 Arashi,35,Yes
+41,Man,44,engineer,62500,TRUE,Songshan,Bus,Tenren's Tea,40,Yes
+78,women,44,sales,68000,TRUE,Wanhua,MRT,JOHN TEA COMPANY,50,No
+173,women,44,staff,71000,TRUE,Beitou,Scooter,CoCo,40,No
+245,women,44,staff,74000,FALSE,Zhongshan,Bus,OtherTeaShop,60,No
+289,women,44,staff,57000,FALSE,Beitou,MRT,KEBUKE,70,Yes
+295,Man,44,staff,50500,TRUE,Beitou,Bus,50 Arashi,40,No
+306,Man,44,financial,71500,FALSE,Neihu,MRT,Chunshuitang,40,No
+350,Man,44, retail,57500,FALSE,Neihu,MRT,KEBUKE,40,No
+448,Man,44,staff,73500,TRUE,Shilin,Bus,Guiji,55,No
+490,women,44,financial,61500,TRUE,Beitou,Bus,WooTea,55,No
+522,Man,44,Worker,44000,FALSE,Songshan,Bus,KEBUKE,70,No
+585,women,44,sales,45000,FALSE,Neihu,Bus,Wanpo,50,No
+592,Man,44,financial,85000,FALSE,Xinyi,MRT,Ching-Shin Fu-Chuan,55,No
+599,women,44,financial,58500,TRUE,Neihu,Bus,Guiji,40,No
+653,Man,44,staff,53000,FALSE,Xinyi,Bus,JOHN TEA COMPANY,50,No
+692,women,44,civil servant,58500,TRUE,Zhongshan,Bus,TRUEDAN,65,No
+747,Man,44,financial,69000,FALSE,Shilin,Bus,Chunshuitang,70,No
+749,women,44,civil servant,42000,TRUE,Wenshan,Bus,OtherTeaShop,70,No
+759,women,44, retail,65500,TRUE,Beitou,MRT,OtherTeaShop,40,No
+808,women,44,staff,52500,TRUE,Shilin,MRT,Tenren's Tea,40,Yes
+876,women,44,Worker,62500,TRUE,Datong,drive,KEBUKE,60,No
+920,women,44,engineer,45000,TRUE,Nangang,Scooter,JOHN TEA COMPANY,65,No
+941,Man,44,staff,44000,TRUE,Nangang,MRT,Guiji,50,No
+960,Man,44,Market,41500,TRUE,Beitou,Bus,Tenren's Tea,40,No
+977,Man,44,Market,74000,FALSE,Da’an,Scooter,OtherTeaShop,50,No
+984,Man,44,Market,57500,TRUE,Neihu,MRT,JOHN TEA COMPANY,65,No
+992,Man,44,service,75000,FALSE,Da’an,MRT,JOHN TEA COMPANY,35,No
+11,Man,45,Market,69000,FALSE,Shilin,MRT,OtherTeaShop,45,Yes
+51,Man,45,staff,62000,TRUE,Da’an,drive,Chunshuitang,35,Yes
+77,women,45,staff,28000,TRUE,Nangang,MRT,50 Arashi,70,No
+93,women,45,engineer,73000,TRUE,Da’an,Bus,Guiji,65,No
+153,women,45,sales,76000,FALSE,Songshan,MRT,Ching-Shin Fu-Chuan,55,No
+167,Man,45,staff,70000,TRUE,Wanhua,MRT,Ching-Shin Fu-Chuan,70,No
+284,women,45,docter,122000,TRUE,Wenshan,MRT,WooTea,60,No
+313,women,45,staff,40000,FALSE,Datong,Bus,Guiji,60,Yes
+325,Man,45,staff,68000,TRUE,Beitou,Bus,50 Arashi,45,Yes
+334,women,45,engineer,42500,TRUE,Xinyi,Bus,Ching-Shin Fu-Chuan,45,Yes
+338,women,45,staff,50500,TRUE,Zhongzheng,MRT,Tenren's Tea,55,No
+373,Man,45,sales,38500,FALSE,Wanhua,MRT,50 Arashi,35,No
+378,Man,45,staff,72000,FALSE,Wenshan,Bus,WooTea,70,Yes
+409,Man,45,civil servant,57500,FALSE,Zhongzheng,MRT,KEBUKE,60,No
+416,women,45,staff,74500,TRUE,Datong,MRT,Guiji,45,Yes
+465,Man,45,staff,51000,FALSE,Wenshan,drive,50 Arashi,55,No
+494,women,45,staff,62500,TRUE,Datong,Bus,KEBUKE,35,Yes
+504,women,45,sales,87000,FALSE,Wanhua,MRT,WooTea,65,No
+506,Man,45,financial,70500,TRUE,Xinyi,MRT,Guiji,40,Yes
+516,Man,45,staff,48000,FALSE,Nangang,MRT,50 Arashi,45,Yes
+542,women,45,engineer,45500,FALSE,Da’an,Bus,Guiji,50,Yes
+629,women,45,financial,95500,FALSE,Xinyi,drive,Wanpo,55,No
+640,women,45,engineer,88500,TRUE,Neihu,Bus,50 Arashi,40,No
+645,Man,45,staff,56500,FALSE,Da’an,Bus,Tenren's Tea,35,Yes
+675,Man,45,civil servant,68000,TRUE,Da’an,Scooter,OtherTeaShop,70,No
+723,Man,45,sales,56500,TRUE,Wenshan,Scooter,Wanpo,65,No
+735,Man,45,engineer,58000,FALSE,Shilin,MRT,KEBUKE,55,Yes
+740,Man,45,staff,62500,FALSE,Shilin,drive,Guiji,65,Yes
+750,Man,45,staff,71000,TRUE,Shilin,Bus,Wanpo,50,No
+770,women,45,Market,61000,FALSE,Shilin,MRT,CoCo,55,No
+788,Man,45,financial,51500,FALSE,Datong,MRT,Tenren's Tea,70,Yes
+795,Man,45,engineer,31500,TRUE,Nangang,MRT,CoCo,50,No
+841,women,45,staff,58000,TRUE,Songshan,Scooter,WooTea,70,No
+850,women,45,engineer,46000,FALSE,Neihu,MRT,Ching-Shin Fu-Chuan,45,Yes
+894,Man,45,financial,51000,FALSE,Neihu,Bus,Ching-Shin Fu-Chuan,50,No
+931,Man,45,service,64500,TRUE,Beitou,Bus,Chunshuitang,65,No
+15,Man,46,staff,36500,TRUE,Wenshan,Bus,CoCo,50,No
+16,Man,46,Market,76000,FALSE,Datong,Bus,TRUEDAN,50,Yes
+17,Man,46,Freelance,32000,TRUE,Xinyi,Scooter,WooTea,60,Yes
+69,women,46,staff,42000,FALSE,Xinyi,MRT,Tenren's Tea,45,No
+85,women,46, retail,82000,TRUE,Neihu,MRT,TRUEDAN,35,No
+117,women,46,teacher,69500,TRUE,Shilin,MRT,Wanpo,45,Yes
+180,Man,46,police,75000,TRUE,Xinyi,drive,50 Arashi,50,Yes
+203,women,46,financial,67000,TRUE,Wenshan,Bus,Guiji,65,No
+271,women,46,service,59000,TRUE,Zhongshan,Bus,WooTea,60,Yes
+303,women,46,staff,76000,TRUE,Wenshan,MRT,WooTea,35,No
+331,women,46,staff,71000,TRUE,Shilin,MRT,Tenren's Tea,35,No
+354,Man,46,financial,89500,TRUE,Da’an,Scooter,OtherTeaShop,35,No
+377,Man,46,staff,70500,FALSE,Wenshan,MRT,CoCo,40,No
+429,Man,46,engineer,54000,TRUE,Zhongshan,Bus,JOHN TEA COMPANY,35,No
+436,Man,46,service,44500,FALSE,Shilin,Bus,KEBUKE,70,No
+459,women,46, retail,54000,FALSE,Zhongzheng,Bus,CoCo,55,Yes
+467,women,46,staff,63500,TRUE,Xinyi,Bus,Ching-Shin Fu-Chuan,65,Yes
+503,women,46,Worker,70000,TRUE,Beitou,Scooter,Guiji,65,No
+568,women,46,staff,62500,TRUE,Beitou,MRT,OtherTeaShop,40,Yes
+583,women,46,Market,57500,TRUE,Songshan,Scooter,JOHN TEA COMPANY,55,No
+632,Man,46,engineer,76500,FALSE,Zhongshan,Bus,Chunshuitang,40,No
+679,women,46,staff,76500,TRUE,Songshan,Scooter,JOHN TEA COMPANY,70,No
+681,women,46,civil servant,63500,TRUE,Xinyi,Bus,Ching-Shin Fu-Chuan,45,Yes
+699,women,46,staff,78000,FALSE,Wanhua,drive,Wanpo,35,Yes
+700,women,46,sales,41000,FALSE,Da’an,MRT,Ching-Shin Fu-Chuan,55,Yes
+819,Man,46,Freelance,69500,TRUE,Songshan,Scooter,Guiji,35,No
+821,women,46,sales,55000,FALSE,Zhongshan,Bus,50 Arashi,40,Yes
+837,Man,46,staff,43500,FALSE,Datong,MRT,50 Arashi,40,Yes
+839,Man,46,staff,75500,FALSE,Da’an,Bus,Ching-Shin Fu-Chuan,70,No
+868,Man,46,staff,43000,TRUE,Beitou,Bus,Ching-Shin Fu-Chuan,70,Yes
+869,Man,46,staff,62500,TRUE,Songshan,Scooter,JOHN TEA COMPANY,40,Yes
+971,women,46,sales,32500,TRUE,Zhongshan,MRT,KEBUKE,60,No
+34,women,47,staff,44000,TRUE,Wenshan,Scooter,Wanpo,65,No
+118,women,47,sales,109000,TRUE,Songshan,Scooter,Wanpo,70,Yes
+150,Man,47,staff,41000,TRUE,Beitou,Bus,OtherTeaShop,35,Yes
+185,Man,47,staff,77000,TRUE,Zhongzheng,Scooter,CoCo,50,Yes
+191,women,47,Freelance,33000,FALSE,Zhongzheng,Bus,Wanpo,55,No
+202,women,47,engineer,81000,TRUE,Nangang,Scooter,Guiji,50,No
+366,women,47,Freelance,56500,FALSE,Xinyi,MRT,50 Arashi,35,No
+385,women,47,sales,93000,TRUE,Wanhua,Bus,Ching-Shin Fu-Chuan,70,Yes
+412,Man,47,staff,53500,TRUE,Da’an,Scooter,CoCo,45,No
+474,Man,47,civil servant,61000,FALSE,Zhongzheng,MRT,KEBUKE,55,No
+489,women,47,Market,47000,FALSE,Songshan,Scooter,Wanpo,45,Yes
+541,Man,47,staff,53500,TRUE,Zhongzheng,Scooter,TRUEDAN,65,Yes
+549,women,47,staff,44500,TRUE,Da’an,MRT,OtherTeaShop,40,Yes
+706,Man,47,staff,60000,TRUE,Xinyi,drive,KEBUKE,55,Yes
+714,Man,47,staff,69500,FALSE,Zhongshan,Bus,JOHN TEA COMPANY,60,No
+746,women,47,sales,53500,TRUE,Xinyi,Scooter,Tenren's Tea,55,Yes
+763,women,47,docter,40500,FALSE,Nangang,Bus,TRUEDAN,60,Yes
+779,Man,47,staff,37000,FALSE,Songshan,MRT,Guiji,70,No
+820,women,47,Market,58000,TRUE,Songshan,Bus,WooTea,35,No
+826,women,47,civil servant,64000,TRUE,Shilin,MRT,KEBUKE,50,Yes
+896,Man,47,financial,36500,TRUE,Wanhua,Bus,Wanpo,45,No
+916,Man,47,engineer,59000,TRUE,Nangang,MRT,50 Arashi,65,Yes
+946,women,47,staff,52000,FALSE,Wenshan,MRT,50 Arashi,60,No
+966,Man,47,engineer,57500,FALSE,Wenshan,MRT,50 Arashi,60,No
+995,Man,47,staff,41500,FALSE,Neihu,MRT,OtherTeaShop,70,Yes
+37,Man,48,civil servant,40500,TRUE,Shilin,MRT,CoCo,65,Yes
+62,Man,48,staff,74000,TRUE,Beitou,MRT,CoCo,45,Yes
+67,women,48,staff,78000,TRUE,Wanhua,MRT,JOHN TEA COMPANY,35,Yes
+152,women,48,Market,75000,TRUE,Zhongzheng,drive,KEBUKE,50,Yes
+189,Man,48,Market,35500,TRUE,Da’an,MRT,KEBUKE,55,No
+225,Man,48,staff,85500,FALSE,Wenshan,Bus,WooTea,60,Yes
+251,Man,48,staff,60500,FALSE,Neihu,Bus,Chunshuitang,40,No
+285,women,48,Worker,52000,TRUE,Nangang,MRT,Wanpo,65,Yes
+343,women,48,staff,63500,TRUE,Shilin,Scooter,Chunshuitang,60,Yes
+364,Man,48,financial,32500,FALSE,Wenshan,MRT,Ching-Shin Fu-Chuan,50,No
+438,women,48,staff,59000,TRUE,Songshan,Bus,Wanpo,35,No
+461,women,48,Freelance,51000,FALSE,Xinyi,Scooter,JOHN TEA COMPANY,50,No
+527,women,48,sales,66500,TRUE,Datong,Bus,WooTea,35,No
+548,women,48,sales,44000,TRUE,Neihu,Bus,JOHN TEA COMPANY,55,Yes
+584,Man,48,financial,76500,FALSE,Neihu,Scooter,Tenren's Tea,60,Yes
+598,Man,48,Freelance,72500,TRUE,Shilin,MRT,KEBUKE,50,Yes
+623,women,48,service,77000,TRUE,Shilin,Scooter,Tenren's Tea,60,No
+650,Man,48,civil servant,52000,TRUE,Beitou,Scooter,JOHN TEA COMPANY,70,No
+671,Man,48,Freelance,55000,FALSE,Songshan,Bus,WooTea,35,No
+701,Man,48,staff,71500,TRUE,Zhongshan,Scooter,TRUEDAN,35,Yes
+806,women,48,staff,100000,TRUE,Wanhua,MRT,Tenren's Tea,40,No
+845,Man,48,staff,55500,TRUE,Da’an,MRT,WooTea,45,No
+923,women,48,engineer,50500,FALSE,Zhongshan,Bus,WooTea,55,No
+927,women,48,Freelance,39000,TRUE,Da’an,MRT,CoCo,35,Yes
+988,Man,48,service,59500,FALSE,Wanhua,Bus,50 Arashi,60,No
+5,Man,49,staff,62500,TRUE,Nangang,Bus,OtherTeaShop,65,Yes
+13,Man,49,sales,66500,TRUE,Wanhua,Scooter,WooTea,65,Yes
+52,Man,49,staff,41500,TRUE,Beitou,MRT,Ching-Shin Fu-Chuan,65,No
+72,Man,49,staff,44500,FALSE,Zhongzheng,Bus,50 Arashi,45,No
+91,women,49,engineer,76000,TRUE,Beitou,MRT,CoCo,70,No
+115,women,49,engineer,135500,TRUE,Wenshan,MRT,Tenren's Tea,55,No
+148,women,49,civil servant,52000,TRUE,Shilin,MRT,Wanpo,60,Yes
+155,Man,49,Worker,29000,FALSE,Songshan,Scooter,Ching-Shin Fu-Chuan,70,No
+162,women,49,engineer,42000,FALSE,Wanhua,MRT,WooTea,60,Yes
+223,women,49,sales,37000,FALSE,Songshan,Bus,Chunshuitang,55,Yes
+233,women,49,staff,62000,TRUE,Wanhua,MRT,JOHN TEA COMPANY,65,Yes
+237,women,49,civil servant,69000,FALSE,Da’an,Scooter,Wanpo,65,Yes
+273,Man,49,service,46500,TRUE,Xinyi,MRT,WooTea,35,Yes
+302,Man,49,Worker,63500,TRUE,Neihu,Scooter,Chunshuitang,45,Yes
+311,Man,49,engineer,67500,TRUE,Wenshan,Scooter,50 Arashi,35,No
+319,women,49,civil servant,49000,TRUE,Da’an,MRT,OtherTeaShop,35,Yes
+328,women,49,financial,73000,TRUE,Zhongzheng,MRT,Wanpo,65,Yes
+332,Man,49,financial,79500,TRUE,Datong,Bus,WooTea,60,No
+339,Man,49,sales,57000,FALSE,Xinyi,MRT,Wanpo,70,No
+363,Man,49,Worker,52000,TRUE,Da’an,Bus,Ching-Shin Fu-Chuan,50,No
+369,women,49,staff,76000,FALSE,Datong,MRT,Wanpo,65,Yes
+419,Man,49,financial,54500,TRUE,Songshan,Scooter,Ching-Shin Fu-Chuan,55,No
+512,Man,49,staff,46500,TRUE,Xinyi,MRT,Tenren's Tea,45,Yes
+637,women,49,staff,73000,FALSE,Wanhua,Bus,Chunshuitang,35,No
+668,Man,49,staff,36500,TRUE,Wanhua,Bus,Tenren's Tea,55,Yes
+725,Man,49, lawyer,114000,FALSE,Nangang,Scooter,Chunshuitang,70,No
+781,women,49,sales,71500,FALSE,Wenshan,Scooter,KEBUKE,60,Yes
+830,women,49,Worker,50500,FALSE,Zhongshan,Bus,CoCo,35,Yes
+832,women,49,financial,61000,TRUE,Datong,MRT,Tenren's Tea,50,Yes
+849,Man,49,engineer,69500,TRUE,Wanhua,Scooter,50 Arashi,35,No
+867,Man,49,staff,67500,FALSE,Nangang,MRT,Wanpo,40,Yes
+895,women,49,financial,69000,TRUE,Wenshan,MRT,WooTea,60,No
+994,women,49,sales,72000,FALSE,Da’an,Bus,Ching-Shin Fu-Chuan,60,Yes
+9,Man,50,financial,58500,FALSE,Zhongzheng,MRT,KEBUKE,45,No
+76,women,50,Freelance,45000,TRUE,Datong,Bus,Guiji,40,Yes
+87,Man,50,Market,55000,FALSE,Nangang,Scooter,WooTea,35,No
+90,Man,50,Worker,43500,TRUE,Nangang,Bus,Guiji,40,No
+144,women,50,Freelance,77000,TRUE,Zhongshan,Scooter,TRUEDAN,35,Yes
+178,women,50,Freelance,40500,FALSE,Nangang,MRT,Ching-Shin Fu-Chuan,60,No
+226,women,50,teacher,73500,FALSE,Xinyi,Bus,Tenren's Tea,70,Yes
+235,Man,50,financial,60500,TRUE,Datong,Scooter,Wanpo,50,No
+322,Man,50,staff,41500,FALSE,Datong,MRT,CoCo,50,No
+335,women,50,civil servant,56000,TRUE,Shilin,MRT,Chunshuitang,40,Yes
+408,Man,50,staff,60000,FALSE,Xinyi,Bus,Ching-Shin Fu-Chuan,70,No
+525,Man,50,financial,48500,TRUE,Nangang,Scooter,Guiji,65,Yes
+591,women,50,staff,75500,TRUE,Beitou,Bus,Tenren's Tea,35,No
+648,women,50,Market,68500,TRUE,Wanhua,Bus,Guiji,50,No
+655,Man,50,staff,79000,TRUE,Wanhua,Bus,Tenren's Tea,35,Yes
+703,Man,50,civil servant,57500,TRUE,Da’an,MRT,WooTea,55,No
+881,Man,50,staff,75000,TRUE,Xinyi,Bus,50 Arashi,50,No
+891,Man,50,Freelance,51500,FALSE,Datong,MRT,Chunshuitang,70,No
+899,women,50,staff,52000,TRUE,Wanhua,drive,Ching-Shin Fu-Chuan,70,Yes
+955,Man,50,Market,77000,TRUE,Songshan,drive,CoCo,45,No
+964,Man,50,staff,42500,FALSE,Zhongzheng,Scooter,Wanpo,50,Yes
+976,women,50,engineer,60500,TRUE,Zhongshan,Scooter,OtherTeaShop,35,Yes

@@ -65,3 +65,36 @@
 [影片展示](https://youtu.be/MrWKgblp6HM)
 
 ---
+
+12. [鄒騰沅_運動場地查詢](./運動場地查詢)
+[影片展示](https://youtu.be/0-h3EYgIzac)
+
+---
+
+13. [邱秀慧_賴弈旭_股價查詢分析預測](./股價查詢分析預測)
+[影片展示](https://youtu.be/a6YdHYf-WOQ)
+
+---
+
+14. [劉冠亨_鄭興耀_高家成_美食地圖](./美食地圖)
+[影片展示](https://youtu.be/hXOA7530pAc)
+
+---
+
+15. [余友中_徐瑋良_翟品皓_桃園機場航班查詢](./桃園機場航班查詢)
+[影片展示](https://youtu.be/1EicZrBOQJk)
+
+---
+
+16. [謝明學_陳瑞涓_陳彥廷_co2碳排放](./co2碳排放)
+[影片展示](https://youtu.be/prFrn4dxYD4)
+
+---
+
+17. [賴依凡_期貨多空趨勢預測](./期貨多空趨勢預測)
+[影片展示](https://youtu.be/ylHqQ0eZZFM)
+
+---
+
+18. [張雯嬌_ATM設點查詢及分析](./ATM設點查詢及分析)
+[影片展示](https://youtu.be/3YqvjZ4_qhY)
