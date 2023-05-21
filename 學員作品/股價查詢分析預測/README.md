@@ -1,36 +1,37 @@
 20230517 Create：
 
-這是一個可以自動抓取股票歷史交易數據的程式，藉由這個程式我們能自由擷取想研究的股票的歷史資料，形成可視化圖形，再用決策樹回歸演算法去預測未來一天的股價。
+這是一個可以抓取股票歷史交易數據的程式，藉由這個程式我們能自由擷取想研究的股票的歷史資料，形成可視化圖形，再用決策樹回歸演算法去預測未來一天的股價。
 
 查詢範圍包含台灣上市上櫃股票以及美股，期間的歷史數據可以下載成csv檔。
 
-透過自動抓取的股票歷史交易數據，套入自訂的交易策略來做基本的交易策略模擬績效，藉由這樣的回測驗證自訂交易策略是否有效。
+透過取得的股票歷史交易數據，套入自訂的交易策略來做基本的交易策略模擬績效，藉由這樣的回測驗證自訂交易策略是否有效。
 
-還有優化交易策略的功能，由程式計算合適的交易方式，找出個股最適合的均線判定，來做為未來交易策略的參考，以提升報酬率。
+另外，還有提供優化交易策略的功能，由程式計算出合適的交易方式，找出個股最適合的均線判定，來做為未來交易策略的參考，以提升報酬率。
 
-執行檔為：main0516v1.py
+執行檔：main.py
 
-![image](https://github.com/gubemiu/stock/assets/128680931/7c8c48ce-3e96-4b3c-9571-29346a289aa0)
+![01](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/d82a86d7-fabc-4250-a56f-7ccff0ac3457)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/5bedd5e7-85df-403c-b186-5139d4898c97)
+![02](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/addee1a5-e119-47e0-b556-f1469c820da5)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/7bf0e504-d7e3-4453-9dad-d899dd2773ba)
+![03](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/0e72c8be-1d01-4420-9b36-f1c193b2d4ee)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/38c0c176-d622-4740-be68-d3f4e91b56dc)
+![04](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/e76f1f81-f048-4683-a992-2def301997d5)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/50ae4962-8317-4f23-9d8f-cebea979c5d5)
+![05](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/7fc9a172-e1f6-440b-aa7f-2de5715803d8)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/89311ab2-99fb-4f57-a55c-8228a82b7b92)
+![06](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/343d8088-d1bc-4f3e-8e79-9b9f00569a1e)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/9cf3995d-d120-434a-aca9-f098a8a54571)
+![07](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/ecaab9e5-3baf-401c-8b82-b3c6ce99e7d4)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/fc9000e6-53af-43e4-9057-6062ab8d91b7)
+![08](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/32981a39-07b8-48c3-9212-05208bbf36d2)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/876679d2-63cc-48fb-875e-ea499d2c424d)
+![09](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/f650d5e0-d0f2-4642-9eaa-08271834454b)
 
-![image](https://github.com/gubemiu/stock/assets/128680931/4546aa67-5ded-4e5b-b41c-cf99b550a1ff)
+![10](https://github.com/gubemiu/__STOCK_DATA__/assets/128680931/ccec6a95-e7dc-4c0b-9221-4632b4e22b10)
 
 
+作者：[邱秀慧](https://github.com/gubemiu)/賴弈旭 ethanazazaz3@gmail.com
 
 指導老師：RobertHsu 徐國堂 老師
 https://github.com/roberthsu2003
