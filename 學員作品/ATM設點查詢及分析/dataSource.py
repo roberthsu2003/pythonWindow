@@ -8,17 +8,20 @@ from geopy.distance import great_circle as GRC      #pip install geopy(The great
 def DownLoadAtmData():      
     url='https://www-api.moda.gov.tw/OpenData/Files/4161'
     response = requests.get(url)
-    response.encoding='utf-8'        
-    if response.ok:        
+    response.encoding='utf-8'     
+     
+    if response.ok:     
+        
         file=open('atmRowData.csv',mode='w',encoding='utf-8',newline='')
         file.write(response.text)
         file.close()
         
         #modify fieldname from chinese to english
-        atmData = pd.read_csv('atmRowData.csv')
-
+        atmData = pd.read_csv('atmRowData.csv')   
         columnNewName = {'編號':'no','銀行代號':'bankcode','分行代號':'branchcode','所屬銀行簡稱':'branchname','裝設型態':'type','裝設地點類別':'placetype','裝設地點':'place','所屬縣市':'county','鄉鎮縣市別':'district','地址':'address','英文地址':'address_eng','區碼':'distcode','聯絡電話':'tel','服務型態':'servicetype','符合輪椅使用':'wheelchair','視障語音':'voice','符合輪椅使用且環境亦符合':'wheelchair_envir','視障語音且環境亦符合':'voice_evnir','備註':'memo','座標X軸':'longitude','座標Y軸':'latitude'}        
-        atmData = atmData.rename(columns=columnNewName)  
+        atmData = atmData.rename(columns=columnNewName)        
+        print(atmData.info())       
+        
 
         #Extra Processing of Data--------------------------------------
         #Error Data-1: atmData.loc[17841,'latitude']
@@ -58,18 +61,37 @@ class filterAtmListFromInquiry():
         self.radiusValue = radiusValue
         
         # 正常運作: 使用爬蟲
-        try: 
-            url = "https://www.google.com/maps/place?q=" + self.Address
+        try:  
+            # 方法1,方法2皆可放置地址或地名,但有點不同, 目前建議使用方法2
+            # 方法2:住址一定要輸入正確,輸出與實際地圖較正確, 但一旦住址有誤有可能無法出現資料
+            # 方法1:住址無論是否正確都可以產出,故不會出現找不到地名的情況，但輸出與實際地圖有落差
+                      
+            # 方法1:
+            # 台北市士林區中正路115號-- longitude:121.52635811500751, latitude: 25.095674883
+            # 台北市大安區信義路三段153號-- longitude:121.54039791500624, latitude: 25.03380218                      
+            # url = "https://www.google.com/maps/place?q=" + self.Address
+                     
+            # 方法2:
+            # 台北市士林區中正路115號-- longitude:121.5285468, latitude: 25.095674899999995  
+            # 台北市大安區信義路三段153號-- longitude:121.5425866, latitude: 25.033802199999997                            
+            url = "https://www.google.com.tw/maps/place/" + self.Address
             html = requests.get(url)
             soup = bs4.BeautifulSoup(html.text, "html.parser")
             text = soup.prettify()
             initial_pos = text.find(";window.APP_INITIALIZATION_STATE") #尋找;window.APP_INITIALIZATION_STATE所在位置
             data = text[initial_pos+36 : initial_pos+85]
-            line = tuple(data.split(','))   # ex:3672.9530075659873,120.2050514149671,22.988751484
+            print(data) 
+            initial_pos = data.find("]")
+            if initial_pos > 0:
+                data = data[0:initial_pos]
+            print(data)
+            
+            line = tuple(data.split(','))        # ex:3613.182629200904,121.52635811500751,25.095674883
             self.longitude = float(line[1])      # longitude:經度,X軸
             self.latitude = float(line[2])       # latitude:緯度,Y軸
             print("經緯度資料爬蟲成功")
             print(f"{self.Address}-- longitude:{self.longitude}, latitude: {self.latitude}")
+            
         except:
             print("經緯度資料爬蟲失敗:")
             return

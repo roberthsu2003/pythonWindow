@@ -102,6 +102,14 @@
 
 ---
 
-18. [張雯嬌_ATM設點查詢及分析](./ATM設點查詢及分析)
+18. [張雯嬌_ATM設點查詢](./ATM設點查詢及分析)
 
-[影片展示](https://youtu.be/3YqvjZ4_qhY)
+[ATM裝設地點查詢_影片展示](https://youtu.be/60wyEO60sws)
+
+---
+
+19. [張雯嬌_ATM設點策略與競爭分析](./ATM設點查詢及分析)
+
+[MachineLearning ATM設點策略與競爭分析](https://youtu.be/AbeT4R6baVM)
+
+---
