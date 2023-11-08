@@ -111,11 +111,13 @@
 
 ![](./images/pic10.png)
 
+---
 
 11.[台北市youbike2.0即時資訊_地圖](./11台北市youbike2.0_地圖/main.py)
 
 ![](./images/pic11.png)
 
+---
 
 12.[股票即時爬蟲,儲存為csv檔,並顯示](./12_13即時存csv檔,顯示線圖/index1.py)
  - data.py(負責爬蟲和儲存為csv檔,data.py要先執行才有資料存檔)
@@ -123,13 +125,29 @@
 
 ![](./images/pic12.png)
 
+---
 
 13 [顯示4檔股票近2年的歷史線圖](./12_13即時存csv檔,顯示線圖/index1.py)
 - index.py
 
 ![](./images/pic13.png)
 
+---
+
 14 [全台4天天氣預測](./14全台4天天氣預測/index.py)
 - index.py
 
 ![](./images/pic14.png)
+
+---
+
+15 [台北市youbike](./15台北市youbike/index.py)
+- 使用sqlite
+- 每3分鐘收集youbike資訊,資料為累加的資料
+- 繼承Dialog
+- 搜尋功能
+
+![](./images/pic15.png)
+![](./images/pic16.png)
+
+---
