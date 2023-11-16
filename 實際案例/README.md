@@ -151,3 +151,14 @@
 ![](./images/pic16.png)
 
 ---
+
+16 [台北市youbike_postgreSQL](./16台北youbike_postgreSQL/index.py)
+- 使用render_postgreSQL
+- 使用psycopg2-binary module
+- 使用pgAdmin4管理資料庫
+- 每3分鐘收集youbike資訊,資料為累加的資料
+- 繼承Dialog
+- 搜尋功能
+
+![](./images/pic15.png)
+---
