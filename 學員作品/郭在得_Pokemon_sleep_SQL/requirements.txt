@@ -1,0 +1,10 @@
+ttkbootstrap
+requests
+selenium
+pandas
+scikit-learn
+matplotli
+Flask
+werkzeug
+numpy
+# 我有改原始碼

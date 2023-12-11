@@ -131,3 +131,22 @@
 [莊智全_薛昆奇_劉冠宏_股價查詢及均價計算](https://youtu.be/TAOSzlRWfg8?si=gbEu7AnWYmsLitIL)
 
 ---
+
+23.[張盛枋_劉峻宏_陳建任_台北市YouBike站點即時資訊](./張盛枋_劉峻宏_陳建任_台北市YouBike站點即時資訊)
+
+[張盛枋_劉峻宏_陳建任_台北市YouBike站點即時資訊](https://youtu.be/F7v6aHVOqPY?si=3Eko3WyNUvt0PlpL)
+
+---
+
+24.[郭在得_Pokemon_sleep_SQL](./郭在得_Pokemon_sleep_SQL)
+
+[郭在得_Pokemon_sleep_SQL](https://youtu.be/IXVMaiW0108?si=91jAkimolqaDeMRA)
+
+---
+
+25.[蕭翊廷_周華相_車禍判決賠償金額視覺化](./蕭翊廷_周華相_車禍判決賠償金額視覺化)
+
+[蕭翊廷_周華相_車禍判決賠償金額視覺化](https://youtu.be/7pVdjvFOYa0?si=zGzWbGG_XAjwA6dB)
+
+---
+
