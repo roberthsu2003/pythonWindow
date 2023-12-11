@@ -1,0 +1,5 @@
+matplotlib
+matplotlib-inline
+Pillow
+ttkbootstrap
+seaborn
