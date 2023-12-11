@@ -125,3 +125,9 @@
 [盧宗基_林玫蓀_李亦宣_信用卡消費樣態](https://youtu.be/-hwE1poVcx4?si=Ux4fVXmv1gVE05Zy)
 
 ---
+
+22.[莊智全_薛昆奇_劉冠宏_股價查詢及均價計算](./莊智全_薛昆奇_劉冠宏_股價查詢及均價計算)
+
+[莊智全_薛昆奇_劉冠宏_股價查詢及均價計算](https://youtu.be/TAOSzlRWfg8?si=gbEu7AnWYmsLitIL)
+
+---
