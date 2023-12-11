@@ -113,3 +113,9 @@
 [MachineLearning ATM設點策略與競爭分析](https://youtu.be/AbeT4R6baVM)
 
 ---
+
+20.[葉俐彤_中華職棒球員資料查詢](./葉俐彤_中華職棒球員資料查詢)
+
+[葉俐彤_中華職棒球員資料查詢](https://youtu.be/BBHp5bA9Llk?si=6Sd68g5m82gdEW0g)
+
+---
