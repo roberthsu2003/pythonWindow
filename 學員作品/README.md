@@ -119,3 +119,9 @@
 [葉俐彤_中華職棒球員資料查詢](https://youtu.be/BBHp5bA9Llk?si=6Sd68g5m82gdEW0g)
 
 ---
+
+21.[盧宗基_林玫蓀_李亦宣_信用卡消費樣態](./盧宗基_林玫蓀_李亦宣_信用卡消費樣態)
+
+[盧宗基_林玫蓀_李亦宣_信用卡消費樣態](https://youtu.be/-hwE1poVcx4?si=Ux4fVXmv1gVE05Zy)
+
+---
