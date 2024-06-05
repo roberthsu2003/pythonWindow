@@ -319,17 +319,17 @@ test = Var()
 test.mainloop()
 ```
 
-## 自訂對話框-繼承Dialog
+### 自訂對話框-繼承Dialog
 
-當然！以下是一個簡單的範例，說明如何繼承 `tkinter` 中的 `Dialog` 類來創建自定義對話框。這個範例展示了如何創建一個自定義對話框，要求用戶輸入姓名並返回輸入結果。
+一個簡單的範例，說明如何繼承 `tkinter` 中的 `Dialog` 類來創建自定義對話框。這個範例展示了如何創建一個自定義對話框，要求用戶輸入姓名並返回輸入結果。
 
 首先，確保你的 Python 環境中已經安裝了 `tkinter`。然後，你可以按照以下範例進行操作：
 
 ```python
 import tkinter as tk
-from tkinter import simpledialog
+from tkinter.simpledialog import Dialog
 
-class MyCustomDialog(simpledialog.Dialog):
+class MyCustomDialog(Dialog):
     def __init__(self, parent, title=None):
         super().__init__(parent, title)
 
@@ -343,6 +343,22 @@ class MyCustomDialog(simpledialog.Dialog):
     def apply(self):
         # 當用戶按下確定時處理數據
         self.result = self.name_entry.get()
+        
+    def buttonbox(self):
+        # Add custom buttons (overriding the default buttonbox)
+        box = tk.Frame(self)
+        self.ok_button = tk.Button(box, text="OK", width=10, command=self.ok, default=tk.ACTIVE)
+        self.ok_button.pack(side=tk.LEFT, padx=5, pady=5)
+        self.cancel_button = tk.Button(box, text="Cancel", width=10, command=self.cancel)
+        self.cancel_button.pack(side=tk.LEFT, padx=5, pady=5)
+        self.bind("<Return>", self.ok)
+        self.bind("<Escape>", self.cancel)
+        box.pack()
+
+    def ok(self, event=None):
+        # Override the ok method
+        print("OK button was clicked!")
+        super().ok()
 
 # 範例用法：
 if __name__ == "__main__":
@@ -357,19 +373,19 @@ if __name__ == "__main__":
 ```
 
 ### 說明：
-1. **繼承 `simpledialog.Dialog` 類:**
+1. **繼承 `simpledialog.Dialog` class:**
    - 我們創建了一個繼承自 `simpledialog.Dialog` 的自定義對話框類 `MyCustomDialog`。
 
-2. **重寫 `body` 方法:**
+2. **override `body` method:**
    - `body` 方法用於創建對話框的主要部分。在這個範例中，創建了一個標籤和一個輸入控件。
-   - `self.name_entry` 是一個類變量，用於存儲輸入控件，將用於捕獲用戶輸入。
+   - `self.name_entry` 是一個attriubte，用於存儲輸入控件，將用於捕獲用戶輸入。
 
-3. **重寫 `apply` 方法:**
-   - 當用戶按下確定按鈕時，會調用 `apply` 方法。在這裡，我們從輸入控件中獲取輸入並存儲在 `self.result` 中。
+3. **override `apply` method:**
+   - 當用戶按下確定按鈕時，會呼叫 `apply` 方法。在這裡，我們從輸入控件中獲取輸入並存儲在 `self.result` 中。
 
 4. **範例用法:**
    - 我們創建了一個根窗口並立即將其隱藏。
    - 創建了一個 `MyCustomDialog` 的實例，顯示對話框。
    - 如果對話框沒有被取消，則打印結果（用戶的輸入）。
 
-這個範例提供了一個基本的自定義對話框。你可以進一步自定義它，添加更多控件、驗證和其他邏輯。
+增加更多控件、驗證和其他邏輯。
