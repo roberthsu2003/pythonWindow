@@ -16,6 +16,9 @@
 	- showerror
 	- askyesno
 
+3. 自訂對話框
+	- [繼承simpledialog.Dialog](#自訂對話框)
+
 ### 標準對話框
 
 使用MessageBox
@@ -316,3 +319,57 @@ test = Var()
 test.mainloop()
 ```
 
+## 自訂對話框(繼承Dialog) #自訂對話框
+
+當然！以下是一個簡單的範例，說明如何繼承 `tkinter` 中的 `Dialog` 類來創建自定義對話框。這個範例展示了如何創建一個自定義對話框，要求用戶輸入姓名並返回輸入結果。
+
+首先，確保你的 Python 環境中已經安裝了 `tkinter`。然後，你可以按照以下範例進行操作：
+
+```python
+import tkinter as tk
+from tkinter import simpledialog
+
+class MyCustomDialog(simpledialog.Dialog):
+    def __init__(self, parent, title=None):
+        super().__init__(parent, title)
+
+    def body(self, master):
+        # 創建對話框主體。返回應具有初始焦點的控件。
+        tk.Label(master, text="請輸入你的名字:").grid(row=0)
+        self.name_entry = tk.Entry(master)
+        self.name_entry.grid(row=0, column=1)
+        return self.name_entry
+
+    def apply(self):
+        # 當用戶按下確定時處理數據
+        self.result = self.name_entry.get()
+
+# 範例用法：
+if __name__ == "__main__":
+    root = tk.Tk()
+    root.withdraw()  # 隱藏根窗口
+
+    dialog = MyCustomDialog(root, title="自定義對話框")
+    if dialog.result is not None:
+        print("用戶的名字:", dialog.result)
+    else:
+        print("對話框已取消")
+```
+
+### 說明：
+1. **繼承 `simpledialog.Dialog` 類:**
+   - 我們創建了一個繼承自 `simpledialog.Dialog` 的自定義對話框類 `MyCustomDialog`。
+
+2. **重寫 `body` 方法:**
+   - `body` 方法用於創建對話框的主要部分。在這個範例中，創建了一個標籤和一個輸入控件。
+   - `self.name_entry` 是一個類變量，用於存儲輸入控件，將用於捕獲用戶輸入。
+
+3. **重寫 `apply` 方法:**
+   - 當用戶按下確定按鈕時，會調用 `apply` 方法。在這裡，我們從輸入控件中獲取輸入並存儲在 `self.result` 中。
+
+4. **範例用法:**
+   - 我們創建了一個根窗口並立即將其隱藏。
+   - 創建了一個 `MyCustomDialog` 的實例，顯示對話框。
+   - 如果對話框沒有被取消，則打印結果（用戶的輸入）。
+
+這個範例提供了一個基本的自定義對話框。你可以進一步自定義它，添加更多控件、驗證和其他邏輯。
