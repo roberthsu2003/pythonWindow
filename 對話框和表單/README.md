@@ -17,7 +17,7 @@
 	- askyesno
 
 3. 自訂對話框
-	- [繼承simpledialog.Dialog](#自訂對話框(繼承Dialog))
+	- [自訂對話框(繼承Dialog)][]
 
 ### 標準對話框
 
