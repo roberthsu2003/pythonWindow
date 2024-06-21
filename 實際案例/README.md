@@ -162,3 +162,13 @@
 
 ![](./images/pic15.png)
 ---
+
+17 [BMI計算器](./17BMI計算器/index.py)
+
+- grid_layout
+- 繼承Dialog
+- Dialog內,操控parent window內的widget
+
+![](./images/pic17_1.png)
+![](./images/pic17_2.png)
+![](./images/pic17_3.png)
