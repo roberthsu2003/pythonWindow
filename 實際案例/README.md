@@ -161,6 +161,7 @@
 - 搜尋功能
 
 ![](./images/pic15.png)
+
 ---
 
 17 [BMI計算器](./17BMI計算器/index.py)
@@ -172,3 +173,16 @@
 ![](./images/pic17_1.png)
 ![](./images/pic17_2.png)
 ![](./images/pic17_3.png)
+
+---
+
+18 [youbike_圖表動態顯示](./18youbike_圖表動態顯示/index.py)
+- pydantic
+- ttkthemes
+- FigureCanvasTkAgg(顯示圖表)
+- 處理圖表太佔記憶體的問題
+- 繼承Frame
+
+![](./images/pic18.png)
+
+---
