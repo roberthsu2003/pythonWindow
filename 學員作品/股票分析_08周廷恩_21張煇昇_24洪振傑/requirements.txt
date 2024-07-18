@@ -1,0 +1,10 @@
+requests
+pydantic
+pandas
+numpy
+ttkthemes
+tkintermapview
+matplotlib
+seaborn
+yfinance
+scikit-learn

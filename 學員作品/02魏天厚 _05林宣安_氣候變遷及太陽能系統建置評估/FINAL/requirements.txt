@@ -1,0 +1,8 @@
+selenium
+pandas
+matplotlib
+numpy
+scikit-learn
+seaborn
+tkinter
+pil

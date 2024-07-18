@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>徐老師專案作業 uBike2.0 及時資料</title>
+</head>
+<body>
+    <h1>台北市YouBike2.0及時資料_python小組專題_3&18_WEB介面</h1>
+    
+    <table border="1">
+        <thead>
+            <tr>
+                <th>站點</th>
+                <th>行政區</th>
+                <th>時間</th>
+                <th>地址</th>
+                <th>總數</th>
+                <th>可借</th>
+                <th>可還</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for site in data %}
+            <tr>
+                <td>{{ site.sna }}</td>
+                <td>{{ site.sarea }}</td>
+                <td>{{ site.mday }}</td>
+                <td>{{ site.ar }}</td>
+                <td>{{ site.total }}</td>
+                <td>{{ site.rent_bikes }}</td>
+                <td>{{ site.retuen_bikes }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</body>
+</html>
+

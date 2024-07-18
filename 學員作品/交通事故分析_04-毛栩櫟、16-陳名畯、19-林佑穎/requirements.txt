@@ -1,0 +1,8 @@
+pydantic
+requests 
+pandas 
+ttkthemes
+matplotlib
+folium
+tkhtmlview
+tkintermapview
