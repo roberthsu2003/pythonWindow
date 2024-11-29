@@ -1,0 +1,13 @@
+原始名稱	                英文名稱
+縣市	                    County
+登記單位數	                Registration Units
+登記數(A)	                Registrations (A)
+除戶數(B)	                Deregistrations (B)
+轉讓數(C)	                Transfers (C)
+變更數(D)	                Modifications (D)
+絕育數(E)	                Neutered (E)
+絕育除戶數(F)	            Neutered Deregistrations (F)
+免絕育數(G)	                Exempt from Neutering (G)
+免絕育除戶數(H)	            Exempt Deregistrations (H)
+絕育率(E-F)/(A-B)	        Neutering Rate (E-F)/(A-B)
+繁殖管理率(E-F)+(G-H)/(A-B)	Breeding Management Rate (E-F)+(G-H)/(A-B)
